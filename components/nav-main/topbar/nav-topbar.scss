@@ -1,0 +1,25 @@
+@import "./nav-topbar-tokens.scss";
+
+.dsa-nav-topbar {
+  &__label {
+    font-family: var(--ks-font-family-display);
+  }
+  &__cta {
+    margin-left: var(--ks-spacing-inline-m);
+  }
+
+  &__item {
+    position: relative;
+    &--active {
+      &::after {
+        position: absolute;
+        background-color: var(--ks-color-secondary);
+        content: "";
+        left: 0;
+        width: 100%;
+        height: 4px;
+        bottom: 0;
+      }
+    }
+  }
+}

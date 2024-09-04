@@ -15,7 +15,7 @@
       },
       "accent-inverted": {
         "base": {
-          "value": "{ks.color.primary-inverted.to-bg.8.base}",
+          "value": "{ks.color.fg.to-bg.2.base}",
           "attributes": {
             "category": "color"
           },
@@ -27,7 +27,7 @@
       },
       "bold": {
         "base": {
-          "value": "{ks.color.primary.to-bg.6.base}",
+          "value": "{ks.color.primary.to-bg.7.base}",
           "attributes": {
             "category": "color"
           },
@@ -39,7 +39,7 @@
       },
       "bold-inverted": {
         "base": {
-          "value": "{ks.color.primary-inverted.to-bg.6.base}",
+          "value": "{ks.color.primary.base}",
           "attributes": {
             "category": "color"
           },
@@ -339,7 +339,7 @@
       },
       "card": {
         "base": {
-          "value": "{ks.color.fg.alpha.9.base}",
+          "value": "{ks.color.bg.base}",
           "attributes": {
             "category": "color"
           },
@@ -350,7 +350,7 @@
         },
         "interactive": {
           "base": {
-            "value": "{ks.color.fg.alpha.9.base}",
+            "value": "{ks.color.bg.base}",
             "attributes": {
               "category": "color"
             },
@@ -411,7 +411,7 @@
       },
       "card-inverted": {
         "base": {
-          "value": "{ks.color.fg-inverted.alpha.9.base}",
+          "value": "{ks.color.bg-inverted.base}",
           "attributes": {
             "category": "color"
           },
@@ -422,7 +422,7 @@
         },
         "interactive": {
           "base": {
-            "value": "{ks.color.fg-inverted.alpha.9.base}",
+            "value": "{ks.color.bg-inverted.base}",
             "attributes": {
               "category": "color"
             },

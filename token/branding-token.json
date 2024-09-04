@@ -1,15 +1,15 @@
 {
   "color": {
-    "primary": "#e21879",
-    "primary-inverted": "#4d25ef",
-    "secondary": "#4d25ef",
-    "secondary-inverted": "#e21879",
-    "background": "#06081F",
-    "background-inverted": "#f1f1f3",
-    "foreground": "#fff",
-    "foreground-inverted": "#06081f",
-    "link": "#B7A5FF",
-    "link-inverted": "#6642F6",
+    "primary": "#2C5D5D",
+    "primary-inverted": "#fff",
+    "secondary": "#FF5C00",
+    "secondary-inverted": "#FF5C00",
+    "background": "#fff",
+    "background-inverted": "#212327",
+    "foreground": "#212327",
+    "foreground-inverted": "#fff",
+    "link": "#2C5D5D",
+    "link-inverted": "#fff",
     "positive": "#6EDB64",
     "positive-inverted": "#23831B",
     "informative": "#64C2DB",
@@ -21,20 +21,20 @@
   },
   "font": {
     "display": {
-      "family": "Fredoka, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif",
-      "font-size": 20,
+      "family": "Metropolis, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif",
+      "font-size": 18,
       "line-height": 1.15,
       "scale-ratio": 1.225,
       "bp-factor": {
         "phone": 1.125,
         "tablet": 1.25,
-        "laptop": 1.5,
-        "desktop": 1.75
+        "laptop": 1.35,
+        "desktop": 1.35
       }
     },
     "copy": {
-      "family": "Mulish, 'Helvetica Neue', Helvetica, Arial, sans-serif",
-      "font-size": 18,
+      "family": "system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+      "font-size": 16,
       "line-height": 1.5,
       "scale-ratio": 1.225,
       "bp-factor": {
@@ -42,7 +42,7 @@
       }
     },
     "interface": {
-      "family": "Mulish, system-ui, -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif",
+      "family": "system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
       "font-size": 16,
       "line-height": 1.5,
       "scale-ratio": 1.225,
@@ -52,7 +52,7 @@
     },
     "mono": {
       "family": "ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace",
-      "font-size": 18,
+      "font-size": 16,
       "line-height": 1.5,
       "scale-ratio": 1.225,
       "bp-factor": {

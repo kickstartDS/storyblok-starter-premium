@@ -1,0 +1,25 @@
+:root {
+  // Control
+  --ks-box-shadow-control: 0 1px 2.75px var(--ks-color-fg-alpha-8);
+  --ks-box-shadow-control-hover: 0 1px 2.75px var(--ks-color-fg-alpha-7);
+
+  // Control Inverted
+  --ks-box-shadow-control-inverted: 0 1px 2.75px var(--ks-color-fg-alpha-3);
+  --ks-box-shadow-control-inverted-hover: 0 1px 2.75px var(--ks-color-fg-alpha-7);
+
+  // Card
+  --ks-box-shadow-card: transparent;
+  --ks-box-shadow-card-hover: 0 14px 20px var(--ks-color-fg-alpha-8);
+
+  // Card Inverted
+  --ks-box-shadow-card-inverted: transparent;
+  --ks-box-shadow-card-inverted-hover: 0 14px 20px var(--ks-color-fg-alpha-8);
+
+  // Surface
+  --ks-box-shadow-surface: 0 1px 11px var(--ks-color-fg-alpha-8);
+  --ks-box-shadow-surface-hover: 0 1px 11px var(--ks-color-fg-alpha-7);
+
+  // Surface Inverted
+  --ks-box-shadow-surface-inverted: 0 1px 11px var(--ks-color-fg-alpha-8);
+  --ks-box-shadow-surface-inverted-hover: 0 1px 11px var(--ks-color-fg-alpha-7);
+}

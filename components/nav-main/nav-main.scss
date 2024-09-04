@@ -1,9 +1,22 @@
-.nav-main {
-  --dsa-nav-main__link--font-weight: var(--ks-font-weight-bold);
-  --dsa-nav-main__link--font-weight_active: var(--ks-font-weight-bold);
-  --dsa-nav-main__link--font: var(--ks-font-interface-s);
+@import "nav-main-tokens.scss";
 
-  .nav-main__link {
-    text-transform: uppercase;
+.dsa-nav-main {
+  .dsa-nav-toggle {
+    display: block;
+    @media (min-width: "94rem") {
+      display: none;
+    }
+  }
+  .dsa-nav-flyout {
+    display: flex;
+    @media (min-width: "94rem") {
+      display: none;
+    }
+  }
+
+  .dsa-nav-topbar {
+    @media (max-width: "94rem") {
+      display: none;
+    }
   }
 }

@@ -1,11 +1,13 @@
+@import "./button-tokens.scss";
+
 .dsa-button {
-  --dsa-button_primary--color: var(--ks-text-color-default-inverted);
-  --dsa-button_primary--color_hover: var(--ks-text-color-default-inverted);
-  --dsa-button_primary--color_active: var(--ks-text-color-default-inverted);
+  &.c-button--solid {
+    border: 0;
+    box-shadow: inset 0px -3px 0px var(--ks-color-fg-alpha-6-base);
+    --dsa-button--padding: calc(0.5em + var(--dsa-button--border-width)) calc(1em + var(--dsa-button--border-width));
+  }
 
-  display: inline-block;
-
-  span {
-    vertical-align: bottom;
+  &.c-button--clear {
+    box-shadow: inset 0px -3px 0px var(--ks-color-primary-alpha-7);
   }
 }

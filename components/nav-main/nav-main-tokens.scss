@@ -1,0 +1,12 @@
+:root {
+  .dsa-nav-main {
+    @media (min-width: 62em) {
+      --dsa-nav-main__link--font: var(--ks-font-copy-s);
+      --dsa-nav-main__link--padding: var(--ks-spacing-stack-xs) var(--nav-spacing-horizontal);
+    }
+
+    @media (min-width: 88em) {
+      --dsa-nav-main__link--font: var(--ks-font-copy-m);
+    }
+  }
+}
