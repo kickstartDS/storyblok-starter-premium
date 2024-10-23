@@ -1,17 +1,11 @@
 import {
-  Children,
+  ComponentProps,
   FC,
   forwardRef,
   HTMLAttributes,
   PropsWithChildren,
 } from "react";
 import { ImageSizeProvider, useImageSize } from "./ImageSizeContext";
-import {
-  getPxSize,
-  getPropertyValue,
-  getSectionWidth,
-  baseFontSizePx,
-} from "@/helpers/token";
 import {
   SectionContext,
   SectionContextDefault,
@@ -24,29 +18,29 @@ import {
   ImageStoryContext,
   ImageStoryContextDefault,
 } from "@kickstartds/ds-agency-premium/components/image-story/index.js";
-import { LogosProps } from "@kickstartds/ds-agency-premium/LogosProps-f9474fe2.js";
-import { SectionProps } from "@kickstartds/ds-agency-premium/SectionProps-83d399b4.js";
-import { ImageStoryProps } from "@kickstartds/ds-agency-premium/ImageStoryProps-e853e1e7.js";
+import calculated from "@/token/calculated";
 
 const Section = forwardRef<
   HTMLDivElement,
-  SectionProps & Omit<HTMLAttributes<HTMLElement>, "style" | "content">
+  ComponentProps<typeof SectionContextDefault> &
+    Omit<HTMLAttributes<HTMLElement>, "style" | "content">
 >((props, ref) => {
   const sectionWidthName =
     props.content?.width === "unset"
       ? props.width || "default"
-      : getSectionWidth(props.content?.width || "default") >
-        getSectionWidth(props.width || "default")
+      : calculated.sectionWidths[props.content?.width || "default"] >
+        calculated.sectionWidths[props.width || "default"]
       ? props.width || "default"
       : props.content?.width || "default";
-  const sectionWidth = getSectionWidth(sectionWidthName) * baseFontSizePx;
+  const sectionWidth =
+    calculated.sectionWidths[sectionWidthName] * calculated.baseFontSizePx;
 
   const componentWidth =
     props.content?.mode === "list"
       ? sectionWidth
       : props.content?.mode === "slider"
       ? sectionWidth
-      : sectionWidth / Children.count(props.children);
+      : sectionWidth / 2;
 
   return (
     <ImageSizeProvider size={componentWidth}>
@@ -62,12 +56,10 @@ const SectionProvider: FC<PropsWithChildren> = (props) => (
 
 const Logos = forwardRef<
   HTMLDivElement,
-  LogosProps & HTMLAttributes<HTMLDivElement>
+  ComponentProps<typeof LogosContextDefault> & HTMLAttributes<HTMLDivElement>
 >((props, ref) => {
   const size = useImageSize();
-  const gapSize = getPxSize(
-    getPropertyValue("--dsa-logos__grid--gap-horizontal", "desktop")
-  );
+  const gapSize = calculated.desktop["--dsa-logos__grid--gap-horizontal"];
   const logoSize = Math.ceil(
     (size - gapSize * (props.logosPerRow || 3)) / (props.logosPerRow || 3)
   );
@@ -86,12 +78,11 @@ const LogosProvider: FC<PropsWithChildren> = (props) => (
 
 const ImageStory = forwardRef<
   HTMLDivElement,
-  ImageStoryProps & HTMLAttributes<HTMLDivElement>
+  ComponentProps<typeof ImageStoryContextDefault> &
+    HTMLAttributes<HTMLDivElement>
 >((props, ref) => {
   const size = useImageSize();
-  const gapSize = getPxSize(
-    getPropertyValue("--dsa-image-story--horizontal-padding", "phone")
-  );
+  const gapSize = calculated.phone["--dsa-image-story--horizontal-padding"];
   const imageSize = Math.ceil(size / 2 - gapSize);
 
   return (

@@ -1,0 +1,11 @@
+@import "./nav-flyout-tokens.scss";
+
+.dsa-nav-flyout {
+  .dsa-nav-flyout__label {
+    font-family: var(--ks-font-family-display);
+  }
+
+  .dsa-nav-flyout__cta {
+    margin-top: var(--ks-spacing-stack-m);
+  }
+}

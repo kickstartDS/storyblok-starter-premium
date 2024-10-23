@@ -19,6 +19,7 @@ import {
 import { Cta } from "@kickstartds/ds-agency-premium/components/cta/index.js";
 import { BlogPost } from "@kickstartds/ds-agency-premium/components/blog-post/index.js";
 import { BlogOverview as DsaBlogOverview } from "@kickstartds/ds-agency-premium/components/blog-overview/index.js";
+import { Divider } from "@kickstartds/ds-agency-premium/components/divider/index.js";
 
 type PageProps = {
   blok: Omit<ComponentProps<typeof DsaBlogOverview>, "section"> &
@@ -80,13 +81,19 @@ const BlogOverview: React.FC<PageProps> = ({ blok }) => {
             </Section>
           )}
           {list && list.length > 0 && (
-            <Section headline={{ text: listTitle }} content={{ mode: "list" }}>
+            <Section
+              headline={{ text: listTitle }}
+              content={{ mode: "list" }}
+              spaceBefore="small"
+            >
               {list.map((article) => (
                 <BlogTeaser {...article} key={article.headline} />
               ))}
             </Section>
           )}
-          <hr />
+          <Section spaceBefore="none" spaceAfter="none">
+            <Divider />
+          </Section>
           {more && more.length > 0 && (
             <Section headline={{ text: moreTitle }}>
               {more.map((article) => (
@@ -95,7 +102,11 @@ const BlogOverview: React.FC<PageProps> = ({ blok }) => {
             </Section>
           )}
           {cta && (
-            <Section content={{ mode: "list" }}>
+            <Section
+              backgroundColor="accent"
+              spaceAfter="none"
+              spaceBefore="none"
+            >
               <Cta {...cta} />
             </Section>
           )}

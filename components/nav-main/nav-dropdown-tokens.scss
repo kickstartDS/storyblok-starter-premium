@@ -1,0 +1,12 @@
+:root {
+  .dsa-nav-dropdown {
+    --dsa-nav-dropdown--min-width: 20em;
+    --dsa-nav-dropdown--box-shadow: var(--ks-box-shadow-card-hover);
+    --dsa-nav-dropdown--border: 1px solid var(--ks-border-color-card);
+    --dsa-nav-dropdown--padding: var(--ks-spacing-inset-s);
+    --dsa-nav-dropdown__label--font: var(--ks-font-interface-s);
+    --dsa-nav-dropdown__label--font-weight: var(--ks-font-weight-regular);
+    --dsa-nav-dropdown__label--padding: 0.5em 0.35em;
+    --dsa-nav-dropdown__label_dimmed--opacity: 0.65;
+  }
+}

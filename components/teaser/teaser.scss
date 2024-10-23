@@ -1,0 +1,17 @@
+@import "./teaser-tokens.scss";
+
+.dsa-teaser-card {
+  .c-teaser__topic {
+    transition-property: padding-left;
+    transition: var(--ks-transition-hover);
+    padding-left: 0em;
+    border-left: 0px solid var(--ks-color-secondary);
+  }
+
+  &:hover {
+    .c-teaser__topic {
+      border-left: 4px solid var(--ks-color-secondary);
+      padding-left: 0.5em;
+    }
+  }
+}

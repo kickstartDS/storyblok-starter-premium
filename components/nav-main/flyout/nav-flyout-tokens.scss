@@ -1,0 +1,21 @@
+:root {
+  .dsa-nav-flyout {
+    --dsa-nav-flyout--shadow: 20px 0px 30px var(--ks-color-fg-inverted);
+    --dsa-nav-flyout--background: linear-gradient(
+      125deg,
+      var(--ks-background-color-default),
+      var(--ks-color-fg-to-bg-8)
+    );
+
+    @media (min-width: "48em") {
+      --dsa-nav-flyout--max-width: 30em;
+    }
+
+    --dsa-nav-flyout__label--font: var(--ks-font-interface-m);
+    --dsa-nav-flyout__label_dimmed--opacity: 0.85;
+    --dsa-nav-flyout__label--padding: 0.5em 0;
+    --dsa-nav-flyout__sublist--padding: 0.25em 0 0.5em 1.125em;
+    --dsa-nav-flyout__sublist__label--font: var(--ks-font-interface-s);
+    --dsa-nav-flyout__sublist__label--padding: 0.45em 0;
+  }
+}

@@ -1,4 +1,55 @@
-:root,
-[ks-inverted] {
-  --dsa-headline--higlight-gradient: var(--ks-text-color-primary);
+@import "./headline-tokens.scss";
+:root {
+  .dsa-headline {
+    &--align-center {
+      &:after {
+        margin: auto;
+      }
+    }
+
+    .dsa-headline__subheadline:not(:first-child),
+    .dsa-headline__headline:not(:first-child) {
+      margin-top: var(--headline-spacing);
+    }
+
+    &--h1 {
+      --headline-spacing: calc(var(--ks-font-size-display-xxl) * 0.5);
+    }
+
+    &--h2 {
+      --headline-spacing: calc(var(--ks-font-size-display-xl) * 0.5);
+    }
+
+    &--h1 {
+      .dsa-headline__headline:not(:last-child),
+      .dsa-headline__headline:only-child,
+      .dsa-headline__subheadline:not(:last-child) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &:after {
+          content: "";
+          background-color: var(--ks-color-secondary);
+          height: 6px;
+          width: 10%;
+          min-width: 3rem;
+          max-width: 4rem;
+          margin-top: var(--headline-spacing);
+        }
+      }
+
+      &.dsa-headline--align-left {
+        .dsa-headline__headline {
+          align-items: flex-start;
+        }
+      }
+
+      &.dsa-headline--align-right {
+        .dsa-headline__headline {
+          align-items: flex-end;
+        }
+      }
+    }
+  }
 }

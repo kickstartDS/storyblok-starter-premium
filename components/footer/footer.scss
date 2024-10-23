@@ -1,0 +1,107 @@
+@import "./footer-tokens.scss";
+
+.dsa-footer {
+  --dsa-footer--border-top: var(--dsa-footer__content--border);
+  flex-direction: column;
+
+  ul,
+  li {
+    list-style: none;
+  }
+
+  .dsa-footer__content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &--bottom {
+      padding: var(--ks-spacing-stack-s) var(--dsa-content--spacing);
+      align-items: center;
+      gap: var(--ks-spacing-stack-s) var(--ks-spacing-inline-m);
+    }
+
+    &--top {
+      align-items: flex-start;
+      border-top: 0;
+    }
+  }
+
+  .dsa-footer__headline {
+    margin-bottom: 0.5em;
+    font: var(--dsa-footer__headline--font);
+    font-weight: var(--dsa-footer__headline--font-weight);
+    color: var(--dsa-footer__headline--color);
+    text-decoration: none;
+  }
+
+  .dsa-footer__column {
+    display: flex;
+    flex-grow: 1;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+
+    @media (max-width: 490px) {
+      flex-basis: 100%;
+    }
+
+    &.dsa-footer__address {
+      flex-shrink: 1;
+      flex-grow: 0;
+      flex-basis: max-content;
+    }
+  }
+
+  .dsa-footer__sublist {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: flex;
+    }
+  }
+
+  .dsa-footer__links--top {
+    margin: 0;
+    padding: 0;
+    flex-basis: 540px;
+    grid-gap: var(--ks-spacing-s) var(--ks-spacing-m);
+  }
+
+  .dsa-footer__links--bottom {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .dsa-footer__item {
+    color: var(--dsa-footer__link--color);
+    font: var(--dsa-footer__link--font);
+  }
+
+  .dsa-footer__link {
+    padding: 0.15em 0;
+  }
+
+  .dsa-footer__contact {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-shrink: 1;
+    flex-grow: 0;
+    flex-wrap: wrap;
+    gap: 0 var(--ks-spacing-inline-m);
+    margin-bottom: 0.5em;
+
+    .dsa-footer__headline {
+      margin-bottom: 0;
+    }
+  }
+  .dsa-footer__social {
+    margin: 0;
+    padding: 0;
+  }
+}

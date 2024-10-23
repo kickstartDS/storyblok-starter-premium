@@ -363,7 +363,7 @@
       },
       "interface": {
         "base": {
-          "value": "{ks.color.fg.alpha.4.base}",
+          "value": "{ks.color.fg.alpha.3.base}",
           "attributes": {
             "category": "color"
           },

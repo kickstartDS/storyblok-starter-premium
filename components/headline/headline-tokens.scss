@@ -1,0 +1,12 @@
+:root,
+[ks-inverted],
+[ks-theme],
+.dsa-headline {
+  --dsa-headline--gap: 0;
+  --dsa-headline--font-weight: var(--ks-font-weight-thin);
+  --dsa-headline--higlight-background: var(--ks-text-color-primary);
+  --dsa-headline__subheadline--font-weight: var(--ks-font-weight-bold);
+
+  --dsa-headline_h1__subheadline--font: var(--ks-font-copy-xxl);
+  --dsa-headline_h2__subheadline--font: var(--ks-font-copy-xl);
+}

@@ -1,0 +1,24 @@
+:root,
+[ks-inverted],
+[ks-theme] {
+  --dsa-text-color-on-primary: var(--ks-color-fg-inverted);
+  --dsa-text_highlight--font: var(--ks-font-copy-xl) !important;
+
+  // Logo
+  --dsa-logo--height: 1.5rem;
+
+  @media (min-width: "94rem") {
+    --dsa-logo--height: 1.35rem;
+  }
+
+  @media (min-width: "102rem") {
+    --dsa-logo--height: 1.75rem;
+  }
+
+  // Link
+  --dsa-topic--font-weight: var(--ks-font-weight-medium);
+
+  // Link
+  --dsa-link--text-decoration: underline;
+  --dsa-link--text-decoration_hover: none;
+}

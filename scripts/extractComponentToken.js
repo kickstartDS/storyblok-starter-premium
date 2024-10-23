@@ -25,11 +25,9 @@ const allToken = componentCssFiles.reduce((acc, componentCssFile) => {
 }, []);
 
 fs.writeFileSync(
-  "token/components.ts",
+  "token/components.js",
   `
-import { FullExtractResult } from "custom-property-extract/dist/types";
-
-const token: FullExtractResult[] = ${JSON.stringify(allToken)};
-export default token;
+const token = ${JSON.stringify(allToken)};
+module.exports = token;
 `
 );

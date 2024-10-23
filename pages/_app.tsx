@@ -29,6 +29,9 @@ if (typeof window !== "undefined") {
 const handleRouteChange = (url: string) => {
   // close mobile nav
   window._ks.radio.emit("location.change", url);
+  // https://github.com/vercel/next.js/issues/33060
+  document.activeElement instanceof HTMLElement &&
+    document.activeElement.blur();
 };
 
 const setActiveNavItem = (navItems: any[] = [], currentRoute: string) => {

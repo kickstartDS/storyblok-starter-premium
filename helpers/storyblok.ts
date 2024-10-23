@@ -125,6 +125,8 @@ export function storyProcessing(blok: Record<string, any>) {
       value.filename &&
       value.fieldtype === "asset"
     ) {
+      if (parent.component === "seo") return;
+
       parent[key] = !value.filename.startsWith("http")
         ? `https:${value.filename}`
         : value.filename;

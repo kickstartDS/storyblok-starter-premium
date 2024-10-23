@@ -1,0 +1,9 @@
+@import "./section-tokens.scss";
+
+:root {
+  .dsa-section.l-section--full {
+    .l-section__container--headline {
+      padding: 0;
+    }
+  }
+}

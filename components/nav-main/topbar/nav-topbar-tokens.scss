@@ -1,0 +1,15 @@
+:root {
+  .dsa-nav-topbar {
+    --dsa-nav-topbar__label--font-weight: var(--ks-font-weight-regular);
+    --dsa-nav-topbar__label--font: var(--ks-font-interface-s);
+    --dsa-nav-topbar__label_dimmed--opacity: 0.8;
+
+    @media (min-width: "90em") {
+      --dsa-nav-topbar__label--font: var(--ks-font-interface-xs);
+    }
+
+    @media (min-width: "102rem") {
+      --dsa-nav-topbar__label--font: var(--ks-font-interface-s);
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@import "./nav-topbar-tokens.scss";
+
+.dsa-nav-topbar {
+  .dsa-nav-topbar__label {
+    font-family: var(--ks-font-family-display);
+  }
+  &__cta {
+    margin-left: var(--ks-spacing-inline-m);
+  }
+
+  &__item {
+    position: relative;
+    &--active {
+      &::after {
+        position: absolute;
+        background-color: var(--ks-color-secondary);
+        content: "";
+        left: 0;
+        width: 100%;
+        height: 4px;
+        bottom: 0;
+      }
+    }
+  }
+
+  .dsa-button.dsa-nav-topbar__cta {
+    font: var(--dsa-nav-topbar__label--font);
+    font-weight: var(--dsa-button--font-weight);
+    padding: 0.35em 0.25em 0.35em 0.75em;
+    height: fit-content;
+    align-self: center;
+    margin: var(--dsa-nav-topbar__label--padding);
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+}

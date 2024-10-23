@@ -1,0 +1,17 @@
+:root {
+  .dsa-footer {
+    --dsa-footer--gap-vertical: var(--ks-spacing-inline-xl);
+    --dsa-footer__links--gap: var(--ks-spacing-s) var(--ks-spacing-inline-m);
+    --dsa-footer__content--border: 1px solid var(--ks-border-color-default);
+
+    --dsa-footer__headline--color: var(--ks-text-color-default);
+    --dsa-footer__headline--font: var(--ks-font-copy-xs);
+    --dsa-footer__headline--font-weight: var(--ks-font-weight-bold);
+
+    --dsa-footer__link--color_hover: var(--ks-color-fg);
+    --dsa-footer__link--color: var(--ks-text-color-interface-interactive);
+    --dsa-footer__link--font: var(--ks-font-copy-xs);
+    --dsa-footer__link--font-weight: var(--ks-font-weight-regular);
+    --dsa-footer__link--text-tecoration_hover: none;
+  }
+}

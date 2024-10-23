@@ -17,3 +17,75 @@
 
 [[plugins]]
   package = "/plugins/netlify-plugin-ksds-storyblok"
+
+[[redirects]]
+  from="/brauche-ich-ein-design-system"
+  to="/design-system-services/brauche-ich-ein-design-system"
+  status = 301
+  force = false
+
+[[redirects]]
+  from="/design-system-services"
+  to="/design-system-services/design-system-services"
+  status = 301
+  force = false
+
+[[redirects]]
+  from="/headless-cms"
+  to="/headless-cms/headless-cms-services"
+  status = 301
+  force = false
+
+[[redirects]]
+  from="/internetagentur/partner"
+  to="/ueber-uns/partner"
+  status = 301
+  force = false
+
+[[redirects]]
+  from="/kontakt"
+  to="/ueber-uns/kontakt"
+  status = 301
+  force = false
+
+[[redirects]]
+  from="/leistungen/ux-strategie-und-beratung"
+  to="/ux-strategie-beratung"
+  status = 301
+  force = false
+
+[[redirects]]
+  from="/referenzen"
+  to="/ueber-uns/referenzen"
+  status = 301
+  force = false
+
+[[redirects]]
+  from="/vorteile-eines-design-systems"
+  to="/design-system-services/vorteile-eines-design-systems"
+  status = 301
+  force = false
+
+[[redirects]]
+  from="/was-sind-headless-cms"
+  to="/headless-cms/was-ist-ein-headless-cms"
+  status = 301
+  force = false
+
+[[redirects]]
+  from="/web-frontends/design-system-implementierung"
+  to="/design-system-services/design-system-implementierung"
+  status = 301
+  force = false
+
+[[redirects]]
+  from="/web-frontends/design-system-implementierung/storybook"
+  to="/glossar/storybook"
+  status = 301
+  force = false
+
+[[redirects]]
+  from="/web-frontends/frontend-architektur/atomic-design"
+  to="/glossar/atomic-design"
+  status = 301
+  force = false

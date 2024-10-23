@@ -5,6 +5,7 @@ import Document, {
   NextScript,
   DocumentContext,
 } from "next/document";
+import Script from "next/script";
 
 class KsDocument extends Document<any> {
   static async getInitialProps(ctx: DocumentContext) {
@@ -33,6 +34,10 @@ class KsDocument extends Document<any> {
         <body>
           <Main />
           <NextScript />
+          <Script
+            strategy="beforeInteractive"
+            src="https://cdn.debugbear.com/U3aC0VFDm3bP.js"
+          />
         </body>
       </Html>
     );

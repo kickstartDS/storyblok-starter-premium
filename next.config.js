@@ -1,6 +1,7 @@
 const cspHeader = `
     default-src 'self';
-    script-src 'self' 'unsafe-eval' 'unsafe-inline' https://app.storyblok.com;
+    connect-src 'self' https://data.debugbear.com;
+    script-src 'self' 'unsafe-eval' 'unsafe-inline' https://app.storyblok.com https://cdn.debugbear.com;
     style-src 'self' 'unsafe-inline';
     img-src 'self' blob: data: https://a.storyblok.com;
     font-src 'self';

@@ -1,0 +1,10 @@
+:root {
+  .dsa-teaser-card {
+    --dsa-teaser-card--shadow: none;
+
+    --dsa-teaser-card--border-color: transparent;
+    --dsa-teaser-card--border-color_hover: transparent;
+
+    --dsa-teaser-card--padding: var(--ks-spacing-inset-stretch-m);
+  }
+}
