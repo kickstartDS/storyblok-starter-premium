@@ -17,3 +17,21 @@
 
 [[plugins]]
   package = "/plugins/netlify-plugin-ksds-storyblok"
+
+[[redirects]]
+  from="/downloads-en.html"
+  to="/en/contact"
+  status = 301
+  force = false
+
+[[redirects]]
+  from="/downloads.html"
+  to="/kontakt"
+  status = 301
+  force = false
+
+[[redirects]]
+  from="/start.html"
+  to="/"
+  status = 301
+  force = false
