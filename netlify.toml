@@ -35,3 +35,9 @@
   to="/"
   status = 301
   force = false
+
+[[redirects]]
+  from="/praezisions-leistungsverstaerker.html "
+  to="/produkte"
+  status = 301
+  force = false
