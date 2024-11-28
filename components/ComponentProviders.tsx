@@ -51,6 +51,7 @@ import { useBlurHashes } from "./BlurHashContext";
 import { useImagePriority } from "./ImagePriorityContext";
 import { useImageSize } from "./ImageSizeContext";
 import { useImageRatio } from "./ImageRatioContext";
+import { IconProvider } from "./icon/IconProvider";
 
 const Link = forwardRef<
   HTMLAnchorElement,
@@ -217,57 +218,59 @@ const StorytellingProvider: FC<PropsWithChildren> = (props) => (
 );
 
 const ComponentProviders = (props: PropsWithChildren) => (
-  <StorytellingProvider>
-    <PictureProvider>
-      <HeroProvider>
-        <LinkProvider>
-          <NavTopbarProvider>
-            <FooterProvider>
-              <NavFlyoutProvider>
-                <TeaserProvider>
-                  {/* @ts-expect-error */}
-                  <CtaContext.Provider value={StoryblokSubComponent}>
+  <IconProvider>
+    <StorytellingProvider>
+      <PictureProvider>
+        <HeroProvider>
+          <LinkProvider>
+            <NavTopbarProvider>
+              <FooterProvider>
+                <NavFlyoutProvider>
+                  <TeaserProvider>
                     {/* @ts-expect-error */}
-                    <FeatureContext.Provider value={StoryblokSubComponent}>
+                    <CtaContext.Provider value={StoryblokSubComponent}>
                       {/* @ts-expect-error */}
-                      <StatContext.Provider value={StoryblokSubComponent}>
-                        <TestimonialContext.Provider
-                          // @ts-expect-error
-                          value={StoryblokSubComponent}
-                        >
-                          <BlogHeadContext.Provider
+                      <FeatureContext.Provider value={StoryblokSubComponent}>
+                        {/* @ts-expect-error */}
+                        <StatContext.Provider value={StoryblokSubComponent}>
+                          <TestimonialContext.Provider
                             // @ts-expect-error
                             value={StoryblokSubComponent}
                           >
-                            <BlogAsideContext.Provider
+                            <BlogHeadContext.Provider
                               // @ts-expect-error
                               value={StoryblokSubComponent}
                             >
-                              <BlogTeaserContext.Provider
+                              <BlogAsideContext.Provider
                                 // @ts-expect-error
                                 value={StoryblokSubComponent}
                               >
-                                <BlogAuthorContext.Provider
+                                <BlogTeaserContext.Provider
                                   // @ts-expect-error
                                   value={StoryblokSubComponent}
                                 >
-                                  {props.children}
-                                </BlogAuthorContext.Provider>
-                              </BlogTeaserContext.Provider>
-                            </BlogAsideContext.Provider>
-                          </BlogHeadContext.Provider>
-                        </TestimonialContext.Provider>
-                      </StatContext.Provider>
-                    </FeatureContext.Provider>
-                  </CtaContext.Provider>
-                </TeaserProvider>
-              </NavFlyoutProvider>
-            </FooterProvider>
-          </NavTopbarProvider>
-        </LinkProvider>
-      </HeroProvider>
-    </PictureProvider>
-  </StorytellingProvider>
+                                  <BlogAuthorContext.Provider
+                                    // @ts-expect-error
+                                    value={StoryblokSubComponent}
+                                  >
+                                    {props.children}
+                                  </BlogAuthorContext.Provider>
+                                </BlogTeaserContext.Provider>
+                              </BlogAsideContext.Provider>
+                            </BlogHeadContext.Provider>
+                          </TestimonialContext.Provider>
+                        </StatContext.Provider>
+                      </FeatureContext.Provider>
+                    </CtaContext.Provider>
+                  </TeaserProvider>
+                </NavFlyoutProvider>
+              </FooterProvider>
+            </NavTopbarProvider>
+          </LinkProvider>
+        </HeroProvider>
+      </PictureProvider>
+    </StorytellingProvider>
+  </IconProvider>
 );
 
 export default ComponentProviders;
