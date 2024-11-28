@@ -54,6 +54,7 @@ token/storybook/tokens.js
 token/storybook/icons.svg
 token/components.js
 token/calculated.js
+token/InlineIcon.tsx
 
 # Next
 public/sitemap*
