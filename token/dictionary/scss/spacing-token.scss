@@ -44,36 +44,43 @@
   --ks-spacing-xxs-bp-factor-tablet: calc(var(--ks-spacing-xxs-bp-factor-phone) * var(--spacing-xxs-bp-factor));
   --ks-spacing-xxs-bp-factor-laptop: calc(var(--ks-spacing-xxs-bp-factor-tablet) * var(--spacing-xxs-bp-factor));
   --ks-spacing-xxs-bp-factor-desktop: calc(var(--ks-spacing-xxs-bp-factor-laptop) * var(--spacing-xxs-bp-factor));
+  --ks-spacing-xxs-bp-factor-tv: calc(var(--ks-spacing-xxs-bp-factor-dektop) * var(--spacing-xxs-bp-factor));
 
   --ks-spacing-xs-bp-factor-phone: calc(1 * var(--spacing-xs-bp-factor));
   --ks-spacing-xs-bp-factor-tablet: calc(var(--ks-spacing-xs-bp-factor-phone) * var(--spacing-xs-bp-factor));
   --ks-spacing-xs-bp-factor-laptop: calc(var(--ks-spacing-xs-bp-factor-tablet) * var(--spacing-xs-bp-factor));
   --ks-spacing-xs-bp-factor-desktop: calc(var(--ks-spacing-xs-bp-factor-laptop) * var(--spacing-xs-bp-factor));
+  --ks-spacing-xs-bp-factor-tv: calc(var(--ks-spacing-xs-bp-factor-desktop) * var(--spacing-xs-bp-factor));
 
   --ks-spacing-s-bp-factor-phone: calc(1 * var(--spacing-s-bp-factor));
   --ks-spacing-s-bp-factor-tablet: calc(var(--ks-spacing-s-bp-factor-phone) * var(--spacing-s-bp-factor));
   --ks-spacing-s-bp-factor-laptop: calc(var(--ks-spacing-s-bp-factor-tablet) * var(--spacing-s-bp-factor));
   --ks-spacing-s-bp-factor-desktop: calc(var(--ks-spacing-s-bp-factor-laptop) * var(--spacing-s-bp-factor));
+  --ks-spacing-s-bp-factor-tv: calc(var(--ks-spacing-s-bp-factor-desktop) * var(--spacing-s-bp-factor));
 
   --ks-spacing-m-bp-factor-phone: calc(1 * var(--spacing-m-bp-factor));
   --ks-spacing-m-bp-factor-tablet: calc(var(--ks-spacing-m-bp-factor-phone) * var(--spacing-m-bp-factor));
   --ks-spacing-m-bp-factor-laptop: calc(var(--ks-spacing-m-bp-factor-tablet) * var(--spacing-m-bp-factor));
   --ks-spacing-m-bp-factor-desktop: calc(var(--ks-spacing-m-bp-factor-laptop) * var(--spacing-m-bp-factor));
+  --ks-spacing-m-bp-factor-tv: calc(var(--ks-spacing-m-bp-factor-desktop) * var(--spacing-m-bp-factor));
 
   --ks-spacing-l-bp-factor-phone: calc(1 * var(--spacing-l-bp-factor));
   --ks-spacing-l-bp-factor-tablet: calc(var(--ks-spacing-l-bp-factor-phone) * var(--spacing-l-bp-factor));
   --ks-spacing-l-bp-factor-laptop: calc(var(--ks-spacing-l-bp-factor-tablet) * var(--spacing-l-bp-factor));
   --ks-spacing-l-bp-factor-desktop: calc(var(--ks-spacing-l-bp-factor-laptop) * var(--spacing-l-bp-factor));
+  --ks-spacing-l-bp-factor-tv: calc(var(--ks-spacing-l-bp-factor-desktop) * var(--spacing-l-bp-factor));
 
   --ks-spacing-xl-bp-factor-phone: calc(1 * var(--spacing-xl-bp-factor));
   --ks-spacing-xl-bp-factor-tablet: calc(var(--ks-spacing-xl-bp-factor-phone) * var(--spacing-xl-bp-factor));
   --ks-spacing-xl-bp-factor-laptop: calc(var(--ks-spacing-xl-bp-factor-tablet) * var(--spacing-xl-bp-factor));
   --ks-spacing-xl-bp-factor-desktop: calc(var(--ks-spacing-xl-bp-factor-laptop) * var(--spacing-xl-bp-factor));
+  --ks-spacing-xl-bp-factor-tv: calc(var(--ks-spacing-xl-bp-factor-desktop) * var(--spacing-xl-bp-factor));
 
   --ks-spacing-xxl-bp-factor-phone: calc(1 * var(--spacing-xxl-bp-factor));
   --ks-spacing-xxl-bp-factor-tablet: calc(var(--ks-spacing-xxl-bp-factor-phone) * var(--spacing-xxl-bp-factor));
   --ks-spacing-xxl-bp-factor-laptop: calc(var(--ks-spacing-xxl-bp-factor-tablet) * var(--spacing-xxl-bp-factor));
   --ks-spacing-xxl-bp-factor-desktop: calc(var(--ks-spacing-xxl-bp-factor-laptop) * var(--spacing-xxl-bp-factor));
+  --ks-spacing-xxl-bp-factor-tv: calc(var(--ks-spacing-xxl-bp-factor-desktop) * var(--spacing-xxl-bp-factor));
 }
 
 // Spacings get BP-factor applied
@@ -154,5 +161,20 @@
     --ks-spacing-l-bp-factor: var(--ks-spacing-l-bp-factor-desktop);
     --ks-spacing-xl-bp-factor: var(--ks-spacing-xl-bp-factor-desktop);
     --ks-spacing-xxl-bp-factor: var(--ks-spacing-xxl-bp-factor-desktop);
+  }
+}
+
+@media (min-width: 122em) {
+  :root,
+  [ks-theme],
+  [ks-inverted="false"],
+  [ks-inverted="true"] {
+    --ks-spacing-xxs-bp-factor: var(--ks-spacing-xxs-bp-factor-tv);
+    --ks-spacing-xs-bp-factor: var(--ks-spacing-xs-bp-factor-tv);
+    --ks-spacing-s-bp-factor: var(--ks-spacing-s-bp-factor-tv);
+    --ks-spacing-m-bp-factor: var(--ks-spacing-m-bp-factor-tv);
+    --ks-spacing-l-bp-factor: var(--ks-spacing-l-bp-factor-tv);
+    --ks-spacing-xl-bp-factor: var(--ks-spacing-xl-bp-factor-tv);
+    --ks-spacing-xxl-bp-factor: var(--ks-spacing-xxl-bp-factor-tv);
   }
 }

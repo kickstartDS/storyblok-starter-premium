@@ -81,6 +81,9 @@
           },
           "desktop": {
             "value": 1.35
+          },
+          "tv": {
+            "value": 3
           }
         },
         "xxs-base": {
@@ -134,7 +137,7 @@
           }
         },
         "xl-base": {
-          "value": "1.6882rem",
+          "value": "1.875rem",
           "attributes": {
             "category": "size"
           },
@@ -144,7 +147,7 @@
           }
         },
         "xxl-base": {
-          "value": "2.068rem",
+          "value": "2.5rem",
           "attributes": {
             "category": "size"
           },
@@ -158,10 +161,13 @@
         "bp-factor": {
           "tablet": {
             "value": 1.125
+          },
+          "tv": {
+            "value": 1.35
           }
         },
         "xxs-base": {
-          "value": "0.544rem",
+          "value": "0.75rem",
           "attributes": {
             "category": "size"
           },
@@ -171,7 +177,7 @@
           }
         },
         "xs-base": {
-          "value": "0.6664rem",
+          "value": "0.875rem",
           "attributes": {
             "category": "size"
           },
@@ -181,7 +187,7 @@
           }
         },
         "s-base": {
-          "value": "0.8163rem",
+          "value": "0.9125rem",
           "attributes": {
             "category": "size"
           },
@@ -211,7 +217,7 @@
           }
         },
         "xl-base": {
-          "value": "1.5006rem",
+          "value": "1.35rem",
           "attributes": {
             "category": "size"
           },
@@ -221,7 +227,7 @@
           }
         },
         "xxl-base": {
-          "value": "1.8383rem",
+          "value": "1.5rem",
           "attributes": {
             "category": "size"
           },
@@ -235,10 +241,13 @@
         "bp-factor": {
           "tablet": {
             "value": 1.125
+          },
+          "tv": {
+            "value": 1.35
           }
         },
         "xxs-base": {
-          "value": "0.544rem",
+          "value": "0.75rem",
           "attributes": {
             "category": "size"
           },
@@ -248,7 +257,7 @@
           }
         },
         "xs-base": {
-          "value": "0.6664rem",
+          "value": "0.875rem",
           "attributes": {
             "category": "size"
           },
@@ -258,7 +267,7 @@
           }
         },
         "s-base": {
-          "value": "0.8163rem",
+          "value": "0.9125rem",
           "attributes": {
             "category": "size"
           },
@@ -288,7 +297,7 @@
           }
         },
         "xl-base": {
-          "value": "1.5006rem",
+          "value": "1.35rem",
           "attributes": {
             "category": "size"
           },
@@ -298,7 +307,7 @@
           }
         },
         "xxl-base": {
-          "value": "1.8383rem",
+          "value": "1.5rem",
           "attributes": {
             "category": "size"
           },
@@ -312,10 +321,13 @@
         "bp-factor": {
           "tablet": {
             "value": 1.125
+          },
+          "tv": {
+            "value": 1.35
           }
         },
         "xxs-base": {
-          "value": "0.544rem",
+          "value": "0.75rem",
           "attributes": {
             "category": "size"
           },
@@ -325,7 +337,7 @@
           }
         },
         "xs-base": {
-          "value": "0.6664rem",
+          "value": "0.875rem",
           "attributes": {
             "category": "size"
           },
@@ -335,7 +347,7 @@
           }
         },
         "s-base": {
-          "value": "0.8163rem",
+          "value": "0.9125rem",
           "attributes": {
             "category": "size"
           },
@@ -365,7 +377,7 @@
           }
         },
         "xl-base": {
-          "value": "1.5006rem",
+          "value": "1.35rem",
           "attributes": {
             "category": "size"
           },
@@ -375,7 +387,7 @@
           }
         },
         "xxl-base": {
-          "value": "1.8383rem",
+          "value": "1.5rem",
           "attributes": {
             "category": "size"
           },

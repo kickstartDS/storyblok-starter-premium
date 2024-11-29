@@ -10,7 +10,7 @@
           }
         },
         "base": {
-          "value": "0.246",
+          "value": "0.15",
           "attributes": {
             "category": "size"
           }
@@ -27,6 +27,9 @@
           },
           "desktop": {
             "value": "2.4414"
+          },
+          "tv": {
+            "value": "2.75"
           }
         }
       },
@@ -39,7 +42,7 @@
           }
         },
         "base": {
-          "value": "0.3567",
+          "value": "0.25",
           "attributes": {
             "category": "size"
           }
@@ -56,6 +59,9 @@
           },
           "desktop": {
             "value": "2.4414"
+          },
+          "tv": {
+            "value": "2.75"
           }
         }
       },
@@ -68,7 +74,7 @@
           }
         },
         "base": {
-          "value": "0.5172",
+          "value": "0.5",
           "attributes": {
             "category": "size"
           }
@@ -85,6 +91,9 @@
           },
           "desktop": {
             "value": "2.4414"
+          },
+          "tv": {
+            "value": "2.75"
           }
         }
       },
@@ -114,6 +123,9 @@
           },
           "desktop": {
             "value": "2.4414"
+          },
+          "tv": {
+            "value": "2.75"
           }
         }
       },
@@ -126,7 +138,7 @@
           }
         },
         "base": {
-          "value": "1.0875",
+          "value": "1",
           "attributes": {
             "category": "size"
           }
@@ -143,6 +155,9 @@
           },
           "desktop": {
             "value": "2.4414"
+          },
+          "tv": {
+            "value": "2.75"
           }
         }
       },
@@ -155,7 +170,7 @@
           }
         },
         "base": {
-          "value": "1.5769",
+          "value": "1.5",
           "attributes": {
             "category": "size"
           }
@@ -172,6 +187,9 @@
           },
           "desktop": {
             "value": "2.4414"
+          },
+          "tv": {
+            "value": "2.75"
           }
         }
       },
@@ -184,7 +202,7 @@
           }
         },
         "base": {
-          "value": "2.2865",
+          "value": "2.25",
           "attributes": {
             "category": "size"
           }
@@ -200,7 +218,10 @@
             "value": "1.9531"
           },
           "desktop": {
-            "value": "2.4414"
+            "value": "2.2"
+          },
+          "tv": {
+            "value": "2.75"
           }
         }
       },
