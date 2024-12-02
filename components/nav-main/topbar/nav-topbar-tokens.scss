@@ -4,7 +4,9 @@
     --dsa-nav-topbar__label--font: var(--ks-font-interface-s);
     --dsa-nav-topbar__label_dimmed--opacity: 0.8;
 
-    @media (min-width: "90em") {
+    --dsa-nav-topbar__label--font: var(--ks-font-interface-xxs);
+
+    @media (min-width: "96em") {
       --dsa-nav-topbar__label--font: var(--ks-font-interface-xs);
     }
 
