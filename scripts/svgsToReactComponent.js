@@ -25,7 +25,12 @@ export const InlineIcon: FC<IconProps & SVGAttributes<SVGElement>> = ({
   icon,
   className,
   ...props
-}) => icons[icon]({className: classNames("icon", className), ...props});
+}) => {
+  if (!icons[icon]) {
+    throw \`unknown icon: \${icon}\`;
+  }
+  return icons[icon]({className: classNames("icon", className), ...props});
+}
 `;
   return result;
 };
