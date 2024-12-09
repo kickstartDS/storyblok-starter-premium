@@ -1,13 +1,11 @@
 :root {
   .dsa-nav-topbar {
     --dsa-nav-topbar__label--font-weight: var(--ks-font-weight-regular);
-    --dsa-nav-topbar__label--font: var(--ks-font-interface-s);
+    --dsa-nav-topbar__label--font: var(--ks-font-interface-xs);
     --dsa-nav-topbar__label_dimmed--opacity: 0.8;
 
-    --dsa-nav-topbar__label--font: var(--ks-font-interface-xxs);
-
     @media (min-width: "96em") {
-      --dsa-nav-topbar__label--font: var(--ks-font-interface-xs);
+      --dsa-nav-topbar__label--font: var(--ks-font-interface-s);
     }
 
     @media (min-width: "102rem") {

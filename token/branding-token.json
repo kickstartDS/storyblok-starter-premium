@@ -24,7 +24,7 @@
       "family": "Metropolis, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif",
       "font-size": 18,
       "line-height": 1.15,
-      "scale-ratio": 1.225,
+      "scale-ratio": 1.15,
       "bp-factor": {
         "phone": 1.125,
         "tablet": 1.25,
@@ -36,7 +36,7 @@
       "family": "system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
       "font-size": 16,
       "line-height": 1.5,
-      "scale-ratio": 1.225,
+      "scale-ratio": 1.15,
       "bp-factor": {
         "tablet": 1.125
       }
@@ -45,7 +45,7 @@
       "family": "system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
       "font-size": 16,
       "line-height": 1.5,
-      "scale-ratio": 1.225,
+      "scale-ratio": 1.15,
       "bp-factor": {
         "tablet": 1.125
       }
@@ -54,7 +54,7 @@
       "family": "ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace",
       "font-size": 16,
       "line-height": 1.5,
-      "scale-ratio": 1.225,
+      "scale-ratio": 1.15,
       "bp-factor": {
         "tablet": 1.125
       }

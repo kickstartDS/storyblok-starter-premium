@@ -77,17 +77,17 @@
             "value": 1.25
           },
           "laptop": {
-            "value": 1.35
+            "value": 1.45
           },
           "desktop": {
-            "value": 1.35
+            "value": 1.6
           },
           "tv": {
-            "value": 1.45
+            "value": 1.75
           }
         },
         "xxs-base": {
-          "value": "0.612rem",
+          "value": "0.7397rem",
           "attributes": {
             "category": "size"
           },
@@ -97,7 +97,7 @@
           }
         },
         "xs-base": {
-          "value": "0.7497rem",
+          "value": "0.8507rem",
           "attributes": {
             "category": "size"
           },
@@ -107,7 +107,7 @@
           }
         },
         "s-base": {
-          "value": "0.9184rem",
+          "value": "0.9783rem",
           "attributes": {
             "category": "size"
           },
@@ -127,7 +127,7 @@
           }
         },
         "l-base": {
-          "value": "1.3781rem",
+          "value": "1.2938rem",
           "attributes": {
             "category": "size"
           },
@@ -137,7 +137,7 @@
           }
         },
         "xl-base": {
-          "value": "1.875rem",
+          "value": "1.4878rem",
           "attributes": {
             "category": "size"
           },
@@ -147,7 +147,7 @@
           }
         },
         "xxl-base": {
-          "value": "2.5rem",
+          "value": "2rem",
           "attributes": {
             "category": "size"
           },
@@ -167,7 +167,7 @@
           }
         },
         "xxs-base": {
-          "value": "0.75rem",
+          "value": "0.6575rem",
           "attributes": {
             "category": "size"
           },
@@ -177,7 +177,7 @@
           }
         },
         "xs-base": {
-          "value": "0.875rem",
+          "value": "0.7561rem",
           "attributes": {
             "category": "size"
           },
@@ -187,7 +187,7 @@
           }
         },
         "s-base": {
-          "value": "0.9125rem",
+          "value": "0.8696rem",
           "attributes": {
             "category": "size"
           },
@@ -207,7 +207,7 @@
           }
         },
         "l-base": {
-          "value": "1.225rem",
+          "value": "1.15rem",
           "attributes": {
             "category": "size"
           },
@@ -217,7 +217,7 @@
           }
         },
         "xl-base": {
-          "value": "1.35rem",
+          "value": "1.3225rem",
           "attributes": {
             "category": "size"
           },
@@ -227,7 +227,7 @@
           }
         },
         "xxl-base": {
-          "value": "1.5rem",
+          "value": "1.5209rem",
           "attributes": {
             "category": "size"
           },
@@ -247,7 +247,7 @@
           }
         },
         "xxs-base": {
-          "value": "0.75rem",
+          "value": "0.6575rem",
           "attributes": {
             "category": "size"
           },
@@ -257,7 +257,7 @@
           }
         },
         "xs-base": {
-          "value": "0.875rem",
+          "value": "0.7561rem",
           "attributes": {
             "category": "size"
           },
@@ -267,7 +267,7 @@
           }
         },
         "s-base": {
-          "value": "0.9125rem",
+          "value": "0.8696rem",
           "attributes": {
             "category": "size"
           },
@@ -287,7 +287,7 @@
           }
         },
         "l-base": {
-          "value": "1.225rem",
+          "value": "1.15rem",
           "attributes": {
             "category": "size"
           },
@@ -297,7 +297,7 @@
           }
         },
         "xl-base": {
-          "value": "1.35rem",
+          "value": "1.3225rem",
           "attributes": {
             "category": "size"
           },
@@ -307,7 +307,7 @@
           }
         },
         "xxl-base": {
-          "value": "1.5rem",
+          "value": "1.5209rem",
           "attributes": {
             "category": "size"
           },
@@ -327,7 +327,7 @@
           }
         },
         "xxs-base": {
-          "value": "0.75rem",
+          "value": "0.6575rem",
           "attributes": {
             "category": "size"
           },
@@ -337,7 +337,7 @@
           }
         },
         "xs-base": {
-          "value": "0.875rem",
+          "value": "0.7561rem",
           "attributes": {
             "category": "size"
           },
@@ -347,7 +347,7 @@
           }
         },
         "s-base": {
-          "value": "0.9125rem",
+          "value": "0.8696rem",
           "attributes": {
             "category": "size"
           },
@@ -367,7 +367,7 @@
           }
         },
         "l-base": {
-          "value": "1.225rem",
+          "value": "1.15rem",
           "attributes": {
             "category": "size"
           },
@@ -377,7 +377,7 @@
           }
         },
         "xl-base": {
-          "value": "1.35rem",
+          "value": "1.3225rem",
           "attributes": {
             "category": "size"
           },
@@ -387,7 +387,7 @@
           }
         },
         "xxl-base": {
-          "value": "1.5rem",
+          "value": "1.5209rem",
           "attributes": {
             "category": "size"
           },
