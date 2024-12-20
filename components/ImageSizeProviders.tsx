@@ -48,14 +48,14 @@ const SectionProvider: FC<PropsWithChildren> = (props) => {
         const sectionWidthName =
           props.content?.width === "unset" || !props.content?.width
             ? props.width || "default"
-            : calculated.sectionWidths[props.content?.width || "default"] >
-              calculated.sectionWidths[props.width || "default"]
+            : calculated?.sectionWidths[props.content?.width || "default"] >
+              calculated?.sectionWidths[props.width || "default"]
             ? props.width || "default"
             : props.content?.width || "default";
 
         const sectionWidth =
-          calculated.sectionWidths[sectionWidthName] *
-          calculated.baseFontSizePx;
+          calculated?.sectionWidths[sectionWidthName] *
+          calculated?.baseFontSizePx;
 
         const componentWidth =
           props.content?.mode === "list"
@@ -87,7 +87,8 @@ const LogosProvider: FC<PropsWithChildren> = (props) => {
           HTMLAttributes<HTMLDivElement>
       >(function LogosImageSize(props, ref) {
         const size = useImageSize();
-        const gapSize = calculated.desktop["--dsa-logos__grid--gap-horizontal"];
+        const gapSize =
+          calculated?.desktop["--dsa-logos__grid--gap-horizontal"];
         const logoSize = Math.ceil(
           (size - gapSize * (props.logosPerRow || 3)) / (props.logosPerRow || 3)
         );
@@ -116,7 +117,7 @@ const ImageStoryProvider: FC<PropsWithChildren> = (props) => {
       >(function ImageStoryImageSize(props, ref) {
         const size = useImageSize();
         const gapSize =
-          calculated.phone["--dsa-image-story--horizontal-padding"];
+          calculated?.phone["--dsa-image-story--horizontal-padding"];
         const imageSize = Math.ceil(size / 2 - gapSize);
 
         return (
@@ -169,7 +170,7 @@ const PostMetaProvider: FC<PropsWithChildren> = (props) => {
           HTMLAttributes<HTMLElement>
       >(function PostMetaImageSize(props, ref) {
         const avatarSize =
-          calculated.desktop["--dsa-blog-teaser__avatar--size"];
+          calculated?.desktop["--dsa-blog-teaser__avatar--size"];
         return (
           <ImageSizeProvider size={avatarSize}>
             <UpstreamPostMeta {...props} ref={ref} />
