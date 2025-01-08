@@ -26,7 +26,7 @@
     "lint": "next lint",
     "init-tokens": "kickstartDS tokens init --token-dictionary-path token/dictionary --branding-token-path token/branding-token.json",
     "build-tokens": "kickstartDS tokens compile --token-dictionary-path token/dictionary",
-    "extract-tokens": "node scripts/extractComponentToken.js && node scripts/calculateCssProperties.js && cat token/tokens.js",
+    "extract-tokens": "node scripts/extractComponentToken.js && node scripts/calculateCssProperties.js",
     "pull-content-schema": "dotenvx run -f .env.local -- npm run storyblok-pull-content-schema",
     "storyblok-pull-content-schema": "storyblok pull-components --space $NEXT_STORYBLOK_SPACE_ID -p types/ && mv types/components.$NEXT_STORYBLOK_SPACE_ID.json types/components-schema.json && mv types/presets.$NEXT_STORYBLOK_SPACE_ID.json types/components-presets.json",
     "generate-content-types": "dotenvx run -f .env.local -- npm run pull-content-schema && storyblok-generate-ts source=./types/components-schema.json target=./types/components-schema compilerOptions.unknownAny=true compilerOptions.additionalProperties=false",

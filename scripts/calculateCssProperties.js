@@ -278,17 +278,19 @@ const getPropertyValue = (propertyName, breakpoint = "desktop") => {
 
 const sectionWidthRems = {
   narrow: parseInt(
-    getVertexValue("--dsa-content--width_narrow").replace("rem", "")
+    getPropertyValue("--dsa-content--width_narrow").replace("rem", "")
   ),
   default: parseInt(
-    getVertexValue("--dsa-content--width_default").replace("rem", "")
+    getPropertyValue("--dsa-content--width_default").replace("rem", "")
   ),
   wide: parseInt(
-    getVertexValue("--dsa-content--width_wide").replace("rem", "")
+    getPropertyValue("--dsa-content--width_wide").replace("rem", "")
   ),
-  max: parseInt(getVertexValue("--dsa-content--width_max").replace("rem", "")),
+  max: parseInt(
+    getPropertyValue("--dsa-content--width_max").replace("rem", "")
+  ),
   full: parseInt(
-    getVertexValue("--dsa-content--width_full").replace("rem", "")
+    getPropertyValue("--dsa-content--width_full").replace("rem", "")
   ),
 };
 
