@@ -1,7 +1,7 @@
 const cspHeader = `
     default-src 'self';
     connect-src 'self' https://data.debugbear.com;
-    script-src 'self' 'unsafe-eval' 'unsafe-inline' https://app.storyblok.com https://cdn.debugbear.com;
+    script-src 'self' 'unsafe-eval' 'unsafe-inline' https://app.storyblok.com https://cdn.debugbear.com https://www.clarity.ms;
     style-src 'self' 'unsafe-inline';
     frame-src 'self' https://youtube.com https://www.youtube.com https://player.vimeo.com *.google.com;
     img-src 'self' blob: data: https://a.storyblok.com;
