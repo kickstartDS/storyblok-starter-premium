@@ -1,5 +1,7 @@
 .dsa-hero {
-  --dsa-hero__textbox--max-width: var(--dsa-content--width_default) .c-visual__box--solid {box-shadow: var(
-      --ks-box-shadow-surface
-    ) ;};
+  --dsa-hero__textbox--max-width: var(--dsa-content--width_default);
+
+  .c-visual__box--solid {
+    box-shadow: var(--ks-box-shadow-surface);
+  }
 }
