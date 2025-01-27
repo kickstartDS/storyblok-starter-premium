@@ -4,6 +4,8 @@
   --dsa-text-color-on-primary: var(--ks-color-fg-inverted);
   --dsa-text_highlight--font: var(--ks-font-copy-xl) !important;
 
+  --dsa-typo--highlight: var(--ks-color-primary);
+
   // Logo
   --dsa-logo--height: 1.5rem;
 
@@ -16,7 +18,7 @@
   }
 
   // Link
-  --dsa-topic--font-weight: var(--ks-font-weight-medium);
+  --dsa-topic--font-weight: var(--ks-font-weight-secondary);
 
   // Link
   --dsa-link--text-decoration: underline;
