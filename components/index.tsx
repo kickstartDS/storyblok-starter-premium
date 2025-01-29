@@ -177,6 +177,13 @@ export const components = {
       )
     )
   ),
+  html: editable(
+    dynamic(() =>
+      import("@kickstartds/ds-agency-premium/html").then(
+        (mod) => mod.HtmlContextDefault
+      )
+    )
+  ),
   split: editable(
     dynamic(() =>
       import("@kickstartds/ds-agency-premium/split").then((mod) => mod.Split)
