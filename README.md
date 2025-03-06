@@ -158,7 +158,7 @@ TODO adjust this to `ds-agency` on non-premium version
    6. `yarn create-component-previews` to re-create the existing previews with your branding
    7. `mkdir -p YOUR_WEBSITE/public/img && rm -rf YOUR_WEBSITE/public/img/screenshots && cp -r static/img/screenshots YOUR_WEBSITE/public/img/` to copy the generated screenshots to your project
    8. `cd YOUR_WEBSITE` to switch to your website project
-   9. `npm run update-previews` to update those newly created screenshots in your Storyblok space
+   9. `npm run update-previews` to update those newly created screenshots in your Storyblok space (can take 2-3 mins)
 3. That's it!
 
 Reminder: Undo the import for `fonts.scss` in `index.scss` if you had to change that for your previews, otherwise you'd load redundant fonts on your page later.

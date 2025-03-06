@@ -9,7 +9,11 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   return getServerSideSitemapLegacy(
     ctx,
     paths
-      .filter((path) => !exclude.includes(path.params.slug.join("/")))
+      .filter(
+        (path) =>
+          !exclude.includes(path.params.slug.join("/")) &&
+          path.params.slug[0] !== "global"
+      )
       .map((path) => {
         return {
           loc: `${process.env.NEXT_PUBLIC_SITE_URL}/${path.params.slug.join(

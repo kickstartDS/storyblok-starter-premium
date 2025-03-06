@@ -27,7 +27,7 @@ const BlogPost: React.FC<PageProps> = ({ blok }) => {
 
     return (
       <main {...storyblokEditable(blok)}>
-        <Section width="wide">
+        <Section width="wide" content={{ mode: "list" }}>
           <Split layout="sidebarRight">
             <div>
               {head && <BlogHead {...head} />}
@@ -43,7 +43,11 @@ const BlogPost: React.FC<PageProps> = ({ blok }) => {
           </Split>
         </Section>
         {cta && (
-          <Section content={{ mode: "list" }}>
+          <Section
+            backgroundColor="accent"
+            spaceAfter="none"
+            spaceBefore="none"
+          >
             <Cta {...cta} />
           </Section>
         )}

@@ -198,6 +198,7 @@ export interface GlobalStoryblok {
     | HeroStoryblok
     | ImageStoryStoryblok
     | ImageTextStoryblok
+    | InfoTableStoryblok
     | LogosStoryblok
     | MosaicStoryblok
     | SliderStoryblok
@@ -290,6 +291,30 @@ export interface ImageTextStoryblok {
   type?: string;
   _uid: string;
   component: "image-text";
+}
+
+export interface TableStoryblok {
+  thead: {
+    _uid: string;
+    value?: string;
+    component: number;
+  }[];
+  tbody: {
+    _uid: string;
+    body: {
+      _uid?: string;
+      value?: string;
+      component?: number;
+    }[];
+    component: number;
+  }[];
+}
+
+export interface InfoTableStoryblok {
+  data?: TableStoryblok;
+  type?: string;
+  _uid: string;
+  component: "info-table";
 }
 
 export interface LogoStoryblok {
@@ -389,6 +414,7 @@ export interface SectionStoryblok {
     | HeroStoryblok
     | ImageStoryStoryblok
     | ImageTextStoryblok
+    | InfoTableStoryblok
     | LogosStoryblok
     | MosaicStoryblok
     | SliderStoryblok
@@ -442,6 +468,7 @@ export interface SliderStoryblok {
     | HeroStoryblok
     | ImageStoryStoryblok
     | ImageTextStoryblok
+    | InfoTableStoryblok
     | LogosStoryblok
     | MosaicStoryblok
     | SliderStoryblok

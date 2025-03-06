@@ -7,8 +7,6 @@ const StoryblokClient = require("storyblok-js-client");
 const { v4: uuidv4 } = require("uuid");
 const jsonpointer = require("jsonpointer");
 const designSystemPresets = require("@kickstartds/ds-agency-premium/presets.json");
-const ffprobe = require("ffprobe");
-const ffprobeStatic = require("ffprobe-static");
 const generatedComponents = require("../cms/components.123456.json");
 const initialStory = require("../resources/story.json");
 const ffprobe = require("ffprobe");
@@ -299,7 +297,6 @@ const prepare = async () => {
                 ? jsonpointer
                     .get(preset.preset, `/${meta.nodePath}`)
                     .map((entry) => {
-                      console.log("mapping entry", entry);
                       if (typeof entry !== "object") return entry;
                       return {
                         ...entry,
@@ -396,6 +393,61 @@ const prepare = async () => {
         }
       );
     }
+
+    const section = generatedComponents.components.find(
+      (component) => component.name === "section"
+    );
+
+    generatedComponents.components.push({
+      name: "global",
+      display_name: "Global",
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString(),
+      id: 0,
+      schema: {
+        global: {
+          id: 0,
+          pos: 0,
+          type: "bloks",
+          restrict_type: "groups",
+          restrict_components: true,
+          component_group_whitelist: [
+            section.schema.components.component_group_whitelist[0],
+          ],
+        },
+      },
+      is_root: true,
+      is_nestable: false,
+      real_name: "Global",
+    });
+
+    const globalReferenceUuid = uuidv4();
+    generatedComponents.components.push({
+      name: "global_reference",
+      display_name: "Global Reference",
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString(),
+      id: 0,
+      schema: {
+        reference: {
+          type: "options",
+          pos: 0,
+          is_reference_type: true,
+          source: "internal_stories",
+          entry_appearance: "card",
+          allow_advanced_search: true,
+          folder_slug: "global/",
+        },
+      },
+      is_nestable: true,
+      real_name: "Global Rereference",
+      component_group_uuid: globalReferenceUuid,
+      component_group_name: "Global",
+    });
+
+    section.schema.components.component_group_whitelist.push(
+      globalReferenceUuid
+    );
 
     // Write preset configuration to disk
     fs.writeFileSync(

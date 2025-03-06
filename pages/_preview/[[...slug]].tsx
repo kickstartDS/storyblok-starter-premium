@@ -12,9 +12,11 @@ import {
   storyProcessing,
 } from "@/helpers/storyblok";
 import { fontClassNamesPreview } from "@/helpers/fonts";
+import { locale } from "@/components";
 
 type PageProps = ISbStory["data"] & {
   settings?: ISbStoryData["content"];
+  language: typeof locale;
 };
 
 const Page: NextPage<PageProps> = ({ story: initialStory }) => {
@@ -63,6 +65,7 @@ export const getStaticProps = (async ({ params, previewData }) => {
   );
   const previewStoryblokApi = new StoryblokClient({ accessToken: previewData });
   const slug = params?.slug?.join("/");
+
   try {
     const { pageData, settingsData } = await fetchPageProps(
       slug,
@@ -76,6 +79,7 @@ export const getStaticProps = (async ({ params, previewData }) => {
         fontClassNames: fontClassNamesPreview,
         settings: settingsData.stories[0]?.content || null,
         key: pageData.story.id,
+        language: locale,
       },
     };
   } catch (e) {

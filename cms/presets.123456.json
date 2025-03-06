@@ -83,7 +83,7 @@
         "image": "//a.storyblok.com/f/284989/1260x840/d7d4af8458/close-up-young-business-team-working.png",
         "readingTime": "5 min read",
         "link_url": "https://example.com",
-        "link_label": "Read more",
+        "link_text": "Read article",
         "author_name": "Jane Smith",
         "author_title": "Senior AI Researcher",
         "author_image": "//a.storyblok.com/f/284989/250x250/cd9c7c180f/author-emily.png"
@@ -586,9 +586,7 @@
             "type": "feature",
             "component": "feature",
             "cta_target": "/feature1",
-            "cta_label": "Learn more",
-            "cta_toggle": true,
-            "cta_style": "link"
+            "cta_label": "Learn more"
           },
           {
             "icon": "map",
@@ -599,9 +597,7 @@
             "type": "feature",
             "component": "feature",
             "cta_target": "/feature2",
-            "cta_label": "Get started",
-            "cta_toggle": true,
-            "cta_style": "link"
+            "cta_label": "Get started"
           },
           {
             "icon": "person",
@@ -612,9 +608,7 @@
             "type": "feature",
             "component": "feature",
             "cta_target": "/feature3",
-            "cta_label": "Explore",
-            "cta_toggle": true,
-            "cta_style": "link"
+            "cta_label": "Explore"
           },
           {
             "icon": "star",
@@ -625,9 +619,7 @@
             "type": "feature",
             "component": "feature",
             "cta_target": "/feature4",
-            "cta_label": "Customize",
-            "cta_toggle": true,
-            "cta_style": "link"
+            "cta_label": "Customize"
           },
           {
             "icon": "upload",
@@ -638,9 +630,7 @@
             "type": "feature",
             "component": "feature",
             "cta_target": "/feature5",
-            "cta_label": "Deploy",
-            "cta_toggle": true,
-            "cta_style": "link"
+            "cta_label": "Deploy"
           },
           {
             "icon": "login",
@@ -651,9 +641,7 @@
             "type": "feature",
             "component": "feature",
             "cta_target": "/feature6",
-            "cta_label": "Secure",
-            "cta_toggle": true,
-            "cta_style": "link"
+            "cta_label": "Secure"
           }
         ],
         "ctas_toggle": true,
@@ -687,9 +675,7 @@
             "type": "feature",
             "component": "feature",
             "cta_target": "/feature3",
-            "cta_label": "Explore",
-            "cta_toggle": true,
-            "cta_style": "link"
+            "cta_label": "Explore"
           },
           {
             "icon": "star",
@@ -700,9 +686,7 @@
             "type": "feature",
             "component": "feature",
             "cta_target": "/feature4",
-            "cta_label": "Customize",
-            "cta_toggle": true,
-            "cta_style": "link"
+            "cta_label": "Customize"
           },
           {
             "icon": "upload",
@@ -713,9 +697,7 @@
             "type": "feature",
             "component": "feature",
             "cta_target": "/feature5",
-            "cta_label": "Deploy",
-            "cta_toggle": true,
-            "cta_style": "link"
+            "cta_label": "Deploy"
           },
           {
             "icon": "login",
@@ -726,9 +708,7 @@
             "type": "feature",
             "component": "feature",
             "cta_target": "/feature6",
-            "cta_label": "Secure",
-            "cta_toggle": true,
-            "cta_style": "link"
+            "cta_label": "Secure"
           }
         ],
         "ctas_toggle": true,
@@ -762,9 +742,7 @@
             "type": "feature",
             "component": "feature",
             "cta_target": "/feature4",
-            "cta_label": "Customize",
-            "cta_toggle": true,
-            "cta_style": "link"
+            "cta_label": "Customize"
           },
           {
             "icon": "map",
@@ -775,9 +753,7 @@
             "type": "feature",
             "component": "feature",
             "cta_target": "/feature2",
-            "cta_label": "Get started",
-            "cta_toggle": true,
-            "cta_style": "link"
+            "cta_label": "Get started"
           },
           {
             "icon": "person",
@@ -788,9 +764,7 @@
             "type": "feature",
             "component": "feature",
             "cta_target": "/feature3",
-            "cta_label": "Explore",
-            "cta_toggle": true,
-            "cta_style": "link"
+            "cta_label": "Explore"
           },
           {
             "icon": "home",
@@ -801,9 +775,7 @@
             "type": "feature",
             "component": "feature",
             "cta_target": "/feature1",
-            "cta_label": "Learn more",
-            "cta_toggle": true,
-            "cta_style": "link"
+            "cta_label": "Learn more"
           },
           {
             "icon": "upload",
@@ -814,9 +786,7 @@
             "type": "feature",
             "component": "feature",
             "cta_target": "/feature5",
-            "cta_label": "Deploy",
-            "cta_toggle": true,
-            "cta_style": "link"
+            "cta_label": "Deploy"
           },
           {
             "icon": "login",
@@ -827,9 +797,7 @@
             "type": "feature",
             "component": "feature",
             "cta_target": "/feature6",
-            "cta_label": "Secure",
-            "cta_toggle": true,
-            "cta_style": "link"
+            "cta_label": "Secure"
           }
         ],
         "ctas_toggle": false,
@@ -863,9 +831,7 @@
             "type": "feature",
             "component": "feature",
             "cta_target": "/feature1",
-            "cta_label": "Learn more",
-            "cta_toggle": true,
-            "cta_style": "link"
+            "cta_label": "Learn more"
           },
           {
             "icon": "map",
@@ -876,9 +842,7 @@
             "type": "feature",
             "component": "feature",
             "cta_target": "/feature2",
-            "cta_label": "Get started",
-            "cta_toggle": true,
-            "cta_style": "link"
+            "cta_label": "Get started"
           },
           {
             "icon": "person",
@@ -889,9 +853,7 @@
             "type": "feature",
             "component": "feature",
             "cta_target": "/feature3",
-            "cta_label": "Explore",
-            "cta_toggle": true,
-            "cta_style": "link"
+            "cta_label": "Explore"
           },
           {
             "icon": "star",
@@ -902,9 +864,7 @@
             "type": "feature",
             "component": "feature",
             "cta_target": "/feature4",
-            "cta_label": "Customize",
-            "cta_toggle": true,
-            "cta_style": "link"
+            "cta_label": "Customize"
           },
           {
             "icon": "upload",
@@ -915,9 +875,7 @@
             "type": "feature",
             "component": "feature",
             "cta_target": "/feature5",
-            "cta_label": "Deploy",
-            "cta_toggle": true,
-            "cta_style": "link"
+            "cta_label": "Deploy"
           },
           {
             "icon": "login",
@@ -928,9 +886,7 @@
             "type": "feature",
             "component": "feature",
             "cta_target": "/feature6",
-            "cta_label": "Secure",
-            "cta_toggle": true,
-            "cta_style": "link"
+            "cta_label": "Secure"
           }
         ],
         "ctas_toggle": true,
@@ -964,9 +920,7 @@
             "type": "feature",
             "component": "feature",
             "cta_target": "/feature4",
-            "cta_label": "Customize",
-            "cta_toggle": true,
-            "cta_style": "link"
+            "cta_label": "Customize"
           },
           {
             "icon": "map",
@@ -977,9 +931,7 @@
             "type": "feature",
             "component": "feature",
             "cta_target": "/feature2",
-            "cta_label": "Get started",
-            "cta_toggle": true,
-            "cta_style": "link"
+            "cta_label": "Get started"
           },
           {
             "icon": "person",
@@ -990,9 +942,7 @@
             "type": "feature",
             "component": "feature",
             "cta_target": "/feature3",
-            "cta_label": "Explore",
-            "cta_toggle": true,
-            "cta_style": "link"
+            "cta_label": "Explore"
           },
           {
             "icon": "upload",
@@ -1003,9 +953,7 @@
             "type": "feature",
             "component": "feature",
             "cta_target": "/feature5",
-            "cta_label": "Deploy",
-            "cta_toggle": true,
-            "cta_style": "link"
+            "cta_label": "Deploy"
           },
           {
             "icon": "login",
@@ -1016,9 +964,7 @@
             "type": "feature",
             "component": "feature",
             "cta_target": "/feature6",
-            "cta_label": "Secure",
-            "cta_toggle": true,
-            "cta_style": "link"
+            "cta_label": "Secure"
           }
         ],
         "ctas_toggle": true,

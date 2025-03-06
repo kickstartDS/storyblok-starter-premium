@@ -2663,6 +2663,42 @@
       "component_group_name": "Components"
     },
     {
+      "name": "info-table",
+      "display_name": null,
+      "description": "",
+      "created_at": "2025-03-06T14:05:44.960Z",
+      "updated_at": "2025-03-06T14:06:20.199Z",
+      "id": 7053072,
+      "schema": {
+        "data": {
+          "type": "table",
+          "pos": 0,
+          "id": "_veNh45MRoSP2nBktX1p7Q"
+        },
+        "type": {
+          "type": "text",
+          "pos": 1,
+          "default_value": "info-table",
+          "id": "uQS0ULoZS6ebg-SuiW5BBg"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "info-table",
+      "component_group_uuid": "667502f0-5403-48c6-bc80-c2a07d1e27ae",
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "component_group_name": "Components"
+    },
+    {
       "name": "logo",
       "display_name": "Logo",
       "description": null,
@@ -3076,7 +3112,7 @@
       "display_name": "Page",
       "description": null,
       "created_at": "2024-05-03T09:23:23.860Z",
-      "updated_at": "2024-05-03T09:23:23.860Z",
+      "updated_at": "2025-03-06T14:11:49.595Z",
       "id": 5746599,
       "schema": {
         "section": {
@@ -3093,7 +3129,7 @@
           "description": "Component used to layout components into pages"
         },
         "tab-ea28959f-3f50-4366-93c4-2553f1d20872": {
-          "id": 0,
+          "id": "6iiVnz9QQ2aTxCVT8dIIcg",
           "pos": 0,
           "display_name": "Header",
           "key": "tab-ea28959f-3f50-4366-93c4-2553f1d20872",
@@ -3124,7 +3160,7 @@
           "required": false
         },
         "tab-bc5686f9-6742-4c45-9f95-007682b8b64b": {
-          "id": 0,
+          "id": "vFaG-WdCTEWflQB2gri2Sw",
           "pos": 0,
           "display_name": "Footer",
           "key": "tab-bc5686f9-6742-4c45-9f95-007682b8b64b",
@@ -3155,7 +3191,8 @@
           "component_whitelist": [
             "seo"
           ],
-          "description": "Abstracts SEO settings for a website into JSON schema"
+          "description": "Abstracts SEO settings for a website into JSON schema",
+          "maximum": 1
         },
         "type": {
           "id": 0,
@@ -3986,7 +4023,7 @@
       "display_name": "Settings",
       "description": null,
       "created_at": "2024-04-16T12:23:07.217Z",
-      "updated_at": "2024-04-16T12:23:07.217Z",
+      "updated_at": "2025-03-06T14:12:30.552Z",
       "id": 5660761,
       "schema": {
         "header": {
@@ -4000,7 +4037,9 @@
           "component_whitelist": [
             "header"
           ],
-          "description": "Header"
+          "description": "Header",
+          "maximum": 1,
+          "minimum": 1
         },
         "footer": {
           "id": 0,
@@ -4013,7 +4052,9 @@
           "component_whitelist": [
             "footer"
           ],
-          "description": "Footer"
+          "description": "Footer",
+          "minimum": 1,
+          "maximum": 1
         },
         "seo": {
           "id": 0,
@@ -4026,7 +4067,9 @@
           "component_whitelist": [
             "seo"
           ],
-          "description": "Abstracts SEO settings for a website into JSON schema"
+          "description": "Abstracts SEO settings for a website into JSON schema",
+          "minimum": 1,
+          "maximum": 1
         },
         "type": {
           "id": 0,

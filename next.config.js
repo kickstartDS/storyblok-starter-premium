@@ -1,8 +1,11 @@
 const cspHeader = `
     default-src 'self';
+    connect-src 'self';
     script-src 'self' 'unsafe-eval' 'unsafe-inline' https://app.storyblok.com;
     style-src 'self' 'unsafe-inline';
+    frame-src 'self' https://youtube.com https://www.youtube.com https://player.vimeo.com *.google.com;
     img-src 'self' blob: data: https://a.storyblok.com;
+    media-src 'self' blob: data: https://a.storyblok.com;
     font-src 'self';
     object-src 'none';
     base-uri 'self';

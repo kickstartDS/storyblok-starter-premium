@@ -1,7 +1,8 @@
-@import "components/global.scss";
-@import "components/button/button.scss";
-@import "components/cta/cta.scss";
-@import "components/headline/headline.scss";
-@import "components/header/header.scss";
-@import "components/nav-main/nav-main.scss";
-@import "components/stats/stats.scss";
+@use "./components/global.scss";
+@use "./components/button/button.scss";
+@use "./components/cta/cta.scss";
+@use "./components/headline/headline.scss";
+@use "./components/header/header.scss";
+@use "./components/nav-main/nav-main.scss";
+@use "./components/stats/stats.scss";
+@use "./components/info-table/info-table.scss";
