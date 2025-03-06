@@ -11,11 +11,8 @@ export interface AssetStoryblok {
   filename: string;
   copyright?: string;
   fieldtype?: string;
-  meta_data?: null | {
-    [k: string]: any;
-  };
+  meta_data?: null | {};
   is_external_url?: boolean;
-  [k: string]: any;
 }
 
 export interface BlogAsideStoryblok {
@@ -31,7 +28,6 @@ export interface BlogAsideStoryblok {
   type?: string;
   _uid: string;
   component: "blog-aside";
-  [k: string]: any;
 }
 
 export interface BlogHeadStoryblok {
@@ -42,7 +38,6 @@ export interface BlogHeadStoryblok {
   type?: string;
   _uid: string;
   component: "blog-head";
-  [k: string]: any;
 }
 
 export interface BlogOverviewStoryblok {
@@ -54,7 +49,6 @@ export interface BlogOverviewStoryblok {
   type?: string;
   _uid: string;
   component: "blog-overview";
-  [k: string]: any;
 }
 
 export interface BlogPostStoryblok {
@@ -66,7 +60,6 @@ export interface BlogPostStoryblok {
   type?: string;
   _uid: string;
   component: "blog-post";
-  [k: string]: any;
 }
 
 export type MultilinkStoryblok =
@@ -76,7 +69,6 @@ export type MultilinkStoryblok =
       anchor?: string;
       linktype?: "story";
       target?: "_self" | "_blank";
-      [k: string]: any;
     }
   | {
       url?: string;
@@ -84,13 +76,11 @@ export type MultilinkStoryblok =
       anchor?: string;
       linktype?: "asset" | "url";
       target?: "_self" | "_blank";
-      [k: string]: any;
     }
   | {
       email?: string;
       linktype?: "email";
       target?: "_self" | "_blank";
-      [k: string]: any;
     };
 
 export interface BlogTeaserStoryblok {
@@ -109,7 +99,6 @@ export interface BlogTeaserStoryblok {
   type?: string;
   _uid: string;
   component: "blog-teaser";
-  [k: string]: any;
 }
 
 export interface ButtonsStoryblok {
@@ -118,7 +107,6 @@ export interface ButtonsStoryblok {
   target?: MultilinkStoryblok;
   _uid: string;
   component: "buttons";
-  [k: string]: any;
 }
 
 export interface CtaStoryblok {
@@ -141,7 +129,6 @@ export interface CtaStoryblok {
   type?: string;
   _uid: string;
   component: "cta";
-  [k: string]: any;
 }
 
 export interface FaqStoryblok {
@@ -149,7 +136,6 @@ export interface FaqStoryblok {
   type?: string;
   _uid: string;
   component: "faq";
-  [k: string]: any;
 }
 
 export interface FeatureStoryblok {
@@ -164,7 +150,6 @@ export interface FeatureStoryblok {
   type?: string;
   _uid: string;
   component: "feature";
-  [k: string]: any;
 }
 
 export interface FeaturesStoryblok {
@@ -176,20 +161,21 @@ export interface FeaturesStoryblok {
   type?: string;
   _uid: string;
   component: "features";
-  [k: string]: any;
 }
 
 export interface FooterStoryblok {
+  logo_homepageHref?: Exclude<MultilinkStoryblok, {linktype?: "email"} | {linktype?: "asset"}>;
   logo_src?: AssetStoryblok;
+  logo_srcInverted?: AssetStoryblok;
   logo_alt?: string;
   logo_width?: string;
   logo_height?: string;
-  logoHref?: MultilinkStoryblok;
+  byline?: string;
+  inverted?: boolean;
   navItems?: NavItemsStoryblok[];
   type?: string;
   _uid: string;
   component: "footer";
-  [k: string]: any;
 }
 
 export interface GalleryStoryblok {
@@ -200,21 +186,74 @@ export interface GalleryStoryblok {
   type?: string;
   _uid: string;
   component: "gallery";
-  [k: string]: any;
+}
+
+export interface GlobalStoryblok {
+  global?: (
+    | BlogTeaserStoryblok
+    | CtaStoryblok
+    | FaqStoryblok
+    | FeaturesStoryblok
+    | GalleryStoryblok
+    | HeroStoryblok
+    | ImageStoryStoryblok
+    | ImageTextStoryblok
+    | LogosStoryblok
+    | MosaicStoryblok
+    | SliderStoryblok
+    | StatsStoryblok
+    | TeaserCardStoryblok
+    | TestimonialsStoryblok
+    | TextStoryblok
+    | VideoCurtainStoryblok
+  )[];
+  _uid: string;
+  component: "global";
+  uuid?: string;
+}
+
+export interface GlobalReferenceStoryblok {
+  reference?: unknown[];
+  _uid: string;
+  component: "global_reference";
 }
 
 export interface HeaderStoryblok {
+  floating?: boolean;
+  inverted?: boolean;
+  flyoutInverted?: boolean;
+  navItems?: NavItemsStoryblok[];
+  type?: string;
+  logo_homepageHref?: Exclude<MultilinkStoryblok, {linktype?: "email"} | {linktype?: "asset"}>;
   logo_src?: AssetStoryblok;
+  logo_srcInverted?: AssetStoryblok;
   logo_alt?: string;
   logo_width?: string;
   logo_height?: string;
-  logoHref?: MultilinkStoryblok;
-  floating?: boolean;
-  navItems?: NavItemsStoryblok[];
-  type?: string;
   _uid: string;
   component: "header";
-  [k: string]: any;
+}
+
+export interface HeroStoryblok {
+  headline?: string;
+  sub?: string;
+  text?: string;
+  highlightText?: boolean;
+  colorNeutral?: boolean;
+  height?: "" | "small" | "default" | "fullImage" | "fullScreen";
+  textbox?: boolean;
+  buttons?: ButtonsStoryblok[];
+  overlay?: boolean;
+  image_srcMobile?: AssetStoryblok;
+  image_srcTablet?: AssetStoryblok;
+  image_srcDesktop?: AssetStoryblok;
+  image_src?: AssetStoryblok;
+  image_indent?: "" | "none" | "left" | "right";
+  image_alt?: string;
+  textPosition?: "" | "center" | "below" | "left" | "right";
+  type?: string;
+  _uid: string;
+  component: "hero";
 }
 
 export interface ImagesStoryblok {
@@ -223,7 +262,23 @@ export interface ImagesStoryblok {
   caption?: string;
   _uid: string;
   component: "images";
-  [k: string]: any;
+}
+
+export interface ImageStoryStoryblok {
+  headline?: string;
+  largeHeadline?: boolean;
+  sub?: string;
+  text?: string;
+  layout?: "" | "textLeft" | "imageLeft";
+  padding?: boolean;
+  buttons?: ButtonsStoryblok[];
+  image_src?: AssetStoryblok;
+  image_ratio?: "" | "VALUE_4_3" | "VALUE_3_2" | "VALUE_16_9" | "VALUE_1_1" | "none";
+  image_alt?: string;
+  textAlign?: "" | "left" | "center";
+  type?: string;
+  _uid: string;
+  component: "image-story";
 }
 
 export interface ImageTextStoryblok {
@@ -235,7 +290,6 @@ export interface ImageTextStoryblok {
   type?: string;
   _uid: string;
   component: "image-text";
-  [k: string]: any;
 }
 
 export interface LogoStoryblok {
@@ -244,7 +298,6 @@ export interface LogoStoryblok {
   type?: string;
   _uid: string;
   component: "logo";
-  [k: string]: any;
 }
 
 export interface LogosStoryblok {
@@ -260,7 +313,15 @@ export interface LogosStoryblok {
   type?: string;
   _uid: string;
   component: "logos";
-  [k: string]: any;
+}
+
+export interface MosaicStoryblok {
+  layout?: "" | "alternate" | "textLeft" | "textRight";
+  largeHeadlines?: boolean;
+  tile?: TilesStoryblok[];
+  type?: string;
+  _uid: string;
+  component: "mosaic";
 }
 
 export interface NavItemsStoryblok {
@@ -269,17 +330,18 @@ export interface NavItemsStoryblok {
   active?: boolean;
   _uid: string;
   component: "navItems";
-  [k: string]: any;
 }
 
 export interface PageStoryblok {
   section?: SectionStoryblok[];
+  header_floating?: boolean;
+  header_inverted?: boolean;
+  footer_inverted?: boolean;
   seo?: SeoStoryblok[];
   type?: string;
   _uid: string;
   component: "page";
   uuid?: string;
-  [k: string]: any;
 }
 
 export interface QuestionsStoryblok {
@@ -287,7 +349,6 @@ export interface QuestionsStoryblok {
   answer?: string;
   _uid: string;
   component: "questions";
-  [k: string]: any;
 }
 
 export interface SectionStoryblok {
@@ -325,23 +386,22 @@ export interface SectionStoryblok {
     | FaqStoryblok
     | FeaturesStoryblok
     | GalleryStoryblok
+    | HeroStoryblok
+    | ImageStoryStoryblok
     | ImageTextStoryblok
     | LogosStoryblok
+    | MosaicStoryblok
+    | SliderStoryblok
     | StatsStoryblok
-    | Tab0210B3AeEbb2467387F0Bab9555Ec309Storyblok
-    | Tab1468E511C96840A1B267Ea720C1Ca9EdStoryblok
-    | Tab8726807F12Bd4D53Ae343Df7360494C9Storyblok
-    | TabB5Ece91F9Fc346FdBcfc107686351188Storyblok
-    | TabFb45D4759Bc54D998Ba553C6149B34C0Storyblok
     | TeaserCardStoryblok
     | TestimonialsStoryblok
     | TextStoryblok
+    | VideoCurtainStoryblok
   )[];
   buttons?: ButtonsStoryblok[];
   type?: string;
   _uid: string;
   component: "section";
-  [k: string]: any;
 }
 
 export interface SeoStoryblok {
@@ -349,11 +409,10 @@ export interface SeoStoryblok {
   description?: string;
   keywords?: string;
   image?: AssetStoryblok;
-  cardImage?: string;
+  cardImage?: AssetStoryblok;
   type?: string;
   _uid: string;
   component: "seo";
-  [k: string]: any;
 }
 
 export interface SettingsStoryblok {
@@ -363,7 +422,38 @@ export interface SettingsStoryblok {
   type?: string;
   _uid: string;
   component: "settings";
-  [k: string]: any;
+}
+
+export interface SliderStoryblok {
+  autoplay?: boolean;
+  nav?: boolean;
+  teaseNeighbours?: boolean;
+  equalHeight?: boolean;
+  gap?: string;
+  arrows?: boolean;
+  type?: string;
+  className?: string;
+  components?: (
+    | BlogTeaserStoryblok
+    | CtaStoryblok
+    | FaqStoryblok
+    | FeaturesStoryblok
+    | GalleryStoryblok
+    | HeroStoryblok
+    | ImageStoryStoryblok
+    | ImageTextStoryblok
+    | LogosStoryblok
+    | MosaicStoryblok
+    | SliderStoryblok
+    | StatsStoryblok
+    | TeaserCardStoryblok
+    | TestimonialsStoryblok
+    | TextStoryblok
+    | VideoCurtainStoryblok
+  )[];
+  typeProp?: "" | "slider" | "carousel";
+  _uid: string;
+  component: "slider";
 }
 
 export interface SocialSharingStoryblok {
@@ -372,7 +462,6 @@ export interface SocialSharingStoryblok {
   title?: string;
   _uid: string;
   component: "socialSharing";
-  [k: string]: any;
 }
 
 export interface StatStoryblok {
@@ -383,7 +472,6 @@ export interface StatStoryblok {
   type?: string;
   _uid: string;
   component: "stat";
-  [k: string]: any;
 }
 
 export interface StatsStoryblok {
@@ -391,101 +479,12 @@ export interface StatsStoryblok {
   type?: string;
   _uid: string;
   component: "stats";
-  [k: string]: any;
-}
-
-export interface Tab0210B3AeEbb2467387F0Bab9555Ec309Storyblok {
-  hero_headline?: string;
-  hero_sub?: string;
-  hero_text?: string;
-  hero_highlightText?: boolean;
-  hero_colorNeutral?: boolean;
-  hero_height?: "" | "small" | "default" | "fullImage" | "fullScreen";
-  hero_textbox?: boolean;
-  hero_buttons?: ButtonsStoryblok[];
-  hero_overlay?: boolean;
-  "hero_tab-7ddc9fb5-a2a6-41a3-b779-114aaf465e66"?: any;
-  image_srcMobile?: AssetStoryblok;
-  image_srcTablet?: AssetStoryblok;
-  image_srcDesktop?: AssetStoryblok;
-  image_src?: AssetStoryblok;
-  image_indent?: "" | "none" | "left" | "right";
-  image_alt?: string;
-  hero_textPosition?: "" | "center" | "below" | "left" | "right";
-  hero_type?: string;
-  _uid: string;
-  component: "tab-0210b3ae-ebb2-4673-87f0-bab9555ec309";
-  [k: string]: any;
-}
-
-export interface Tab1468E511C96840A1B267Ea720C1Ca9EdStoryblok {
-  mosaic_layout?: "" | "alternate" | "textLeft" | "textRight";
-  mosaic_largeHeadlines?: boolean;
-  mosaic_tiles?: TilesStoryblok[];
-  mosaic_type?: string;
-  _uid: string;
-  component: "tab-1468e511-c968-40a1-b267-ea720c1ca9ed";
-  [k: string]: any;
-}
-
-export interface Tab8726807F12Bd4D53Ae343Df7360494C9Storyblok {
-  "video-curtain_headline"?: string;
-  "video-curtain_sub"?: string;
-  "video-curtain_text"?: string;
-  "video-curtain_highlightText"?: boolean;
-  "video-curtain_colorNeutral"?: boolean;
-  "video-curtain_buttons"?: ButtonsStoryblok[];
-  "video-curtain_overlay"?: boolean;
-  "video-curtain_tab-bf9d0675-1df7-4f54-8eef-07de14cbda68"?: any;
-  video_srcMobile?: AssetStoryblok;
-  video_srcTablet?: AssetStoryblok;
-  video_srcDesktop?: AssetStoryblok;
-  "video-curtain_textPosition"?: "" | "center" | "left" | "right";
-  "video-curtain_type"?: string;
-  _uid: string;
-  component: "tab-8726807f-12bd-4d53-ae34-3df7360494c9";
-  [k: string]: any;
-}
-
-export interface TabB5Ece91F9Fc346FdBcfc107686351188Storyblok {
-  "image-story_headline"?: string;
-  "image-story_largeHeadline"?: boolean;
-  "image-story_sub"?: string;
-  "image-story_text"?: string;
-  "image-story_layout"?: "" | "textLeft" | "imageLeft";
-  "image-story_padding"?: boolean;
-  "image-story_buttons"?: ButtonsStoryblok[];
-  "image-story_tab-e81d87ae-553a-4cb2-b064-750d3ecfd872"?: any;
-  image_src?: AssetStoryblok;
-  image_ratio?: "" | "VALUE_4_3" | "VALUE_3_2" | "VALUE_16_9" | "VALUE_1_1" | "none";
-  image_alt?: string;
-  "image-story_textAlign"?: "" | "left" | "center";
-  "image-story_type"?: string;
-  _uid: string;
-  component: "tab-b5ece91f-9fc3-46fd-bcfc-107686351188";
-  [k: string]: any;
-}
-
-export interface TabFb45D4759Bc54D998Ba553C6149B34C0Storyblok {
-  slider_autoplay?: boolean;
-  slider_nav?: boolean;
-  slider_teaseNeighbours?: boolean;
-  slider_equalHeight?: boolean;
-  slider_gap?: string;
-  slider_arrows?: boolean;
-  slider_type?: string;
-  slider_className?: string;
-  slider_typeProp?: "" | "slider" | "carousel";
-  _uid: string;
-  component: "tab-fb45d475-9bc5-4d99-8ba5-53c6149b34c0";
-  [k: string]: any;
 }
 
 export interface TagsStoryblok {
   entry?: string;
   _uid: string;
   component: "tags";
-  [k: string]: any;
 }
 
 export interface TeaserCardStoryblok {
@@ -502,7 +501,6 @@ export interface TeaserCardStoryblok {
   type?: string;
   _uid: string;
   component: "teaser-card";
-  [k: string]: any;
 }
 
 export interface TestimonialStoryblok {
@@ -515,7 +513,6 @@ export interface TestimonialStoryblok {
   type?: string;
   _uid: string;
   component: "testimonial";
-  [k: string]: any;
 }
 
 export interface TestimonialsStoryblok {
@@ -524,7 +521,6 @@ export interface TestimonialsStoryblok {
   type?: string;
   _uid: string;
   component: "testimonials";
-  [k: string]: any;
 }
 
 export interface TextStoryblok {
@@ -535,7 +531,6 @@ export interface TextStoryblok {
   type?: string;
   _uid: string;
   component: "text";
-  [k: string]: any;
 }
 
 export interface TilesStoryblok {
@@ -553,5 +548,21 @@ export interface TilesStoryblok {
   textColor?: string;
   _uid: string;
   component: "tiles";
-  [k: string]: any;
+}
+
+export interface VideoCurtainStoryblok {
+  headline?: string;
+  sub?: string;
+  text?: string;
+  highlightText?: boolean;
+  colorNeutral?: boolean;
+  buttons?: ButtonsStoryblok[];
+  overlay?: boolean;
+  video_srcMobile?: AssetStoryblok;
+  video_srcTablet?: AssetStoryblok;
+  video_srcDesktop?: AssetStoryblok;
+  textPosition?: "" | "center" | "left" | "right";
+  type?: string;
+  _uid: string;
+  component: "video-curtain";
 }
