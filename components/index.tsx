@@ -282,5 +282,10 @@ export const components = {
       )
     )
   ),
-  slider: editable(Slider, "components"),
+  slider: editable(
+    dynamic(() =>
+      import("@kickstartds/ds-agency-premium/slider").then((mod) => mod.Slider)
+    ),
+    "components"
+  ),
 };
