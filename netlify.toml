@@ -113,3 +113,9 @@
   to="/ueber-uns/kontakt"
   status = 301
   force = false
+
+[[redirects]]
+  from="/cms-starter-paket"
+  to="/headless-cms/cms-starter-paket"
+  status = 301
+  force = false
