@@ -4,6 +4,7 @@ import Cors from "cors";
 
 const cors = Cors({
   methods: ["POST"],
+  origin: "*",
 });
 
 function runMiddleware(
