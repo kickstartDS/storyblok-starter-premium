@@ -14,12 +14,15 @@ import {
 
 import { Logo } from "@kickstartds/ds-agency-premium/components/logo/index.js";
 import { Link } from "@kickstartds/base/lib/link";
+import { useLanguage } from "../LanguageContext";
 
 export const NavFlyoutContextDefault = forwardRef<
   HTMLElement,
   ComponentProps<typeof DsaNavFlyout> & HTMLAttributes<HTMLElement>
->(({ items, inverted, logo }, ref) =>
-  items && items.length > 0 ? (
+>(({ items, inverted, logo }, ref) => {
+  const language = useLanguage();
+
+  return items && items.length > 0 ? (
     <nav
       className="dsa-nav-flyout"
       ks-inverted={inverted}
@@ -32,14 +35,27 @@ export const NavFlyoutContextDefault = forwardRef<
       <ul className="dsa-nav-flyout__lang">
         <li className="dsa-nav-flyout__lang__item">
           <Link
-            href="#"
-            className="dsa-nav-flyout__lang__link dsa-nav-flyout__lang__link--active"
+            href="/"
+            className={classnames(
+              "dsa-nav-flyout__lang__link",
+              language &&
+                language === "de" &&
+                "dsa-nav-flyout__lang__link--active"
+            )}
           >
             DE
           </Link>
         </li>
         <li className="dsa-nav-flyout__lang__item">
-          <Link href="#" className="dsa-nav-flyout__lang__link">
+          <Link
+            href="/en"
+            className={classnames(
+              "dsa-nav-flyout__lang__link",
+              language &&
+                language === "en" &&
+                "dsa-nav-flyout__lang__link--active"
+            )}
+          >
             EN
           </Link>
         </li>
@@ -94,8 +110,8 @@ export const NavFlyoutContextDefault = forwardRef<
         })}
       </ul>
     </nav>
-  ) : null
-);
+  ) : null;
+});
 
 export const NavFlyoutProvider: FC<PropsWithChildren> = (props) => (
   <NavFlyoutContext.Provider {...props} value={NavFlyoutContextDefault} />

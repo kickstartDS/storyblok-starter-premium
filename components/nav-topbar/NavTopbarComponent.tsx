@@ -22,6 +22,7 @@ export const NavTopbarContextDefault = forwardRef<
   ComponentProps<typeof DsaNavTopbar> & HTMLAttributes<HTMLElement>
 >(({ items, inverted }, ref) => {
   const language = useLanguage();
+
   return items && items.length > 0 ? (
     <nav
       className="dsa-nav-topbar"
