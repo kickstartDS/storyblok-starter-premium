@@ -78,6 +78,21 @@ export function isStoryblokStoryLinkObject(
   );
 }
 
+export function isMissingStoryLinkObject(
+  object: any
+): object is MultilinkStoryblok & {
+  story: ISbLinkURLObject;
+  linktype: "story";
+} {
+  return (
+    object &&
+    typeof object === "object" &&
+    object.linktype &&
+    object.linktype === "story" &&
+    object.story === undefined
+  );
+}
+
 export function storyProcessing(blok: Record<string, any>) {
   function removeEmptyImages({ parent, key, value }: TraversalCallbackContext) {
     if (
@@ -248,6 +263,32 @@ export async function resolveStoryUuids(
   await Promise.all(promises);
 }
 
+export async function resolveMissingStoriesInLinks(
+  story: ISbStoryData,
+  storyblokApi?: StoryblokClient
+) {
+  const promises: Promise<any>[] = [];
+  traverse(story, ({ parent, key, value }) => {
+    if (parent && key && isMissingStoryLinkObject(value) && value.id) {
+      promises.push(
+        fetchUuid(value.id, storyblokApi).then((data) => {
+          value.story = {
+            name: data.name,
+            slug: data.slug,
+            id: data.id,
+            full_slug: data.full_slug,
+            url: data.full_slug,
+            uuid: data.uuid,
+          };
+          return resolveMissingStoriesInLinks(data, storyblokApi);
+        })
+      );
+    }
+  });
+
+  await Promise.all(promises);
+}
+
 export async function fetchStory(
   slug: string,
   resolveUuids: boolean = false,
@@ -262,6 +303,7 @@ export async function fetchStory(
   lastContentVersion = response.data.cv;
 
   if (resolveUuids) await resolveStoryUuids(response.data.story, storyblokApi);
+  await resolveMissingStoriesInLinks(response.data.story, storyblokApi);
   storyProcessing(response.data.story.content);
 
   return response;
@@ -283,6 +325,7 @@ export async function fetchStories(
     if (resolveUuids) {
       await resolveStoryUuids(story, storyblokApi);
     }
+    await resolveMissingStoriesInLinks(story, storyblokApi);
     storyProcessing(story.content);
   }
 
