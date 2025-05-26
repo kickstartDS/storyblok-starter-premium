@@ -216,7 +216,7 @@ export const components = {
   ),
   "teaser-card": editable(
     dynamic(() =>
-      import("@kickstartds/ds-agency-premium/teaser-card").then(
+      import("./teaser-card/TeaserCardComponent").then(
         (mod) => mod.TeaserCardContextDefault
       )
     )

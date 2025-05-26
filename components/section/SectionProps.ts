@@ -5,25 +5,25 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
-import type { CtaProps } from "@kickstartds/ds-agency-premium/cta";
-import type { DividerProps } from "@kickstartds/ds-agency-premium/divider";
-import type { FaqProps } from "@kickstartds/ds-agency-premium/faq";
-import type { FeaturesProps } from "@kickstartds/ds-agency-premium/features";
-import type { GalleryProps } from "@kickstartds/ds-agency-premium/gallery";
-import type { HeroProps } from "@kickstartds/ds-agency-premium/hero";
-import type { HtmlProps } from "@kickstartds/ds-agency-premium/html";
-import type { ImageStoryProps } from "@kickstartds/ds-agency-premium/image-story";
-import type { ImageTextProps } from "@kickstartds/ds-agency-premium/image-text";
-import type { LogosProps } from "@kickstartds/ds-agency-premium/logos";
-import type { MosaicProps } from "@kickstartds/ds-agency-premium/mosaic";
-import type { SliderProps } from "@kickstartds/ds-agency-premium/slider";
-import type { StatsProps } from "@kickstartds/ds-agency-premium/stats";
-import type { TeaserCardProps } from "@kickstartds/ds-agency-premium/teaser-card";
-import type { TestimonialsProps } from "@kickstartds/ds-agency-premium/testimonials";
-import type { TextProps } from "@kickstartds/ds-agency-premium/text";
-import type { VideoCurtainProps } from "@kickstartds/ds-agency-premium/video-curtain";
-import type { InfoTableProps } from "../info-table/InfoTableProps";
-import type { ButtonProps } from "@kickstartds/ds-agency-premium/button";
+import type {CtaProps} from "@kickstartds/ds-agency-premium/cta";
+import type {DividerProps} from "@kickstartds/ds-agency-premium/divider";
+import type {FaqProps} from "@kickstartds/ds-agency-premium/faq";
+import type {FeaturesProps} from "@kickstartds/ds-agency-premium/features";
+import type {GalleryProps} from "@kickstartds/ds-agency-premium/gallery";
+import type {HeroProps} from "@kickstartds/ds-agency-premium/hero";
+import type {HtmlProps} from "@kickstartds/ds-agency-premium/html";
+import type {ImageStoryProps} from "@kickstartds/ds-agency-premium/image-story";
+import type {ImageTextProps} from "@kickstartds/ds-agency-premium/image-text";
+import type {LogosProps} from "@kickstartds/ds-agency-premium/logos";
+import type {MosaicProps} from "@kickstartds/ds-agency-premium/mosaic";
+import type {SliderProps} from "@kickstartds/ds-agency-premium/slider";
+import type {StatsProps} from "@kickstartds/ds-agency-premium/stats";
+import type {TeaserCardProps} from "../teaser-card/TeaserCardProps";
+import type {TestimonialsProps} from "@kickstartds/ds-agency-premium/testimonials";
+import type {TextProps} from "@kickstartds/ds-agency-premium/text";
+import type {VideoCurtainProps} from "@kickstartds/ds-agency-premium/video-curtain";
+import type {InfoTableProps} from "../info-table/InfoTableProps";
+import type {ButtonProps} from "@kickstartds/ds-agency-premium/button";
 
 /**
  * Width of section to use

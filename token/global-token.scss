@@ -1,6 +1,8 @@
 :root,
 [ks-inverted],
 [ks-theme] {
+  --ks-color-secondary: #953434;
+
   --dsa-text-color-on-primary: var(--ks-color-fg-inverted);
   --dsa-text-color-on-primary-inverted: var(--ks-color-fg);
 

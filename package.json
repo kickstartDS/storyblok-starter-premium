@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "@dotenvx/dotenvx": "^1.7.0",
+    "@github/relative-time-element": "^4.4.8",
     "@kickstartds/base": "^4.1.0",
     "@kickstartds/blog": "^4.1.0",
     "@kickstartds/content": "^4.0.0",
