@@ -45,6 +45,10 @@ export type Style =
  */
 export type Style1 = "default" | "accent" | "bold";
 /**
+ * Background image for the whole section
+ */
+export type BackgroundImage = string;
+/**
  * Show spotlight behind cursor
  */
 export type Spotlight = boolean;
@@ -147,6 +151,7 @@ export interface SectionProps {
   width?: Width;
   style?: Style;
   backgroundColor?: Style1;
+  backgroundImage?: BackgroundImage;
   spotlight?: Spotlight;
   spaceBefore?: SpaceBefore;
   spaceAfter?: SpaceAfter;
