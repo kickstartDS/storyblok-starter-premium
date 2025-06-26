@@ -270,4 +270,11 @@ export const components = {
     )
   ),
   slider: editable(Slider, "components"),
+  "info-table": editable(
+    dynamic(() =>
+      import("./info-table/InfoTableComponent").then(
+        (mod) => mod.InfoTableContextDefault
+      )
+    )
+  ),
 };
