@@ -32,7 +32,7 @@
     "generate-content-types": "dotenvx run -f .env.local -- npm run pull-content-schema && storyblok-generate-ts source=./types/components-schema.json target=./types/components-schema compilerOptions.unknownAny=true compilerOptions.additionalProperties=false",
     "push-components": "dotenvx run -f .env.local -- npm run storyblok-push-components",
     "storyblok-push-components": "storyblok push-components cms/components.123456.json --space $NEXT_STORYBLOK_SPACE_ID --presets-source cms/presets.123456.json",
-    "create-storyblok-config": "kickstartDS cms storyblok --components-path node_modules/@kickstartds/ds-agency-premium/dist/components --cms-path components --configuration-path cms --components contact cta faq features gallery html image-text logos stats teaser-card testimonials text blog-teaser hero mosaic video-curtain image-story slider",
+    "create-storyblok-config": "kickstartDS cms storyblok --components-path node_modules/@kickstartds/ds-agency-premium/dist/components --cms-path components --configuration-path cms --components contact cta faq features gallery html image-text info-table logos stats teaser-card testimonials text blog-teaser hero mosaic video-curtain image-story slider",
     "bundle-static-assets": "node scripts/bundleStaticAssets.js",
     "storyblok-logout": "storyblok logout",
     "storyblok-login": "storyblok login"
@@ -43,7 +43,7 @@
     "@kickstartds/blog": "^4.1.0",
     "@kickstartds/content": "^4.1.1",
     "@kickstartds/core": "^4.1.0",
-    "@kickstartds/ds-agency-premium": "^1.6.67",
+    "@kickstartds/ds-agency-premium": "^1.6.68",
     "@kickstartds/form": "^4.1.0",
     "@storyblok/react": "^3.0.9",
     "@unpic/pixels": "^1.2.2",
