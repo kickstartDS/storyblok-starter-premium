@@ -17,7 +17,6 @@ import ImageRatioProviders from "@/components/ImageRatioProviders";
 
 import palette from "@kickstartds/ds-agency-premium/global.client.js";
 import "@kickstartds/ds-agency-premium/global.css";
-import IconSprite from "@/token/IconSprite";
 import "@/token/tokens.css";
 import "@/index.scss";
 import { BlurHashProvider } from "@/components/BlurHashContext";
@@ -94,7 +93,6 @@ export default function App({
                   pageSeo={story?.content.seo}
                   fallbackName={story?.name}
                 />
-                <IconSprite />
                 {headerProps && (
                   <Header
                     logo={{}}
