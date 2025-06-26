@@ -73,6 +73,7 @@ const signedUpload = async (fileName, assetFolderId) => {
         asset_folder_id: assetFolderId || null,
       }
     );
+
     await upload(
       assetResponse.data,
       "./node_modules/@kickstartds/ds-agency-premium/dist/static/" + fileName

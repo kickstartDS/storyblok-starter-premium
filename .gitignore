@@ -45,6 +45,7 @@ tmp/*
 # kickstartDS
 *.dereffed.json
 *-tokens.json
+components/bundle-hash.ts
 token/tokens.css
 token/IconSprite.js
 token/tokens.js
