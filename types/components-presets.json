@@ -885,11 +885,8 @@
         "_uid": "070b9ec2-0377-4c52-bb36-268042c87c4c",
         "date": "12/30/2022",
         "type": "blog-aside",
-        "title": "Blog Post",
         "component": "blog-aside",
-        "author__uid": "949fce95-d0c3-42b3-ab39-73054a7aedf2",
         "author_name": "Jane Smith",
-        "author_type": "blog-author",
         "readingTime": "5 min read",
         "author_email": "jane.smith@example.com",
         "author_image": "//a.storyblok.com/f/297364/250x250/ca6e532871/author-emily.png",
@@ -912,7 +909,7 @@
             "component": "socialSharing"
           }
         ],
-        "author_component": "blog-author"
+        "author_twitter": "jane_smith"
       },
       "component_id": 6059538,
       "space_id": 297364,
@@ -1074,7 +1071,7 @@
             "_uid": "da491ff4-32f8-4331-906a-61e186e94c91",
             "href": "#",
             "type": "navItems",
-            "label": "Navigation Item",
+            "label": "Another Item",
             "component": "navItems"
           },
           {
@@ -1215,7 +1212,7 @@
             "_uid": "6eade8a8-4d51-4cdc-bcc0-c84cbbdc7644",
             "href": "#",
             "type": "navItems",
-            "label": "Navigation Item",
+            "label": "Another Item",
             "component": "navItems"
           },
           {
@@ -1809,6 +1806,42 @@
       "description": null
     },
     {
+      "id": 2229374,
+      "name": "ListLayout",
+      "preset": {
+        "_uid": "6cb1bf8f-4a09-4cb9-84a3-a1803f7c18f0",
+        "type": "section",
+        "style": "default",
+        "width": "default",
+        "buttons": [],
+        "inverted": false,
+        "component": "section",
+        "spotlight": false,
+        "spaceAfter": "default",
+        "spaceBefore": "default",
+        "content_mode": "list",
+        "headline_sub": "We can create something shining for you too!",
+        "content_align": "center",
+        "content_width": "unset",
+        "headerSpacing": false,
+        "headline_text": "Happy Customers Showcases",
+        "content_gutter": "default",
+        "headline_align": "center",
+        "headline_large": false,
+        "headline_width": "unset",
+        "backgroundColor": "default",
+        "content_tileWidth": "default"
+      },
+      "component_id": 6059565,
+      "space_id": 297364,
+      "created_at": "2024-07-17T09:28:52.005Z",
+      "updated_at": "2024-07-17T09:28:52.005Z",
+      "image": "//a.storyblok.com/f/297364/1440x1658/e3c1fb88ee/layout-section-list-layout.png",
+      "color": null,
+      "icon": null,
+      "description": null
+    },
+    {
       "id": 2229352,
       "name": "ListLayout",
       "preset": {
@@ -1857,42 +1890,6 @@
       "created_at": "2024-07-17T09:28:43.593Z",
       "updated_at": "2024-07-17T09:28:43.593Z",
       "image": "//a.storyblok.com/f/297364/1000x1080/65561c0bb6/components-testimonials-list-layout.png",
-      "color": null,
-      "icon": null,
-      "description": null
-    },
-    {
-      "id": 2229374,
-      "name": "ListLayout",
-      "preset": {
-        "_uid": "6cb1bf8f-4a09-4cb9-84a3-a1803f7c18f0",
-        "type": "section",
-        "style": "default",
-        "width": "default",
-        "buttons": [],
-        "inverted": false,
-        "component": "section",
-        "spotlight": false,
-        "spaceAfter": "default",
-        "spaceBefore": "default",
-        "content_mode": "list",
-        "headline_sub": "We can create something shining for you too!",
-        "content_align": "center",
-        "content_width": "unset",
-        "headerSpacing": false,
-        "headline_text": "Happy Customers Showcases",
-        "content_gutter": "default",
-        "headline_align": "center",
-        "headline_large": false,
-        "headline_width": "unset",
-        "backgroundColor": "default",
-        "content_tileWidth": "default"
-      },
-      "component_id": 6059565,
-      "space_id": 297364,
-      "created_at": "2024-07-17T09:28:52.005Z",
-      "updated_at": "2024-07-17T09:28:52.005Z",
-      "image": "//a.storyblok.com/f/297364/1440x1658/e3c1fb88ee/layout-section-list-layout.png",
       "color": null,
       "icon": null,
       "description": null
@@ -2847,13 +2844,13 @@
       "name": "TextBelowImage",
       "preset": {
         "sub": "Where Creativity Meets Innovation",
-        "_uid": "b11bdaf7-63a4-4760-bc35-62ece7bccc01",
+        "_uid": "8ab59ea6-4482-4c9d-8a63-dde003461df9",
         "text": "Experience the perfect blend of creativity, innovation, and productivity in our modern office environment.",
         "type": "hero",
         "height": "default",
         "buttons": [
           {
-            "_uid": "c2539573-19d6-4d5c-a949-a6b97dcd330a",
+            "_uid": "a2c8c4ad-0389-407b-bcac-8a57f5f06531",
             "icon": "arrow-down",
             "type": "buttons",
             "label": "Explore further",
@@ -2865,7 +2862,18 @@
         "textbox": false,
         "headline": "Welcome to Our Dynamic Workplace",
         "component": "hero",
-        "image_src": "https://picsum.photos/seed/kdsvisual/640/270",
+        "image_src": {
+          "id": null,
+          "alt": null,
+          "name": "",
+          "focus": null,
+          "title": null,
+          "filename": null,
+          "copyright": null,
+          "fieldtype": "asset",
+          "meta_data": {},
+          "is_external_url": false
+        },
         "colorNeutral": false,
         "image_indent": "none",
         "textPosition": "below",
@@ -2877,7 +2885,7 @@
       "component_id": 6059553,
       "space_id": 297364,
       "created_at": "2024-07-17T09:28:33.407Z",
-      "updated_at": "2024-07-17T09:28:33.407Z",
+      "updated_at": "2024-11-28T15:51:30.060Z",
       "image": "//a.storyblok.com/f/297364/1165x780/0ac75a988e/components-hero-text-below-image.png",
       "color": null,
       "icon": null,

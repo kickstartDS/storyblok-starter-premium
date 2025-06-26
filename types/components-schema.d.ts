@@ -1,4 +1,4 @@
-import { StoryblokStory } from "storyblok-generate-ts";
+import {StoryblokStory} from 'storyblok-generate-ts'
 
 export interface BlogAsideStoryblok {
   author?: BlogAuthorStoryblok[];
@@ -44,6 +44,7 @@ export interface BlogHeadStoryblok {
   tags?: TagsStoryblok[];
   headline: string;
   image?: AssetStoryblok;
+  alt?: string;
   type?: string;
   _uid: string;
   component: "blog-head";
@@ -103,14 +104,15 @@ export interface BlogTeaserStoryblok {
   headline: string;
   teaserText: string;
   image?: AssetStoryblok;
+  alt?: string;
+  readingTime?: string;
+  className?: string;
+  type?: string;
   link_url?: MultilinkStoryblok;
   link_label?: string;
-  readingTime?: string;
   author_name?: string;
   author_title?: string;
   author_image?: AssetStoryblok;
-  className?: string;
-  type?: string;
   _uid: string;
   component: "blog-teaser";
 }
@@ -156,6 +158,7 @@ export interface CtaStoryblok {
   textAlign?: "" | "left" | "center";
   contentAlign?: "" | "center" | "top" | "bottom";
   type?: string;
+  width?: string;
   _uid: string;
   component: "cta";
 }
@@ -193,10 +196,7 @@ export interface FeaturesStoryblok {
 }
 
 export interface FooterStoryblok {
-  logo_homepageHref?: Exclude<
-    MultilinkStoryblok,
-    { linktype?: "email" } | { linktype?: "asset" }
-  >;
+  logo_homepageHref?: Exclude<MultilinkStoryblok, {linktype?: "email"} | {linktype?: "asset"}>;
   logo_src?: AssetStoryblok;
   logo_srcInverted?: AssetStoryblok;
   logo_alt?: string;
@@ -229,8 +229,10 @@ export interface GlobalStoryblok {
     | FeaturesStoryblok
     | GalleryStoryblok
     | HeroStoryblok
+    | HtmlStoryblok
     | ImageStoryStoryblok
     | ImageTextStoryblok
+    | InfoTableStoryblok
     | LogosStoryblok
     | MosaicStoryblok
     | SliderStoryblok
@@ -258,10 +260,7 @@ export interface HeaderStoryblok {
   dropdownInverted?: boolean;
   navItems?: NavItemsStoryblok[];
   type?: string;
-  logo_homepageHref?: Exclude<
-    MultilinkStoryblok,
-    { linktype?: "email" } | { linktype?: "asset" }
-  >;
+  logo_homepageHref?: Exclude<MultilinkStoryblok, {linktype?: "email"} | {linktype?: "asset"}>;
   logo_src?: AssetStoryblok;
   logo_srcInverted?: AssetStoryblok;
   logo_alt?: string;
@@ -287,10 +286,23 @@ export interface HeroStoryblok {
   image_src?: AssetStoryblok;
   image_indent?: "" | "none" | "left" | "right";
   image_alt?: string;
-  textPosition?: "" | "center" | "below" | "left" | "right";
+  textPosition?: "" | "center" | "below" | "left" | "right" | "corner";
   type?: string;
   _uid: string;
   component: "hero";
+}
+
+export interface HtmlStoryblok {
+  html?: string;
+  consent?: boolean;
+  consentText?: string;
+  consentButtonLabel?: string;
+  consentBackgroundImage?: AssetStoryblok;
+  consentAspectRatio?: "16:9" | "16:10" | "4:3" | "1:1";
+  type?: string;
+  inverted?: boolean;
+  _uid: string;
+  component: "html";
 }
 
 export interface ImagesStoryblok {
@@ -328,6 +340,30 @@ export interface ImageTextStoryblok {
   type?: string;
   _uid: string;
   component: "image-text";
+}
+
+export interface TableStoryblok {
+  thead: {
+    _uid: string;
+    value?: string;
+    component: number;
+  }[];
+  tbody: {
+    _uid: string;
+    body: {
+      _uid?: string;
+      value?: string;
+      component?: number;
+    }[];
+    component: number;
+  }[];
+}
+
+export interface InfoTableStoryblok {
+  data?: TableStoryblok;
+  type?: string;
+  _uid: string;
+  component: "info-table";
 }
 
 export interface LinksStoryblok {
@@ -382,10 +418,7 @@ export interface NavItemsStoryblok {
 }
 
 export interface NavSubItemsStoryblok {
-  href?: Exclude<
-    MultilinkStoryblok,
-    { linktype?: "email" } | { linktype?: "asset" }
-  >;
+  href?: Exclude<MultilinkStoryblok, {linktype?: "email"} | {linktype?: "asset"}>;
   label?: string;
   _uid: string;
   component: "navSubItems";
@@ -422,29 +455,12 @@ export interface SectionStoryblok {
     | "symmetricGlow"
     | "anchorGlow";
   backgroundColor?: "" | "default" | "accent" | "bold";
+  backgroundImage?: AssetStoryblok;
   spotlight?: boolean;
   spaceBefore?: "" | "default" | "small" | "none";
   spaceAfter?: "" | "default" | "small" | "none";
   inverted?: boolean;
   headerSpacing?: boolean;
-  headline_text?: string;
-  headline_large?: boolean;
-  headline_width?: "" | "unset" | "narrow" | "default" | "wide";
-  headline_textAlign?: "" | "left" | "center" | "right";
-  headline_align?: "" | "left" | "center" | "right";
-  headline_sub?: string;
-  headline_switchOrder?: boolean;
-  content_width?: "" | "unset" | "narrow" | "default" | "wide";
-  content_align?: "" | "left" | "center" | "right";
-  content_gutter?: "" | "large" | "default" | "small" | "none";
-  content_mode?: "" | "default" | "tile" | "list" | "slider";
-  content_tileWidth?:
-    | ""
-    | "smallest"
-    | "default"
-    | "medium"
-    | "large"
-    | "largest";
   components?: (
     | BlogTeaserStoryblok
     | ContactStoryblok
@@ -453,8 +469,10 @@ export interface SectionStoryblok {
     | FeaturesStoryblok
     | GalleryStoryblok
     | HeroStoryblok
+    | HtmlStoryblok
     | ImageStoryStoryblok
     | ImageTextStoryblok
+    | InfoTableStoryblok
     | LogosStoryblok
     | MosaicStoryblok
     | SliderStoryblok
@@ -467,6 +485,18 @@ export interface SectionStoryblok {
   )[];
   buttons?: ButtonsStoryblok[];
   type?: string;
+  headline_text?: string;
+  headline_large?: boolean;
+  headline_width?: "" | "unset" | "narrow" | "default" | "wide";
+  headline_textAlign?: "" | "left" | "center" | "right";
+  headline_align?: "" | "left" | "center" | "right";
+  headline_sub?: string;
+  headline_switchOrder?: boolean;
+  content_width?: "" | "unset" | "narrow" | "default" | "wide";
+  content_align?: "" | "left" | "center" | "right";
+  content_gutter?: "" | "large" | "default" | "small" | "none";
+  content_mode?: "" | "default" | "tile" | "list" | "slider";
+  content_tileWidth?: "" | "smallest" | "default" | "medium" | "large" | "largest";
   _uid: string;
   component: "section";
 }
@@ -566,6 +596,7 @@ export interface TestimonialStoryblok {
 
 export interface TestimonialsStoryblok {
   layout?: "" | "slider" | "list" | "alternating";
+  quoteSigns?: "" | "normal" | "large" | "none";
   testimonial?: TestimonialStoryblok[];
   type?: string;
   _uid: string;
