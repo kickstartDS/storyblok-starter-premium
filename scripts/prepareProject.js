@@ -60,7 +60,7 @@ const upload = (signed_request, file) => {
 };
 
 const signedUpload = async (fileName, assetFolderId) => {
-  console.log("signedUpload", fileName);
+  console.log("uploading: ", fileName);
   return new Promise(async (resolve) => {
     const fullPath = `./node_modules/@kickstartds/ds-agency-premium/dist/static/${fileName}`;
     let size = "";
@@ -274,7 +274,6 @@ const prepare = async () => {
         };
 
         if (!images.has(preset.screenshot)) {
-          console.log("preset", preset.id, preset.name, preset.screenshot);
           const image = signedUpload.bind(
             this,
             preset.screenshot,
@@ -350,7 +349,6 @@ const prepare = async () => {
     // ... and lazily load them
     for (const presetImage of presetImages) {
       if (!images.has(presetImage.value)) {
-        console.log("presetImage", presetImage.value);
         const image = signedUpload.bind(this, presetImage.value, demoFolderId);
         images.set(presetImage.value, (await promiseThrottle.add(image)).url);
       }
@@ -380,7 +378,6 @@ const prepare = async () => {
     // ... and lazily load them
     for (const initialImage of initialImages) {
       if (!images.has(initialImage.value)) {
-        console.log("initialImage", initialImage.value);
         const image = signedUpload.bind(this, initialImage.value, demoFolderId);
         images.set(initialImage.value, (await promiseThrottle.add(image)).url);
       }
