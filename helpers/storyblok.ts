@@ -91,15 +91,15 @@ export function storyProcessing(blok: Record<string, any>) {
     if (parent && key) {
       if (isStoryblokStoryLinkObject(value)) {
         parent[key] = `${
-          value.story?.full_slug === INDEX_SLUG
-            ? "/"
-            : value.cached_url || value.story?.full_slug
+          value.story?.full_slug === INDEX_SLUG ? "/" : value.story.full_slug
         }${value.anchor ? `#${value.anchor}` : ""}`;
       } else if (isStoryblokLink(value)) {
         if (value.linktype === "email") {
           parent[key] = `mailto:${value.email}`;
         } else if (value.linktype === "url") {
           parent[key] = `${value.url}${value.anchor ? `#${value.anchor}` : ""}`;
+        } else if (value.linktype === "asset") {
+          parent[key] = value.url;
         } else {
           parent[key] = "#";
         }

@@ -30,6 +30,7 @@ import { StorytellingProps } from "@kickstartds/content/lib/storytelling/typing"
 import { NavTopbarProvider } from "./nav-main/topbar/NavTopbarComponent";
 import { NavFlyoutProvider } from "./nav-main/flyout/NavFlyoutComponent";
 
+import { IconProvider } from "./icon/IconProvider";
 import { FooterProvider } from "./footer/FooterComponent";
 
 import { BlogTeaserContext } from "@kickstartds/ds-agency-premium/blog-teaser";
@@ -46,11 +47,11 @@ import {
 } from "@kickstartds/ds-agency-premium/hero";
 
 import { StoryblokSubComponent } from "./StoryblokSubComponent";
+import { TeaserProvider } from "./TeaserProvider";
 import { useBlurHashes } from "./BlurHashContext";
 import { useImagePriority } from "./ImagePriorityContext";
 import { useImageSize } from "./ImageSizeContext";
 import { useImageRatio } from "./ImageRatioContext";
-import { IconProvider } from "./icon/IconProvider";
 
 const Link = forwardRef<
   HTMLAnchorElement,
@@ -92,7 +93,7 @@ const Picture = forwardRef<
   if (!src) return;
   const fileUrl = !src.startsWith("http") ? `https:${src}` : src;
   const [width, height] = fileUrl.match(/\/(\d+)x(\d+)\//)?.slice(1) || [];
-  const maxWidth = parseInt(width) > size ? size : parseInt(width);
+  const maxWidth = parseInt(width) > size ? Math.floor(size) : parseInt(width);
   const maxHeight =
     parseInt(width) > size
       ? Math.floor((parseInt(height) * size) / parseInt(width))
@@ -222,47 +223,49 @@ const ComponentProviders = (props: PropsWithChildren) => (
       <PictureProvider>
         <HeroProvider>
           <LinkProvider>
-            <NavTopbarProvider>
-              <FooterProvider>
-                <NavFlyoutProvider>
-                  {/* @ts-expect-error */}
-                  <CtaContext.Provider value={StoryblokSubComponent}>
+            <TeaserProvider>
+              <NavTopbarProvider>
+                <FooterProvider>
+                  <NavFlyoutProvider>
                     {/* @ts-expect-error */}
-                    <FeatureContext.Provider value={StoryblokSubComponent}>
+                    <CtaContext.Provider value={StoryblokSubComponent}>
                       {/* @ts-expect-error */}
-                      <StatContext.Provider value={StoryblokSubComponent}>
-                        <TestimonialContext.Provider
-                          // @ts-expect-error
-                          value={StoryblokSubComponent}
-                        >
-                          <BlogHeadContext.Provider
+                      <FeatureContext.Provider value={StoryblokSubComponent}>
+                        {/* @ts-expect-error */}
+                        <StatContext.Provider value={StoryblokSubComponent}>
+                          <TestimonialContext.Provider
                             // @ts-expect-error
                             value={StoryblokSubComponent}
                           >
-                            <BlogAsideContext.Provider
+                            <BlogHeadContext.Provider
                               // @ts-expect-error
                               value={StoryblokSubComponent}
                             >
-                              <BlogTeaserContext.Provider
+                              <BlogAsideContext.Provider
                                 // @ts-expect-error
                                 value={StoryblokSubComponent}
                               >
-                                <BlogAuthorContext.Provider
+                                <BlogTeaserContext.Provider
                                   // @ts-expect-error
                                   value={StoryblokSubComponent}
                                 >
-                                  {props.children}
-                                </BlogAuthorContext.Provider>
-                              </BlogTeaserContext.Provider>
-                            </BlogAsideContext.Provider>
-                          </BlogHeadContext.Provider>
-                        </TestimonialContext.Provider>
-                      </StatContext.Provider>
-                    </FeatureContext.Provider>
-                  </CtaContext.Provider>
-                </NavFlyoutProvider>
-              </FooterProvider>
-            </NavTopbarProvider>
+                                  <BlogAuthorContext.Provider
+                                    // @ts-expect-error
+                                    value={StoryblokSubComponent}
+                                  >
+                                    {props.children}
+                                  </BlogAuthorContext.Provider>
+                                </BlogTeaserContext.Provider>
+                              </BlogAsideContext.Provider>
+                            </BlogHeadContext.Provider>
+                          </TestimonialContext.Provider>
+                        </StatContext.Provider>
+                      </FeatureContext.Provider>
+                    </CtaContext.Provider>
+                  </NavFlyoutProvider>
+                </FooterProvider>
+              </NavTopbarProvider>
+            </TeaserProvider>
           </LinkProvider>
         </HeroProvider>
       </PictureProvider>

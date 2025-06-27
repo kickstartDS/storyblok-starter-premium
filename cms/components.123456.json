@@ -21,7 +21,14 @@
           "pos": 0,
           "display_name": "Icon",
           "key": "icon",
-          "type": "text",
+          "type": "custom",
+          "field_type": "storyblok-icon-sprite-picker-field-plugin",
+          "options": [
+            {
+              "name": "allowedIcons",
+              "_uid": "c638bde7-32c3-48b6-a0a5-d8b0639d10b0"
+            }
+          ],
           "description": "Choose an icon",
           "required": false
         },
@@ -87,7 +94,14 @@
           "pos": 0,
           "display_name": "Icon",
           "key": "icon",
-          "type": "text",
+          "type": "custom",
+          "field_type": "storyblok-icon-sprite-picker-field-plugin",
+          "options": [
+            {
+              "name": "allowedIcons",
+              "_uid": "06ca1935-f230-4846-9bc4-3d88fd186cdf"
+            }
+          ],
           "description": "The icon for the feature",
           "required": false
         },
@@ -114,10 +128,7 @@
           "pos": 0,
           "display_name": "Cta",
           "key": "tab-2a3d5958-a01b-4e9d-b879-c7dae7a53c72",
-          "keys": [
-            "cta_target",
-            "cta_label"
-          ],
+          "keys": ["cta_target", "cta_label"],
           "type": "tab",
           "required": false
         },
@@ -164,9 +175,7 @@
           "display_name": "Src",
           "key": "src",
           "type": "asset",
-          "filetypes": [
-            "images"
-          ],
+          "filetypes": ["images"],
           "description": "The source of the image",
           "required": false
         },
@@ -207,9 +216,7 @@
           "display_name": "Src",
           "key": "src",
           "type": "asset",
-          "filetypes": [
-            "images"
-          ],
+          "filetypes": ["images"],
           "description": "The URL of the logo image",
           "required": false
         },
@@ -267,10 +274,7 @@
           "pos": 0,
           "display_name": "Image",
           "key": "tab-c97e1af6-d700-4cd3-a928-5af192ab4eca",
-          "keys": [
-            "image_src",
-            "image_alt"
-          ],
+          "keys": ["image_src", "image_alt"],
           "type": "tab",
           "required": false
         },
@@ -280,9 +284,7 @@
           "display_name": "Src",
           "key": "image_src",
           "type": "asset",
-          "filetypes": [
-            "images"
-          ],
+          "filetypes": ["images"],
           "description": "Picture source",
           "required": false
         },
@@ -346,7 +348,14 @@
           "pos": 0,
           "display_name": "Icon",
           "key": "button_icon",
-          "type": "text",
+          "type": "custom",
+          "field_type": "storyblok-icon-sprite-picker-field-plugin",
+          "options": [
+            {
+              "name": "allowedIcons",
+              "_uid": "7ae3c129-4449-4de9-bde4-e4fd43f0f984"
+            }
+          ],
           "description": "Choose an icon",
           "required": false
         },
@@ -365,9 +374,7 @@
           "display_name": "BackgroundImage",
           "key": "backgroundImage",
           "type": "asset",
-          "filetypes": [
-            "images"
-          ],
+          "filetypes": ["images"],
           "description": "Background image for the whole element",
           "required": false
         },
@@ -407,7 +414,7 @@
           "pos": 0,
           "display_name": "Number",
           "key": "number",
-          "type": "number",
+          "type": "text",
           "description": "The number of the stat",
           "required": false
         },
@@ -434,7 +441,14 @@
           "pos": 0,
           "display_name": "Icon",
           "key": "icon",
-          "type": "text",
+          "type": "custom",
+          "field_type": "storyblok-icon-sprite-picker-field-plugin",
+          "options": [
+            {
+              "name": "allowedIcons",
+              "_uid": "f11d1620-40cb-4e77-9aa3-979af8f2b7c1"
+            }
+          ],
           "description": "Optional icon of the stat",
           "required": false
         },
@@ -492,10 +506,7 @@
           "pos": 0,
           "display_name": "Image",
           "key": "tab-1c48c868-595c-4499-b8ba-9b1c7949716c",
-          "keys": [
-            "image_src",
-            "image_alt"
-          ],
+          "keys": ["image_src", "image_alt"],
           "type": "tab",
           "required": false
         },
@@ -505,9 +516,7 @@
           "display_name": "Src",
           "key": "image_src",
           "type": "asset",
-          "filetypes": [
-            "images"
-          ],
+          "filetypes": ["images"],
           "description": "The image to display with the testimonial",
           "required": false
         },
@@ -528,15 +537,6 @@
           "type": "number",
           "description": "The rating of the testimonial, from 1 to 5",
           "required": false
-        },
-        "type": {
-          "id": 0,
-          "pos": 0,
-          "display_name": "Type",
-          "key": "type",
-          "type": "text",
-          "description": "Internal type for interface resolution",
-          "default_value": "testimonial"
         }
       },
       "is_nestable": true,
@@ -613,9 +613,7 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": [
-            "buttons"
-          ],
+          "component_whitelist": ["buttons"],
           "description": "Button"
         },
         "backgroundColor": {
@@ -633,9 +631,7 @@
           "display_name": "BackgroundImage",
           "key": "backgroundImage",
           "type": "asset",
-          "filetypes": [
-            "images"
-          ],
+          "filetypes": ["images"],
           "description": "Background image for the whole element",
           "required": false
         },
@@ -644,11 +640,7 @@
           "pos": 0,
           "display_name": "Image",
           "key": "tab-8b6e54e7-f4ea-4e3a-b82e-70d970d815de",
-          "keys": [
-            "image_src",
-            "image_padding",
-            "image_alt"
-          ],
+          "keys": ["image_src", "image_padding", "image_alt"],
           "type": "tab",
           "description": "Image displayed alongside the text content",
           "required": false
@@ -659,9 +651,7 @@
           "display_name": "Src",
           "key": "image_src",
           "type": "asset",
-          "filetypes": [
-            "images"
-          ],
+          "filetypes": ["images"],
           "description": "Image source to use",
           "required": false
         },
@@ -689,10 +679,7 @@
           "pos": 0,
           "display_name": "Order",
           "key": "tab-32c034db-bcf3-40d6-adc9-b49d2100ff50",
-          "keys": [
-            "order_mobileImageLast",
-            "order_desktopImageLast"
-          ],
+          "keys": ["order_mobileImageLast", "order_desktopImageLast"],
           "type": "tab",
           "description": "Choose what comes first on mobile and desktop: image or text",
           "required": false
@@ -776,7 +763,7 @@
         }
       },
       "is_nestable": true,
-      "real_name": "Components",
+      "real_name": "Cta",
       "color": "#05566a",
       "icon": "block-wallet",
       "component_group_uuid": "206dff3c-19ca-4d06-aa5e-e23c8c90401f",
@@ -857,10 +844,7 @@
           "pos": 0,
           "display_name": "Ctas",
           "key": "tab-39b787e2-ea03-4070-93c4-ae49eda845a5",
-          "keys": [
-            "ctas_toggle",
-            "ctas_style"
-          ],
+          "keys": ["ctas_toggle", "ctas_style"],
           "type": "tab",
           "required": false
         },
@@ -908,9 +892,7 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": [
-            "feature"
-          ],
+          "component_whitelist": ["feature"],
           "description": "Feature"
         },
         "type": {
@@ -924,7 +906,7 @@
         }
       },
       "is_nestable": true,
-      "real_name": "Components",
+      "real_name": "Features",
       "color": "#05566a",
       "icon": "block-wallet",
       "component_group_uuid": "206dff3c-19ca-4d06-aa5e-e23c8c90401f",
@@ -945,9 +927,7 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": [
-            "images"
-          ]
+          "component_whitelist": ["images"]
         },
         "layout": {
           "id": 0,
@@ -1027,7 +1007,7 @@
         }
       },
       "is_nestable": true,
-      "real_name": "Components",
+      "real_name": "Gallery",
       "color": "#05566a",
       "icon": "block-wallet",
       "component_group_uuid": "206dff3c-19ca-4d06-aa5e-e23c8c90401f",
@@ -1135,9 +1115,7 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": [
-            "buttons"
-          ],
+          "component_whitelist": ["buttons"],
           "description": "Button"
         },
         "overlay": {
@@ -1172,9 +1150,7 @@
           "display_name": "SrcMobile",
           "key": "image_srcMobile",
           "type": "asset",
-          "filetypes": [
-            "images"
-          ],
+          "filetypes": ["images"],
           "description": "Background image source for small screens",
           "required": false
         },
@@ -1184,9 +1160,7 @@
           "display_name": "SrcTablet",
           "key": "image_srcTablet",
           "type": "asset",
-          "filetypes": [
-            "images"
-          ],
+          "filetypes": ["images"],
           "description": "Background image source for medium screens",
           "required": false
         },
@@ -1196,9 +1170,7 @@
           "display_name": "SrcDesktop",
           "key": "image_srcDesktop",
           "type": "asset",
-          "filetypes": [
-            "images"
-          ],
+          "filetypes": ["images"],
           "description": "Background image source for large screens",
           "required": false
         },
@@ -1208,9 +1180,7 @@
           "display_name": "Src",
           "key": "image_src",
           "type": "asset",
-          "filetypes": [
-            "images"
-          ],
+          "filetypes": ["images"],
           "description": "Override for img tag of picture element, if needed",
           "required": false
         },
@@ -1298,7 +1268,7 @@
         }
       },
       "is_nestable": true,
-      "real_name": "Components",
+      "real_name": "Hero",
       "color": "#05566a",
       "icon": "block-wallet",
       "component_group_uuid": "206dff3c-19ca-4d06-aa5e-e23c8c90401f",
@@ -1334,10 +1304,7 @@
           "pos": 0,
           "display_name": "Image",
           "key": "tab-866a85f3-fa68-44c4-84e0-7da09ca61ec8",
-          "keys": [
-            "image_src",
-            "image_alt"
-          ],
+          "keys": ["image_src", "image_alt"],
           "type": "tab",
           "required": false
         },
@@ -1347,9 +1314,7 @@
           "display_name": "Src",
           "key": "image_src",
           "type": "asset",
-          "filetypes": [
-            "images"
-          ],
+          "filetypes": ["images"],
           "description": "URL of the image to display",
           "required": false
         },
@@ -1404,7 +1369,7 @@
         }
       },
       "is_nestable": true,
-      "real_name": "Components",
+      "real_name": "Image Text",
       "color": "#05566a",
       "icon": "block-wallet",
       "component_group_uuid": "206dff3c-19ca-4d06-aa5e-e23c8c90401f",
@@ -1434,9 +1399,7 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": [
-            "logo"
-          ],
+          "component_whitelist": ["logo"],
           "description": "Logo entry for Logos component"
         },
         "align": {
@@ -1559,7 +1522,7 @@
         }
       },
       "is_nestable": true,
-      "real_name": "Components",
+      "real_name": "Logos",
       "color": "#05566a",
       "icon": "block-wallet",
       "component_group_uuid": "206dff3c-19ca-4d06-aa5e-e23c8c90401f",
@@ -1580,9 +1543,7 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": [
-            "stat"
-          ],
+          "component_whitelist": ["stat"],
           "description": "Stat entry of Stats component"
         },
         "type": {
@@ -1596,7 +1557,7 @@
         }
       },
       "is_nestable": true,
-      "real_name": "Components",
+      "real_name": "Stats",
       "color": "#05566a",
       "icon": "block-wallet",
       "component_group_uuid": "206dff3c-19ca-4d06-aa5e-e23c8c90401f",
@@ -1676,11 +1637,7 @@
           "pos": 0,
           "display_name": "Button",
           "key": "tab-757968e4-1101-4c22-97ca-ea6d9247e372",
-          "keys": [
-            "button_label",
-            "button_chevron",
-            "button_hidden"
-          ],
+          "keys": ["button_label", "button_chevron", "button_hidden"],
           "type": "tab",
           "required": false
         },
@@ -1717,9 +1674,7 @@
           "display_name": "Image",
           "key": "image",
           "type": "asset",
-          "filetypes": [
-            "images"
-          ],
+          "filetypes": ["images"],
           "description": "Image to display as cover",
           "required": false
         },
@@ -1766,7 +1721,7 @@
         }
       },
       "is_nestable": true,
-      "real_name": "Components",
+      "real_name": "Teaser Card",
       "color": "#05566a",
       "icon": "block-wallet",
       "component_group_uuid": "206dff3c-19ca-4d06-aa5e-e23c8c90401f",
@@ -1814,9 +1769,7 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": [
-            "testimonial"
-          ],
+          "component_whitelist": ["testimonial"],
           "description": "Testimonial entry of Testimonials component"
         },
         "type": {
@@ -1830,7 +1783,7 @@
         }
       },
       "is_nestable": true,
-      "real_name": "Components",
+      "real_name": "Testimonials",
       "color": "#05566a",
       "icon": "block-wallet",
       "component_group_uuid": "206dff3c-19ca-4d06-aa5e-e23c8c90401f",
@@ -1916,7 +1869,7 @@
         }
       },
       "is_nestable": true,
-      "real_name": "Components",
+      "real_name": "Text",
       "color": "#05566a",
       "icon": "block-wallet",
       "component_group_uuid": "206dff3c-19ca-4d06-aa5e-e23c8c90401f",
@@ -2001,9 +1954,7 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": [
-            "questions"
-          ]
+          "component_whitelist": ["questions"]
         },
         "type": {
           "id": 0,
@@ -2016,7 +1967,7 @@
         }
       },
       "is_nestable": true,
-      "real_name": "Components",
+      "real_name": "Faq",
       "color": "#05566a",
       "icon": "block-wallet",
       "component_group_uuid": "206dff3c-19ca-4d06-aa5e-e23c8c90401f",
@@ -2069,9 +2020,7 @@
           "display_name": "ConsentBackgroundImage",
           "key": "consentBackgroundImage",
           "type": "asset",
-          "filetypes": [
-            "images"
-          ],
+          "filetypes": ["images"],
           "required": false
         },
         "consentAspectRatio": {
@@ -2222,9 +2171,7 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": [
-            "buttons"
-          ],
+          "component_whitelist": ["buttons"],
           "description": "Component used for user interaction"
         },
         "tab-06cc0e03-5cee-425a-a426-f3faf31277a8": {
@@ -2248,9 +2195,7 @@
           "display_name": "Src",
           "key": "image_src",
           "type": "asset",
-          "filetypes": [
-            "images"
-          ],
+          "filetypes": ["images"],
           "description": "Image source to use",
           "required": false
         },
@@ -2355,7 +2300,7 @@
         }
       },
       "is_nestable": true,
-      "real_name": "Components",
+      "real_name": "Image Story",
       "color": "#05566a",
       "icon": "block-wallet",
       "component_group_uuid": "206dff3c-19ca-4d06-aa5e-e23c8c90401f",
@@ -2412,9 +2357,7 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": [
-            "tile"
-          ],
+          "component_whitelist": ["tile"],
           "description": "Tile"
         },
         "type": {
@@ -2428,7 +2371,7 @@
         }
       },
       "is_nestable": true,
-      "real_name": "Components",
+      "real_name": "Mosaic",
       "color": "#05566a",
       "icon": "block-wallet",
       "component_group_uuid": "206dff3c-19ca-4d06-aa5e-e23c8c90401f",
@@ -2522,9 +2465,7 @@
           "type": "bloks",
           "restrict_type": "groups",
           "restrict_components": true,
-          "component_group_whitelist": [
-            "206dff3c-19ca-4d06-aa5e-e23c8c90401f"
-          ],
+          "component_group_whitelist": ["206dff3c-19ca-4d06-aa5e-e23c8c90401f"],
           "description": "Abstracts a blog overview concept into JSON schema",
           "required": false
         },
@@ -2552,7 +2493,7 @@
         }
       },
       "is_nestable": true,
-      "real_name": "Components",
+      "real_name": "Slider",
       "color": "#05566a",
       "icon": "block-wallet",
       "component_group_uuid": "206dff3c-19ca-4d06-aa5e-e23c8c90401f",
@@ -2618,9 +2559,7 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": [
-            "buttons"
-          ],
+          "component_whitelist": ["buttons"],
           "description": "Button"
         },
         "overlay": {
@@ -2637,11 +2576,7 @@
           "pos": 0,
           "display_name": "Video",
           "key": "tab-23a6b5a6-3f03-4761-a82c-d52bb462ff75",
-          "keys": [
-            "video_srcMobile",
-            "video_srcTablet",
-            "video_srcDesktop"
-          ],
+          "keys": ["video_srcMobile", "video_srcTablet", "video_srcDesktop"],
           "type": "tab",
           "description": "Sources of background videos for different screen sizes",
           "required": false
@@ -2652,9 +2587,7 @@
           "display_name": "SrcMobile",
           "key": "video_srcMobile",
           "type": "asset",
-          "filetypes": [
-            "videos"
-          ],
+          "filetypes": ["videos"],
           "description": "Background video source for small screens",
           "required": false
         },
@@ -2664,9 +2597,7 @@
           "display_name": "SrcTablet",
           "key": "video_srcTablet",
           "type": "asset",
-          "filetypes": [
-            "videos"
-          ],
+          "filetypes": ["videos"],
           "description": "Background video source for medium screens",
           "required": false
         },
@@ -2676,9 +2607,7 @@
           "display_name": "SrcDesktop",
           "key": "video_srcDesktop",
           "type": "asset",
-          "filetypes": [
-            "videos"
-          ],
+          "filetypes": ["videos"],
           "description": "Background video source for large screens",
           "required": false
         },
@@ -2720,7 +2649,7 @@
         }
       },
       "is_nestable": true,
-      "real_name": "Components",
+      "real_name": "Video Curtain",
       "color": "#05566a",
       "icon": "block-wallet",
       "component_group_uuid": "206dff3c-19ca-4d06-aa5e-e23c8c90401f",
@@ -2733,6 +2662,15 @@
       "updated_at": "2025-01-23T11:13:17.461Z",
       "id": 46,
       "schema": {
+        "type": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Type",
+          "key": "type",
+          "type": "text",
+          "description": "Internal type for interface resolution",
+          "default_value": "section"
+        },
         "width": {
           "id": 0,
           "pos": 0,
@@ -2850,9 +2788,7 @@
           "display_name": "BackgroundImage",
           "key": "backgroundImage",
           "type": "asset",
-          "filetypes": [
-            "images"
-          ],
+          "filetypes": ["images"],
           "description": "Background image for the whole section",
           "required": false
         },
@@ -3257,9 +3193,7 @@
           "type": "bloks",
           "restrict_type": "groups",
           "restrict_components": true,
-          "component_group_whitelist": [
-            "206dff3c-19ca-4d06-aa5e-e23c8c90401f"
-          ],
+          "component_group_whitelist": ["206dff3c-19ca-4d06-aa5e-e23c8c90401f"],
           "description": "Abstracts a blog overview concept into JSON schema",
           "required": false
         },
@@ -3271,19 +3205,8 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": [
-            "buttons"
-          ],
+          "component_whitelist": ["buttons"],
           "description": "Component used for user interaction"
-        },
-        "type": {
-          "id": 0,
-          "pos": 0,
-          "display_name": "Type",
-          "key": "type",
-          "type": "text",
-          "description": "Internal type for interface resolution",
-          "default_value": "section"
         }
       },
       "is_nestable": true,
@@ -3347,9 +3270,7 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": [
-            "tags"
-          ],
+          "component_whitelist": ["tags"],
           "description": "Tag given to a blog post"
         },
         "headline": {
@@ -3376,9 +3297,7 @@
           "display_name": "Image",
           "key": "image",
           "type": "asset",
-          "filetypes": [
-            "images"
-          ],
+          "filetypes": ["images"],
           "description": "The preview image for the blog post",
           "required": false
         },
@@ -3396,10 +3315,7 @@
           "pos": 0,
           "display_name": "Link",
           "key": "tab-58e45de3-91b4-418b-95b6-3d647693bf22",
-          "keys": [
-            "link_url",
-            "link_text"
-          ],
+          "keys": ["link_url", "link_text"],
           "type": "tab",
           "description": "URL and label for the blog post linked",
           "required": false
@@ -3441,11 +3357,7 @@
           "pos": 0,
           "display_name": "Author",
           "key": "tab-6f993f4f-361c-47da-8b97-a970ae221a1a",
-          "keys": [
-            "author_name",
-            "author_title",
-            "author_image"
-          ],
+          "keys": ["author_name", "author_title", "author_image"],
           "type": "tab",
           "description": "The author of the blog post",
           "required": false
@@ -3474,9 +3386,7 @@
           "display_name": "Image",
           "key": "author_image",
           "type": "asset",
-          "filetypes": [
-            "images"
-          ],
+          "filetypes": ["images"],
           "description": "The image URL of the author",
           "required": false
         },
@@ -3545,9 +3455,7 @@
           "display_name": "Image",
           "key": "image",
           "type": "asset",
-          "filetypes": [
-            "images"
-          ],
+          "filetypes": ["images"],
           "description": "Preview image used for the page",
           "required": false
         },
@@ -3557,9 +3465,7 @@
           "display_name": "CardImage",
           "key": "cardImage",
           "type": "asset",
-          "filetypes": [
-            "images"
-          ],
+          "filetypes": ["images"],
           "description": "Card preview image (larger, e.g. Twitter) used for the page",
           "required": false
         },
@@ -3603,9 +3509,7 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": [
-            "tags"
-          ],
+          "component_whitelist": ["tags"],
           "description": "Tag given to a blog post"
         },
         "headline": {
@@ -3623,9 +3527,7 @@
           "display_name": "Image",
           "key": "image",
           "type": "asset",
-          "filetypes": [
-            "images"
-          ],
+          "filetypes": ["images"],
           "description": "The source of the cover image for the blog post",
           "required": false
         },
@@ -3651,7 +3553,8 @@
       "is_nestable": true,
       "real_name": "Blog Head",
       "color": "#05566a",
-      "icon": "block-wallet"
+      "icon": "block-wallet",
+      "image": "//a.storyblok.com/f/285403483064057/1000x863/d56d71c7fc/blog-blog-head-default.png"
     },
     {
       "name": "links",
@@ -3665,7 +3568,14 @@
           "pos": 0,
           "display_name": "Icon",
           "key": "icon",
-          "type": "text",
+          "type": "custom",
+          "field_type": "storyblok-icon-sprite-picker-field-plugin",
+          "options": [
+            {
+              "name": "allowedIcons",
+              "_uid": "09c6425b-3d03-4c02-a8c4-79ad3cdd726e"
+            }
+          ],
           "required": false
         },
         "label": {
@@ -3748,9 +3658,7 @@
           "display_name": "Src",
           "key": "image_src",
           "type": "asset",
-          "filetypes": [
-            "images"
-          ],
+          "filetypes": ["images"],
           "description": "URL of the image to display",
           "required": false
         },
@@ -3807,9 +3715,7 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": [
-            "links"
-          ]
+          "component_whitelist": ["links"]
         },
         "type": {
           "id": 0,
@@ -3824,7 +3730,8 @@
       "is_nestable": true,
       "real_name": "Blog Author",
       "color": "#05566a",
-      "icon": "block-wallet"
+      "icon": "block-wallet",
+      "image": "//a.storyblok.com/f/285403483064057/390x646/751397b4ed/blog-blog-author-default.png"
     },
     {
       "name": "socialSharing",
@@ -3838,7 +3745,14 @@
           "pos": 0,
           "display_name": "Icon",
           "key": "icon",
-          "type": "text",
+          "type": "custom",
+          "field_type": "storyblok-icon-sprite-picker-field-plugin",
+          "options": [
+            {
+              "name": "allowedIcons",
+              "_uid": "9d5abe6f-a2cc-41dd-9d3b-c3e1d4494a4e"
+            }
+          ],
           "description": "The icon name for the social link",
           "required": false
         },
@@ -3885,9 +3799,7 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": [
-            "blog-author"
-          ],
+          "component_whitelist": ["blog-author"],
           "description": "The author of the blog post"
         },
         "socialSharing": {
@@ -3898,9 +3810,7 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": [
-            "socialSharing"
-          ]
+          "component_whitelist": ["socialSharing"]
         },
         "readingTime": {
           "id": 0,
@@ -3942,7 +3852,8 @@
       "is_nestable": true,
       "real_name": "Blog Aside",
       "color": "#05566a",
-      "icon": "block-wallet"
+      "icon": "block-wallet",
+      "image": "//a.storyblok.com/f/285403483064057/390x646/c76ce5018c/blog-blog-aside-default.png"
     },
     {
       "name": "tab-fb0e3e72-2dc8-4d3a-ae3f-fb7e605defee",
@@ -4156,9 +4067,7 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": [
-            "items"
-          ]
+          "component_whitelist": ["items"]
         }
       },
       "is_nestable": true,
@@ -4196,9 +4105,7 @@
           "display_name": "Src",
           "key": "logo_src",
           "type": "asset",
-          "filetypes": [
-            "images"
-          ],
+          "filetypes": ["images"],
           "description": "Picture source",
           "required": false
         },
@@ -4208,9 +4115,7 @@
           "display_name": "SrcInverted",
           "key": "logo_srcInverted",
           "type": "asset",
-          "filetypes": [
-            "images"
-          ],
+          "filetypes": ["images"],
           "description": "Picture source",
           "required": false
         },
@@ -4298,9 +4203,7 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": [
-            "navItems"
-          ]
+          "component_whitelist": ["navItems"]
         },
         "type": {
           "id": 0,
@@ -4347,9 +4250,7 @@
           "display_name": "Src",
           "key": "logo_src",
           "type": "asset",
-          "filetypes": [
-            "images"
-          ],
+          "filetypes": ["images"],
           "description": "Picture source",
           "required": false
         },
@@ -4359,9 +4260,7 @@
           "display_name": "SrcInverted",
           "key": "logo_srcInverted",
           "type": "asset",
-          "filetypes": [
-            "images"
-          ],
+          "filetypes": ["images"],
           "description": "Picture source",
           "required": false
         },
@@ -4432,9 +4331,7 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": [
-            "navItems"
-          ]
+          "component_whitelist": ["navItems"]
         },
         "type": {
           "id": 0,
@@ -4467,9 +4364,7 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": [
-            "section"
-          ],
+          "component_whitelist": ["section"],
           "description": "Component used to layout components into pages"
         },
         "latestTitle": {
@@ -4490,9 +4385,7 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": [
-            "blog-teaser"
-          ],
+          "component_whitelist": ["blog-teaser"],
           "description": "Display a blog teaser with date, tags, headline, teaser text and author"
         },
         "listTitle": {
@@ -4513,9 +4406,7 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": [
-            "blog-teaser"
-          ],
+          "component_whitelist": ["blog-teaser"],
           "description": "Display a blog teaser with date, tags, headline, teaser text and author"
         },
         "moreTitle": {
@@ -4536,9 +4427,7 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": [
-            "blog-teaser"
-          ],
+          "component_whitelist": ["blog-teaser"],
           "description": "Display a blog teaser with date, tags, headline, teaser text and author"
         },
         "cta": {
@@ -4549,9 +4438,7 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": [
-            "cta"
-          ],
+          "component_whitelist": ["cta"],
           "description": "Cta"
         },
         "seo": {
@@ -4562,9 +4449,7 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": [
-            "seo"
-          ],
+          "component_whitelist": ["seo"],
           "description": "Abstracts SEO settings for a website into JSON schema"
         },
         "type": {
@@ -4578,7 +4463,8 @@
         }
       },
       "is_nestable": false,
-      "real_name": "Blog Overview"
+      "real_name": "Blog Overview",
+      "image": "//a.storyblok.com/f/285403483064057/1280x720/55d0e59011/page-archetypes-blog-overview-blog-overview.png"
     },
     {
       "name": "blog-post",
@@ -4596,9 +4482,7 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": [
-            "blog-head"
-          ],
+          "component_whitelist": ["blog-head"],
           "description": "Intro portion of a singular blog entry"
         },
         "aside": {
@@ -4609,9 +4493,7 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": [
-            "blog-aside"
-          ],
+          "component_whitelist": ["blog-aside"],
           "description": "Meta info for a singular blog entry"
         },
         "content": {
@@ -4631,9 +4513,7 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": [
-            "section"
-          ],
+          "component_whitelist": ["section"],
           "description": "Component used to layout components into pages"
         },
         "cta": {
@@ -4644,9 +4524,7 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": [
-            "cta"
-          ],
+          "component_whitelist": ["cta"],
           "description": "Cta"
         },
         "seo": {
@@ -4657,9 +4535,7 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": [
-            "seo"
-          ],
+          "component_whitelist": ["seo"],
           "description": "Abstracts SEO settings for a website into JSON schema"
         },
         "type": {
@@ -4673,7 +4549,8 @@
         }
       },
       "is_nestable": false,
-      "real_name": "Blog Post"
+      "real_name": "Blog Post",
+      "image": "//a.storyblok.com/f/285403483064057/1280x720/68ab8db018/page-archetypes-blog-post-blog-post.png"
     },
     {
       "name": "page",
@@ -4691,9 +4568,7 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": [
-            "section"
-          ],
+          "component_whitelist": ["section"],
           "description": "Component used to layout components into pages"
         },
         "tab-a921c95d-2acf-4861-af27-d2c97de59e33": {
@@ -4701,10 +4576,7 @@
           "pos": 0,
           "display_name": "Header",
           "key": "tab-a921c95d-2acf-4861-af27-d2c97de59e33",
-          "keys": [
-            "header_floating",
-            "header_inverted"
-          ],
+          "keys": ["header_floating", "header_inverted"],
           "type": "tab",
           "description": "Header settings for the page",
           "required": false
@@ -4732,9 +4604,7 @@
           "pos": 0,
           "display_name": "Footer",
           "key": "tab-1e2248ee-5c0b-4709-8a06-08d1c01a9413",
-          "keys": [
-            "footer_inverted"
-          ],
+          "keys": ["footer_inverted"],
           "type": "tab",
           "description": "Footer settings for the page",
           "required": false
@@ -4756,9 +4626,7 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": [
-            "seo"
-          ],
+          "component_whitelist": ["seo"],
           "description": "Abstracts SEO settings for a website into JSON schema"
         },
         "type": {
@@ -4790,9 +4658,7 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": [
-            "header"
-          ],
+          "component_whitelist": ["header"],
           "description": "Header layered on top by the CMS"
         },
         "footer": {
@@ -4803,9 +4669,7 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": [
-            "footer"
-          ],
+          "component_whitelist": ["footer"],
           "description": "Footer"
         },
         "seo": {
@@ -4816,9 +4680,7 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": [
-            "seo"
-          ],
+          "component_whitelist": ["seo"],
           "description": "Abstracts SEO settings for a website into JSON schema"
         },
         "iconSprite": {
@@ -4842,6 +4704,48 @@
       },
       "is_nestable": false,
       "real_name": "Settings"
+    },
+    {
+      "name": "global",
+      "display_name": "Global",
+      "created_at": "2025-06-27T14:51:09.558Z",
+      "updated_at": "2025-06-27T14:51:09.558Z",
+      "id": 0,
+      "schema": {
+        "global": {
+          "id": 0,
+          "pos": 0,
+          "type": "bloks",
+          "restrict_type": "groups",
+          "restrict_components": true,
+          "component_group_whitelist": ["ce97b343-65ca-43d9-85c5-1f49da8842ed"]
+        }
+      },
+      "is_root": true,
+      "is_nestable": false,
+      "real_name": "Global"
+    },
+    {
+      "name": "global_reference",
+      "display_name": "Global Reference",
+      "created_at": "2025-06-27T14:51:09.559Z",
+      "updated_at": "2025-06-27T14:51:09.559Z",
+      "id": 0,
+      "schema": {
+        "reference": {
+          "type": "options",
+          "pos": 0,
+          "is_reference_type": true,
+          "source": "internal_stories",
+          "entry_appearance": "card",
+          "allow_advanced_search": true,
+          "folder_slug": "global/"
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Global Rereference",
+      "component_group_uuid": "07ed4d72-8f90-48de-bd97-69f9d9bbb58e",
+      "component_group_name": "Global"
     }
   ]
 }

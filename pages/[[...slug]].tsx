@@ -6,9 +6,11 @@ import { traverse } from "object-traversal";
 import { isImgUrl } from "@/helpers/apiUtils";
 import { fontClassNames } from "@/helpers/fonts";
 import { HeadlineLevelProvider } from "@/components/headline/HeadlineLevelContext";
+import { locale } from "@/components";
 
 type PageProps = ISbStory["data"] & {
   settings?: ISbStoryData["content"];
+  language: typeof locale;
 };
 
 const Page: NextPage<PageProps> = ({ story }) => {
@@ -43,6 +45,7 @@ export const getStaticPaths = (async () => {
 
 export const getStaticProps = (async ({ params }) => {
   const slug = params?.slug?.join("/");
+
   try {
     const { pageData, settingsData } = await fetchPageProps(slug);
 
@@ -69,6 +72,7 @@ export const getStaticProps = (async ({ params }) => {
         fontClassNames,
         settings: settingsData.stories[0]?.content || null,
         key: pageData.story.id,
+        language: locale,
       },
     };
   } catch (e) {

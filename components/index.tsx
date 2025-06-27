@@ -20,7 +20,6 @@ import {
   GlobalStoryblok,
 } from "@/types/components-schema";
 
-// TODO change locale to 'en' in starter, think about overall local handling
 export const locale = "de";
 
 export const Global: FC<GlobalStoryblok & SbBlokData> = (props) =>
@@ -142,6 +141,13 @@ export const components = {
       )
     )
   ),
+  divider: editable(
+    dynamic(() =>
+      import("@kickstartds/ds-agency-premium/divider").then(
+        (mod) => mod.DividerContextDefault
+      )
+    )
+  ),
   faq: editable(
     dynamic(() =>
       import("@kickstartds/ds-agency-premium/faq").then(
@@ -200,6 +206,13 @@ export const components = {
     dynamic(() =>
       import("@kickstartds/ds-agency-premium/stat").then(
         (mod) => mod.StatContextDefault
+      )
+    )
+  ),
+  "info-table": editable(
+    dynamic(() =>
+      import("./info-table/InfoTableComponent").then(
+        (mod) => mod.InfoTableContextDefault
       )
     )
   ),
@@ -270,11 +283,4 @@ export const components = {
     )
   ),
   slider: editable(Slider, "components"),
-  "info-table": editable(
-    dynamic(() =>
-      import("./info-table/InfoTableComponent").then(
-        (mod) => mod.InfoTableContextDefault
-      )
-    )
-  ),
 };

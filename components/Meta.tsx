@@ -1,6 +1,8 @@
 import Head from "next/head";
 import { SeoStoryblok } from "@/types/components-schema";
 
+import bundleHash from "@/components/bundle-hash";
+
 export default function Meta({
   pageSeo,
   globalSeo,
@@ -54,7 +56,11 @@ export default function Meta({
           `,
         }}
       />
-      <script defer type="module" src="/_/client.js"></script>
+      <script
+        defer
+        type="module"
+        src={`/_/client.js?cacheBuster=${bundleHash}`}
+      ></script>
     </Head>
   );
 }

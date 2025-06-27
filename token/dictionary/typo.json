@@ -2,21 +2,21 @@
   "ks": {
     "font-family": {
       "display": {
-        "value": "Metropolis, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif",
+        "value": "Fredoka, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif",
         "token": {
           "category": "Font Families",
           "presenter": "FontFamily"
         }
       },
       "copy": {
-        "value": "system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+        "value": "Mulish, 'Helvetica Neue', Helvetica, Arial, sans-serif",
         "token": {
           "category": "Font Families",
           "presenter": "FontFamily"
         }
       },
       "interface": {
-        "value": "system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+        "value": "Mulish, system-ui, -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif",
         "token": {
           "category": "Font Families",
           "presenter": "FontFamily"
@@ -31,8 +31,8 @@
       }
     },
     "font-weight": {
-      "thin": {
-        "value": 100,
+      "light": {
+        "value": 300,
         "token": {
           "category": "Font Weights",
           "presenter": "FontWeight"
@@ -117,7 +117,7 @@
           }
         },
         "m-base": {
-          "value": "1.125rem",
+          "value": "1.25rem",
           "attributes": {
             "category": "size"
           },
@@ -197,7 +197,7 @@
           }
         },
         "m-base": {
-          "value": "1rem",
+          "value": "1.125rem",
           "attributes": {
             "category": "size"
           },
@@ -357,7 +357,7 @@
           }
         },
         "m-base": {
-          "value": "1rem",
+          "value": "1.125rem",
           "attributes": {
             "category": "size"
           },

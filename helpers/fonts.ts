@@ -5,26 +5,32 @@ const displayFont = localFont({
     {
       path: "../token/fonts/Metropolis-Thin.woff2",
       weight: "100",
+      style: "normal",
     },
     {
       path: "../token/fonts/Metropolis-Thin.woff",
       weight: "100",
+      style: "normal",
     },
     {
       path: "../token/fonts/Metropolis-Regular.woff2",
       weight: "400",
+      style: "normal",
     },
     {
       path: "../token/fonts/Metropolis-Regular.woff",
       weight: "400",
+      style: "normal",
     },
     {
       path: "../token/fonts/Metropolis-Bold.woff2",
       weight: "700",
+      style: "normal",
     },
     {
       path: "../token/fonts/Metropolis-Bold.woff",
       weight: "700",
+      style: "normal",
     },
   ],
   preload: true,

@@ -22,7 +22,7 @@ import { BlogPost } from "@kickstartds/ds-agency-premium/components/blog-post/in
 import { BlogOverview as DsaBlogOverview } from "@kickstartds/ds-agency-premium/components/blog-overview/index.js";
 import { Divider } from "@kickstartds/ds-agency-premium/components/divider/index.js";
 import { unflatten } from "@/helpers/unflatten";
-import { locale } from ".";
+import { useLanguage } from "./LanguageContext";
 
 type PageProps = {
   blok: Omit<ComponentProps<typeof DsaBlogOverview>, "section"> &
@@ -43,6 +43,8 @@ const BlogTeaserPostProvider: FC<PropsWithChildren> = (props) => {
         | (ComponentProps<typeof BlogTeaser> & HTMLAttributes<HTMLDivElement>)
         | (ComponentProps<typeof BlogPost> & HTMLAttributes<HTMLDivElement>)
       >(function BlogTeaserPostMapper(props, ref) {
+        const locale = useLanguage();
+
         function isBlogPost(
           object: any
         ): object is ComponentProps<typeof BlogPost> & { slug: string } {

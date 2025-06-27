@@ -35,7 +35,13 @@ const promiseThrottle = new PromiseThrottle({
 });
 
 const presetIdToComponentName = (id) =>
-  id.split("--").shift().split("-").slice(1).join("-");
+  id
+    .split("--")
+    .shift()
+    .split("-")
+    .slice(1)
+    .join("-")
+    .replaceAll("archetypes-", "");
 
 const groupToComponentName = (name) => name.split("/").pop().trim();
 
@@ -54,6 +60,7 @@ const upload = (signed_request, file) => {
 };
 
 const signedUpload = async (fileName, assetFolderId) => {
+  console.log("uploading: ", fileName);
   return new Promise(async (resolve) => {
     const fullPath = `./node_modules/@kickstartds/ds-agency-premium/dist/static/${fileName}`;
     let size = "";
@@ -73,6 +80,7 @@ const signedUpload = async (fileName, assetFolderId) => {
         asset_folder_id: assetFolderId || null,
       }
     );
+
     await upload(
       assetResponse.data,
       "./node_modules/@kickstartds/ds-agency-premium/dist/static/" + fileName
@@ -296,7 +304,6 @@ const prepare = async () => {
                 ? jsonpointer
                     .get(preset.preset, `/${meta.nodePath}`)
                     .map((entry) => {
-                      console.log("mapping entry", entry);
                       if (typeof entry !== "object") return entry;
                       return {
                         ...entry,
@@ -381,8 +388,7 @@ const prepare = async () => {
     // Add demo content to space
     if (
       !stories.some(
-        (story) =>
-          story.name === "Getting Started" && story.slug === "getting-started"
+        (story) => story.name === "Getting Started" && story.slug === "home"
       )
     ) {
       await Storyblok.post(
@@ -393,6 +399,61 @@ const prepare = async () => {
         }
       );
     }
+
+    const section = generatedComponents.components.find(
+      (component) => component.name === "section"
+    );
+
+    generatedComponents.components.push({
+      name: "global",
+      display_name: "Global",
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString(),
+      id: 0,
+      schema: {
+        global: {
+          id: 0,
+          pos: 0,
+          type: "bloks",
+          restrict_type: "groups",
+          restrict_components: true,
+          component_group_whitelist: [
+            section.schema.components.component_group_whitelist[0],
+          ],
+        },
+      },
+      is_root: true,
+      is_nestable: false,
+      real_name: "Global",
+    });
+
+    const globalReferenceUuid = uuidv4();
+    generatedComponents.components.push({
+      name: "global_reference",
+      display_name: "Global Reference",
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString(),
+      id: 0,
+      schema: {
+        reference: {
+          type: "options",
+          pos: 0,
+          is_reference_type: true,
+          source: "internal_stories",
+          entry_appearance: "card",
+          allow_advanced_search: true,
+          folder_slug: "global/",
+        },
+      },
+      is_nestable: true,
+      real_name: "Global Rereference",
+      component_group_uuid: globalReferenceUuid,
+      component_group_name: "Global",
+    });
+
+    section.schema.components.component_group_whitelist.push(
+      globalReferenceUuid
+    );
 
     // Write preset configuration to disk
     fs.writeFileSync(

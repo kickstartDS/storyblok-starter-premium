@@ -46,3 +46,13 @@ traverse(json, (schema) => {
 });
 
 fs.writeFileSync(filePathNew, JSON.stringify(json, null, 2));
+
+// TODO:
+//
+// - add hints for removed fields to description, if applicable (e.g. `format: markdown` -> "this typically can include markdown formatting", `default` -> "..., typically set to 'value'")
+// - collect used / removed fields, to clean up stories from API to use for additional context
+// - add typing as property `type__TYPE`
+// - merge result back to defaults of component
+// - attempt to find heuristics for images ("$ref: picture"?, "image" in key?)
+// - count properties (<100)
+// - unique first key requirement -> add type first

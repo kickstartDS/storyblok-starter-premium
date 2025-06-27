@@ -12,10 +12,6 @@ module.exports = StyleDictionary.extend(config)
     source: [
       "token/dictionary/**/*.json",
       path.join(__dirname, "token/dictionary/**/*.svg"),
-      path.join(
-        "source/design-tokens/icons/*.svg",
-        path.dirname(require.resolve("@kickstartds/core/package.json"))
-      ),
     ],
     platforms: {
       css: {
@@ -30,6 +26,9 @@ module.exports = StyleDictionary.extend(config)
             filter: "includeIcons",
           },
         ],
+      },
+      html: {
+        buildPath: "token/",
       },
       storybook: {
         buildPath: "token/storybook/",
