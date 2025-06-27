@@ -272,7 +272,7 @@ export interface HeroStoryblok {
   image_src?: AssetStoryblok;
   image_indent?: "" | "none" | "left" | "right";
   image_alt?: string;
-  textPosition?: "" | "center" | "below" | "left" | "right";
+  textPosition?: "" | "center" | "below" | "left" | "right" | "corner";
   type?: string;
   _uid: string;
   component: "hero";
@@ -285,6 +285,7 @@ export interface HtmlStoryblok {
   consentButtonLabel?: string;
   consentBackgroundImage?: AssetStoryblok;
   consentAspectRatio?: "" | "VALUE_16_9" | "VALUE_16_10" | "VALUE_4_3" | "VALUE_1_1";
+  inverted?: boolean;
   className?: string;
   component: "html";
   type?: string;
@@ -440,6 +441,7 @@ export interface SectionStoryblok {
     | "symmetricGlow"
     | "anchorGlow";
   backgroundColor?: "" | "default" | "accent" | "bold";
+  backgroundImage?: AssetStoryblok;
   spotlight?: boolean;
   spaceBefore?: "" | "default" | "small" | "none";
   spaceAfter?: "" | "default" | "small" | "none";
@@ -593,13 +595,13 @@ export interface TestimonialStoryblok {
   image_src?: AssetStoryblok;
   image_alt?: string;
   rating?: string;
-  type?: string;
   _uid: string;
   component: "testimonial";
 }
 
 export interface TestimonialsStoryblok {
   layout?: "" | "slider" | "list" | "alternating";
+  quoteSigns?: "" | "normal" | "large" | "none";
   testimonial?: TestimonialStoryblok[];
   type?: string;
   _uid: string;

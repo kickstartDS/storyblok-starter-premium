@@ -35,7 +35,13 @@ const promiseThrottle = new PromiseThrottle({
 });
 
 const presetIdToComponentName = (id) =>
-  id.split("--").shift().split("-").slice(1).join("-");
+  id
+    .split("--")
+    .shift()
+    .split("-")
+    .slice(1)
+    .join("-")
+    .replaceAll("archetypes-", "");
 
 const groupToComponentName = (name) => name.split("/").pop().trim();
 
@@ -54,6 +60,7 @@ const upload = (signed_request, file) => {
 };
 
 const signedUpload = async (fileName, assetFolderId) => {
+  console.log("signedUpload", fileName);
   return new Promise(async (resolve) => {
     const fullPath = `./node_modules/@kickstartds/ds-agency-premium/dist/static/${fileName}`;
     let size = "";
@@ -267,6 +274,7 @@ const prepare = async () => {
         };
 
         if (!images.has(preset.screenshot)) {
+          console.log("preset", preset.id, preset.name, preset.screenshot);
           const image = signedUpload.bind(
             this,
             preset.screenshot,
@@ -342,6 +350,7 @@ const prepare = async () => {
     // ... and lazily load them
     for (const presetImage of presetImages) {
       if (!images.has(presetImage.value)) {
+        console.log("presetImage", presetImage.value);
         const image = signedUpload.bind(this, presetImage.value, demoFolderId);
         images.set(presetImage.value, (await promiseThrottle.add(image)).url);
       }
@@ -371,6 +380,7 @@ const prepare = async () => {
     // ... and lazily load them
     for (const initialImage of initialImages) {
       if (!images.has(initialImage.value)) {
+        console.log("initialImage", initialImage.value);
         const image = signedUpload.bind(this, initialImage.value, demoFolderId);
         images.set(initialImage.value, (await promiseThrottle.add(image)).url);
       }
@@ -381,8 +391,7 @@ const prepare = async () => {
     // Add demo content to space
     if (
       !stories.some(
-        (story) =>
-          story.name === "Getting Started" && story.slug === "getting-started"
+        (story) => story.name === "Getting Started" && story.slug === "home"
       )
     ) {
       await Storyblok.post(
