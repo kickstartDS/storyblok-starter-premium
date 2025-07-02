@@ -47,7 +47,6 @@ import {
 } from "@kickstartds/ds-agency-premium/hero";
 
 import { StoryblokSubComponent } from "./StoryblokSubComponent";
-import { TeaserProvider } from "./TeaserProvider";
 import { useBlurHashes } from "./BlurHashContext";
 import { useImagePriority } from "./ImagePriorityContext";
 import { useImageSize } from "./ImageSizeContext";
@@ -223,49 +222,47 @@ const ComponentProviders = (props: PropsWithChildren) => (
       <PictureProvider>
         <HeroProvider>
           <LinkProvider>
-            <TeaserProvider>
-              <NavTopbarProvider>
-                <FooterProvider>
-                  <NavFlyoutProvider>
+            <NavTopbarProvider>
+              <FooterProvider>
+                <NavFlyoutProvider>
+                  {/* @ts-expect-error */}
+                  <CtaContext.Provider value={StoryblokSubComponent}>
                     {/* @ts-expect-error */}
-                    <CtaContext.Provider value={StoryblokSubComponent}>
+                    <FeatureContext.Provider value={StoryblokSubComponent}>
                       {/* @ts-expect-error */}
-                      <FeatureContext.Provider value={StoryblokSubComponent}>
-                        {/* @ts-expect-error */}
-                        <StatContext.Provider value={StoryblokSubComponent}>
-                          <TestimonialContext.Provider
+                      <StatContext.Provider value={StoryblokSubComponent}>
+                        <TestimonialContext.Provider
+                          // @ts-expect-error
+                          value={StoryblokSubComponent}
+                        >
+                          <BlogHeadContext.Provider
                             // @ts-expect-error
                             value={StoryblokSubComponent}
                           >
-                            <BlogHeadContext.Provider
+                            <BlogAsideContext.Provider
                               // @ts-expect-error
                               value={StoryblokSubComponent}
                             >
-                              <BlogAsideContext.Provider
+                              <BlogTeaserContext.Provider
                                 // @ts-expect-error
                                 value={StoryblokSubComponent}
                               >
-                                <BlogTeaserContext.Provider
+                                <BlogAuthorContext.Provider
                                   // @ts-expect-error
                                   value={StoryblokSubComponent}
                                 >
-                                  <BlogAuthorContext.Provider
-                                    // @ts-expect-error
-                                    value={StoryblokSubComponent}
-                                  >
-                                    {props.children}
-                                  </BlogAuthorContext.Provider>
-                                </BlogTeaserContext.Provider>
-                              </BlogAsideContext.Provider>
-                            </BlogHeadContext.Provider>
-                          </TestimonialContext.Provider>
-                        </StatContext.Provider>
-                      </FeatureContext.Provider>
-                    </CtaContext.Provider>
-                  </NavFlyoutProvider>
-                </FooterProvider>
-              </NavTopbarProvider>
-            </TeaserProvider>
+                                  {props.children}
+                                </BlogAuthorContext.Provider>
+                              </BlogTeaserContext.Provider>
+                            </BlogAsideContext.Provider>
+                          </BlogHeadContext.Provider>
+                        </TestimonialContext.Provider>
+                      </StatContext.Provider>
+                    </FeatureContext.Provider>
+                  </CtaContext.Provider>
+                </NavFlyoutProvider>
+              </FooterProvider>
+            </NavTopbarProvider>
           </LinkProvider>
         </HeroProvider>
       </PictureProvider>
