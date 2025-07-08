@@ -1,0 +1,42 @@
+export type DeepPartial<T> = T extends object
+  ? {
+      [P in keyof T]?: DeepPartial<T[P]>;
+    }
+  : T;
+
+export function deepMergeDefaults<T extends Record<string, any>>(
+  defaults: DeepPartial<T>,
+  props: T,
+  replaceExamples: boolean = false
+): T {
+  const keys = Array.from(
+    new Set([...Object.keys(defaults), ...Object.keys(props)])
+  );
+
+  return keys.reduce((acc, key) => {
+    const val1 = defaults[key] as any;
+    const val2 = props[key] as any;
+
+    if (Array.isArray(val1) && Array.isArray(val2)) {
+      acc[key] =
+        key === "examples" && replaceExamples
+          ? val2
+          : (acc[key] = [...val1, ...val2].filter((value, index, self) => {
+              return self.findIndex((v) => v === value) === index;
+            }));
+    } else if (
+      typeof val1 === "object" &&
+      val1 !== null &&
+      typeof val2 === "object" &&
+      val2 !== null
+    ) {
+      acc[key] = deepMergeDefaults(val1, val2, replaceExamples);
+    } else if (key in props) {
+      acc[key] = structuredClone(val2);
+    } else {
+      acc[key] = structuredClone(val1);
+    }
+
+    return acc;
+  }, {} as any) as T;
+}

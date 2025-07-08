@@ -46,6 +46,7 @@ tmp/*
 *.dereffed.json
 *-tokens.json
 components/bundle-hash.ts
+# components/**/*Defaults.ts
 token/tokens.css
 token/IconSprite.js
 token/tokens.js

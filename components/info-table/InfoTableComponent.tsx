@@ -1,6 +1,8 @@
 import { createContext, forwardRef, HTMLAttributes, useContext } from "react";
 import { InfoTableProps } from "./InfoTableProps";
 import { TableStoryblok } from "../../types/components-schema";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./InfoTableDefaults";
 
 export const InfoTableContextDefault = forwardRef<
   HTMLTableElement,
@@ -40,6 +42,6 @@ export const InfoTable = forwardRef<
   InfoTableProps & HTMLAttributes<HTMLTableElement>
 >((props, ref) => {
   const Component = useContext(InfoTableContext);
-  return <Component {...props} ref={ref} />;
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
 });
 InfoTable.displayName = "Info Table";
