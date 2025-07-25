@@ -6,13 +6,13 @@
  */
 
 /**
- * Data to display inside table
+ * Daten, die in der Tabelle angezeigt werden sollen
  */
-export type Data = string;
+export type Daten = string;
 
-/**
- * Component used to display tabular data
- */
-export interface InfoTableProps {
+export interface UndefinedProps {
+  data?: Daten;
+}
+leProps {
   data?: Data;
 }

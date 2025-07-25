@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://cms.schema.mydesignsystem.com/section.schema.json",
+  "$id": "http://cms.mydesignsystem.com/section.schema.json",
   "title": "Section",
   "description": "Component used to layout components into pages",
   "type": "object",
@@ -15,7 +15,7 @@
           "items": {
             "anyOf": [
               {
-                "$ref": "http://cms.schema.mydesignsystem.com/info-table.schema.json"
+                "$ref": "http://cms.mydesignsystem.com/info-table.schema.json"
               }
             ]
           }

@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://language.mydesignsystem.com/split.schema.json",
+  "type": "object",
+  "allOf": [
+    {
+      "title": "Geteilt",
+      "description": "Das Geteilt Element repräsentiert eine Layoutstruktur, die in zwei Abschnitte unterteilt ist.",
+      "type": "object",
+      "properties": {
+        "layout": {
+          "title": "Sidebar Position",
+          "description": "Position der Sidebar im Layout, z.B. links oder rechts."
+        },
+        "mainSectionWidth": {
+          "title": "Breite des Hauptabschnitts",
+          "description": "Breite des Hauptabschnitts im Verhältnis zur Sidebar."
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "$ref": "http://schema.mydesignsystem.com/split.schema.json"
+    }
+  ],
+  "additionalProperties": false
+}
