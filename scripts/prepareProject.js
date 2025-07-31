@@ -260,7 +260,6 @@ const prepare = async () => {
           name: preset.name,
           preset: {
             _uid: uuidv4(),
-            type: componentKey,
             component: componentKey,
             ...preset.args,
           },
@@ -308,14 +307,12 @@ const prepare = async () => {
                       return {
                         ...entry,
                         _uid: uuidv4(),
-                        type: config.component_whitelist[0],
                         component: config.component_whitelist[0],
                       };
                     })
                 : {
                     ...jsonpointer.get(preset.preset, `/${meta.nodePath}`),
                     _uid: uuidv4(),
-                    type: config.component_whitelist[0],
                     component: config.component_whitelist[0],
                   }
             );
@@ -330,6 +327,77 @@ const prepare = async () => {
           for (const [propKey, propValue] of Object.entries(value)) {
             parent[`${key}_${propKey}`] = propValue;
           }
+          delete parent[key];
+        }
+      });
+
+      const storyblokProperties = ["_uid", "component"];
+
+      traverse(preset.preset, ({ parent, key, meta, value }) => {
+        const config = jsonpointer.get(component.schema, `/${meta.nodePath}`);
+
+        if (config?.type === "bloks") {
+          const originalValue = jsonpointer.get(
+            preset.preset,
+            `/${meta.nodePath}`
+          );
+
+          if (Array.isArray(originalValue)) {
+            const value = jsonpointer
+              .get(preset.preset, `/${meta.nodePath}`)
+              .map((entry) => {
+                const subComponent = generatedComponents.components.find(
+                  (component) => component.name === entry.component
+                );
+                for (const property of Object.keys(entry)) {
+                  if (
+                    subComponent &&
+                    subComponent.schema &&
+                    !subComponent.schema.hasOwnProperty(property) &&
+                    !storyblokProperties.includes(property)
+                  ) {
+                    console.log("deleting array", property);
+                    delete entry[property];
+                  }
+                }
+                return {
+                  ...entry,
+                };
+              });
+            jsonpointer.set(preset.preset, `/${meta.nodePath}`, value);
+          } else {
+            const subComponent = generatedComponents.components.find(
+              (component) => component.name === originalValue.component
+            );
+            for (const property of Object.keys(originalValue)) {
+              if (
+                subComponent &&
+                subComponent.schema &&
+                !subComponent.schema.hasOwnProperty(property) &&
+                !storyblokProperties.includes(property)
+              ) {
+                console.log("deleting single", property);
+                delete originalValue[property];
+              }
+            }
+            jsonpointer.set(preset.preset, `/${meta.nodePath}`, {
+              ...originalValue,
+            });
+          }
+        }
+
+        if (config) return;
+
+        if (
+          parent &&
+          key &&
+          parent.hasOwnProperty(key) &&
+          !storyblokProperties.includes(key) &&
+          isNaN(key) &&
+          !Array.isArray(value) &&
+          parent.component === preset.preset.component
+        ) {
+          console.log("deleting", key);
           delete parent[key];
         }
       });

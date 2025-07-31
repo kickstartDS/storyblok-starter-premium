@@ -1,3 +1,12 @@
+export function canBeCloned(val: unknown): boolean {
+  try {
+    window.postMessage(val, "*");
+  } catch (err) {
+    return false;
+  }
+  return true;
+}
+
 export type DeepPartial<T> = T extends object
   ? {
       [P in keyof T]?: DeepPartial<T[P]>;
@@ -32,9 +41,9 @@ export function deepMergeDefaults<T extends Record<string, any>>(
     ) {
       acc[key] = deepMergeDefaults(val1, val2, replaceExamples);
     } else if (key in props) {
-      acc[key] = structuredClone(val2);
+      acc[key] = canBeCloned(val2) ? structuredClone(val2) : val2;
     } else {
-      acc[key] = structuredClone(val1);
+      acc[key] = canBeCloned(val1) ? structuredClone(val1) : val1;
     }
 
     return acc;

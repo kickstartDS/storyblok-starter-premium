@@ -32,7 +32,7 @@
       "additionalProperties": false
     },
     {
-      "$ref": "http://schema.mydesignsystem.com/cms/seo.schema.json"
+      "$ref": "http://cms.mydesignsystem.com/seo.schema.json"
     }
   ],
   "additionalProperties": false

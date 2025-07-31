@@ -22,7 +22,7 @@ import type {TeaserCardProps} from "@kickstartds/ds-agency-premium/teaser-card";
 import type {TestimonialsProps} from "@kickstartds/ds-agency-premium/testimonials";
 import type {TextProps} from "@kickstartds/ds-agency-premium/text";
 import type {VideoCurtainProps} from "@kickstartds/ds-agency-premium/video-curtain";
-import type {InfoTableProps} from "@kickstartds/ds-agency-premium/info-table";
+import type {InfoTableProps} from "../info-table/InfoTableProps";
 import type {ButtonProps} from "@kickstartds/ds-agency-premium/button";
 
 /**
