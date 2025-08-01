@@ -24,7 +24,7 @@
           "title": "Layout",
           "description": "Das Layout der Teaser-Karte, das die Anordnung von Text, Bild und anderen Elementen bestimmt."
         },
-        "target": {
+        "url": {
           "title": "Ziel",
           "description": "Das Ziel, auf das die Teaser-Karte verweist, z.B. eine URL oder eine interne Seite."
         },

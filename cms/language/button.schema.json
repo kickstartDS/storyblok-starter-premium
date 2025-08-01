@@ -12,7 +12,7 @@
           "title": "Text",
           "description": "Text des Buttons"
         },
-        "target": {
+        "url": {
           "title": "Ziel",
           "description": "Ziel des Buttons, z.B. eine URL oder eine Aktion"
         },

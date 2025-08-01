@@ -3,7 +3,9 @@ import { SectionProps } from "./SectionProps";
 
 const defaults: DeepPartial<SectionProps> = {
   "width": "default",
+  "style": "default",
   "backgroundColor": "default",
+  "transition": "none",
   "spotlight": false,
   "spaceBefore": "default",
   "spaceAfter": "default",
@@ -17,7 +19,7 @@ const defaults: DeepPartial<SectionProps> = {
     "width": "unset",
     "align": "center",
     "gutter": "default",
-    "mode": "list",
+    "mode": "default",
     "tileWidth": "default"
   },
   "components": [],
