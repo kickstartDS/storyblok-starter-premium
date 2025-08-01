@@ -356,7 +356,6 @@ const prepare = async () => {
                     !subComponent.schema.hasOwnProperty(property) &&
                     !storyblokProperties.includes(property)
                   ) {
-                    console.log("deleting array", property);
                     delete entry[property];
                   }
                 }
@@ -376,7 +375,6 @@ const prepare = async () => {
                 !subComponent.schema.hasOwnProperty(property) &&
                 !storyblokProperties.includes(property)
               ) {
-                console.log("deleting single", property);
                 delete originalValue[property];
               }
             }
@@ -397,7 +395,6 @@ const prepare = async () => {
           !Array.isArray(value) &&
           parent.component === preset.preset.component
         ) {
-          console.log("deleting", key);
           delete parent[key];
         }
       });
