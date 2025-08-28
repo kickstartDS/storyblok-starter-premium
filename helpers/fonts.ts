@@ -72,5 +72,5 @@ const displayFontPreview = localFont({
   adjustFontFallback: false,
 });
 
-export const fontClassNames = `${displayFont.variable}`;
-export const fontClassNamesPreview = `${displayFontPreview.variable}`;
+export const fontClassNames = ``;
+export const fontClassNamesPreview = ``;

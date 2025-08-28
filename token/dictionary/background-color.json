@@ -15,7 +15,7 @@
       },
       "accent-inverted": {
         "base": {
-          "value": "{ks.color.fg-inverted.to-bg.9.base}",
+          "value": "{ks.color.primary-inverted.to-bg.8.base}",
           "attributes": {
             "category": "color"
           },
@@ -27,7 +27,7 @@
       },
       "bold": {
         "base": {
-          "value": "{ks.color.fg.to-bg.8.base}",
+          "value": "{ks.color.primary.to-bg.8.base}",
           "attributes": {
             "category": "color"
           },
@@ -39,7 +39,7 @@
       },
       "bold-inverted": {
         "base": {
-          "value": "{ks.color.fg-inverted.to-bg.8.base}",
+          "value": "{ks.color.primary-inverted.to-bg.6.base}",
           "attributes": {
             "category": "color"
           },

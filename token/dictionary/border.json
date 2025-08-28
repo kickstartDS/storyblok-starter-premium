@@ -10,21 +10,21 @@
     },
     "border-radius": {
       "control": {
-        "value": "6px",
-        "token": {
-          "category": "Border Radius",
-          "presenter": "BorderRadius"
-        }
-      },
-      "card": {
         "value": "8px",
         "token": {
           "category": "Border Radius",
           "presenter": "BorderRadius"
         }
       },
+      "card": {
+        "value": "32px",
+        "token": {
+          "category": "Border Radius",
+          "presenter": "BorderRadius"
+        }
+      },
       "surface": {
-        "value": "16px",
+        "value": "32px",
         "token": {
           "category": "Border Radius",
           "presenter": "BorderRadius"

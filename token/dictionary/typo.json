@@ -2,21 +2,21 @@
   "ks": {
     "font-family": {
       "display": {
-        "value": "Montserrat, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif",
+        "value": "'HelveticaNeue LT', Helvetica, Montserrat, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif",
         "token": {
           "category": "Font Families",
           "presenter": "FontFamily"
         }
       },
       "copy": {
-        "value": "system-ui, -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif",
+        "value": "'HelveticaNeue LT', Helvetica, system-ui, -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif",
         "token": {
           "category": "Font Families",
           "presenter": "FontFamily"
         }
       },
       "interface": {
-        "value": "system-ui, -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif",
+        "value": "'HelveticaNeue LT', Helvetica, system-ui, -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif",
         "token": {
           "category": "Font Families",
           "presenter": "FontFamily"
@@ -73,11 +73,11 @@
             "value": 1.25
           },
           "desktop": {
-            "value": 1.375
+            "value": 1.35
           }
         },
         "xxs-base": {
-          "value": "0.4064rem",
+          "value": "0.512rem",
           "attributes": {
             "category": "size"
           },
@@ -87,7 +87,7 @@
           }
         },
         "xs-base": {
-          "value": "0.5487rem",
+          "value": "0.64rem",
           "attributes": {
             "category": "size"
           },
@@ -97,7 +97,7 @@
           }
         },
         "s-base": {
-          "value": "0.7407rem",
+          "value": "0.8rem",
           "attributes": {
             "category": "size"
           },
@@ -117,7 +117,7 @@
           }
         },
         "l-base": {
-          "value": "1.35rem",
+          "value": "1.25rem",
           "attributes": {
             "category": "size"
           },
@@ -127,7 +127,7 @@
           }
         },
         "xl-base": {
-          "value": "1.8225rem",
+          "value": "1.5625rem",
           "attributes": {
             "category": "size"
           },
@@ -137,7 +137,7 @@
           }
         },
         "xxl-base": {
-          "value": "2.4604rem",
+          "value": "1.9531rem",
           "attributes": {
             "category": "size"
           },
