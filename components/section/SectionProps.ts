@@ -37,7 +37,7 @@ export type Width = "full" | "max" | "wide" | "default" | "narrow";
 /**
  * Style of background
  */
-export type Style = "default" | "framed" | "deko";
+export type Style = "default" | "framed" | "shine-left" | "shine-right" | "carbon" | "stripe";
 /**
  * Color of background
  */
@@ -117,7 +117,7 @@ export type Mode = "default" | "tile" | "list" | "slider";
 /**
  * Set min-width for the tiles in the grid
  */
-export type TileWidth = "smallest" | "default" | "medium" | "large" | "largest";
+export type TileWidth = "smallest" | "default" | "medium" | "large" | "largest" | "full";
 /**
  * Allowed components for content
  */
