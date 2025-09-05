@@ -47,6 +47,12 @@ export default function Meta({
       <style>{`body { display: block !important }`}</style>
       <script
         defer
+        src="REPLACE_WITH_URL_TODO_ENV"
+        data-website-id="REPLACE_WITH_ID_TODO_ENV"
+        data-do-not-track="true"
+      ></script>
+      <script
+        defer
         type="module"
         src={`/_/client.js?cacheBuster=${bundleHash}`}
       ></script>
