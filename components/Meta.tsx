@@ -47,8 +47,8 @@ export default function Meta({
       <style>{`body { display: block !important }`}</style>
       <script
         defer
-        src="REPLACE_WITH_URL_TODO_ENV"
-        data-website-id="REPLACE_WITH_ID_TODO_ENV"
+        src={`https://${process.env.NEXT_PUBLIC_ANALYTICS_DOMAIN}`}
+        data-website-id={process.env.NEXT_PUBLIC_ANALYTICS_SITE_ID}
         data-do-not-track="true"
       ></script>
       <script

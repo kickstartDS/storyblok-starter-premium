@@ -2,12 +2,12 @@
 service: server
 
 # Name of the container image.
-image: YOUR_ORG/YOUR_IMAGE_NAME_WEBSITE
+image: <%= ENV["DOCKER_SITE_IMAGE_NAME"] %>
 
 # Deploy to these servers.
 servers:
   web:
-    - XX.XX.XX.XX
+    - <%= ENV["HOSTING_SERVER_IP"] %>
   # job:
   #   hosts:
   #     - 192.168.0.1
@@ -20,8 +20,8 @@ servers:
 proxy:
   ssl: true
   hosts:
-    - YOUR_DOMAIN.TLD
-    - WWW.YOUR_DOMAIN.TLD
+    - <%= ENV["NEXT_PUBLIC_PRIMARY_PUBLIC_SITE_DOMAIN"] %>
+    - <%= ENV["NEXT_PUBLIC_SECONDARY_PUBLIC_SITE_DOMAIN"] %>
   # Proxy connects to your container on port 80 by default.
   app_port: 3030
   healthcheck:
@@ -31,7 +31,7 @@ proxy:
 registry:
   # Specify the registry server, if you're not using Docker Hub
   # server: registry.digitalocean.com / ghcr.io / ...
-  username: YOUR_DOCKER_USERNAME
+  username: <%= ENV["DOCKER_USERNAME"] %>
 
   # Always use an access token rather than real password (pulled from .kamal/secrets).
   password:
