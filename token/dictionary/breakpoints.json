@@ -16,6 +16,10 @@
       "desktop": {
         "value": "75em",
         "private": true
+      },
+      "tv": {
+        "value": "122em",
+        "private": true
       }
     }
   }

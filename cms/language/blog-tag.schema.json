@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://language.mydesignsystem.com/blog-tag.schema.json",
+  "type": "object",
+  "allOf": [
+    {
+      "title": "Blog Tag",
+      "description": "Das Blog Tag Element repräsentiert ein einzelnes Tag, das einem Blogbeitrag zugeordnet ist.",
+      "type": "object",
+      "properties": {
+        "entry": {
+          "title": "Text",
+          "description": "Text des Tags"
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "$ref": "http://schema.mydesignsystem.com/blog-tag.schema.json"
+    }
+  ],
+  "additionalProperties": false
+}
