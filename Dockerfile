@@ -1,21 +1,48 @@
 FROM node:18-alpine AS base
 
+# Disabling Telemetry
+ENV NEXT_TELEMETRY_DISABLED 1
+RUN apk add --no-cache libc6-compat curl
+
 FROM base AS deps
 WORKDIR /app
 
-COPY --link .npmrc package.json package-lock.json ./
-RUN --mount=type=secret,id=secret_npmrc,target=/root/.npmrc npm ci
+COPY package.json package-lock.json .npmrc ./
+RUN npm ci
 
-FROM base AS devcontainer
+FROM base AS builder
+ARG NEXT_STORYBLOK_SPACE_ID
+ENV NEXT_STORYBLOK_SPACE_ID=$NEXT_STORYBLOK_SPACE_ID
+ARG NEXT_STORYBLOK_API_TOKEN
+ENV NEXT_STORYBLOK_API_TOKEN=$NEXT_STORYBLOK_API_TOKEN
+ARG NEXT_STORYBLOK_OAUTH_TOKEN
+ENV NEXT_STORYBLOK_OAUTH_TOKEN=$NEXT_STORYBLOK_OAUTH_TOKEN
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
 
-RUN apk update && apk add --no-cache git curl
+RUN npm run build
 
-WORKDIR /workspaces/energyui-storyblok-starter
-RUN chown node:node /workspaces/energyui-storyblok-starter
-USER node
+FROM base AS runner
+WORKDIR /app
 
-COPY --from=deps --chown=node:node --link /app /workspaces/storyblok-starter-ds-agency
-COPY --from=deps --chown=node:node --link /app/node_modules /workspaces/storyblok-starter-ds-agency-premium/node_modules
-COPY --link --chown=node:node . .
+ENV NODE_ENV production
 
-EXPOSE 3000
+RUN addgroup --system --gid 1001 nodejs
+RUN adduser --system --uid 1001 nextjs
+
+COPY --from=builder /app/public ./public
+RUN mkdir .next
+RUN chown 1001:1001 .next
+
+COPY --from=builder --chown=1001:1001 /app/.next/standalone ./
+COPY --from=builder --chown=1001:1001 /app/.next/static ./.next/static
+
+USER nextjs
+
+EXPOSE 3030
+
+ENV PORT 3030
+ENV HOSTNAME "0.0.0.0"
+
+CMD ["node", "server.js"]
