@@ -38,12 +38,12 @@ const handleRouteChange = (url: string) => {
 const setActiveNavItem = (navItems: any[] = [], currentRoute: string) => {
   const route = currentRoute.replace(/^\/|\/$/g, "");
   for (const navItem of navItems) {
-    const href = navItem.href.replace(/^\/|\/$/g, "");
+    const href = navItem.url.replace(/^\/|\/$/g, "");
     navItem.active = href === route;
 
     if (navItem.items && Array.isArray(navItem.items)) {
       for (const item of navItem.items) {
-        const itemHref = item.href.replace(/^\/|\/$/g, "");
+        const itemHref = item.url.replace(/^\/|\/$/g, "");
         item.active = itemHref === route;
         navItem.active ||= item.active;
       }
@@ -103,7 +103,11 @@ export default function App({
                 )}
                 <Component {...pageProps} />
                 {footerProps && (
-                  <Footer logo={{}} {...footerProps} inverted={invertFooter} />
+                  <Footer
+                    logo={{}}
+                    {...footerProps}
+                    inverted={invertFooter || false}
+                  />
                 )}
               </ImageRatioProviders>
             </ImageSizeProviders>

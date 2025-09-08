@@ -190,9 +190,18 @@ export const components = {
       )
     )
   ),
-  split: editable(
+  "split-even": editable(
     dynamic(() =>
-      import("@kickstartds/ds-agency-premium/split").then((mod) => mod.Split)
+      import("@kickstartds/ds-agency-premium/split-even").then(
+        (mod) => mod.SplitEven
+      )
+    )
+  ),
+  "split-weighted": editable(
+    dynamic(() =>
+      import("@kickstartds/ds-agency-premium/split-weighted").then(
+        (mod) => mod.SplitWeighted
+      )
     )
   ),
   stats: editable(

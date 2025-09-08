@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://language.mydesignsystem.com/info-table.schema.json",
+  "type": "object",
+  "allOf": [
+    {
+      "title": "Info Tabelle",
+      "description": "Komponente zur Anzeige tabellarischer Daten",
+      "type": "object",
+      "properties": {
+        "data": {
+          "title": "Daten",
+          "description": "Daten, die in der Tabelle angezeigt werden sollen"
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "$ref": "http://cms.mydesignsystem.com/info-table.schema.json"
+    }
+  ],
+  "additionalProperties": false
+}

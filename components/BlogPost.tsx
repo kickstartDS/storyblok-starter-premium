@@ -5,12 +5,12 @@ import {
   storyblokEditable,
 } from "@storyblok/react";
 import { Section } from "@kickstartds/ds-agency-premium/components/section/index.js";
-import { Split } from "@kickstartds/ds-agency-premium/components/split/index.js";
 import { BlogAside } from "@kickstartds/ds-agency-premium/components/blog-aside/index.js";
 import { Text } from "@kickstartds/ds-agency-premium/components/text/index.js";
 import { BlogHead } from "@kickstartds/ds-agency-premium/components/blog-head/index.js";
 import { Cta } from "@kickstartds/ds-agency-premium/components/cta/index.js";
 import { BlogPost as DsaBlogPost } from "@kickstartds/ds-agency-premium/components/blog-post/index.js";
+import { SplitWeighted } from "@kickstartds/ds-agency-premium/components/split-weighted/index.js";
 
 type PageProps = {
   blok: Omit<ComponentProps<typeof DsaBlogPost>, "section"> &
@@ -28,7 +28,7 @@ const BlogPost: React.FC<PageProps> = ({ blok }) => {
     return (
       <main {...storyblokEditable(blok)}>
         <Section width="wide" content={{ mode: "list" }}>
-          <Split layout="sidebarRight">
+          <SplitWeighted>
             <div>
               {head && <BlogHead {...head} />}
               {content ? (
@@ -40,7 +40,7 @@ const BlogPost: React.FC<PageProps> = ({ blok }) => {
               )}
             </div>
             {aside && <BlogAside {...aside} />}
-          </Split>
+          </SplitWeighted>
         </Section>
         {cta && (
           <Section

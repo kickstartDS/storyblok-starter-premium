@@ -5,8 +5,11 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
+import type {BusinessCardProps} from "@kickstartds/ds-agency-premium/business-card";
+import type {ContentNavProps} from "@kickstartds/ds-agency-premium/content-nav";
 import type {CtaProps} from "@kickstartds/ds-agency-premium/cta";
 import type {DividerProps} from "@kickstartds/ds-agency-premium/divider";
+import type {DownloadsProps} from "@kickstartds/ds-agency-premium/downloads";
 import type {FaqProps} from "@kickstartds/ds-agency-premium/faq";
 import type {FeaturesProps} from "@kickstartds/ds-agency-premium/features";
 import type {GalleryProps} from "@kickstartds/ds-agency-premium/gallery";
@@ -17,6 +20,8 @@ import type {ImageTextProps} from "@kickstartds/ds-agency-premium/image-text";
 import type {LogosProps} from "@kickstartds/ds-agency-premium/logos";
 import type {MosaicProps} from "@kickstartds/ds-agency-premium/mosaic";
 import type {SliderProps} from "@kickstartds/ds-agency-premium/slider";
+import type {SplitEvenProps} from "@kickstartds/ds-agency-premium/split-even";
+import type {SplitWeightedProps} from "@kickstartds/ds-agency-premium/split-weighted";
 import type {StatsProps} from "@kickstartds/ds-agency-premium/stats";
 import type {TeaserCardProps} from "@kickstartds/ds-agency-premium/teaser-card";
 import type {TestimonialsProps} from "@kickstartds/ds-agency-premium/testimonials";
@@ -32,18 +37,15 @@ export type Width = "full" | "max" | "wide" | "default" | "narrow";
 /**
  * Style of background
  */
-export type Style =
-  | "stagelights"
-  | "horizontalGradient"
-  | "verticalGradient"
-  | "accentTransition"
-  | "boldTransition"
-  | "symmetricGlow"
-  | "anchorGlow";
+export type Style = "default" | "framed" | "deko";
 /**
  * Color of background
  */
 export type Style1 = "default" | "accent" | "bold";
+/**
+ * Color of background
+ */
+export type Style2 = "none" | "to-default" | "to-accent" | "to-bold" | "to-inverted";
 /**
  * Background image for the whole section
  */
@@ -115,13 +117,16 @@ export type Mode = "default" | "tile" | "list" | "slider";
 /**
  * Set min-width for the tiles in the grid
  */
-export type TileWidth = "smallest" | "default" | "medium" | "large" | "largest";
+export type TileWidth = "smallest" | "default" | "medium" | "large" | "largest" | "full";
 /**
  * Allowed components for content
  */
 export type Content = (
+  | BusinessCardProps
+  | ContentNavProps
   | CtaProps
   | DividerProps
+  | DownloadsProps
   | FaqProps
   | FeaturesProps
   | GalleryProps
@@ -132,6 +137,8 @@ export type Content = (
   | LogosProps
   | MosaicProps
   | SliderProps
+  | SplitEvenProps
+  | SplitWeightedProps
   | StatsProps
   | TeaserCardProps
   | TestimonialsProps
@@ -151,6 +158,7 @@ export interface SectionProps {
   width?: Width;
   style?: Style;
   backgroundColor?: Style1;
+  transition?: Style2;
   backgroundImage?: BackgroundImage;
   spotlight?: Spotlight;
   spaceBefore?: SpaceBefore;

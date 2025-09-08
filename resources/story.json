@@ -5,7 +5,6 @@
     "content": {
       "seo": [
         {
-          "type": "seo",
           "image": "img/close-up-young-business-team-working.png",
           "title": "Getting Started with your kickstartDS Next.js starter",
           "cardImage": "img/close-up-young-business-team-working.png",
@@ -13,10 +12,8 @@
           "description": "Getting started page for kickstartDS CMS starter"
         }
       ],
-      "type": "page",
       "section": [
         {
-          "type": "section",
           "component": "section",
           "headerSpacing": true,
           "style": "accentTransition",
@@ -32,7 +29,6 @@
               "button_chevron": true,
               "button_hidden": false,
               "button_label": "Customize Design",
-              "type": "teaser-card",
               "component": "teaser-card",
               "headline": "Next Steps",
               "layout": "stack",
@@ -43,7 +39,6 @@
               "button_chevron": true,
               "button_hidden": false,
               "button_label": "Learn about this starter",
-              "type": "teaser-card",
               "component": "teaser-card",
               "headline": "What is this for and why?",
               "layout": "stack",
@@ -53,7 +48,6 @@
           ]
         },
         {
-          "type": "section",
           "component": "section",
           "width": "wide",
           "spaceBefore": "default",
@@ -63,7 +57,6 @@
           "content_width": "narrow",
           "components": [
             {
-              "type": "cta",
               "component": "cta",
               "headline": "Need help?",
               "sub": "Reach out to us and the community for any questions, or for the case you ran into trouble. **We're on Discord, join us!**",
