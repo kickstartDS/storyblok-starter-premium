@@ -5,11 +5,15 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
+import type {BlogTeaserProps} from "@kickstartds/ds-agency-premium/blog-teaser";
 import type {BusinessCardProps} from "@kickstartds/ds-agency-premium/business-card";
+import type {ContactProps} from "@kickstartds/ds-agency-premium/contact";
 import type {ContentNavProps} from "@kickstartds/ds-agency-premium/content-nav";
 import type {CtaProps} from "@kickstartds/ds-agency-premium/cta";
 import type {DividerProps} from "@kickstartds/ds-agency-premium/divider";
 import type {DownloadsProps} from "@kickstartds/ds-agency-premium/downloads";
+import type {EventLatestTeaserProps} from "@kickstartds/ds-agency-premium/event-latest-teaser";
+import type {EventListTeaserProps} from "@kickstartds/ds-agency-premium/event-list-teaser";
 import type {FaqProps} from "@kickstartds/ds-agency-premium/faq";
 import type {FeaturesProps} from "@kickstartds/ds-agency-premium/features";
 import type {GalleryProps} from "@kickstartds/ds-agency-premium/gallery";
@@ -122,11 +126,15 @@ export type TileWidth = "smallest" | "default" | "medium" | "large" | "largest" 
  * Allowed components for content
  */
 export type Content = (
+  | BlogTeaserProps
   | BusinessCardProps
+  | ContactProps
   | ContentNavProps
   | CtaProps
   | DividerProps
   | DownloadsProps
+  | EventLatestTeaserProps
+  | EventListTeaserProps
   | FaqProps
   | FeaturesProps
   | GalleryProps
