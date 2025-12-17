@@ -3907,7 +3907,8 @@
           "restrict_type": "groups",
           "restrict_components": true,
           "component_group_whitelist": [
-            "967007d3-50d5-47ae-9bab-bd09551095ae"
+            "967007d3-50d5-47ae-9bab-bd09551095ae",
+            "3e60258a-8eed-47d0-9c73-da3caaea6886"
           ],
           "description": "Abstracts a blog overview concept into JSON schema",
           "required": false
@@ -6814,6 +6815,50 @@
       },
       "is_nestable": false,
       "real_name": "Settings"
+    },
+    {
+      "name": "global",
+      "display_name": "Global",
+      "created_at": "2025-12-17T15:19:17.779Z",
+      "updated_at": "2025-12-17T15:19:17.779Z",
+      "id": 0,
+      "schema": {
+        "global": {
+          "id": 0,
+          "pos": 0,
+          "type": "bloks",
+          "restrict_type": "groups",
+          "restrict_components": true,
+          "component_group_whitelist": [
+            "967007d3-50d5-47ae-9bab-bd09551095ae"
+          ]
+        }
+      },
+      "is_root": true,
+      "is_nestable": false,
+      "real_name": "Global"
+    },
+    {
+      "name": "global_reference",
+      "display_name": "Global Reference",
+      "created_at": "2025-12-17T15:19:17.779Z",
+      "updated_at": "2025-12-17T15:19:17.779Z",
+      "id": 0,
+      "schema": {
+        "reference": {
+          "type": "options",
+          "pos": 0,
+          "is_reference_type": true,
+          "source": "internal_stories",
+          "entry_appearance": "card",
+          "allow_advanced_search": true,
+          "folder_slug": "global/"
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Global Rereference",
+      "component_group_uuid": "3e60258a-8eed-47d0-9c73-da3caaea6886",
+      "component_group_name": "Global"
     }
   ]
 }

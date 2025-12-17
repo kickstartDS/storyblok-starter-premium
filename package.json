@@ -44,7 +44,7 @@
     "@kickstartds/blog": "^4.1.0",
     "@kickstartds/content": "^4.1.1",
     "@kickstartds/core": "^4.1.0",
-    "@kickstartds/ds-agency-premium": "1.6.71--canary.45.1999.0",
+    "@kickstartds/ds-agency-premium": "1.6.71--canary.45.2311.0",
     "@kickstartds/form": "^4.1.0",
     "@storyblok/react": "^3.0.9",
     "@unpic/pixels": "^1.2.2",
