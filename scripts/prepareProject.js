@@ -287,9 +287,12 @@ const prepare = async () => {
     // Add Storyblok component typing where needed
     const presetImages = [];
     for (const [presetId, preset] of Object.entries(presets)) {
+      if (presetId.includes("layout-split")) continue;
+
       const component = generatedComponents.components.find(
         (component) => component.name === presetIdToComponentName(presetId)
       );
+
       traverse(
         preset.preset,
         ({ meta }) => {
@@ -321,6 +324,7 @@ const prepare = async () => {
         { pathSeparator: "/" }
       );
 
+      console.log("flatten");
       // ... also flatten some keys to be compatible with Storyblok config
       traverse(preset.preset, ({ parent, key, value }) => {
         if (typeof value === "object" && isNaN(key) && !Array.isArray(value)) {

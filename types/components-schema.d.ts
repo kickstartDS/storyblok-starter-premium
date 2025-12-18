@@ -174,13 +174,19 @@ export interface DividerStoryblok {
   component: "divider";
 }
 
-export interface DownloadsStoryblok {
+export interface DownloadStoryblok {
   name?: string;
   description?: string;
   previewImage?: MultilinkStoryblok;
   url?: MultilinkStoryblok;
   size?: string;
   format?: string;
+  _uid: string;
+  component: "download";
+}
+
+export interface DownloadsStoryblok {
+  download?: DownloadStoryblok[];
   _uid: string;
   component: "downloads";
 }
@@ -263,6 +269,19 @@ export interface GalleryStoryblok {
   lightbox?: boolean;
   _uid: string;
   component: "gallery";
+}
+
+export interface GlobalStoryblok {
+  global?: (InfoTableStoryblok | SplitEvenStoryblok | SplitWeightedStoryblok)[];
+  _uid: string;
+  component: "global";
+  uuid?: string;
+}
+
+export interface GlobalReferenceStoryblok {
+  reference?: unknown[];
+  _uid: string;
+  component: "global_reference";
 }
 
 export interface HeaderStoryblok {
@@ -455,7 +474,7 @@ export interface SectionStoryblok {
   content_gutter?: "" | "large" | "default" | "small" | "none";
   content_mode?: "" | "default" | "tile" | "list" | "slider";
   content_tileWidth?: "" | "smallest" | "default" | "medium" | "large" | "largest" | "full";
-  components?: (InfoTableStoryblok | SplitEvenStoryblok | SplitWeightedStoryblok)[];
+  components?: (InfoTableStoryblok | SplitEvenStoryblok | SplitWeightedStoryblok | GlobalReferenceStoryblok)[];
   buttons?: ButtonsStoryblok[];
   _uid: string;
   component: "section";
@@ -510,6 +529,7 @@ export interface SplitEvenStoryblok {
     | ContentNavStoryblok
     | CtaStoryblok
     | DividerStoryblok
+    | DownloadsStoryblok
     | EventLatestTeaserStoryblok
     | EventListTeaserStoryblok
     | FaqStoryblok
