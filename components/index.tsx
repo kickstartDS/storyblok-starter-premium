@@ -230,14 +230,16 @@ export const components = {
       import("@kickstartds/ds-agency-premium/split-even").then(
         (mod) => mod.SplitEven
       )
-    )
+    ),
+    "firstComponents"
   ),
   "split-weighted": editable(
     dynamic(() =>
       import("@kickstartds/ds-agency-premium/split-weighted").then(
         (mod) => mod.SplitWeighted
       )
-    )
+    ),
+    "mainComponents"
   ),
   stats: editable(
     dynamic(() =>
