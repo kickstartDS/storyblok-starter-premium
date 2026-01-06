@@ -10,7 +10,8 @@ import { Text } from "@kickstartds/ds-agency-premium/components/text/index.js";
 import { BlogHead } from "@kickstartds/ds-agency-premium/components/blog-head/index.js";
 import { Cta } from "@kickstartds/ds-agency-premium/components/cta/index.js";
 import { BlogPost as DsaBlogPost } from "@kickstartds/ds-agency-premium/components/blog-post/index.js";
-import { SplitWeighted } from "@kickstartds/ds-agency-premium/components/split-weighted/index.js";
+import { SplitWeightedContextDefault as SplitWeighted } from "@kickstartds/ds-agency-premium/components/split-weighted/index.js";
+import { unflatten } from "@/helpers/unflatten";
 
 type PageProps = {
   blok: Omit<ComponentProps<typeof DsaBlogPost>, "section"> &
@@ -29,8 +30,7 @@ const BlogPost: React.FC<PageProps> = ({ blok }) => {
       <main {...storyblokEditable(blok)}>
         <Section width="wide" content={{ mode: "list" }}>
           <SplitWeighted
-            // @ts-expect-error
-            mainComponents={
+            main={
               <div>
                 {head && <BlogHead {...head} />}
                 {content ? (
@@ -38,15 +38,14 @@ const BlogPost: React.FC<PageProps> = ({ blok }) => {
                 ) : (
                   blok.section?.map((nestedBlok) => (
                     <StoryblokComponent
-                      blok={nestedBlok}
+                      blok={unflatten(nestedBlok)}
                       key={nestedBlok._uid}
                     />
                   ))
                 )}
               </div>
             }
-            // @ts-expect-error
-            asideComponents={aside && <BlogAside {...aside} />}
+            aside={aside && <BlogAside {...aside} />}
           />
         </Section>
         {cta && (
