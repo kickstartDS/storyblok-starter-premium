@@ -53,14 +53,16 @@ const EventDetail: React.FC<PageProps> = ({ blok }) => {
             <RichText className="dsa-event__description" text={description} />
           </Section>
         )}
-        <Section spaceBefore="none">
-          <Gallery
-            images={images}
-            aspectRatio="wide"
-            layout="smallTiles"
-            lightbox
-          />
-        </Section>
+        {images && images.length > 0 && (
+          <Section spaceBefore="none">
+            <Gallery
+              images={images}
+              aspectRatio="wide"
+              layout="smallTiles"
+              lightbox
+            />
+          </Section>
+        )}
         {download && download.length > 0 && (
           <Section
             width="narrow"
