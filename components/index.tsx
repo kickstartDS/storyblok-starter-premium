@@ -98,6 +98,7 @@ export const components = {
   global_reference: GlobalReference,
   "blog-overview": dynamic(() => import("./BlogOverview")),
   "blog-post": dynamic(() => import("./BlogPost")),
+  "event-detail": dynamic(() => import("./EventDetail")),
   "blog-teaser": editable(
     dynamic(() =>
       import("@kickstartds/ds-agency-premium/blog-teaser").then(
