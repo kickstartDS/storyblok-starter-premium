@@ -10,7 +10,7 @@ import { RichText } from "@kickstartds/base/lib/rich-text";
 import { Downloads } from "@kickstartds/ds-agency-premium/components/downloads/index.js";
 
 type PageProps = {
-  blok: Omit<ComponentProps<typeof DsaEventDetail>, "section"> & SbBlokData;
+  blok: ComponentProps<typeof DsaEventDetail> & SbBlokData;
 };
 
 const EventDetail: React.FC<PageProps> = ({ blok }) => {

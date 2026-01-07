@@ -99,6 +99,7 @@ export const components = {
   "blog-overview": dynamic(() => import("./BlogOverview")),
   "blog-post": dynamic(() => import("./BlogPost")),
   "event-detail": dynamic(() => import("./EventDetail")),
+  "event-list": dynamic(() => import("./EventList")),
   "blog-teaser": editable(
     dynamic(() =>
       import("@kickstartds/ds-agency-premium/blog-teaser").then(

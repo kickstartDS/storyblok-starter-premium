@@ -1,10 +1,4805 @@
 {
   "components": [
     {
+      "name": "tags",
+      "display_name": "Tags",
+      "created_at": "2026-01-07T09:52:15.007Z",
+      "updated_at": "2026-01-07T09:52:15.007Z",
+      "id": 0,
+      "schema": {
+        "entry": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Entry",
+          "key": "entry",
+          "type": "text",
+          "description": "Text des Tags",
+          "required": false
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Tags",
+      "color": "#05566a",
+      "icon": "block-wallet"
+    },
+    {
+      "name": "contact",
+      "display_name": "Contact",
+      "created_at": "2026-01-07T09:52:15.011Z",
+      "updated_at": "2026-01-07T09:52:15.011Z",
+      "id": 1,
+      "schema": {
+        "label": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Label",
+          "key": "label",
+          "type": "text",
+          "description": "Label describing the contact method (e.g., 'Email', 'Phone').",
+          "required": false
+        },
+        "icon": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Icon",
+          "key": "icon",
+          "type": "text",
+          "description": "Icon name or identifier representing the contact method.",
+          "required": false
+        },
+        "url": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Url",
+          "key": "url",
+          "type": "multilink",
+          "allow_target_blank": true,
+          "email_link_type": true,
+          "asset_link_type": true,
+          "show_anchor": true,
+          "description": "URL or link for the contact method, if applicable.",
+          "required": false
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Contact",
+      "color": "#05566a",
+      "icon": "contact"
+    },
+    {
+      "name": "buttons",
+      "display_name": "Buttons",
+      "created_at": "2026-01-07T09:52:15.011Z",
+      "updated_at": "2026-01-07T09:52:15.011Z",
+      "id": 2,
+      "schema": {
+        "label": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Label",
+          "key": "label",
+          "type": "text",
+          "description": "Text label for the link.",
+          "required": false
+        },
+        "url": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Url",
+          "key": "url",
+          "type": "multilink",
+          "allow_target_blank": true,
+          "email_link_type": true,
+          "asset_link_type": true,
+          "show_anchor": true,
+          "description": "URL the link points to.",
+          "required": false
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Buttons",
+      "color": "#05566a",
+      "icon": "block-wallet"
+    },
+    {
+      "name": "links",
+      "display_name": "Links",
+      "created_at": "2026-01-07T09:52:15.012Z",
+      "updated_at": "2026-01-07T09:52:15.012Z",
+      "id": 3,
+      "schema": {
+        "icon": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Icon",
+          "key": "icon",
+          "type": "custom",
+          "field_type": "storyblok-icon-sprite-picker-field-plugin",
+          "options": [
+            {
+              "name": "allowedIcons",
+              "_uid": "07cc568c-c54d-471d-b278-0adc1e23e1d9"
+            }
+          ],
+          "required": false
+        },
+        "label": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Label",
+          "key": "label",
+          "type": "text",
+          "required": false
+        },
+        "url": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Url",
+          "key": "url",
+          "type": "multilink",
+          "allow_target_blank": true,
+          "email_link_type": true,
+          "asset_link_type": true,
+          "show_anchor": true,
+          "required": false
+        },
+        "newTab": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "NewTab",
+          "key": "newTab",
+          "type": "boolean",
+          "description": "Open link in new Tab",
+          "required": false
+        },
+        "ariaLabel": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "AriaLabel",
+          "key": "ariaLabel",
+          "type": "text",
+          "description": "Aria label for the link",
+          "required": false
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Links",
+      "color": "#05566a",
+      "icon": "block-wallet"
+    },
+    {
+      "name": "download",
+      "display_name": "Download",
+      "created_at": "2026-01-07T09:52:15.019Z",
+      "updated_at": "2026-01-07T09:52:15.019Z",
+      "id": 6,
+      "schema": {
+        "name": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Name",
+          "key": "name",
+          "type": "text",
+          "description": "The name of the file",
+          "required": false
+        },
+        "description": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Description",
+          "key": "description",
+          "type": "text",
+          "description": "A brief description of the file",
+          "required": false
+        },
+        "previewImage": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "PreviewImage",
+          "key": "previewImage",
+          "type": "multilink",
+          "allow_target_blank": true,
+          "email_link_type": true,
+          "asset_link_type": true,
+          "show_anchor": true,
+          "description": "A URL to an image that previews the file.",
+          "required": false
+        },
+        "url": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Url",
+          "key": "url",
+          "type": "multilink",
+          "allow_target_blank": true,
+          "email_link_type": true,
+          "asset_link_type": true,
+          "show_anchor": true,
+          "description": "The URL to download the file from.",
+          "required": false
+        },
+        "size": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Size",
+          "key": "size",
+          "type": "text",
+          "description": "The size of the download file",
+          "required": false
+        },
+        "format": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Format",
+          "key": "format",
+          "type": "text",
+          "description": "The format of the download file",
+          "required": false
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Download",
+      "color": "#05566a",
+      "icon": "block-wallet"
+    },
+    {
+      "name": "questions",
+      "display_name": "Questions",
+      "created_at": "2026-01-07T09:52:15.025Z",
+      "updated_at": "2026-01-07T09:52:15.025Z",
+      "id": 8,
+      "schema": {
+        "question": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Question",
+          "key": "question",
+          "type": "markdown",
+          "description": "The question",
+          "required": false
+        },
+        "answer": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Answer",
+          "key": "answer",
+          "type": "markdown",
+          "description": "The answer to the question",
+          "required": false
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Questions",
+      "color": "#05566a",
+      "icon": "block-wallet"
+    },
+    {
+      "name": "feature",
+      "display_name": "Feature",
+      "created_at": "2026-01-07T09:52:15.028Z",
+      "updated_at": "2026-01-07T09:52:15.028Z",
+      "id": 9,
+      "schema": {
+        "icon": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Icon",
+          "key": "icon",
+          "type": "custom",
+          "field_type": "storyblok-icon-sprite-picker-field-plugin",
+          "options": [
+            {
+              "name": "allowedIcons",
+              "_uid": "986a9b57-5b08-4166-9d3f-09b23375eb26"
+            }
+          ],
+          "description": "The icon for the feature",
+          "required": false
+        },
+        "title": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Title",
+          "key": "title",
+          "type": "text",
+          "description": "The title of the feature",
+          "required": false
+        },
+        "text": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Text",
+          "key": "text",
+          "type": "markdown",
+          "description": "The description of the feature",
+          "required": false
+        },
+        "tab-61c4c289-9236-4753-a08c-b7883c87b844": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Cta",
+          "key": "tab-61c4c289-9236-4753-a08c-b7883c87b844",
+          "keys": [
+            "cta_url",
+            "cta_label",
+            "cta_icon"
+          ],
+          "type": "tab",
+          "required": false
+        },
+        "cta_url": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Url",
+          "key": "cta_url",
+          "type": "multilink",
+          "allow_target_blank": true,
+          "email_link_type": true,
+          "asset_link_type": true,
+          "show_anchor": true,
+          "default_value": "#",
+          "description": "The CTA url",
+          "required": false
+        },
+        "cta_label": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Label",
+          "key": "cta_label",
+          "type": "text",
+          "default_value": "See more",
+          "description": "The text label displayed on the link",
+          "required": false
+        },
+        "cta_icon": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Icon",
+          "key": "cta_icon",
+          "type": "custom",
+          "field_type": "storyblok-icon-sprite-picker-field-plugin",
+          "options": [
+            {
+              "name": "allowedIcons",
+              "_uid": "a16b9902-1299-414f-a4e8-3ac84a405953"
+            }
+          ],
+          "default_value": "arrow-right",
+          "description": "Icon for the link style of the cta",
+          "required": false
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Feature",
+      "color": "#05566a",
+      "icon": "block-wallet"
+    },
+    {
+      "name": "images",
+      "display_name": "Images",
+      "created_at": "2026-01-07T09:52:15.030Z",
+      "updated_at": "2026-01-07T09:52:15.030Z",
+      "id": 10,
+      "schema": {
+        "src": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Src",
+          "key": "src",
+          "type": "asset",
+          "filetypes": [
+            "images"
+          ],
+          "description": "The source of the image",
+          "required": false
+        },
+        "alt": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Alt",
+          "key": "alt",
+          "type": "text",
+          "description": "Alt text of the image",
+          "required": false
+        },
+        "caption": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Caption",
+          "key": "caption",
+          "type": "markdown",
+          "description": "The caption of the image",
+          "required": false
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Images",
+      "color": "#05566a",
+      "icon": "block-wallet"
+    },
+    {
+      "name": "logo",
+      "display_name": "Logo",
+      "created_at": "2026-01-07T09:52:15.042Z",
+      "updated_at": "2026-01-07T09:52:15.042Z",
+      "id": 13,
+      "schema": {
+        "src": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Src",
+          "key": "src",
+          "type": "asset",
+          "filetypes": [
+            "images"
+          ],
+          "description": "The URL of the logo image",
+          "required": false
+        },
+        "alt": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Alt",
+          "key": "alt",
+          "type": "text",
+          "description": "The alt text of the logo",
+          "required": false
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Logo",
+      "color": "#05566a",
+      "icon": "block-wallet"
+    },
+    {
+      "name": "tile",
+      "display_name": "Tile",
+      "created_at": "2026-01-07T09:52:15.045Z",
+      "updated_at": "2026-01-07T09:52:15.045Z",
+      "id": 14,
+      "schema": {
+        "headline": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Headline",
+          "key": "headline",
+          "type": "markdown",
+          "description": "Die Überschrift der Kachel, die den Inhalt zusammenfasst.",
+          "required": false
+        },
+        "sub": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Sub",
+          "key": "sub",
+          "type": "markdown",
+          "description": "Eine optionale Unterüberschrift, die zusätzliche Informationen zur Kachel bietet.",
+          "required": false
+        },
+        "text": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Text",
+          "key": "text",
+          "type": "markdown",
+          "description": "Der Haupttext der Kachel, der den Inhalt detailliert beschreibt.",
+          "required": false
+        },
+        "tab-16121020-72c5-4b61-af19-24a555d407a2": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Image",
+          "key": "tab-16121020-72c5-4b61-af19-24a555d407a2",
+          "keys": [
+            "image_src",
+            "image_alt"
+          ],
+          "type": "tab",
+          "description": "Ein Bild, das in der Kachel angezeigt wird, um den Inhalt visuell zu unterstützen.",
+          "required": false
+        },
+        "image_src": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Src",
+          "key": "image_src",
+          "type": "asset",
+          "filetypes": [
+            "images"
+          ],
+          "description": "Picture source",
+          "required": false
+        },
+        "image_alt": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Alt",
+          "key": "image_alt",
+          "type": "text",
+          "description": "Alt text to display for picture",
+          "required": false
+        },
+        "tab-8910b93a-2422-40e9-9e2f-d34ceea6a2c1": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Button",
+          "key": "tab-8910b93a-2422-40e9-9e2f-d34ceea6a2c1",
+          "keys": [
+            "button_toggle",
+            "button_label",
+            "button_url",
+            "button_icon"
+          ],
+          "type": "tab",
+          "description": "Ein Button, der eine Aktion auslöst, wie z.B. das Öffnen einer Seite.",
+          "required": false
+        },
+        "button_toggle": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Toggle",
+          "key": "button_toggle",
+          "type": "boolean",
+          "default_value": true,
+          "description": "Toggle wether the Button is displayed or not",
+          "required": false
+        },
+        "button_label": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Label",
+          "key": "button_label",
+          "type": "text",
+          "description": "Text content to display inside the button",
+          "required": false
+        },
+        "button_url": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Url",
+          "key": "button_url",
+          "type": "multilink",
+          "allow_target_blank": true,
+          "email_link_type": true,
+          "asset_link_type": true,
+          "show_anchor": true,
+          "description": "The URL to link to when the button is clicked",
+          "required": false
+        },
+        "button_icon": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Icon",
+          "key": "button_icon",
+          "type": "custom",
+          "field_type": "storyblok-icon-sprite-picker-field-plugin",
+          "options": [
+            {
+              "name": "allowedIcons",
+              "_uid": "7b181d18-767a-4591-90da-6e923581304c"
+            }
+          ],
+          "description": "Choose an icon",
+          "required": false
+        },
+        "backgroundColor": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "BackgroundColor",
+          "key": "backgroundColor",
+          "type": "text",
+          "description": "Die Hintergrundfarbe der Kachel, die das visuelle Design unterstützt.",
+          "required": false
+        },
+        "backgroundImage": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "BackgroundImage",
+          "key": "backgroundImage",
+          "type": "asset",
+          "filetypes": [
+            "images"
+          ],
+          "description": "Ein optionales Hintergrundbild, das hinter dem Inhalt der Kachel angezeigt wird.",
+          "required": false
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Tile",
+      "color": "#05566a",
+      "icon": "block-wallet"
+    },
+    {
+      "name": "stat",
+      "display_name": "Stat",
+      "created_at": "2026-01-07T09:52:15.050Z",
+      "updated_at": "2026-01-07T09:52:15.050Z",
+      "id": 30,
+      "schema": {
+        "number": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Number",
+          "key": "number",
+          "type": "text",
+          "description": "Die Zahl, die den Fakt repräsentiert. Dies kann eine absolute Zahl oder eine Prozentangabe sein. Darf maximal eine numerische Zahl enthalten",
+          "required": false
+        },
+        "description": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Description",
+          "key": "description",
+          "type": "markdown",
+          "description": "Eine kurze Beschreibung oder Erklärung des Fakts. Dies kann zusätzliche Informationen oder Kontext zur Zahl bieten.",
+          "required": false
+        },
+        "title": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Title",
+          "key": "title",
+          "type": "markdown",
+          "description": "Ein optionaler Titel für den Fakt, der hervorgehoben wird. Dies kann verwendet werden, um den Fakt zu kategorisieren oder hervorzuheben.",
+          "required": false
+        },
+        "icon": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Icon",
+          "key": "icon",
+          "type": "custom",
+          "field_type": "storyblok-icon-sprite-picker-field-plugin",
+          "options": [
+            {
+              "name": "allowedIcons",
+              "_uid": "7697f61b-9cca-4b17-8dc6-783dd9c647dd"
+            }
+          ],
+          "description": "Ein optionales Icon, das den Fakt visuell unterstützt. Dies kann ein Symbol oder eine Grafik sein, die den Fakt repräsentiert.",
+          "required": false
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Stat",
+      "color": "#05566a",
+      "icon": "block-wallet"
+    },
+    {
+      "name": "testimonial",
+      "display_name": "Testimonial",
+      "created_at": "2026-01-07T09:52:15.056Z",
+      "updated_at": "2026-01-07T09:52:15.056Z",
+      "id": 31,
+      "schema": {
+        "quote": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Quote",
+          "key": "quote",
+          "type": "markdown",
+          "description": "The testimonial quote",
+          "required": false
+        },
+        "name": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Name",
+          "key": "name",
+          "type": "text",
+          "description": "The name of the quote author",
+          "required": false
+        },
+        "title": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Title",
+          "key": "title",
+          "type": "text",
+          "description": "The title of the quote author",
+          "required": false
+        },
+        "tab-d9ccbffa-92c3-4a1d-8931-3b8f5aad170d": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Image",
+          "key": "tab-d9ccbffa-92c3-4a1d-8931-3b8f5aad170d",
+          "keys": [
+            "image_src",
+            "image_alt"
+          ],
+          "type": "tab",
+          "required": false
+        },
+        "image_src": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Src",
+          "key": "image_src",
+          "type": "asset",
+          "filetypes": [
+            "images"
+          ],
+          "description": "The image to display with the testimonial",
+          "required": false
+        },
+        "image_alt": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Alt",
+          "key": "image_alt",
+          "type": "text",
+          "description": "The alt text of the image file",
+          "required": false
+        },
+        "rating": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Rating",
+          "key": "rating",
+          "type": "number",
+          "description": "The rating of the testimonial, from 1 to 5",
+          "required": false
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Testimonial",
+      "color": "#05566a",
+      "icon": "block-wallet"
+    },
+    {
+      "name": "blog-teaser",
+      "display_name": "Blog Teaser",
+      "created_at": "2026-01-07T09:52:15.061Z",
+      "updated_at": "2026-01-07T09:52:15.061Z",
+      "id": 33,
+      "schema": {
+        "date": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Date",
+          "key": "date",
+          "type": "datetime",
+          "disable_time": true,
+          "description": "Datum der Veröffentlichung des Blogbeitrags",
+          "required": false
+        },
+        "tags": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Tags",
+          "key": "tags",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "tags"
+          ]
+        },
+        "headline": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Headline",
+          "key": "headline",
+          "type": "markdown",
+          "description": "Headline des Blogbeitrags",
+          "required": false
+        },
+        "teaserText": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "TeaserText",
+          "key": "teaserText",
+          "type": "markdown",
+          "description": "Teasertext des Blogbeitrags",
+          "required": false
+        },
+        "image": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Image",
+          "key": "image",
+          "type": "asset",
+          "filetypes": [
+            "images"
+          ],
+          "description": "Hauptbild des Blogbeitrags",
+          "required": false
+        },
+        "alt": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Alt",
+          "key": "alt",
+          "type": "text",
+          "description": "Alternativtext für das Bild des Blogbeitrags",
+          "required": false
+        },
+        "tab-4965f26c-32fd-4b51-8eff-fa2ee0240428": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Link",
+          "key": "tab-4965f26c-32fd-4b51-8eff-fa2ee0240428",
+          "keys": [
+            "link_url",
+            "link_text"
+          ],
+          "type": "tab",
+          "description": "Link zum Blogbeitrag",
+          "required": false
+        },
+        "link_url": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Url",
+          "key": "link_url",
+          "type": "multilink",
+          "allow_target_blank": true,
+          "email_link_type": true,
+          "asset_link_type": true,
+          "show_anchor": true,
+          "description": "The blog entry URL to link",
+          "required": false
+        },
+        "link_text": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Text",
+          "key": "link_text",
+          "type": "text",
+          "default_value": "Read article",
+          "description": "The text for the link",
+          "required": false
+        },
+        "readingTime": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "ReadingTime",
+          "key": "readingTime",
+          "type": "text",
+          "description": "Lesezeit des Blogbeitrags",
+          "required": false
+        },
+        "tab-e643ac78-87cc-4b1d-b3d6-880924bca5b3": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Author",
+          "key": "tab-e643ac78-87cc-4b1d-b3d6-880924bca5b3",
+          "keys": [
+            "author_name",
+            "author_title",
+            "author_image"
+          ],
+          "type": "tab",
+          "description": "Autor des Blogbeitrags",
+          "required": false
+        },
+        "author_name": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Name",
+          "key": "author_name",
+          "type": "text",
+          "description": "The name of the author",
+          "required": false
+        },
+        "author_title": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Title",
+          "key": "author_title",
+          "type": "text",
+          "description": "The title of the author",
+          "required": false
+        },
+        "author_image": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Image",
+          "key": "author_image",
+          "type": "asset",
+          "filetypes": [
+            "images"
+          ],
+          "description": "The image URL of the author",
+          "required": false
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Blog Teaser",
+      "color": "#05566a",
+      "icon": "block-wallet",
+      "component_group_uuid": "0064354c-7c18-4b83-b28a-f47556a6dbe6",
+      "component_group_name": "FirstComponents"
+    },
+    {
+      "name": "business-card",
+      "display_name": "Business Card",
+      "created_at": "2026-01-07T09:52:15.061Z",
+      "updated_at": "2026-01-07T09:52:15.061Z",
+      "id": 34,
+      "schema": {
+        "centered": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Centered",
+          "key": "centered",
+          "type": "boolean",
+          "description": "Whether the business card content is centered.",
+          "required": false
+        },
+        "tab-d3593bd3-1241-4cf1-a728-1ecc26aa9057": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Image",
+          "key": "tab-d3593bd3-1241-4cf1-a728-1ecc26aa9057",
+          "keys": [
+            "image_src",
+            "image_alt"
+          ],
+          "type": "tab",
+          "description": "A background or feature image displayed on the business card.",
+          "required": false
+        },
+        "image_src": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Src",
+          "key": "image_src",
+          "type": "multilink",
+          "allow_target_blank": true,
+          "email_link_type": true,
+          "asset_link_type": true,
+          "show_anchor": true,
+          "description": "URL of the background image shown on the business card.",
+          "required": false
+        },
+        "image_alt": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Alt",
+          "key": "image_alt",
+          "type": "text",
+          "description": "Alternative text describing the background image.",
+          "required": false
+        },
+        "tab-94b50f1a-124c-4118-978a-46b1e6fce5c0": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Logo",
+          "key": "tab-94b50f1a-124c-4118-978a-46b1e6fce5c0",
+          "keys": [
+            "logo_src",
+            "logo_alt",
+            "logo_url"
+          ],
+          "type": "tab",
+          "description": "The logo of the company or organization displayed on the business card.",
+          "required": false
+        },
+        "logo_src": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Src",
+          "key": "logo_src",
+          "type": "multilink",
+          "allow_target_blank": true,
+          "email_link_type": true,
+          "asset_link_type": true,
+          "show_anchor": true,
+          "description": "URL of the company or organization logo.",
+          "required": false
+        },
+        "logo_alt": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Alt",
+          "key": "logo_alt",
+          "type": "text",
+          "description": "Alternative text describing the logo.",
+          "required": false
+        },
+        "logo_url": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Url",
+          "key": "logo_url",
+          "type": "multilink",
+          "allow_target_blank": true,
+          "email_link_type": true,
+          "asset_link_type": true,
+          "show_anchor": true,
+          "description": "URL to the company's website or landing page.",
+          "required": false
+        },
+        "topic": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Topic",
+          "key": "topic",
+          "type": "text",
+          "description": "A headline or main topic for the business card, such as a job title or department.",
+          "required": false
+        },
+        "address": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Address",
+          "key": "address",
+          "type": "text",
+          "description": "The physical or mailing address displayed on the business card.",
+          "required": false
+        },
+        "tab-1e104885-1974-49f3-bed1-551866b1a796": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Avatar",
+          "key": "tab-1e104885-1974-49f3-bed1-551866b1a796",
+          "keys": [
+            "avatar_src",
+            "avatar_alt"
+          ],
+          "type": "tab",
+          "description": "A profile image or avatar representing the person on the business card.",
+          "required": false
+        },
+        "avatar_src": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Src",
+          "key": "avatar_src",
+          "type": "multilink",
+          "allow_target_blank": true,
+          "email_link_type": true,
+          "asset_link_type": true,
+          "show_anchor": true,
+          "description": "URL of the person's avatar or profile image.",
+          "required": false
+        },
+        "avatar_alt": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Alt",
+          "key": "avatar_alt",
+          "type": "text",
+          "description": "Alternative text describing the avatar.",
+          "required": false
+        },
+        "contact": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Contact",
+          "key": "contact",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "contact"
+          ]
+        },
+        "buttons": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Buttons",
+          "key": "buttons",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "buttons"
+          ]
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Business Card",
+      "color": "#05566a",
+      "icon": "block-wallet",
+      "component_group_uuid": "0064354c-7c18-4b83-b28a-f47556a6dbe6",
+      "component_group_name": "FirstComponents"
+    },
+    {
+      "name": "content-nav",
+      "display_name": "Content Nav",
+      "created_at": "2026-01-07T09:52:15.061Z",
+      "updated_at": "2026-01-07T09:52:15.061Z",
+      "id": 36,
+      "schema": {
+        "tab-31e10d3e-a64d-4bea-9b1a-e7471a92337e": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Image",
+          "key": "tab-31e10d3e-a64d-4bea-9b1a-e7471a92337e",
+          "keys": [
+            "image_src",
+            "image_alt"
+          ],
+          "type": "tab",
+          "required": false
+        },
+        "image_src": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Src",
+          "key": "image_src",
+          "type": "multilink",
+          "allow_target_blank": true,
+          "email_link_type": true,
+          "asset_link_type": true,
+          "show_anchor": true,
+          "description": "URL of the image to display in the content nav.",
+          "required": false
+        },
+        "image_alt": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Alt",
+          "key": "image_alt",
+          "type": "text",
+          "description": "Alternative text for the image.",
+          "required": false
+        },
+        "topic": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Topic",
+          "key": "topic",
+          "type": "text",
+          "description": "The topic of the content being navigated.",
+          "required": false
+        },
+        "links": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Links",
+          "key": "links",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "links"
+          ]
+        },
+        "initiallyShown": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "InitiallyShown",
+          "key": "initiallyShown",
+          "type": "number",
+          "default_value": 4,
+          "description": "Determines how many links are initially shown in the content nav. If there are more links, a 'Show More' button will be displayed.",
+          "required": false
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Content Nav",
+      "color": "#05566a",
+      "icon": "block-wallet",
+      "component_group_uuid": "0064354c-7c18-4b83-b28a-f47556a6dbe6",
+      "component_group_name": "FirstComponents"
+    },
+    {
+      "name": "cta",
+      "display_name": "Cta",
+      "created_at": "2026-01-07T09:52:15.061Z",
+      "updated_at": "2026-01-07T09:52:15.061Z",
+      "id": 37,
+      "schema": {
+        "headline": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Headline",
+          "key": "headline",
+          "type": "markdown",
+          "description": "Headline für den Call-to-Action",
+          "required": false
+        },
+        "sub": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Sub",
+          "key": "sub",
+          "type": "markdown",
+          "description": "Subheadline unterhalb der Headline",
+          "required": false
+        },
+        "text": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Text",
+          "key": "text",
+          "type": "markdown",
+          "description": "Infotext für den Call-to-Action",
+          "required": false
+        },
+        "buttons": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Buttons",
+          "key": "buttons",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "buttons"
+          ],
+          "description": "Button"
+        },
+        "tab-c1313d3b-b21e-4b83-893a-8dec9c3123e6": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Image",
+          "key": "tab-c1313d3b-b21e-4b83-893a-8dec9c3123e6",
+          "keys": [
+            "image_src",
+            "image_padding",
+            "image_alt",
+            "image_align"
+          ],
+          "type": "tab",
+          "description": "Bild welches nebem dem Infotext angezeigt wird",
+          "required": false
+        },
+        "image_src": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Src",
+          "key": "image_src",
+          "type": "asset",
+          "filetypes": [
+            "images"
+          ],
+          "description": "Image source to use",
+          "required": false
+        },
+        "image_padding": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Padding",
+          "key": "image_padding",
+          "type": "boolean",
+          "default_value": true,
+          "description": "Toggle padding of the image",
+          "required": false
+        },
+        "image_alt": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Alt",
+          "key": "image_alt",
+          "type": "text",
+          "description": "Image description",
+          "required": false
+        },
+        "image_align": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Align",
+          "key": "image_align",
+          "type": "option",
+          "default_value": "center",
+          "description": "Select a vertical alignment for the image",
+          "options": [
+            {
+              "name": "center",
+              "value": "center",
+              "_uid": "7c116196-742b-4b57-a31a-1ea265523833"
+            },
+            {
+              "name": "top",
+              "value": "top",
+              "_uid": "f818bea8-6b7f-449f-9c16-0fcfb5f0be6f"
+            },
+            {
+              "name": "bottom",
+              "value": "bottom",
+              "_uid": "ef822cf1-c06c-43e6-a2b4-158eb028c1d3"
+            }
+          ],
+          "required": false
+        },
+        "tab-50b776fd-5f2b-4203-a4c0-ec7aa901be2f": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Order",
+          "key": "tab-50b776fd-5f2b-4203-a4c0-ec7aa901be2f",
+          "keys": [
+            "order_mobileImageLast",
+            "order_desktopImageLast"
+          ],
+          "type": "tab",
+          "description": "Reihenfolge von Bild und Infotext",
+          "required": false
+        },
+        "order_mobileImageLast": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "MobileImageLast",
+          "key": "order_mobileImageLast",
+          "type": "boolean",
+          "description": "Switch to displaying the image after the text on mobile",
+          "required": false
+        },
+        "order_desktopImageLast": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "DesktopImageLast",
+          "key": "order_desktopImageLast",
+          "type": "boolean",
+          "default_value": true,
+          "description": "Switch to displaying the image after the text on desktop",
+          "required": false
+        },
+        "align": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Align",
+          "key": "align",
+          "type": "option",
+          "default_value": "center",
+          "description": "Select a vertical alignment for the content",
+          "options": [
+            {
+              "name": "center",
+              "value": "center",
+              "_uid": "d5122083-01c2-4cdf-b89d-c1a6050c4b74"
+            },
+            {
+              "name": "top",
+              "value": "top",
+              "_uid": "c5e9d5c3-d437-4a44-8dc7-4801bd619c31"
+            },
+            {
+              "name": "bottom",
+              "value": "bottom",
+              "_uid": "a8c5ab38-ab9f-4c63-affa-ebcf53021483"
+            }
+          ],
+          "required": false
+        },
+        "padding": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Padding",
+          "key": "padding",
+          "type": "boolean",
+          "description": "Toggle padding of the content",
+          "required": false
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Cta",
+      "color": "#05566a",
+      "icon": "block-wallet",
+      "component_group_uuid": "0064354c-7c18-4b83-b28a-f47556a6dbe6",
+      "component_group_name": "FirstComponents"
+    },
+    {
+      "name": "divider",
+      "display_name": "Divider",
+      "created_at": "2026-01-07T09:52:15.061Z",
+      "updated_at": "2026-01-07T09:52:15.061Z",
+      "id": 38,
+      "schema": {
+        "variant": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Variant",
+          "key": "variant",
+          "type": "option",
+          "default_value": "default",
+          "description": "Gewählte Variante des Trenners.",
+          "options": [
+            {
+              "name": "default",
+              "value": "default",
+              "_uid": "4e0f9a1e-4aa6-4843-a866-d9678997935a"
+            },
+            {
+              "name": "accent",
+              "value": "accent",
+              "_uid": "6aaf14e7-b669-414f-8364-f344cb9ca7f4"
+            }
+          ],
+          "required": false
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Divider",
+      "color": "#05566a",
+      "icon": "block-wallet",
+      "component_group_uuid": "0064354c-7c18-4b83-b28a-f47556a6dbe6",
+      "component_group_name": "FirstComponents"
+    },
+    {
+      "name": "downloads",
+      "display_name": "Downloads",
+      "created_at": "2026-01-07T09:52:15.061Z",
+      "updated_at": "2026-01-07T09:52:15.061Z",
+      "id": 39,
+      "schema": {
+        "download": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Download",
+          "key": "download",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "download"
+          ]
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Downloads",
+      "color": "#05566a",
+      "icon": "block-wallet",
+      "component_group_uuid": "0064354c-7c18-4b83-b28a-f47556a6dbe6",
+      "component_group_name": "FirstComponents"
+    },
+    {
+      "name": "event-latest-teaser",
+      "display_name": "Event Latest Teaser",
+      "created_at": "2026-01-07T09:52:15.061Z",
+      "updated_at": "2026-01-07T09:52:15.061Z",
+      "id": 40,
+      "schema": {
+        "date": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Date",
+          "key": "date",
+          "type": "datetime",
+          "disable_time": true,
+          "description": "The date of the event",
+          "required": false
+        },
+        "tab-d4db865c-bef9-428c-9bcc-4fdf44e028e8": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Calendar",
+          "key": "tab-d4db865c-bef9-428c-9bcc-4fdf44e028e8",
+          "keys": [
+            "calendar_month",
+            "calendar_day"
+          ],
+          "type": "tab",
+          "description": "Calendar icon to display the date",
+          "required": false
+        },
+        "calendar_month": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Month",
+          "key": "calendar_month",
+          "type": "text",
+          "description": "The month of the event",
+          "required": false
+        },
+        "calendar_day": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Day",
+          "key": "calendar_day",
+          "type": "text",
+          "description": "The day of the event",
+          "required": false
+        },
+        "title": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Title",
+          "key": "title",
+          "type": "markdown",
+          "description": "Title of the event",
+          "required": false
+        },
+        "location": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Location",
+          "key": "location",
+          "type": "markdown",
+          "description": "Location of the event",
+          "required": false
+        },
+        "url": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Url",
+          "key": "url",
+          "type": "multilink",
+          "allow_target_blank": true,
+          "email_link_type": true,
+          "asset_link_type": true,
+          "show_anchor": true,
+          "description": "The event entry URL to link",
+          "required": false
+        },
+        "cta": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Cta",
+          "key": "cta",
+          "type": "text",
+          "description": "Text for the call to action",
+          "required": false
+        },
+        "ariaLabel": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "AriaLabel",
+          "key": "ariaLabel",
+          "type": "text",
+          "description": "ARIA label for accessibility",
+          "required": false
+        },
+        "className": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "ClassName",
+          "key": "className",
+          "type": "text",
+          "required": false
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Event Latest Teaser",
+      "color": "#05566a",
+      "icon": "block-wallet",
+      "component_group_uuid": "0064354c-7c18-4b83-b28a-f47556a6dbe6",
+      "component_group_name": "FirstComponents"
+    },
+    {
+      "name": "event-list-teaser",
+      "display_name": "Event List Teaser",
+      "created_at": "2026-01-07T09:52:15.061Z",
+      "updated_at": "2026-01-07T09:52:15.061Z",
+      "id": 41,
+      "schema": {
+        "category": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Category",
+          "key": "category",
+          "type": "text",
+          "description": "Category of the event teaser",
+          "required": false
+        },
+        "title": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Title",
+          "key": "title",
+          "type": "markdown",
+          "description": "Title of the event",
+          "required": false
+        },
+        "text": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Text",
+          "key": "text",
+          "type": "markdown",
+          "description": "Short teaser text for the event",
+          "required": false
+        },
+        "date": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Date",
+          "key": "date",
+          "type": "datetime",
+          "disable_time": true,
+          "description": "The date of the event",
+          "required": false
+        },
+        "time": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Time",
+          "key": "time",
+          "type": "text",
+          "description": "The time of the event",
+          "required": false
+        },
+        "tab-577fa1c4-d798-4f27-aac7-9cb291d47e17": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Location",
+          "key": "tab-577fa1c4-d798-4f27-aac7-9cb291d47e17",
+          "keys": [
+            "location_name",
+            "location_address"
+          ],
+          "type": "tab",
+          "description": "Location of the event",
+          "required": false
+        },
+        "location_name": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Name",
+          "key": "location_name",
+          "type": "text",
+          "description": "Name of the location",
+          "required": false
+        },
+        "location_address": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Address",
+          "key": "location_address",
+          "type": "text",
+          "description": "Address of the location",
+          "required": false
+        },
+        "tags": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Tags",
+          "key": "tags",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "tags"
+          ]
+        },
+        "tab-5a5a951a-2e65-4d3c-8144-f6d16cf0ddee": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Image",
+          "key": "tab-5a5a951a-2e65-4d3c-8144-f6d16cf0ddee",
+          "keys": [
+            "image_src",
+            "image_alt"
+          ],
+          "type": "tab",
+          "description": "Image to display in the teaser",
+          "required": false
+        },
+        "image_src": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Src",
+          "key": "image_src",
+          "type": "asset",
+          "filetypes": [
+            "images"
+          ],
+          "description": "URL of the image to display",
+          "required": false
+        },
+        "image_alt": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Alt",
+          "key": "image_alt",
+          "type": "text",
+          "description": "Alt text of the image",
+          "required": false
+        },
+        "url": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Url",
+          "key": "url",
+          "type": "multilink",
+          "allow_target_blank": true,
+          "email_link_type": true,
+          "asset_link_type": true,
+          "show_anchor": true,
+          "description": "The event entry URL to link",
+          "required": false
+        },
+        "ctaText": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "CtaText",
+          "key": "ctaText",
+          "type": "text",
+          "description": "Text for the call to action",
+          "required": false
+        },
+        "ariaLabel": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "AriaLabel",
+          "key": "ariaLabel",
+          "type": "text",
+          "description": "ARIA label for accessibility",
+          "required": false
+        },
+        "className": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "ClassName",
+          "key": "className",
+          "type": "text",
+          "required": false
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Event List Teaser",
+      "color": "#05566a",
+      "icon": "block-wallet",
+      "component_group_uuid": "0064354c-7c18-4b83-b28a-f47556a6dbe6",
+      "component_group_name": "FirstComponents"
+    },
+    {
+      "name": "faq",
+      "display_name": "Faq",
+      "created_at": "2026-01-07T09:52:15.061Z",
+      "updated_at": "2026-01-07T09:52:15.061Z",
+      "id": 42,
+      "schema": {
+        "questions": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Questions",
+          "key": "questions",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "questions"
+          ],
+          "description": "Question"
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Faq",
+      "color": "#05566a",
+      "icon": "block-wallet",
+      "component_group_uuid": "0064354c-7c18-4b83-b28a-f47556a6dbe6",
+      "component_group_name": "FirstComponents"
+    },
+    {
+      "name": "features",
+      "display_name": "Features",
+      "created_at": "2026-01-07T09:52:15.061Z",
+      "updated_at": "2026-01-07T09:52:15.061Z",
+      "id": 43,
+      "schema": {
+        "layout": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Layout",
+          "key": "layout",
+          "type": "option",
+          "default_value": "largeTiles",
+          "description": "Das Layout der Features-Sektion, das die Anordnung und Struktur der enthaltenen Merkmale definiert.",
+          "options": [
+            {
+              "name": "largeTiles",
+              "value": "largeTiles",
+              "_uid": "495d437d-b4cf-4cc3-97d2-e7a8464a3ed9"
+            },
+            {
+              "name": "smallTiles",
+              "value": "smallTiles",
+              "_uid": "5927a828-c66a-4a58-8e61-fe779aa868f2"
+            },
+            {
+              "name": "list",
+              "value": "list",
+              "_uid": "a5fcb4fa-5db7-4d00-8273-6e9151b4fae7"
+            }
+          ],
+          "required": false
+        },
+        "style": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Style",
+          "key": "style",
+          "type": "option",
+          "default_value": "stack",
+          "description": "Der Stil der Features-Sektion, der das visuelle Erscheinungsbild beeinflusst.",
+          "options": [
+            {
+              "name": "intext",
+              "value": "intext",
+              "_uid": "43b72496-7666-4363-9312-61b3671df50e"
+            },
+            {
+              "name": "stack",
+              "value": "stack",
+              "_uid": "2b013ff6-e367-49fe-8c77-07010f475d02"
+            },
+            {
+              "name": "centered",
+              "value": "centered",
+              "_uid": "de157b21-94e6-4301-bf3d-62ad3d5f3b06"
+            },
+            {
+              "name": "besideLarge",
+              "value": "besideLarge",
+              "_uid": "6fa51864-1796-4d54-ae86-d707e321cf9f"
+            },
+            {
+              "name": "besideSmall",
+              "value": "besideSmall",
+              "_uid": "c93da439-4e39-4355-873b-5fce9a616fd3"
+            }
+          ],
+          "required": false
+        },
+        "tab-7858493b-6561-42e6-bd29-888394961e73": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Ctas",
+          "key": "tab-7858493b-6561-42e6-bd29-888394961e73",
+          "keys": [
+            "ctas_toggle",
+            "ctas_style"
+          ],
+          "type": "tab",
+          "description": "Übergreifende Einstellungen für Handlungsaufrufen, die den Benutzer zu Aktionen auffordern, wie z.B. 'Mehr erfahren' oder 'Jetzt kaufen'.",
+          "required": false
+        },
+        "ctas_toggle": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Toggle",
+          "key": "ctas_toggle",
+          "type": "boolean",
+          "default_value": true,
+          "description": "Activate/disable the CTAs",
+          "required": false
+        },
+        "ctas_style": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Style",
+          "key": "ctas_style",
+          "type": "option",
+          "default_value": "link",
+          "options": [
+            {
+              "name": "button",
+              "value": "button",
+              "_uid": "0c0d95c4-6dbd-488f-9a81-75f6712c734a"
+            },
+            {
+              "name": "link",
+              "value": "link",
+              "_uid": "f717b967-6ffd-41e3-b9aa-d1f4674f995e"
+            },
+            {
+              "name": "intext",
+              "value": "intext",
+              "_uid": "c7c20100-31db-45e9-84a7-d9689fae8fa1"
+            }
+          ],
+          "required": false
+        },
+        "feature": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Feature",
+          "key": "feature",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "feature"
+          ],
+          "description": "Feature"
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Features",
+      "color": "#05566a",
+      "icon": "block-wallet",
+      "component_group_uuid": "0064354c-7c18-4b83-b28a-f47556a6dbe6",
+      "component_group_name": "FirstComponents"
+    },
+    {
+      "name": "gallery",
+      "display_name": "Gallery",
+      "created_at": "2026-01-07T09:52:15.061Z",
+      "updated_at": "2026-01-07T09:52:15.061Z",
+      "id": 44,
+      "schema": {
+        "images": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Images",
+          "key": "images",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "images"
+          ]
+        },
+        "layout": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Layout",
+          "key": "layout",
+          "type": "option",
+          "default_value": "smallTiles",
+          "description": "Das Layout der Galerie, das die Anordnung der Bilder definiert.",
+          "options": [
+            {
+              "name": "stack",
+              "value": "stack",
+              "_uid": "6f88dbec-d585-40b4-acee-d190120746c2"
+            },
+            {
+              "name": "smallTiles",
+              "value": "smallTiles",
+              "_uid": "628e42e6-42cd-4363-9c25-c33b90741bd9"
+            },
+            {
+              "name": "largeTiles",
+              "value": "largeTiles",
+              "_uid": "3c02bafc-41b2-46f1-ae34-1a7fd54e8d84"
+            }
+          ],
+          "required": false
+        },
+        "aspectRatio": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "AspectRatio",
+          "key": "aspectRatio",
+          "type": "option",
+          "default_value": "unset",
+          "description": "Das Seitenverhältnis der Bilder in der Galerie, das die Breite und Höhe der Bilder definiert.",
+          "options": [
+            {
+              "name": "unset",
+              "value": "unset",
+              "_uid": "14092904-161e-40d5-b1d5-5663cf5eb420"
+            },
+            {
+              "name": "square",
+              "value": "square",
+              "_uid": "2c431c21-8107-43ca-900d-cd931d9c6e37"
+            },
+            {
+              "name": "wide",
+              "value": "wide",
+              "_uid": "40b9e47b-60a3-4835-a08c-bfc6a74fab42"
+            },
+            {
+              "name": "landscape",
+              "value": "landscape",
+              "_uid": "05ead114-81bd-4d18-ac8d-25bd743f2fab"
+            }
+          ],
+          "required": false
+        },
+        "lightbox": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Lightbox",
+          "key": "lightbox",
+          "type": "boolean",
+          "description": "Ob die Bilder in einer Lightbox angezeigt werden sollen, wenn sie angeklickt werden.",
+          "required": false
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Gallery",
+      "color": "#05566a",
+      "icon": "block-wallet",
+      "component_group_uuid": "0064354c-7c18-4b83-b28a-f47556a6dbe6",
+      "component_group_name": "FirstComponents"
+    },
+    {
+      "name": "hero",
+      "display_name": "Hero",
+      "created_at": "2026-01-07T09:52:15.061Z",
+      "updated_at": "2026-01-07T09:52:15.061Z",
+      "id": 45,
+      "schema": {
+        "headline": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Headline",
+          "key": "headline",
+          "type": "markdown",
+          "description": "Headline für das Visual",
+          "required": false
+        },
+        "sub": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Sub",
+          "key": "sub",
+          "type": "markdown",
+          "description": "Subheadline unterhalb der Headline",
+          "required": false
+        },
+        "text": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Text",
+          "key": "text",
+          "type": "markdown",
+          "description": "Textinhalt des Hero Elements",
+          "required": false
+        },
+        "invertText": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "InvertText",
+          "key": "invertText",
+          "type": "boolean",
+          "description": "Invert the text color for better contrast against the background",
+          "required": false
+        },
+        "buttons": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Buttons",
+          "key": "buttons",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "buttons"
+          ],
+          "description": "Button für das Hero Element"
+        },
+        "skipButton": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "SkipButton",
+          "key": "skipButton",
+          "type": "boolean",
+          "description": "Add a skip button to the hero module",
+          "required": false
+        },
+        "tab-b6b6afcf-6c3f-47a4-a7a2-3b21cc75344c": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Image",
+          "key": "tab-b6b6afcf-6c3f-47a4-a7a2-3b21cc75344c",
+          "keys": [
+            "image_srcMobile",
+            "image_srcTablet",
+            "image_srcDesktop",
+            "image_src",
+            "image_indent",
+            "image_alt"
+          ],
+          "type": "tab",
+          "description": "Hintergrundbild für das Hero Element",
+          "required": false
+        },
+        "image_srcMobile": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "SrcMobile",
+          "key": "image_srcMobile",
+          "type": "asset",
+          "filetypes": [
+            "images"
+          ],
+          "description": "Background image source for small screens",
+          "required": false
+        },
+        "image_srcTablet": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "SrcTablet",
+          "key": "image_srcTablet",
+          "type": "asset",
+          "filetypes": [
+            "images"
+          ],
+          "description": "Background image source for medium screens",
+          "required": false
+        },
+        "image_srcDesktop": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "SrcDesktop",
+          "key": "image_srcDesktop",
+          "type": "asset",
+          "filetypes": [
+            "images"
+          ],
+          "description": "Background image source for large screens",
+          "required": false
+        },
+        "image_src": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Src",
+          "key": "image_src",
+          "type": "asset",
+          "filetypes": [
+            "images"
+          ],
+          "description": "Override for img tag of picture element, if needed",
+          "required": false
+        },
+        "image_indent": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Indent",
+          "key": "image_indent",
+          "type": "option",
+          "default_value": "none",
+          "description": "Choose to indent the image horizontally on small screens",
+          "options": [
+            {
+              "name": "none",
+              "value": "none",
+              "_uid": "dfa5f8fc-2307-4c33-ae24-858c86cefaa8"
+            },
+            {
+              "name": "left",
+              "value": "left",
+              "_uid": "ca7c47e2-70bf-4b72-a2c1-6a94c94e568e"
+            },
+            {
+              "name": "right",
+              "value": "right",
+              "_uid": "3bb28946-26f0-4ed3-bd82-f46306733c74"
+            }
+          ],
+          "required": false
+        },
+        "image_alt": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Alt",
+          "key": "image_alt",
+          "type": "text",
+          "description": "Alt text to display for picture",
+          "required": false
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Hero",
+      "color": "#05566a",
+      "icon": "block-wallet",
+      "component_group_uuid": "0064354c-7c18-4b83-b28a-f47556a6dbe6",
+      "component_group_name": "FirstComponents"
+    },
+    {
+      "name": "html",
+      "display_name": "Html",
+      "created_at": "2026-01-07T09:52:15.061Z",
+      "updated_at": "2026-01-07T09:52:15.061Z",
+      "id": 46,
+      "schema": {
+        "html": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Html",
+          "key": "html",
+          "type": "text",
+          "description": "HTML-Inhalt, der eingebettet werden soll.",
+          "required": false
+        },
+        "consent": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Consent",
+          "key": "consent",
+          "type": "boolean",
+          "description": "Einwilligungsmanagement für eingebettete Inhalte. Aktivieren, um Einwilligung zu verlangen.",
+          "required": false
+        },
+        "consentText": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "ConsentText",
+          "key": "consentText",
+          "type": "text",
+          "description": "Text, der für die Einwilligung angezeigt wird. Wird nur angezeigt, wenn 'Einwilligung' aktiviert ist.",
+          "required": false
+        },
+        "consentButtonLabel": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "ConsentButtonLabel",
+          "key": "consentButtonLabel",
+          "type": "text",
+          "description": "Beschriftung des Buttons für die Einwilligung. Wird nur angezeigt, wenn 'Einwilligung' aktiviert ist.",
+          "required": false
+        },
+        "consentBackgroundImage": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "ConsentBackgroundImage",
+          "key": "consentBackgroundImage",
+          "type": "asset",
+          "filetypes": [
+            "images"
+          ],
+          "description": "Bild, das im Hintergrund des Einwilligungsdialogs angezeigt wird. Wird nur angezeigt, wenn 'Einwilligung' aktiviert ist.",
+          "required": false
+        },
+        "consentAspectRatio": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "ConsentAspectRatio",
+          "key": "consentAspectRatio",
+          "type": "option",
+          "default_value": "VALUE_16_9",
+          "description": "Seitenverhältnis des Einwilligungsdialogs. Wird nur verwendet, wenn 'Einwilligung' aktiviert ist.",
+          "options": [
+            {
+              "name": "16:9",
+              "value": "VALUE_16_9",
+              "_uid": "7745efe3-09d4-41f8-aea3-8c5191f9c51e"
+            },
+            {
+              "name": "16:10",
+              "value": "VALUE_16_10",
+              "_uid": "bb807314-3ac6-46fc-8bee-857b32541e11"
+            },
+            {
+              "name": "4:3",
+              "value": "VALUE_4_3",
+              "_uid": "ec48b341-533d-413e-b2f3-96b9d46d50bf"
+            },
+            {
+              "name": "1:1",
+              "value": "VALUE_1_1",
+              "_uid": "c22145fc-894e-4aa3-8614-bd58549318f2"
+            }
+          ],
+          "required": false
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Html",
+      "color": "#05566a",
+      "icon": "block-wallet",
+      "component_group_uuid": "0064354c-7c18-4b83-b28a-f47556a6dbe6",
+      "component_group_name": "FirstComponents"
+    },
+    {
+      "name": "image-story",
+      "display_name": "Image Story",
+      "created_at": "2026-01-07T09:52:15.061Z",
+      "updated_at": "2026-01-07T09:52:15.061Z",
+      "id": 47,
+      "schema": {
+        "headline": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Headline",
+          "key": "headline",
+          "type": "markdown",
+          "description": "Die Hauptüberschrift der Image Story",
+          "required": false
+        },
+        "sub": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Sub",
+          "key": "sub",
+          "type": "markdown",
+          "description": "Eine optionale Unterüberschrift, die zusätzliche Informationen zur Image Story liefert",
+          "required": false
+        },
+        "text": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Text",
+          "key": "text",
+          "type": "markdown",
+          "description": "Der Haupttext der Image Story, der die Geschichte erzählt",
+          "required": false
+        },
+        "layout": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Layout",
+          "key": "layout",
+          "type": "option",
+          "default_value": "imageLeft",
+          "description": "Das Layout der Image Story, das die Anordnung von Bild und Text bestimmt",
+          "options": [
+            {
+              "name": "textLeft",
+              "value": "textLeft",
+              "_uid": "56504bbd-ae1a-48a8-b289-b5c6c443abd7"
+            },
+            {
+              "name": "imageLeft",
+              "value": "imageLeft",
+              "_uid": "531b69a8-1bf4-4eb7-8a59-4bb0c6fbbad6"
+            }
+          ],
+          "required": false
+        },
+        "buttons": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Buttons",
+          "key": "buttons",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "buttons"
+          ]
+        },
+        "tab-891b4c94-6cb7-410e-b147-49e877cae644": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Image",
+          "key": "tab-891b4c94-6cb7-410e-b147-49e877cae644",
+          "keys": [
+            "image_src",
+            "image_aspectRatio",
+            "image_alt",
+            "image_vAlign"
+          ],
+          "type": "tab",
+          "description": "Das Hauptbild der Image Story, das die visuelle Komponente darstellt",
+          "required": false
+        },
+        "image_src": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Src",
+          "key": "image_src",
+          "type": "asset",
+          "filetypes": [
+            "images"
+          ],
+          "description": "Image source to use",
+          "required": false
+        },
+        "image_aspectRatio": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "AspectRatio",
+          "key": "image_aspectRatio",
+          "type": "option",
+          "default_value": "unset",
+          "description": "The aspect ratio of the image",
+          "options": [
+            {
+              "name": "unset",
+              "value": "unset",
+              "_uid": "dc7f0e91-8d0a-48bc-87e8-d66ef89a1689"
+            },
+            {
+              "name": "square",
+              "value": "square",
+              "_uid": "63fd9c97-b927-40b4-952b-c33cc9c5e3a2"
+            },
+            {
+              "name": "wide",
+              "value": "wide",
+              "_uid": "c5155d8a-c4e2-4b1c-a790-b651e0620b74"
+            },
+            {
+              "name": "landscape",
+              "value": "landscape",
+              "_uid": "2ac9ea9f-15ef-4c23-88ae-dd4765497c9a"
+            }
+          ],
+          "required": false
+        },
+        "image_alt": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Alt",
+          "key": "image_alt",
+          "type": "text",
+          "description": "Image description",
+          "required": false
+        },
+        "image_vAlign": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "VAlign",
+          "key": "image_vAlign",
+          "type": "option",
+          "default_value": "top",
+          "description": "Select a vertical alignment for the image",
+          "options": [
+            {
+              "name": "center",
+              "value": "center",
+              "_uid": "815a82d0-60a0-44c5-b283-cc016ab0c6c0"
+            },
+            {
+              "name": "top",
+              "value": "top",
+              "_uid": "b700347d-9eb7-47f5-92e9-2c7709408b04"
+            },
+            {
+              "name": "bottom",
+              "value": "bottom",
+              "_uid": "19a55c65-ba3d-458a-b715-c6bb2ce96ff9"
+            }
+          ],
+          "required": false
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Image Story",
+      "color": "#05566a",
+      "icon": "block-wallet",
+      "component_group_uuid": "0064354c-7c18-4b83-b28a-f47556a6dbe6",
+      "component_group_name": "FirstComponents"
+    },
+    {
+      "name": "image-text",
+      "display_name": "Image Text",
+      "created_at": "2026-01-07T09:52:15.061Z",
+      "updated_at": "2026-01-07T09:52:15.061Z",
+      "id": 48,
+      "schema": {
+        "text": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Text",
+          "key": "text",
+          "type": "markdown",
+          "description": "Der Text, der neben dem Bild angezeigt wird.",
+          "required": false
+        },
+        "highlightText": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "HighlightText",
+          "key": "highlightText",
+          "type": "boolean",
+          "description": "Text hervorheben, um besondere Aufmerksamkeit zu erregen.",
+          "required": false
+        },
+        "tab-2f1afcf4-ed9c-4fc6-b65b-8369ca6a3b7f": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Image",
+          "key": "tab-2f1afcf4-ed9c-4fc6-b65b-8369ca6a3b7f",
+          "keys": [
+            "image_src",
+            "image_alt"
+          ],
+          "type": "tab",
+          "description": "Das Bild, das neben dem Text angezeigt wird.",
+          "required": false
+        },
+        "image_src": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Src",
+          "key": "image_src",
+          "type": "asset",
+          "filetypes": [
+            "images"
+          ],
+          "description": "URL of the image to display",
+          "required": false
+        },
+        "image_alt": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Alt",
+          "key": "image_alt",
+          "type": "text",
+          "description": "Alt text of the image",
+          "required": false
+        },
+        "layout": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Layout",
+          "key": "layout",
+          "type": "option",
+          "description": "Das Layout des Image Text Elements, z.B. ob das Bild links oder rechts vom Text angezeigt wird.",
+          "options": [
+            {
+              "name": "above",
+              "value": "above",
+              "_uid": "4815ad17-c925-4380-ac53-9243ccb81441"
+            },
+            {
+              "name": "below",
+              "value": "below",
+              "_uid": "d7aed671-7f38-4e13-872c-90a13f58547b"
+            },
+            {
+              "name": "beside-right",
+              "value": "beside_right",
+              "_uid": "ccae39bd-6a8e-4616-9b86-fe4a4b9a606c"
+            },
+            {
+              "name": "beside-left",
+              "value": "beside_left",
+              "_uid": "ea0b4c3b-6819-44ed-9381-d895ffafdf45"
+            }
+          ],
+          "required": false
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Image Text",
+      "color": "#05566a",
+      "icon": "block-wallet",
+      "component_group_uuid": "0064354c-7c18-4b83-b28a-f47556a6dbe6",
+      "component_group_name": "FirstComponents"
+    },
+    {
+      "name": "logos",
+      "display_name": "Logos",
+      "created_at": "2026-01-07T09:52:15.062Z",
+      "updated_at": "2026-01-07T09:52:15.062Z",
+      "id": 49,
+      "schema": {
+        "tagline": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Tagline",
+          "key": "tagline",
+          "type": "text",
+          "description": "Optionaler Text, der über den Logos angezeigt wird.",
+          "required": false
+        },
+        "logo": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Logo",
+          "key": "logo",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "logo"
+          ],
+          "description": "Logo entry for Logos component"
+        },
+        "logosPerRow": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "LogosPerRow",
+          "key": "logosPerRow",
+          "type": "number",
+          "description": "Anzahl der Logos, die in einer Zeile angezeigt werden sollen.",
+          "required": false
+        },
+        "tab-e9beb0f7-3bc6-40cd-9a37-c5f76fd364cd": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Cta",
+          "key": "tab-e9beb0f7-3bc6-40cd-9a37-c5f76fd364cd",
+          "keys": [
+            "cta_toggle",
+            "cta_text",
+            "cta_link",
+            "cta_label",
+            "cta_style"
+          ],
+          "type": "tab",
+          "description": "Optionaler Call-to-Action, der unter den Logos angezeigt wird.",
+          "required": false
+        },
+        "cta_toggle": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Toggle",
+          "key": "cta_toggle",
+          "type": "boolean",
+          "description": "Activate/disable the CTA",
+          "required": false
+        },
+        "cta_text": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Text",
+          "key": "cta_text",
+          "type": "text",
+          "description": "A short CTA text",
+          "required": false
+        },
+        "cta_link": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Link",
+          "key": "cta_link",
+          "type": "multilink",
+          "allow_target_blank": true,
+          "email_link_type": true,
+          "asset_link_type": true,
+          "show_anchor": true,
+          "default_value": "#",
+          "description": "The CTA link",
+          "required": false
+        },
+        "cta_label": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Label",
+          "key": "cta_label",
+          "type": "text",
+          "description": "The text label displayed on the link",
+          "required": false
+        },
+        "cta_style": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Style",
+          "key": "cta_style",
+          "type": "option",
+          "default_value": "text",
+          "options": [
+            {
+              "name": "button",
+              "value": "button",
+              "_uid": "769da15f-b149-4ac5-992f-76c898d119f8"
+            },
+            {
+              "name": "text",
+              "value": "text",
+              "_uid": "38b54958-8fa4-4740-a05e-07271b47ac00"
+            }
+          ],
+          "required": false
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Logos",
+      "color": "#05566a",
+      "icon": "block-wallet",
+      "component_group_uuid": "0064354c-7c18-4b83-b28a-f47556a6dbe6",
+      "component_group_name": "FirstComponents"
+    },
+    {
+      "name": "mosaic",
+      "display_name": "Mosaic",
+      "created_at": "2026-01-07T09:52:15.062Z",
+      "updated_at": "2026-01-07T09:52:15.062Z",
+      "id": 50,
+      "schema": {
+        "layout": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Layout",
+          "key": "layout",
+          "type": "option",
+          "default_value": "alternate",
+          "description": "Das Layout des Mosaik-Elements, das die Anordnung der Kacheln bestimmt.",
+          "options": [
+            {
+              "name": "alternate",
+              "value": "alternate",
+              "_uid": "253a8bc0-1d23-4116-9ccb-a45887ebed6c"
+            },
+            {
+              "name": "textLeft",
+              "value": "textLeft",
+              "_uid": "453091a6-be32-487e-882a-751e73bbe4fb"
+            },
+            {
+              "name": "textRight",
+              "value": "textRight",
+              "_uid": "37a0dd2b-518b-4ebe-93ce-c8de826a5847"
+            }
+          ],
+          "required": false
+        },
+        "largeHeadlines": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "LargeHeadlines",
+          "key": "largeHeadlines",
+          "type": "boolean",
+          "description": "Bestimmt, ob die Kacheln große Überschriften verwenden sollen.",
+          "required": false
+        },
+        "tile": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Tile",
+          "key": "tile",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "tile"
+          ]
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Mosaic",
+      "color": "#05566a",
+      "icon": "block-wallet",
+      "component_group_uuid": "0064354c-7c18-4b83-b28a-f47556a6dbe6",
+      "component_group_name": "FirstComponents"
+    },
+    {
+      "name": "slider",
+      "display_name": "Slider",
+      "created_at": "2026-01-07T09:52:15.062Z",
+      "updated_at": "2026-01-07T09:52:15.062Z",
+      "id": 51,
+      "schema": {
+        "autoplay": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Autoplay",
+          "key": "autoplay",
+          "type": "boolean",
+          "description": "Bestimmt, ob der Slider automatisch durch die Elemente wechselt.",
+          "required": false
+        },
+        "nav": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Nav",
+          "key": "nav",
+          "type": "boolean",
+          "description": "Eine Reihe von Kreisen zur expliziten Navigation durch die Slider-Elemente anzeigen?",
+          "required": false
+        },
+        "teaseNeighbours": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "TeaseNeighbours",
+          "key": "teaseNeighbours",
+          "type": "boolean",
+          "description": "Zeigt die Nachbarelemente des aktuellen Sliders an, um eine Vorschau auf die nächsten und vorherigen Elemente zu geben.",
+          "required": false
+        },
+        "equalHeight": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "EqualHeight",
+          "key": "equalHeight",
+          "type": "boolean",
+          "default_value": true,
+          "description": "Stellt sicher, dass alle Slider-Elemente die gleiche Höhe haben, um ein einheitliches Layout zu gewährleisten.",
+          "required": false
+        },
+        "arrows": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Arrows",
+          "key": "arrows",
+          "type": "boolean",
+          "description": "Zeigt Pfeile an, um durch die Slider-Elemente zu navigieren. Diese können links und rechts des Sliders platziert werden.",
+          "required": false
+        },
+        "variant": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Variant",
+          "key": "variant",
+          "type": "option",
+          "default_value": "carousel",
+          "description": "Die visuelle Variante des Sliders, die das Design und die Darstellung beeinflusst.",
+          "options": [
+            {
+              "name": "slider",
+              "value": "slider",
+              "_uid": "3691ddc4-f5dc-4fe4-a069-81b0622e47d5"
+            },
+            {
+              "name": "carousel",
+              "value": "carousel",
+              "_uid": "9a85f1ef-eb64-4642-b099-588ee42d323a"
+            }
+          ],
+          "required": false
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Slider",
+      "color": "#05566a",
+      "icon": "block-wallet",
+      "component_group_uuid": "0064354c-7c18-4b83-b28a-f47556a6dbe6",
+      "component_group_name": "FirstComponents"
+    },
+    {
+      "name": "stats",
+      "display_name": "Stats",
+      "created_at": "2026-01-07T09:52:15.062Z",
+      "updated_at": "2026-01-07T09:52:15.062Z",
+      "id": 52,
+      "schema": {
+        "stat": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Stat",
+          "key": "stat",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "stat"
+          ]
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Stats",
+      "color": "#05566a",
+      "icon": "block-wallet",
+      "component_group_uuid": "0064354c-7c18-4b83-b28a-f47556a6dbe6",
+      "component_group_name": "FirstComponents"
+    },
+    {
+      "name": "teaser-card",
+      "display_name": "Teaser Card",
+      "created_at": "2026-01-07T09:52:15.062Z",
+      "updated_at": "2026-01-07T09:52:15.062Z",
+      "id": 53,
+      "schema": {
+        "headline": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Headline",
+          "key": "headline",
+          "type": "markdown",
+          "description": "Die Überschrift der Teaser-Karte, die den Inhalt zusammenfasst.",
+          "required": false
+        },
+        "text": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Text",
+          "key": "text",
+          "type": "markdown",
+          "description": "Ein kurzer Text, der den Inhalt der Teaser-Karte beschreibt.",
+          "required": false
+        },
+        "label": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Label",
+          "key": "label",
+          "type": "text",
+          "description": "Ein optionales Label, das zusätzliche Informationen oder Kategorien für die Teaser-Karte bereitstellt.",
+          "required": false
+        },
+        "layout": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Layout",
+          "key": "layout",
+          "type": "option",
+          "default_value": "stack",
+          "description": "Das Layout der Teaser-Karte, das die Anordnung von Text, Bild und anderen Elementen bestimmt.",
+          "options": [
+            {
+              "name": "stack",
+              "value": "stack",
+              "_uid": "876680cf-77ce-49e0-93fb-f07dcc784c6b"
+            },
+            {
+              "name": "row",
+              "value": "row",
+              "_uid": "204e2621-fca4-4385-bd3a-5594992f1cbf"
+            }
+          ],
+          "required": false
+        },
+        "centered": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Centered",
+          "key": "centered",
+          "type": "boolean",
+          "description": "Whether the Teaser Card is centered",
+          "required": false
+        },
+        "url": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Url",
+          "key": "url",
+          "type": "multilink",
+          "allow_target_blank": true,
+          "email_link_type": true,
+          "asset_link_type": true,
+          "show_anchor": true,
+          "description": "Das Ziel, auf das die Teaser-Karte verweist, z.B. eine URL oder eine interne Seite.",
+          "required": false
+        },
+        "tab-38a2eb5c-52d2-4369-a8ec-56662126ef96": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Button",
+          "key": "tab-38a2eb5c-52d2-4369-a8ec-56662126ef96",
+          "keys": [
+            "button_label",
+            "button_chevron",
+            "button_hidden"
+          ],
+          "type": "tab",
+          "description": "Ein optionaler Button, als explizites Element zum das Öffnen der hinterlegten Seite.",
+          "required": false
+        },
+        "button_label": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Label",
+          "key": "button_label",
+          "type": "text",
+          "description": "Label of the button. Still A11Y relevant when the button is hidden.",
+          "required": false
+        },
+        "button_chevron": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Chevron",
+          "key": "button_chevron",
+          "type": "boolean",
+          "description": "Toggle arrow icon",
+          "required": false
+        },
+        "button_hidden": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Hidden",
+          "key": "button_hidden",
+          "type": "boolean",
+          "description": "Toggle wether you want the card to have a visible button or not",
+          "required": false
+        },
+        "image": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Image",
+          "key": "image",
+          "type": "asset",
+          "filetypes": [
+            "images"
+          ],
+          "description": "Ein Bild, das die Teaser-Karte visuell unterstützt. Dies kann ein Hauptbild oder ein Hintergrundbild sein.",
+          "required": false
+        },
+        "imageRatio": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "ImageRatio",
+          "key": "imageRatio",
+          "type": "option",
+          "default_value": "wide",
+          "description": "Das Verhältnis des Bildes, das in der Teaser-Karte verwendet wird, z.B. quadratisch oder weit.",
+          "options": [
+            {
+              "name": "wide",
+              "value": "wide",
+              "_uid": "127349b5-4f58-4495-b680-6de11c1f3b3b"
+            },
+            {
+              "name": "landscape",
+              "value": "landscape",
+              "_uid": "cda40438-3ce6-46f7-8549-af6934c30a29"
+            },
+            {
+              "name": "square",
+              "value": "square",
+              "_uid": "9a5cb6f0-9db5-47d8-9a0f-bccf4effdafc"
+            },
+            {
+              "name": "unset",
+              "value": "unset",
+              "_uid": "b12a4404-15df-4c67-b666-c617087905c8"
+            }
+          ],
+          "required": false
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Teaser Card",
+      "color": "#05566a",
+      "icon": "block-wallet",
+      "component_group_uuid": "0064354c-7c18-4b83-b28a-f47556a6dbe6",
+      "component_group_name": "FirstComponents"
+    },
+    {
+      "name": "testimonials",
+      "display_name": "Testimonials",
+      "created_at": "2026-01-07T09:52:15.062Z",
+      "updated_at": "2026-01-07T09:52:15.062Z",
+      "id": 54,
+      "schema": {
+        "layout": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Layout",
+          "key": "layout",
+          "type": "option",
+          "default_value": "slider",
+          "description": "Das Layout des Testimonials, z.B. ob es in einem Raster, Slider oder einer Liste angezeigt wird.",
+          "options": [
+            {
+              "name": "slider",
+              "value": "slider",
+              "_uid": "2f4388ef-fd3d-4ad5-9a44-36b23c16849f"
+            },
+            {
+              "name": "list",
+              "value": "list",
+              "_uid": "e1e855b3-6a1d-4bfc-bfcd-fbb293ddf3cf"
+            },
+            {
+              "name": "alternating",
+              "value": "alternating",
+              "_uid": "50261a99-6482-4c54-8f30-5199a7b7c7cd"
+            }
+          ],
+          "required": false
+        },
+        "quoteSigns": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "QuoteSigns",
+          "key": "quoteSigns",
+          "type": "option",
+          "default_value": "normal",
+          "description": "Die Darstellung der Anführungszeichen um das Zitat, z.B. ob sie angezeigt werden oder nicht.",
+          "options": [
+            {
+              "name": "normal",
+              "value": "normal",
+              "_uid": "de951f7f-3b38-4474-84a0-f8ec6144e468"
+            },
+            {
+              "name": "large",
+              "value": "large",
+              "_uid": "2c44b717-59dc-4724-a581-6328172c5fa3"
+            },
+            {
+              "name": "none",
+              "value": "none",
+              "_uid": "b8996919-ab37-46cd-be04-4eb6d04b9611"
+            }
+          ],
+          "required": false
+        },
+        "testimonial": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Testimonial",
+          "key": "testimonial",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "testimonial"
+          ],
+          "description": "Testimonial entry of Testimonials component"
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Testimonials",
+      "color": "#05566a",
+      "icon": "block-wallet",
+      "component_group_uuid": "0064354c-7c18-4b83-b28a-f47556a6dbe6",
+      "component_group_name": "FirstComponents"
+    },
+    {
+      "name": "text",
+      "display_name": "Text",
+      "created_at": "2026-01-07T09:52:15.062Z",
+      "updated_at": "2026-01-07T09:52:15.062Z",
+      "id": 55,
+      "schema": {
+        "text": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Text",
+          "key": "text",
+          "type": "markdown",
+          "description": "Der darzustellende Textinhalt.",
+          "required": false
+        },
+        "layout": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Layout",
+          "key": "layout",
+          "type": "option",
+          "default_value": "singleColumn",
+          "description": "Das Layout des Textes, z.B. ob er einspaltig oder mehrspaltig dargestellt wird.",
+          "options": [
+            {
+              "name": "singleColumn",
+              "value": "singleColumn",
+              "_uid": "d04a6885-3ef0-4592-b35b-4b9ca48ad6d8"
+            },
+            {
+              "name": "multiColumn",
+              "value": "multiColumn",
+              "_uid": "74b53c1a-3f5d-4a35-8c01-86ec9b83ab1c"
+            }
+          ],
+          "required": false
+        },
+        "highlightText": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "HighlightText",
+          "key": "highlightText",
+          "type": "boolean",
+          "description": "Ob der Text hervorgehoben werden soll, z.B. durch eine andere Farbe, Schriftart oder Größe.",
+          "required": false
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Text",
+      "color": "#05566a",
+      "icon": "block-wallet",
+      "component_group_uuid": "0064354c-7c18-4b83-b28a-f47556a6dbe6",
+      "component_group_name": "FirstComponents"
+    },
+    {
+      "name": "video-curtain",
+      "display_name": "Video Curtain",
+      "created_at": "2026-01-07T09:52:15.062Z",
+      "updated_at": "2026-01-07T09:52:15.062Z",
+      "id": 56,
+      "schema": {
+        "headline": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Headline",
+          "key": "headline",
+          "type": "markdown",
+          "description": "Die Hauptüberschrift des Video-Vorhangs, die den Inhalt zusammenfasst.",
+          "required": false
+        },
+        "sub": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Sub",
+          "key": "sub",
+          "type": "markdown",
+          "description": "Eine optionale Unterüberschrift, die zusätzliche Informationen oder Kontext zum Video bietet.",
+          "required": false
+        },
+        "text": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Text",
+          "key": "text",
+          "type": "markdown",
+          "description": "Der Haupttext des Video-Vorhangs, der den Inhalt detailliert beschreibt.",
+          "required": false
+        },
+        "highlightText": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "HighlightText",
+          "key": "highlightText",
+          "type": "boolean",
+          "description": "Ob der Text visuell hervorgehoben werden soll, um besondere Aufmerksamkeit zu erregen.",
+          "required": false
+        },
+        "colorNeutral": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "ColorNeutral",
+          "key": "colorNeutral",
+          "type": "boolean",
+          "description": "Ob der Text und die Buttons in neutralen Farben dargestellt werden sollen, um eine klare Lesbarkeit zu gewährleisten.",
+          "required": false
+        },
+        "buttons": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Buttons",
+          "key": "buttons",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "buttons"
+          ],
+          "description": "Button"
+        },
+        "overlay": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Overlay",
+          "key": "overlay",
+          "type": "boolean",
+          "description": "Ob ein Overlay über dem Video angezeigt werden soll, um die Lesbarkeit des Textes zu verbessern.",
+          "required": false
+        },
+        "tab-809ca740-c1a6-4b73-bfe6-cd11eb33ab93": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Video",
+          "key": "tab-809ca740-c1a6-4b73-bfe6-cd11eb33ab93",
+          "keys": [
+            "video_srcMobile",
+            "video_srcTablet",
+            "video_srcDesktop"
+          ],
+          "type": "tab",
+          "description": "Das Video, das im Vorhang angezeigt wird. Es kann von einer URL oder einer eingebetteten Quelle stammen.",
+          "required": false
+        },
+        "video_srcMobile": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "SrcMobile",
+          "key": "video_srcMobile",
+          "type": "asset",
+          "filetypes": [
+            "videos"
+          ],
+          "description": "Background video source for small screens",
+          "required": false
+        },
+        "video_srcTablet": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "SrcTablet",
+          "key": "video_srcTablet",
+          "type": "asset",
+          "filetypes": [
+            "videos"
+          ],
+          "description": "Background video source for medium screens",
+          "required": false
+        },
+        "video_srcDesktop": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "SrcDesktop",
+          "key": "video_srcDesktop",
+          "type": "asset",
+          "filetypes": [
+            "videos"
+          ],
+          "description": "Background video source for large screens",
+          "required": false
+        },
+        "textPosition": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "TextPosition",
+          "key": "textPosition",
+          "type": "option",
+          "default_value": "center",
+          "description": "Ausrichtung des Textes im Video-Vorhang. Dies kann die Positionierung des Textes relativ zum Video beeinflussen.",
+          "options": [
+            {
+              "name": "center",
+              "value": "center",
+              "_uid": "9599ec55-b50f-4554-989c-f4e2e32ac298"
+            },
+            {
+              "name": "bottom",
+              "value": "bottom",
+              "_uid": "89154320-5124-46ec-86ab-9a2b829010a8"
+            },
+            {
+              "name": "left",
+              "value": "left",
+              "_uid": "45b5d777-45f2-4e6b-8335-3705174e9ac2"
+            },
+            {
+              "name": "right",
+              "value": "right",
+              "_uid": "54741856-175f-4aab-875b-d78cbc44a507"
+            },
+            {
+              "name": "corner",
+              "value": "corner",
+              "_uid": "2a0bcdce-49b5-46f7-b1e5-e9963b5c9c90"
+            }
+          ],
+          "required": false
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Video Curtain",
+      "color": "#05566a",
+      "icon": "block-wallet",
+      "component_group_uuid": "0064354c-7c18-4b83-b28a-f47556a6dbe6",
+      "component_group_name": "FirstComponents"
+    },
+    {
+      "name": "split-even",
+      "display_name": "Split Even",
+      "created_at": "2026-01-07T09:52:15.075Z",
+      "updated_at": "2026-01-07T09:52:15.075Z",
+      "id": 205,
+      "schema": {
+        "contentMinWidth": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "ContentMinWidth",
+          "key": "contentMinWidth",
+          "type": "option",
+          "default_value": "medium",
+          "description": "Sets the minimum width for each half of the split layout",
+          "options": [
+            {
+              "name": "narrow",
+              "value": "narrow",
+              "_uid": "4ac3f9a2-77ff-440c-bc18-76c32d3f9c8a"
+            },
+            {
+              "name": "medium",
+              "value": "medium",
+              "_uid": "706b73b9-5023-4f6c-9987-ea473bd21551"
+            },
+            {
+              "name": "wide",
+              "value": "wide",
+              "_uid": "1130a49b-270f-4516-9c24-2b94ee244b54"
+            }
+          ],
+          "required": false
+        },
+        "contentGutter": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "ContentGutter",
+          "key": "contentGutter",
+          "type": "option",
+          "default_value": "default",
+          "description": "Sets the space between the content inside the two halves of the split layout",
+          "options": [
+            {
+              "name": "small",
+              "value": "small",
+              "_uid": "a013e4f2-24fa-4f59-ae98-670b24d177e8"
+            },
+            {
+              "name": "default",
+              "value": "default",
+              "_uid": "6fa6dbd2-5b7b-4c9a-8916-1221118ebbe5"
+            },
+            {
+              "name": "large",
+              "value": "large",
+              "_uid": "cab162e2-c842-4ab1-bf95-46009a0adb6b"
+            },
+            {
+              "name": "none",
+              "value": "none",
+              "_uid": "9f1d337b-3bbd-4d12-9aad-fd0464a793a7"
+            }
+          ],
+          "required": false
+        },
+        "mobileReverse": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "MobileReverse",
+          "key": "mobileReverse",
+          "type": "boolean",
+          "description": "Reverses the order of the sections on mobile devices",
+          "required": false
+        },
+        "verticalAlign": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "VerticalAlign",
+          "key": "verticalAlign",
+          "type": "option",
+          "default_value": "top",
+          "description": "Aligns the content vertically within the sections",
+          "options": [
+            {
+              "name": "top",
+              "value": "top",
+              "_uid": "54fc0a60-2d3c-469b-8e0d-2f74d512c014"
+            },
+            {
+              "name": "center",
+              "value": "center",
+              "_uid": "2d452962-fda6-4cef-837d-f1dc4f04bb1d"
+            },
+            {
+              "name": "bottom",
+              "value": "bottom",
+              "_uid": "1bc05fc5-bf38-40cf-9b59-54e8b6a1009e"
+            },
+            {
+              "name": "sticky",
+              "value": "sticky",
+              "_uid": "dec6005c-1bb7-4922-998e-006dc1838063"
+            }
+          ],
+          "required": false
+        },
+        "verticalGutter": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "VerticalGutter",
+          "key": "verticalGutter",
+          "type": "option",
+          "default_value": "default",
+          "description": "Sets the vertical space between the content of the split layout",
+          "options": [
+            {
+              "name": "large",
+              "value": "large",
+              "_uid": "d2293d4f-476b-415e-93e0-c6c74aa6cb19"
+            },
+            {
+              "name": "default",
+              "value": "default",
+              "_uid": "59c09c53-d210-4b12-99d1-40994ce76a2e"
+            },
+            {
+              "name": "small",
+              "value": "small",
+              "_uid": "a63cc0fd-042e-494e-9810-fb797d3a44a4"
+            },
+            {
+              "name": "none",
+              "value": "none",
+              "_uid": "d1ffc1b5-c72e-4d02-bfce-5032a4b48f51"
+            }
+          ],
+          "required": false
+        },
+        "horizontalGutter": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "HorizontalGutter",
+          "key": "horizontalGutter",
+          "type": "option",
+          "default_value": "default",
+          "description": "Sets the horizontal space between the content of the split layout",
+          "options": [
+            {
+              "name": "large",
+              "value": "large",
+              "_uid": "1e8f3298-96a5-4776-99bc-e576b97c3549"
+            },
+            {
+              "name": "default",
+              "value": "default",
+              "_uid": "431957b8-4635-47ee-b954-e541b8e3766d"
+            },
+            {
+              "name": "small",
+              "value": "small",
+              "_uid": "9538c86a-b4f9-4903-a16d-c8fe97008649"
+            },
+            {
+              "name": "none",
+              "value": "none",
+              "_uid": "3f2dc398-d0f0-4f8c-8ebf-877d528be767"
+            }
+          ],
+          "required": false
+        },
+        "firstComponents": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "FirstComponents",
+          "key": "firstComponents",
+          "type": "bloks",
+          "restrict_type": "groups",
+          "restrict_components": true,
+          "component_group_whitelist": [
+            "0064354c-7c18-4b83-b28a-f47556a6dbe6"
+          ],
+          "description": "Abstracts a blog overview concept into JSON schema",
+          "required": false
+        },
+        "secondComponents": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "SecondComponents",
+          "key": "secondComponents",
+          "type": "bloks",
+          "restrict_type": "groups",
+          "restrict_components": true,
+          "component_group_whitelist": [
+            "7c0da309-b01c-42cb-a743-19fdabbf59ae"
+          ],
+          "description": "Abstracts a blog overview concept into JSON schema",
+          "required": false
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Split Even",
+      "color": "#05566a",
+      "icon": "block-wallet",
+      "component_group_uuid": "64f2f440-6a71-42a9-bc90-c011212a006c",
+      "component_group_name": "Components"
+    },
+    {
+      "name": "split-weighted",
+      "display_name": "Split Weighted",
+      "created_at": "2026-01-07T09:52:15.075Z",
+      "updated_at": "2026-01-07T09:52:15.075Z",
+      "id": 206,
+      "schema": {
+        "verticalGutter": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "VerticalGutter",
+          "key": "verticalGutter",
+          "type": "option",
+          "default_value": "default",
+          "description": "Sets the vertical space between the content of the split layout",
+          "options": [
+            {
+              "name": "large",
+              "value": "large",
+              "_uid": "8859d7a6-a24d-4246-b729-ca9f833edcdd"
+            },
+            {
+              "name": "default",
+              "value": "default",
+              "_uid": "f3097298-92df-4eb1-8b20-3ed1469617c8"
+            },
+            {
+              "name": "small",
+              "value": "small",
+              "_uid": "629ffd09-ba4f-40c3-95d5-8faf68fbd186"
+            },
+            {
+              "name": "none",
+              "value": "none",
+              "_uid": "86b2a8f9-dff0-49ec-b7f7-96151ebac721"
+            }
+          ],
+          "required": false
+        },
+        "horizontalGutter": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "HorizontalGutter",
+          "key": "horizontalGutter",
+          "type": "option",
+          "default_value": "default",
+          "description": "Sets the horizontal space between the content of the split layout",
+          "options": [
+            {
+              "name": "large",
+              "value": "large",
+              "_uid": "bad03781-b7e1-413f-8a49-a069daf612a5"
+            },
+            {
+              "name": "default",
+              "value": "default",
+              "_uid": "6ac8e7fb-9d78-4dff-8999-04f18859b7c7"
+            },
+            {
+              "name": "small",
+              "value": "small",
+              "_uid": "ba9e8a30-0b79-4e11-9011-67eeb23a9b73"
+            },
+            {
+              "name": "none",
+              "value": "none",
+              "_uid": "576b4d97-b6a8-444a-875a-a168bff50723"
+            }
+          ],
+          "required": false
+        },
+        "verticalAlign": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "VerticalAlign",
+          "key": "verticalAlign",
+          "type": "option",
+          "default_value": "top",
+          "description": "Aligns the content vertically within the sections",
+          "options": [
+            {
+              "name": "top",
+              "value": "top",
+              "_uid": "0c180683-3331-411e-aaeb-e309cb6ca920"
+            },
+            {
+              "name": "center",
+              "value": "center",
+              "_uid": "20e11173-d5dc-4667-802c-146abad47239"
+            },
+            {
+              "name": "bottom",
+              "value": "bottom",
+              "_uid": "3ff5c722-85a0-43c7-ab18-0cfc7380d2cc"
+            },
+            {
+              "name": "sticky",
+              "value": "sticky",
+              "_uid": "0d2776bf-e56f-40e0-980a-7fc0fdb5149d"
+            }
+          ],
+          "required": false
+        },
+        "tab-e646caba-c137-43fb-816f-ba29b256c58f": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "MainLayout",
+          "key": "tab-e646caba-c137-43fb-816f-ba29b256c58f",
+          "keys": [
+            "mainLayout_gutter",
+            "mainLayout_minWidth"
+          ],
+          "type": "tab",
+          "description": "Main Layout",
+          "required": false
+        },
+        "mainLayout_gutter": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Gutter",
+          "key": "mainLayout_gutter",
+          "type": "option",
+          "default_value": "default",
+          "description": "Sets the space between the content of the split layout",
+          "options": [
+            {
+              "name": "large",
+              "value": "large",
+              "_uid": "f06c5dbe-c6eb-46a5-8d12-2839f8ff924d"
+            },
+            {
+              "name": "default",
+              "value": "default",
+              "_uid": "29a9afb6-311a-4edc-b9f7-137cc6c3afa5"
+            },
+            {
+              "name": "small",
+              "value": "small",
+              "_uid": "ff7ab449-ee4c-4944-919a-b3944bc494f3"
+            },
+            {
+              "name": "none",
+              "value": "none",
+              "_uid": "ca02933c-cfb3-47a6-86ac-ca1efee08b26"
+            }
+          ],
+          "required": false
+        },
+        "mainLayout_minWidth": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "MinWidth",
+          "key": "mainLayout_minWidth",
+          "type": "option",
+          "default_value": "wide",
+          "description": "Sets the minimum width of the main section",
+          "options": [
+            {
+              "name": "narrow",
+              "value": "narrow",
+              "_uid": "8e5fa457-39f7-4fc7-9d7e-3744fc69b50f"
+            },
+            {
+              "name": "default",
+              "value": "default",
+              "_uid": "b8e15b61-2545-4c25-b099-955580ff0484"
+            },
+            {
+              "name": "wide",
+              "value": "wide",
+              "_uid": "c1659453-eba2-4701-a9f3-6785e7f418ac"
+            }
+          ],
+          "required": false
+        },
+        "tab-5c2e60be-bb72-44f7-b333-02e88ebf0c60": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "AsideLayout",
+          "key": "tab-5c2e60be-bb72-44f7-b333-02e88ebf0c60",
+          "keys": [
+            "asideLayout_gutter",
+            "asideLayout_minWidth"
+          ],
+          "type": "tab",
+          "description": "Layout settings for the aside section of the split layout",
+          "required": false
+        },
+        "asideLayout_gutter": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Gutter",
+          "key": "asideLayout_gutter",
+          "type": "option",
+          "default_value": "default",
+          "description": "Size of gutter to use",
+          "options": [
+            {
+              "name": "large",
+              "value": "large",
+              "_uid": "49cd5cc3-da9a-4574-8b78-ebbfba144334"
+            },
+            {
+              "name": "default",
+              "value": "default",
+              "_uid": "5822fc9d-0c6e-4191-84b1-bd929fd300bf"
+            },
+            {
+              "name": "small",
+              "value": "small",
+              "_uid": "8889eb53-085f-4065-bce3-b682cf44e582"
+            },
+            {
+              "name": "none",
+              "value": "none",
+              "_uid": "ffff79e9-efce-4c9b-a58e-565926e0fb22"
+            }
+          ],
+          "required": false
+        },
+        "asideLayout_minWidth": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "MinWidth",
+          "key": "asideLayout_minWidth",
+          "type": "option",
+          "default_value": "default",
+          "description": "Sets the minimum width of the main section",
+          "options": [
+            {
+              "name": "narrow",
+              "value": "narrow",
+              "_uid": "002ed0d9-b59f-48a6-962f-16577687a968"
+            },
+            {
+              "name": "default",
+              "value": "default",
+              "_uid": "9256cc6d-92fe-46e6-a903-c2686f9c6211"
+            },
+            {
+              "name": "wide",
+              "value": "wide",
+              "_uid": "164cadd9-4784-47f6-9106-bc540495d5aa"
+            }
+          ],
+          "required": false
+        },
+        "tab-ff2aedbe-a64d-4589-a062-fff6980ab7ce": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Order",
+          "key": "tab-ff2aedbe-a64d-4589-a062-fff6980ab7ce",
+          "keys": [
+            "order_mobile",
+            "order_desktop"
+          ],
+          "type": "tab",
+          "description": "Sets the order of the main and aside sections in the split layout",
+          "required": false
+        },
+        "order_mobile": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Mobile",
+          "key": "order_mobile",
+          "type": "option",
+          "default_value": "mainFirst",
+          "description": "Determines the order of sections on mobile devices",
+          "options": [
+            {
+              "name": "mainFirst",
+              "value": "mainFirst",
+              "_uid": "f03f7b66-ab7a-46f8-910a-838a0f9c06df"
+            },
+            {
+              "name": "asideFirst",
+              "value": "asideFirst",
+              "_uid": "a5dde86f-0fde-4463-89ef-e59358b0a880"
+            }
+          ],
+          "required": false
+        },
+        "order_desktop": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Desktop",
+          "key": "order_desktop",
+          "type": "option",
+          "default_value": "mainFirst",
+          "description": "Determines the order of sections on desktop devices",
+          "options": [
+            {
+              "name": "mainFirst",
+              "value": "mainFirst",
+              "_uid": "339a4aa6-d878-481f-9d9f-05cd85e83ddf"
+            },
+            {
+              "name": "asideFirst",
+              "value": "asideFirst",
+              "_uid": "cf934977-ffec-4085-9f1b-23975431efaa"
+            }
+          ],
+          "required": false
+        },
+        "mainComponents": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "MainComponents",
+          "key": "mainComponents",
+          "type": "bloks",
+          "restrict_type": "groups",
+          "restrict_components": true,
+          "component_group_whitelist": [
+            "554ac4ea-cad1-4f99-870b-5e424708fee4"
+          ],
+          "description": "Abstracts a blog overview concept into JSON schema",
+          "required": false
+        },
+        "asideComponents": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "AsideComponents",
+          "key": "asideComponents",
+          "type": "bloks",
+          "restrict_type": "groups",
+          "restrict_components": true,
+          "component_group_whitelist": [
+            "04b0536d-3297-439d-b787-9c02e9ba70a9"
+          ],
+          "description": "Abstracts a blog overview concept into JSON schema",
+          "required": false
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Split Weighted",
+      "color": "#05566a",
+      "icon": "block-wallet",
+      "component_group_uuid": "64f2f440-6a71-42a9-bc90-c011212a006c",
+      "component_group_name": "Components"
+    },
+    {
+      "name": "info-table",
+      "display_name": "Info Table",
+      "created_at": "2026-01-07T09:52:15.075Z",
+      "updated_at": "2026-01-07T09:52:15.075Z",
+      "id": 212,
+      "schema": {
+        "data": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Data",
+          "key": "data",
+          "type": "table",
+          "description": "Daten, die in der Tabelle angezeigt werden sollen",
+          "required": false
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Info Table",
+      "color": "#05566a",
+      "icon": "block-wallet",
+      "component_group_uuid": "64f2f440-6a71-42a9-bc90-c011212a006c",
+      "component_group_name": "Components"
+    },
+    {
+      "name": "section",
+      "display_name": "Section",
+      "created_at": "2026-01-07T09:52:15.076Z",
+      "updated_at": "2026-01-07T09:52:15.076Z",
+      "id": 214,
+      "schema": {
+        "width": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Width",
+          "key": "width",
+          "type": "option",
+          "default_value": "default",
+          "description": "Die Breite der Sektion.",
+          "options": [
+            {
+              "name": "full",
+              "value": "full",
+              "_uid": "993a1d1a-ad2d-4fbf-b3af-089fedb8119b"
+            },
+            {
+              "name": "max",
+              "value": "max",
+              "_uid": "2c4d4e6d-669a-4089-bc4b-b57065805ac3"
+            },
+            {
+              "name": "wide",
+              "value": "wide",
+              "_uid": "6116a0c5-db80-499f-833c-5e6217f594bd"
+            },
+            {
+              "name": "default",
+              "value": "default",
+              "_uid": "a029559d-e3c1-4001-aa49-64a6dbe0c9f9"
+            },
+            {
+              "name": "narrow",
+              "value": "narrow",
+              "_uid": "c9e37ebb-273d-44bb-99c3-f709ce611cce"
+            }
+          ],
+          "required": false
+        },
+        "style": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Style",
+          "key": "style",
+          "type": "option",
+          "default_value": "default",
+          "description": "Der Stil der Sektion, erlaubt in Kombination mit der Hintergrund-Farbe Variation.",
+          "options": [
+            {
+              "name": "default",
+              "value": "default",
+              "_uid": "783783bf-10f2-43dc-a205-abf4410a0768"
+            },
+            {
+              "name": "framed",
+              "value": "framed",
+              "_uid": "7d584fa6-ef93-4181-92d2-b9836d0db9cf"
+            },
+            {
+              "name": "deko",
+              "value": "deko",
+              "_uid": "482deab6-f9f0-41dc-8f6b-994873a72679"
+            }
+          ],
+          "required": false
+        },
+        "backgroundColor": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "BackgroundColor",
+          "key": "backgroundColor",
+          "type": "option",
+          "default_value": "default",
+          "description": "Die Hintergrundfarbe der Sektion, erlaubt in Kombination mit Stil Variation.",
+          "options": [
+            {
+              "name": "default",
+              "value": "default",
+              "_uid": "c38bd6b3-e01a-48c3-a621-9826691ae454"
+            },
+            {
+              "name": "accent",
+              "value": "accent",
+              "_uid": "a86bcf2a-14d9-45f6-8b40-42b52ae366b8"
+            },
+            {
+              "name": "bold",
+              "value": "bold",
+              "_uid": "ae00570f-132b-4a3b-b784-95b687e36e43"
+            }
+          ],
+          "required": false
+        },
+        "transition": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Transition",
+          "key": "transition",
+          "type": "option",
+          "default_value": "none",
+          "description": "Color of background",
+          "options": [
+            {
+              "name": "none",
+              "value": "none",
+              "_uid": "c4373aed-87ec-454c-bf27-58a9157b222d"
+            },
+            {
+              "name": "to-default",
+              "value": "to_default",
+              "_uid": "c15ac248-5535-4647-bc22-9c496277a4b3"
+            },
+            {
+              "name": "to-accent",
+              "value": "to_accent",
+              "_uid": "5bb160a2-882f-4873-a2dd-03dab61426aa"
+            },
+            {
+              "name": "to-bold",
+              "value": "to_bold",
+              "_uid": "2eec784a-ad37-4feb-a974-430531ecc963"
+            },
+            {
+              "name": "to-inverted",
+              "value": "to_inverted",
+              "_uid": "0854c373-8cd6-481e-bd60-b3dbcb81cd98"
+            }
+          ],
+          "required": false
+        },
+        "backgroundImage": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "BackgroundImage",
+          "key": "backgroundImage",
+          "type": "asset",
+          "filetypes": [
+            "images"
+          ],
+          "description": "Ein optionales Hintergrundbild für die Sektion.",
+          "required": false
+        },
+        "spotlight": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Spotlight",
+          "key": "spotlight",
+          "type": "boolean",
+          "description": "Ein Spotlight-Effekt, der die Sektion hervorhebt, z.B. durch eine spezielle Hintergrundfarbe oder Animation.",
+          "required": false
+        },
+        "spaceBefore": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "SpaceBefore",
+          "key": "spaceBefore",
+          "type": "option",
+          "default_value": "default",
+          "description": "Der Abstand vor der Sektion, um sie vom vorherigen Inhalt abzugrenzen.",
+          "options": [
+            {
+              "name": "default",
+              "value": "default",
+              "_uid": "1ca15f92-b726-480b-9060-8ff977ad338d"
+            },
+            {
+              "name": "small",
+              "value": "small",
+              "_uid": "f36ca31e-0f28-4f5b-b90e-57a0c3925fbb"
+            },
+            {
+              "name": "none",
+              "value": "none",
+              "_uid": "f0693d8b-0383-4a8b-8be3-06366528a02b"
+            }
+          ],
+          "required": false
+        },
+        "spaceAfter": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "SpaceAfter",
+          "key": "spaceAfter",
+          "type": "option",
+          "default_value": "default",
+          "description": "Der Abstand nach der Sektion, um sie vom nachfolgenden Inhalt abzugrenzen.",
+          "options": [
+            {
+              "name": "default",
+              "value": "default",
+              "_uid": "b65774c2-6a10-4fe8-bfb1-4110e5e948a8"
+            },
+            {
+              "name": "small",
+              "value": "small",
+              "_uid": "8f5500c5-5412-4176-bd59-669c4c73a177"
+            },
+            {
+              "name": "none",
+              "value": "none",
+              "_uid": "c3de6817-205b-4f59-bf76-a2e03a67e0be"
+            }
+          ],
+          "required": false
+        },
+        "inverted": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Inverted",
+          "key": "inverted",
+          "type": "boolean",
+          "description": "Ob die Sektion invertiert dargestellt werden soll, z.B. mit umgekehrten Farben.",
+          "required": false
+        },
+        "headerSpacing": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "HeaderSpacing",
+          "key": "headerSpacing",
+          "type": "boolean",
+          "description": "Soll zusätzlicher Platz für einen schwebenden Header berücksichtigt werden?",
+          "required": false
+        },
+        "tab-060414b9-6b48-42c5-a214-2d2b32311091": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Headline",
+          "key": "tab-060414b9-6b48-42c5-a214-2d2b32311091",
+          "keys": [
+            "headline_text",
+            "headline_large",
+            "headline_width",
+            "headline_textAlign",
+            "headline_align",
+            "headline_sub",
+            "headline_switchOrder"
+          ],
+          "type": "tab",
+          "description": "Die Überschrift der Sektion, die den Inhalt zusammenfasst und hervorhebt.",
+          "required": false
+        },
+        "headline_text": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Text",
+          "key": "headline_text",
+          "type": "markdown",
+          "description": "Headline Text for the section",
+          "required": false
+        },
+        "headline_large": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Large",
+          "key": "headline_large",
+          "type": "boolean",
+          "description": "Make the headline larger",
+          "required": false
+        },
+        "headline_width": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Width",
+          "key": "headline_width",
+          "type": "option",
+          "default_value": "unset",
+          "description": "Width of headline to use",
+          "options": [
+            {
+              "name": "unset",
+              "value": "unset",
+              "_uid": "845b4090-0c1f-4f1c-a81e-a11fd1cac254"
+            },
+            {
+              "name": "narrow",
+              "value": "narrow",
+              "_uid": "97fdfb8b-2b70-4b67-b541-831f27b18cf4"
+            },
+            {
+              "name": "default",
+              "value": "default",
+              "_uid": "680c6481-4031-4766-bef1-0f7c5e0cfcfd"
+            },
+            {
+              "name": "wide",
+              "value": "wide",
+              "_uid": "4dadfaf9-0cc6-490a-a927-f565e2682c9c"
+            }
+          ],
+          "required": false
+        },
+        "headline_textAlign": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "TextAlign",
+          "key": "headline_textAlign",
+          "type": "option",
+          "description": "Choose the text alignment for the headline",
+          "options": [
+            {
+              "name": "left",
+              "value": "left",
+              "_uid": "bf94b850-b897-4d14-976f-13dde6da3efd"
+            },
+            {
+              "name": "center",
+              "value": "center",
+              "_uid": "9ac563d5-7a51-4fa4-a2c0-7ee94f3b4950"
+            },
+            {
+              "name": "right",
+              "value": "right",
+              "_uid": "66d44e0e-ea77-41c1-8cc0-e02407875d0d"
+            }
+          ],
+          "required": false
+        },
+        "headline_align": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Align",
+          "key": "headline_align",
+          "type": "option",
+          "description": "Choose an alignment for positioning the headline",
+          "options": [
+            {
+              "name": "left",
+              "value": "left",
+              "_uid": "b2301a7d-8110-44d8-8853-664a285ef987"
+            },
+            {
+              "name": "center",
+              "value": "center",
+              "_uid": "73c69901-e897-4f01-943a-a1006a68af4e"
+            },
+            {
+              "name": "right",
+              "value": "right",
+              "_uid": "ed71de16-4288-42b4-b199-11b292b026f5"
+            }
+          ],
+          "required": false
+        },
+        "headline_sub": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Sub",
+          "key": "headline_sub",
+          "type": "markdown",
+          "description": "Subheadline for the section",
+          "required": false
+        },
+        "headline_switchOrder": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "SwitchOrder",
+          "key": "headline_switchOrder",
+          "type": "boolean",
+          "description": "Switch the order of headline and subheadline",
+          "required": false
+        },
+        "tab-d31b19c1-562a-4b60-83e8-0d90d03d4cbc": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Content",
+          "key": "tab-d31b19c1-562a-4b60-83e8-0d90d03d4cbc",
+          "keys": [
+            "content_width",
+            "content_align",
+            "content_gutter",
+            "content_mode",
+            "content_tileWidth"
+          ],
+          "type": "tab",
+          "description": "Einstellungen zur Darstellung des Inhalts der Sektion.",
+          "required": false
+        },
+        "content_width": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Width",
+          "key": "content_width",
+          "type": "option",
+          "default_value": "unset",
+          "description": "Width of content to use",
+          "options": [
+            {
+              "name": "unset",
+              "value": "unset",
+              "_uid": "f752725a-f722-4bfd-8435-3eda31689dea"
+            },
+            {
+              "name": "narrow",
+              "value": "narrow",
+              "_uid": "2d5aae0e-6c31-4b9b-9dd9-be672d023905"
+            },
+            {
+              "name": "default",
+              "value": "default",
+              "_uid": "e54270e5-b773-459b-8224-79861d44ce8a"
+            },
+            {
+              "name": "wide",
+              "value": "wide",
+              "_uid": "a6b5cf07-802d-4535-9d25-e762e7e929df"
+            }
+          ],
+          "required": false
+        },
+        "content_align": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Align",
+          "key": "content_align",
+          "type": "option",
+          "default_value": "center",
+          "description": "Choose an alignment for the content",
+          "options": [
+            {
+              "name": "left",
+              "value": "left",
+              "_uid": "08c5c650-0724-4a89-b3ab-c4c2d186585c"
+            },
+            {
+              "name": "center",
+              "value": "center",
+              "_uid": "da0b0c05-5bce-4961-8263-484a2b725cc3"
+            },
+            {
+              "name": "right",
+              "value": "right",
+              "_uid": "9eb598e1-e5c5-4de3-9b69-1dbd3dafdced"
+            }
+          ],
+          "required": false
+        },
+        "content_gutter": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Gutter",
+          "key": "content_gutter",
+          "type": "option",
+          "default_value": "default",
+          "description": "Size of gutter to use",
+          "options": [
+            {
+              "name": "large",
+              "value": "large",
+              "_uid": "2b6e4a25-5346-40fd-a111-afdbc39a5182"
+            },
+            {
+              "name": "default",
+              "value": "default",
+              "_uid": "f0776ad6-7f1b-4539-9787-07c0b9941f7a"
+            },
+            {
+              "name": "small",
+              "value": "small",
+              "_uid": "cabbe4ba-20a6-4c06-ba56-214c3659bb7f"
+            },
+            {
+              "name": "none",
+              "value": "none",
+              "_uid": "a2300d5b-7e69-448a-aee8-64a52c79348b"
+            }
+          ],
+          "required": false
+        },
+        "content_mode": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Mode",
+          "key": "content_mode",
+          "type": "option",
+          "default_value": "default",
+          "description": "Layout mode used for section contents",
+          "options": [
+            {
+              "name": "default",
+              "value": "default",
+              "_uid": "888fe585-302c-4202-a4c3-0f20ee69683b"
+            },
+            {
+              "name": "tile",
+              "value": "tile",
+              "_uid": "5b581583-9d72-41e3-8461-3d4e40af4708"
+            },
+            {
+              "name": "list",
+              "value": "list",
+              "_uid": "ced75179-c010-452f-89a4-f96210465d88"
+            },
+            {
+              "name": "slider",
+              "value": "slider",
+              "_uid": "f9b3433c-24f8-4288-bab4-a8ea0c643e83"
+            }
+          ],
+          "required": false
+        },
+        "content_tileWidth": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "TileWidth",
+          "key": "content_tileWidth",
+          "type": "option",
+          "default_value": "default",
+          "description": "Set min-width for the tiles in the grid",
+          "options": [
+            {
+              "name": "smallest",
+              "value": "smallest",
+              "_uid": "5d4d066c-2391-441d-8bb4-8df6f50e7a70"
+            },
+            {
+              "name": "default",
+              "value": "default",
+              "_uid": "9cde4af5-9eb1-4f09-9517-73b7c014dd74"
+            },
+            {
+              "name": "medium",
+              "value": "medium",
+              "_uid": "e067596e-7f07-4cc6-9f82-0750d33f46c3"
+            },
+            {
+              "name": "large",
+              "value": "large",
+              "_uid": "fc383dce-2020-4dc6-80a2-35df40cec35e"
+            },
+            {
+              "name": "largest",
+              "value": "largest",
+              "_uid": "3052c034-7938-4450-9b6f-9f80d3d68bd1"
+            },
+            {
+              "name": "full",
+              "value": "full",
+              "_uid": "f28d2428-f48d-4ca0-bd3d-367bcdcf8ddf"
+            }
+          ],
+          "required": false
+        },
+        "components": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Components",
+          "key": "components",
+          "type": "bloks",
+          "restrict_type": "groups",
+          "restrict_components": true,
+          "component_group_whitelist": [
+            "64f2f440-6a71-42a9-bc90-c011212a006c"
+          ],
+          "description": "Abstracts a blog overview concept into JSON schema",
+          "required": false
+        },
+        "buttons": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Buttons",
+          "key": "buttons",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "buttons"
+          ]
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Section",
+      "color": "#05566a",
+      "icon": "gallery-vertical"
+    },
+    {
+      "name": "seo",
+      "display_name": "Seo",
+      "created_at": "2026-01-07T09:52:15.078Z",
+      "updated_at": "2026-01-07T09:52:15.078Z",
+      "id": 223,
+      "schema": {
+        "title": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Title",
+          "key": "title",
+          "type": "text",
+          "description": "Der Titel der Seite, der in den Suchergebnissen angezeigt wird.",
+          "required": false
+        },
+        "description": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Description",
+          "key": "description",
+          "type": "text",
+          "description": "Eine kurze Beschreibung der Seite, die in den Suchergebnissen angezeigt wird.",
+          "required": false
+        },
+        "keywords": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Keywords",
+          "key": "keywords",
+          "type": "text",
+          "description": "Eine Liste von Schlüsselwörtern, die die Seite beschreiben und in den Suchergebnissen verwendet werden können.",
+          "required": false
+        },
+        "image": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Image",
+          "key": "image",
+          "type": "asset",
+          "filetypes": [
+            "images"
+          ],
+          "description": "Ein Bild, das in den Suchergebnissen oder sozialen Medien als Vorschaubild verwendet wird.",
+          "required": false
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Seo",
+      "color": "#05566a",
+      "icon": "block-wallet"
+    },
+    {
+      "name": "blog-head",
+      "display_name": "Blog Head",
+      "created_at": "2026-01-07T09:52:15.079Z",
+      "updated_at": "2026-01-07T09:52:15.079Z",
+      "id": 226,
+      "schema": {
+        "date": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Date",
+          "key": "date",
+          "type": "datetime",
+          "disable_time": true,
+          "description": "Datum der Veröffentlichung des Blogbeitrags",
+          "required": false
+        },
+        "tags": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Tags",
+          "key": "tags",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "tags"
+          ]
+        },
+        "headline": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Headline",
+          "key": "headline",
+          "type": "markdown",
+          "description": "Headline des Blogbeitrags",
+          "required": false
+        },
+        "image": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Image",
+          "key": "image",
+          "type": "asset",
+          "filetypes": [
+            "images"
+          ],
+          "description": "Hauptbild des Blogbeitrags",
+          "required": false
+        },
+        "alt": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Alt",
+          "key": "alt",
+          "type": "text",
+          "description": "Alternativtext für das Bild des Blogbeitrags",
+          "required": false
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Blog Head",
+      "color": "#05566a",
+      "icon": "block-wallet"
+    },
+    {
+      "name": "blog-author",
+      "display_name": "Blog Author",
+      "created_at": "2026-01-07T09:52:15.081Z",
+      "updated_at": "2026-01-07T09:52:15.081Z",
+      "id": 228,
+      "schema": {
+        "name": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Name",
+          "key": "name",
+          "type": "text",
+          "description": "Name des Autors oder der Autorin",
+          "required": false
+        },
+        "byline": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Byline",
+          "key": "byline",
+          "type": "text",
+          "description": "Kurze Beschreibung oder Titel des Autors oder der Autorin",
+          "required": false
+        },
+        "tab-4dd5056f-cf55-4fe0-acc7-1704318ac145": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Image",
+          "key": "tab-4dd5056f-cf55-4fe0-acc7-1704318ac145",
+          "keys": [
+            "image_src",
+            "image_alt",
+            "image_fullWidth",
+            "image_aspectRatio"
+          ],
+          "type": "tab",
+          "description": "Bild des Autors oder der Autorin",
+          "required": false
+        },
+        "image_src": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Src",
+          "key": "image_src",
+          "type": "asset",
+          "filetypes": [
+            "images"
+          ],
+          "description": "URL of the image to display",
+          "required": false
+        },
+        "image_alt": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Alt",
+          "key": "image_alt",
+          "type": "text",
+          "description": "Alt text of the image",
+          "required": false
+        },
+        "image_fullWidth": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "FullWidth",
+          "key": "image_fullWidth",
+          "type": "boolean",
+          "description": "Image uses all the horizontal space vailable",
+          "required": false
+        },
+        "image_aspectRatio": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "AspectRatio",
+          "key": "image_aspectRatio",
+          "type": "option",
+          "default_value": "square",
+          "description": "Aspect Ratio of the Images",
+          "options": [
+            {
+              "name": "wide",
+              "value": "wide",
+              "_uid": "4d8f1147-1738-40dd-93cd-77ebd8c15ce3"
+            },
+            {
+              "name": "square",
+              "value": "square",
+              "_uid": "966f8929-bbcf-4dc5-9a92-c5315989de19"
+            },
+            {
+              "name": "vertical",
+              "value": "vertical",
+              "_uid": "0acc7d86-5354-4031-84ed-52c0580d9eed"
+            }
+          ],
+          "required": false
+        },
+        "links": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Links",
+          "key": "links",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "links"
+          ]
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Blog Author",
+      "color": "#05566a",
+      "icon": "block-wallet"
+    },
+    {
+      "name": "socialSharing",
+      "display_name": "SocialSharing",
+      "created_at": "2026-01-07T09:52:15.081Z",
+      "updated_at": "2026-01-07T09:52:15.081Z",
+      "id": 229,
+      "schema": {
+        "icon": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Icon",
+          "key": "icon",
+          "type": "custom",
+          "field_type": "storyblok-icon-sprite-picker-field-plugin",
+          "options": [
+            {
+              "name": "allowedIcons",
+              "_uid": "3b9b2a55-18ef-4b9f-adaa-e3a9f0d75eaa"
+            }
+          ],
+          "description": "Das Icon für den Social Link",
+          "required": false
+        },
+        "url": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Url",
+          "key": "url",
+          "type": "multilink",
+          "allow_target_blank": true,
+          "email_link_type": true,
+          "asset_link_type": true,
+          "show_anchor": true,
+          "description": "Die URL zum Teilen des Blogbeitrags",
+          "required": false
+        },
+        "title": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Title",
+          "key": "title",
+          "type": "text",
+          "description": "Dem Benutzer angezeigter Name des Links",
+          "required": false
+        }
+      },
+      "is_nestable": true,
+      "real_name": "SocialSharing",
+      "color": "#05566a",
+      "icon": "block-wallet"
+    },
+    {
+      "name": "blog-aside",
+      "display_name": "Blog Aside",
+      "created_at": "2026-01-07T09:52:15.081Z",
+      "updated_at": "2026-01-07T09:52:15.081Z",
+      "id": 230,
+      "schema": {
+        "author": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Author",
+          "key": "author",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "blog-author"
+          ],
+          "maximum": 1,
+          "minimum": 0
+        },
+        "socialSharing": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "SocialSharing",
+          "key": "socialSharing",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "socialSharing"
+          ],
+          "description": "Link zum Teilen des Blogbeitrags"
+        },
+        "readingTime": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "ReadingTime",
+          "key": "readingTime",
+          "type": "text",
+          "description": "Lesezeit des Blogbeitrags",
+          "required": false
+        },
+        "date": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Date",
+          "key": "date",
+          "type": "datetime",
+          "disable_time": true,
+          "description": "Datum der Veröffentlichung des Blogbeitrags",
+          "required": false
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Blog Aside",
+      "color": "#05566a",
+      "icon": "block-wallet"
+    },
+    {
       "name": "categories",
       "display_name": "Categories",
-      "created_at": "2026-01-06T14:58:33.848Z",
-      "updated_at": "2026-01-06T14:58:33.848Z",
+      "created_at": "2026-01-07T09:52:15.109Z",
+      "updated_at": "2026-01-07T09:52:15.109Z",
       "id": 450,
       "schema": {
         "label": {
@@ -25,8 +4820,8 @@
     {
       "name": "dates",
       "display_name": "Dates",
-      "created_at": "2026-01-06T14:58:33.849Z",
-      "updated_at": "2026-01-06T14:58:33.849Z",
+      "created_at": "2026-01-07T09:52:15.110Z",
+      "updated_at": "2026-01-07T09:52:15.110Z",
       "id": 451,
       "schema": {
         "date": {
@@ -100,8 +4895,8 @@
     {
       "name": "locations",
       "display_name": "Locations",
-      "created_at": "2026-01-06T14:58:33.849Z",
-      "updated_at": "2026-01-06T14:58:33.849Z",
+      "created_at": "2026-01-07T09:52:15.110Z",
+      "updated_at": "2026-01-07T09:52:15.110Z",
       "id": 453,
       "schema": {
         "dates": {
@@ -112,7 +4907,9 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": ["dates"],
+          "component_whitelist": [
+            "dates"
+          ],
           "description": "Event Appointment"
         },
         "locationName": {
@@ -136,12 +4933,12 @@
             {
               "name": "spacious",
               "value": "spacious",
-              "_uid": "03ae29b8-bbb8-463c-b23e-833ace0b09e6"
+              "_uid": "f5690d3b-d6e7-4468-9f15-6d9f07bfbf41"
             },
             {
               "name": "compact",
               "value": "compact",
-              "_uid": "f14d8104-ae93-4a35-9caf-dec8e093887c"
+              "_uid": "56886d3c-dbe4-4ae3-9a98-19ca6c06f957"
             }
           ],
           "required": false
@@ -163,7 +4960,9 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": ["links"]
+          "component_whitelist": [
+            "links"
+          ]
         }
       },
       "is_nestable": true,
@@ -172,11 +4971,255 @@
       "icon": "block-wallet"
     },
     {
+      "name": "categoryCheckboxes",
+      "display_name": "CategoryCheckboxes",
+      "created_at": "2026-01-07T09:52:15.113Z",
+      "updated_at": "2026-01-07T09:52:15.113Z",
+      "id": 457,
+      "schema": {
+        "entry": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "CategoryCheckboxes",
+          "key": "categoryCheckboxes",
+          "type": "text",
+          "description": "Category name",
+          "required": false
+        }
+      },
+      "is_nestable": true,
+      "real_name": "CategoryCheckboxes",
+      "color": "#05566a",
+      "icon": "block-wallet"
+    },
+    {
+      "name": "event-filter",
+      "display_name": "Event Filter",
+      "created_at": "2026-01-07T09:52:15.113Z",
+      "updated_at": "2026-01-07T09:52:15.113Z",
+      "id": 458,
+      "schema": {
+        "tab-12dd9d7f-a1ff-4395-bfd3-41003660df2f": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "DatePicker",
+          "key": "tab-12dd9d7f-a1ff-4395-bfd3-41003660df2f",
+          "keys": [
+            "datePicker_title",
+            "datePicker_tab-52c0d1b6-f5bc-4c85-b837-f28e01e5a6d7",
+            "datePicker_tab-c43ed61c-a4dd-4cd2-b16d-8cc456170b5a",
+            "datePicker_toggle"
+          ],
+          "type": "tab",
+          "required": false
+        },
+        "datePicker_title": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Title",
+          "key": "datePicker_title",
+          "type": "text",
+          "default_value": "Find Appointment",
+          "description": "Title for the date picker",
+          "required": false
+        },
+        "datePicker_tab-52c0d1b6-f5bc-4c85-b837-f28e01e5a6d7": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "DateFromInput",
+          "key": "datePicker_tab-52c0d1b6-f5bc-4c85-b837-f28e01e5a6d7",
+          "keys": [
+            "dateFromInput_label",
+            "dateFromInput_placeholder"
+          ],
+          "type": "tab",
+          "objectFields": [
+            {
+              "id": 0,
+              "pos": 0,
+              "display_name": "Label",
+              "key": "dateFromInput_label",
+              "type": "text",
+              "default_value": "From",
+              "description": "Label for the date-from input",
+              "required": false
+            },
+            {
+              "id": 0,
+              "pos": 0,
+              "display_name": "Placeholder",
+              "key": "dateFromInput_placeholder",
+              "type": "text",
+              "default_value": "Select a date",
+              "description": "Placeholder text for the date-from input",
+              "required": false
+            }
+          ],
+          "required": false
+        },
+        "datePicker_tab-c43ed61c-a4dd-4cd2-b16d-8cc456170b5a": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "DateToInput",
+          "key": "datePicker_tab-c43ed61c-a4dd-4cd2-b16d-8cc456170b5a",
+          "keys": [
+            "dateToInput_label",
+            "dateToInput_placeholder"
+          ],
+          "type": "tab",
+          "objectFields": [
+            {
+              "id": 0,
+              "pos": 0,
+              "display_name": "Label",
+              "key": "dateToInput_label",
+              "type": "text",
+              "default_value": "To",
+              "description": "Label for the date-to input",
+              "required": false
+            },
+            {
+              "id": 0,
+              "pos": 0,
+              "display_name": "Placeholder",
+              "key": "dateToInput_placeholder",
+              "type": "text",
+              "default_value": "Select a date",
+              "description": "Placeholder text for the date-to input",
+              "required": false
+            }
+          ],
+          "required": false
+        },
+        "datePicker_toggle": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Toggle",
+          "key": "datePicker_toggle",
+          "type": "boolean",
+          "default_value": true,
+          "description": "Toggle to enable or disable the date picker",
+          "required": false
+        },
+        "tab-35bb6f38-9e49-42b2-b2d7-706c5756b6fb": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Categories",
+          "key": "tab-35bb6f38-9e49-42b2-b2d7-706c5756b6fb",
+          "keys": [
+            "categories_title",
+            "categories_categoryCheckboxes",
+            "categories_toggle"
+          ],
+          "type": "tab",
+          "required": false
+        },
+        "categories_title": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Title",
+          "key": "categories_title",
+          "type": "text",
+          "default_value": "Categories",
+          "description": "Title for the categories filter",
+          "required": false
+        },
+        "categories_categoryCheckboxes": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "CategoryCheckboxes",
+          "key": "categories_categoryCheckboxes",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "categoryCheckboxes"
+          ]
+        },
+        "categories_toggle": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Toggle",
+          "key": "categories_toggle",
+          "type": "boolean",
+          "default_value": true,
+          "description": "Toggle to enable or disable the category filter",
+          "required": false
+        },
+        "tab-e468bdae-95c2-4de7-a2a4-3d5f0a959c28": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "ApplyButton",
+          "key": "tab-e468bdae-95c2-4de7-a2a4-3d5f0a959c28",
+          "keys": [
+            "applyButton_label",
+            "applyButton_onClick"
+          ],
+          "type": "tab",
+          "required": false
+        },
+        "applyButton_label": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Label",
+          "key": "applyButton_label",
+          "type": "text",
+          "default_value": "Filter Appointments",
+          "description": "Label for the button",
+          "required": false
+        },
+        "applyButton_onClick": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "OnClick",
+          "key": "applyButton_onClick",
+          "type": "text",
+          "description": "Function to call on button click",
+          "required": false
+        },
+        "tab-4c42eb21-2eb4-47b6-94af-0485e07d8c97": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "ResetButton",
+          "key": "tab-4c42eb21-2eb4-47b6-94af-0485e07d8c97",
+          "keys": [
+            "resetButton_label",
+            "resetButton_onClick"
+          ],
+          "type": "tab",
+          "required": false
+        },
+        "resetButton_label": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Label",
+          "key": "resetButton_label",
+          "type": "text",
+          "default_value": "Reset Filters",
+          "description": "Label for the button",
+          "required": false
+        },
+        "resetButton_onClick": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "OnClick",
+          "key": "resetButton_onClick",
+          "type": "text",
+          "description": "Function to call on button click",
+          "required": false
+        }
+      },
+      "is_nestable": true,
+      "real_name": "Event Filter",
+      "color": "#05566a",
+      "icon": "block-wallet"
+    },
+    {
       "name": "items",
       "display_name": "Items",
-      "created_at": "2026-01-06T14:58:33.872Z",
-      "updated_at": "2026-01-06T14:58:33.872Z",
-      "id": 674,
+      "created_at": "2026-01-07T09:52:15.137Z",
+      "updated_at": "2026-01-07T09:52:15.137Z",
+      "id": 679,
       "schema": {
         "url": {
           "id": 0,
@@ -215,9 +5258,9 @@
     {
       "name": "navItems",
       "display_name": "NavItems",
-      "created_at": "2026-01-06T14:58:33.872Z",
-      "updated_at": "2026-01-06T14:58:33.872Z",
-      "id": 675,
+      "created_at": "2026-01-07T09:52:15.137Z",
+      "updated_at": "2026-01-07T09:52:15.137Z",
+      "id": 680,
       "schema": {
         "url": {
           "id": 0,
@@ -255,7 +5298,9 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": ["items"]
+          "component_whitelist": [
+            "items"
+          ]
         }
       },
       "is_nestable": true,
@@ -266,15 +5311,15 @@
     {
       "name": "header",
       "display_name": "Header",
-      "created_at": "2026-01-06T14:58:33.872Z",
-      "updated_at": "2026-01-06T14:58:33.872Z",
-      "id": 676,
+      "created_at": "2026-01-07T09:52:15.137Z",
+      "updated_at": "2026-01-07T09:52:15.137Z",
+      "id": 681,
       "schema": {
-        "tab-81d1e948-a070-411b-9102-240cb438400c": {
+        "tab-a05264f8-4e16-491b-934b-d857f0c69dd4": {
           "id": 0,
           "pos": 0,
           "display_name": "Logo",
-          "key": "tab-81d1e948-a070-411b-9102-240cb438400c",
+          "key": "tab-a05264f8-4e16-491b-934b-d857f0c69dd4",
           "keys": [
             "logo_src",
             "logo_srcInverted",
@@ -293,7 +5338,9 @@
           "display_name": "Src",
           "key": "logo_src",
           "type": "asset",
-          "filetypes": ["images"],
+          "filetypes": [
+            "images"
+          ],
           "description": "Picture source",
           "required": false
         },
@@ -303,7 +5350,9 @@
           "display_name": "SrcInverted",
           "key": "logo_srcInverted",
           "type": "asset",
-          "filetypes": ["images"],
+          "filetypes": [
+            "images"
+          ],
           "description": "Picture source",
           "required": false
         },
@@ -355,7 +5404,9 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": ["navItems"]
+          "component_whitelist": [
+            "navItems"
+          ]
         }
       },
       "is_nestable": true,
@@ -366,15 +5417,15 @@
     {
       "name": "footer",
       "display_name": "Footer",
-      "created_at": "2026-01-06T14:58:33.875Z",
-      "updated_at": "2026-01-06T14:58:33.875Z",
-      "id": 679,
+      "created_at": "2026-01-07T09:52:15.140Z",
+      "updated_at": "2026-01-07T09:52:15.140Z",
+      "id": 684,
       "schema": {
-        "tab-75603a9e-7e86-41ee-ba1d-1ac02a7cc40d": {
+        "tab-0c87b5ca-6df5-4be9-a5ff-aac41b8a5184": {
           "id": 0,
           "pos": 0,
           "display_name": "Logo",
-          "key": "tab-75603a9e-7e86-41ee-ba1d-1ac02a7cc40d",
+          "key": "tab-0c87b5ca-6df5-4be9-a5ff-aac41b8a5184",
           "keys": [
             "logo_src",
             "logo_srcInverted",
@@ -393,7 +5444,9 @@
           "display_name": "Src",
           "key": "logo_src",
           "type": "asset",
-          "filetypes": ["images"],
+          "filetypes": [
+            "images"
+          ],
           "description": "Picture source",
           "required": false
         },
@@ -403,7 +5456,9 @@
           "display_name": "SrcInverted",
           "key": "logo_srcInverted",
           "type": "asset",
-          "filetypes": ["images"],
+          "filetypes": [
+            "images"
+          ],
           "description": "Picture source",
           "required": false
         },
@@ -465,7 +5520,9 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": ["navItems"]
+          "component_whitelist": [
+            "navItems"
+          ]
         }
       },
       "is_nestable": true,
@@ -474,46 +5531,13 @@
       "icon": "block-wallet"
     },
     {
-      "name": "blog-post",
-      "display_name": "Blog Post",
-      "created_at": "2026-01-06T14:58:33.823Z",
-      "updated_at": "2026-01-06T14:58:33.823Z",
+      "name": "blog-overview",
+      "display_name": "Blog Overview",
+      "created_at": "2026-01-07T09:52:15.078Z",
+      "updated_at": "2026-01-07T09:52:15.078Z",
       "is_root": true,
       "id": 224,
       "schema": {
-        "head": {
-          "id": 0,
-          "pos": 0,
-          "display_name": "Head",
-          "key": "head",
-          "type": "bloks",
-          "restrict_type": "",
-          "restrict_components": true,
-          "component_whitelist": ["blog-head"],
-          "maximum": 1,
-          "minimum": 0
-        },
-        "aside": {
-          "id": 0,
-          "pos": 0,
-          "display_name": "Aside",
-          "key": "aside",
-          "type": "bloks",
-          "restrict_type": "",
-          "restrict_components": true,
-          "component_whitelist": ["blog-aside"],
-          "maximum": 1,
-          "minimum": 0
-        },
-        "content": {
-          "id": 0,
-          "pos": 0,
-          "display_name": "Content",
-          "key": "content",
-          "type": "markdown",
-          "description": "Body text for the blog post, overwrites sections if present",
-          "required": false
-        },
         "section": {
           "id": 0,
           "pos": 0,
@@ -522,53 +5546,9 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": ["section"]
-        },
-        "cta": {
-          "id": 0,
-          "pos": 0,
-          "display_name": "Cta",
-          "key": "cta",
-          "type": "bloks",
-          "restrict_type": "",
-          "restrict_components": true,
-          "component_whitelist": ["cta"],
-          "maximum": 1,
-          "minimum": 0
-        },
-        "seo": {
-          "id": 0,
-          "pos": 0,
-          "display_name": "Seo",
-          "key": "seo",
-          "type": "bloks",
-          "restrict_type": "",
-          "restrict_components": true,
-          "component_whitelist": ["seo"],
-          "maximum": 1,
-          "minimum": 0
-        }
-      },
-      "is_nestable": false,
-      "real_name": "Blog Post"
-    },
-    {
-      "name": "blog-overview",
-      "display_name": "Blog Overview",
-      "created_at": "2026-01-06T14:58:33.847Z",
-      "updated_at": "2026-01-06T14:58:33.847Z",
-      "is_root": true,
-      "id": 449,
-      "schema": {
-        "section": {
-          "id": 0,
-          "pos": 0,
-          "display_name": "Section",
-          "key": "section",
-          "type": "bloks",
-          "restrict_type": "",
-          "restrict_components": true,
-          "component_whitelist": ["section"]
+          "component_whitelist": [
+            "section"
+          ]
         },
         "latestTitle": {
           "id": 0,
@@ -588,7 +5568,9 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": ["blog-teaser"],
+          "component_whitelist": [
+            "blog-teaser"
+          ],
           "maximum": 1,
           "minimum": 0
         },
@@ -610,7 +5592,9 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": ["blog-teaser"]
+          "component_whitelist": [
+            "blog-teaser"
+          ]
         },
         "moreTitle": {
           "id": 0,
@@ -630,7 +5614,9 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": ["blog-teaser"]
+          "component_whitelist": [
+            "blog-teaser"
+          ]
         },
         "cta": {
           "id": 0,
@@ -640,7 +5626,9 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": ["cta"],
+          "component_whitelist": [
+            "cta"
+          ],
           "maximum": 1,
           "minimum": 0
         },
@@ -652,7 +5640,9 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": ["seo"],
+          "component_whitelist": [
+            "seo"
+          ],
           "maximum": 1,
           "minimum": 0
         }
@@ -661,10 +5651,99 @@
       "real_name": "Blog Overview"
     },
     {
+      "name": "blog-post",
+      "display_name": "Blog Post",
+      "created_at": "2026-01-07T09:52:15.108Z",
+      "updated_at": "2026-01-07T09:52:15.108Z",
+      "is_root": true,
+      "id": 449,
+      "schema": {
+        "head": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Head",
+          "key": "head",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "blog-head"
+          ],
+          "maximum": 1,
+          "minimum": 0
+        },
+        "aside": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Aside",
+          "key": "aside",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "blog-aside"
+          ],
+          "maximum": 1,
+          "minimum": 0
+        },
+        "content": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Content",
+          "key": "content",
+          "type": "markdown",
+          "description": "Body text for the blog post, overwrites sections if present",
+          "required": false
+        },
+        "section": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Section",
+          "key": "section",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "section"
+          ]
+        },
+        "cta": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Cta",
+          "key": "cta",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "cta"
+          ],
+          "maximum": 1,
+          "minimum": 0
+        },
+        "seo": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Seo",
+          "key": "seo",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "seo"
+          ],
+          "maximum": 1,
+          "minimum": 0
+        }
+      },
+      "is_nestable": false,
+      "real_name": "Blog Post"
+    },
+    {
       "name": "event-detail",
       "display_name": "Event Detail",
-      "created_at": "2026-01-06T14:58:33.849Z",
-      "updated_at": "2026-01-06T14:58:33.849Z",
+      "created_at": "2026-01-07T09:52:15.110Z",
+      "updated_at": "2026-01-07T09:52:15.110Z",
       "is_root": true,
       "id": 456,
       "schema": {
@@ -685,7 +5764,9 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": ["categories"]
+          "component_whitelist": [
+            "categories"
+          ]
         },
         "intro": {
           "id": 0,
@@ -704,7 +5785,9 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": ["locations"],
+          "component_whitelist": [
+            "locations"
+          ],
           "description": "Event Location"
         },
         "download": {
@@ -715,7 +5798,9 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": ["download"]
+          "component_whitelist": [
+            "download"
+          ]
         },
         "description": {
           "id": 0,
@@ -734,14 +5819,19 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": ["images"]
+          "component_whitelist": [
+            "images"
+          ]
         },
-        "tab-dcc851b0-9490-489c-9348-b0f40f90c439": {
+        "tab-305cf19c-f2d8-4e36-9a98-a6fc9fc38dc1": {
           "id": 0,
           "pos": 0,
           "display_name": "Button",
-          "key": "tab-dcc851b0-9490-489c-9348-b0f40f90c439",
-          "keys": ["button_label", "button_url"],
+          "key": "tab-305cf19c-f2d8-4e36-9a98-a6fc9fc38dc1",
+          "keys": [
+            "button_label",
+            "button_url"
+          ],
           "type": "tab",
           "description": "Button at the bottom of the event detail",
           "required": false
@@ -773,12 +5863,52 @@
       "real_name": "Event Detail"
     },
     {
+      "name": "event-list",
+      "display_name": "Event List",
+      "created_at": "2026-01-07T09:52:15.113Z",
+      "updated_at": "2026-01-07T09:52:15.113Z",
+      "is_root": true,
+      "id": 461,
+      "schema": {
+        "filter": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Filter",
+          "key": "filter",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "event-filter"
+          ],
+          "maximum": 1,
+          "minimum": 0,
+          "description": "Event Filter"
+        },
+        "events": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Events",
+          "key": "events",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "event-list-teaser"
+          ],
+          "description": "Display an event teaser with date, title and location"
+        }
+      },
+      "is_nestable": false,
+      "real_name": "Event List"
+    },
+    {
       "name": "page",
       "display_name": "Page",
-      "created_at": "2026-01-06T14:58:33.869Z",
-      "updated_at": "2026-01-06T14:58:33.869Z",
+      "created_at": "2026-01-07T09:52:15.133Z",
+      "updated_at": "2026-01-07T09:52:15.133Z",
       "is_root": true,
-      "id": 673,
+      "id": 678,
       "schema": {
         "section": {
           "id": 0,
@@ -788,14 +5918,19 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": ["section"]
+          "component_whitelist": [
+            "section"
+          ]
         },
-        "tab-92ebcf4f-0292-4419-9da4-459f7a5a5d57": {
+        "tab-093b7436-432d-4d92-896c-02e41ae1dcb5": {
           "id": 0,
           "pos": 0,
           "display_name": "Header",
-          "key": "tab-92ebcf4f-0292-4419-9da4-459f7a5a5d57",
-          "keys": ["header_floating", "header_inverted"],
+          "key": "tab-093b7436-432d-4d92-896c-02e41ae1dcb5",
+          "keys": [
+            "header_floating",
+            "header_inverted"
+          ],
           "type": "tab",
           "description": "Header settings for the page",
           "required": false
@@ -818,12 +5953,14 @@
           "description": "Toggle default inverted header behaviour set in global settings",
           "required": false
         },
-        "tab-a056dd9b-7c06-4e81-8a67-06eafd3df52f": {
+        "tab-9233ec56-b1b2-403d-b4b0-a7703917939b": {
           "id": 0,
           "pos": 0,
           "display_name": "Footer",
-          "key": "tab-a056dd9b-7c06-4e81-8a67-06eafd3df52f",
-          "keys": ["footer_inverted"],
+          "key": "tab-9233ec56-b1b2-403d-b4b0-a7703917939b",
+          "keys": [
+            "footer_inverted"
+          ],
           "type": "tab",
           "description": "Footer settings for the page",
           "required": false
@@ -845,7 +5982,9 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": ["seo"],
+          "component_whitelist": [
+            "seo"
+          ],
           "maximum": 1,
           "minimum": 0
         }
@@ -856,10 +5995,10 @@
     {
       "name": "settings",
       "display_name": "Settings",
-      "created_at": "2026-01-06T14:58:33.875Z",
-      "updated_at": "2026-01-06T14:58:33.875Z",
+      "created_at": "2026-01-07T09:52:15.140Z",
+      "updated_at": "2026-01-07T09:52:15.140Z",
       "is_root": true,
-      "id": 681,
+      "id": 686,
       "schema": {
         "header": {
           "id": 0,
@@ -869,7 +6008,9 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": ["header"],
+          "component_whitelist": [
+            "header"
+          ],
           "maximum": 1,
           "minimum": 0
         },
@@ -881,7 +6022,9 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": ["footer"],
+          "component_whitelist": [
+            "footer"
+          ],
           "maximum": 1,
           "minimum": 0
         },
@@ -893,7 +6036,9 @@
           "type": "bloks",
           "restrict_type": "",
           "restrict_components": true,
-          "component_whitelist": ["seo"],
+          "component_whitelist": [
+            "seo"
+          ],
           "maximum": 1,
           "minimum": 0
         },
