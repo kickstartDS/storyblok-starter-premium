@@ -1,9 +1,5 @@
 import { ComponentProps } from "react";
-import {
-  SbBlokData,
-  StoryblokComponent,
-  storyblokEditable,
-} from "@storyblok/react";
+import { SbBlokData, storyblokEditable } from "@storyblok/react";
 import { Section } from "@kickstartds/ds-agency-premium/components/section/index.js";
 import { EventList as DsaEventList } from "@kickstartds/ds-agency-premium/components/event-list/index.js";
 import { SplitWeightedContextDefault as SplitWeighted } from "@kickstartds/ds-agency-premium/components/split-weighted/index.js";
@@ -47,6 +43,7 @@ const EventList: React.FC<PageProps> = ({ blok }) => {
                 {events &&
                   events.length > 0 &&
                   events.map((event, index) => (
+                    // @ts-expect-error
                     <EventListTeaser key={index} {...unflatten(event)} />
                   ))}
                 <Pagination

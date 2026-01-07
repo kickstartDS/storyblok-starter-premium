@@ -1,4 +1,4 @@
-import {StoryblokStory} from 'storyblok-generate-ts'
+import { StoryblokStory } from "storyblok-generate-ts";
 
 export interface BlogAsideStoryblok {
   author?: BlogAuthorStoryblok[];
@@ -133,6 +133,18 @@ export interface ButtonsStoryblok {
   component: "buttons";
 }
 
+export interface CategoriesStoryblok {
+  label?: string;
+  _uid: string;
+  component: "categories";
+}
+
+export interface CategoryCheckboxesStoryblok {
+  entry?: string;
+  _uid: string;
+  component: "categoryCheckboxes";
+}
+
 export interface ContactStoryblok {
   label?: string;
   icon?: string;
@@ -168,6 +180,17 @@ export interface CtaStoryblok {
   component: "cta";
 }
 
+export interface DatesStoryblok {
+  date?: string;
+  time?: string;
+  label?: string;
+  url?: MultilinkStoryblok;
+  newTab?: boolean;
+  ariaLabel?: string;
+  _uid: string;
+  component: "dates";
+}
+
 export interface DividerStoryblok {
   variant?: "" | "default" | "accent";
   _uid: string;
@@ -177,7 +200,7 @@ export interface DividerStoryblok {
 export interface DownloadStoryblok {
   name?: string;
   description?: string;
-  previewImage?: MultilinkStoryblok;
+  previewImage?: AssetStoryblok;
   url?: MultilinkStoryblok;
   size?: string;
   format?: string;
@@ -189,6 +212,36 @@ export interface DownloadsStoryblok {
   download?: DownloadStoryblok[];
   _uid: string;
   component: "downloads";
+}
+
+export interface EventDetailStoryblok {
+  title?: string;
+  categories?: CategoriesStoryblok[];
+  intro?: string;
+  locations?: LocationsStoryblok[];
+  download?: DownloadStoryblok[];
+  description?: string;
+  images?: ImagesStoryblok[];
+  button_label?: string;
+  button_url?: MultilinkStoryblok;
+  _uid: string;
+  component: "event-detail";
+}
+
+export interface EventFilterStoryblok {
+  datePicker_title?: string;
+  "datePicker_tab-031b763d-b9bb-4efd-b1ba-35d3f1eea44b"?: unknown;
+  "datePicker_tab-0b6ac043-bae7-4201-83f9-1a3165c7e2f3"?: unknown;
+  datePicker_toggle?: boolean;
+  categories_title?: string;
+  categories_categoryCheckboxes?: CategoryCheckboxesStoryblok[];
+  categories_toggle?: boolean;
+  applyButton_label?: string;
+  applyButton_onClick?: string;
+  resetButton_label?: string;
+  resetButton_onClick?: string;
+  _uid: string;
+  component: "event-filter";
 }
 
 export interface EventLatestTeaserStoryblok {
@@ -203,6 +256,13 @@ export interface EventLatestTeaserStoryblok {
   className?: string;
   _uid: string;
   component: "event-latest-teaser";
+}
+
+export interface EventListStoryblok {
+  filter?: EventFilterStoryblok[];
+  events?: EventListTeaserStoryblok[];
+  _uid: string;
+  component: "event-list";
 }
 
 export interface EventListTeaserStoryblok {
@@ -296,6 +356,16 @@ export interface HeaderStoryblok {
   component: "header";
 }
 
+export interface HeadlineStoryblok {
+  text?: string;
+  sub?: string;
+  align?: "" | "left" | "center" | "right";
+  style?: "" | "h1" | "h2" | "h3" | "h4" | "p";
+  spaceAfter?: "" | "minimum" | "small" | "large";
+  _uid: string;
+  component: "headline";
+}
+
 export interface HeroStoryblok {
   headline?: string;
   sub?: string;
@@ -319,7 +389,12 @@ export interface HtmlStoryblok {
   consentText?: string;
   consentButtonLabel?: string;
   consentBackgroundImage?: AssetStoryblok;
-  consentAspectRatio?: "" | "VALUE_16_9" | "VALUE_16_10" | "VALUE_4_3" | "VALUE_1_1";
+  consentAspectRatio?:
+    | ""
+    | "VALUE_16_9"
+    | "VALUE_16_10"
+    | "VALUE_4_3"
+    | "VALUE_1_1";
   _uid: string;
   component: "html";
 }
@@ -396,6 +471,16 @@ export interface LinksStoryblok {
   component: "links";
 }
 
+export interface LocationsStoryblok {
+  dates?: DatesStoryblok[];
+  locationName?: string;
+  displayMode?: "" | "spacious" | "compact";
+  address?: string;
+  links?: LinksStoryblok[];
+  _uid: string;
+  component: "locations";
+}
+
 export interface LogoStoryblok {
   src?: AssetStoryblok;
   alt?: string;
@@ -414,6 +499,14 @@ export interface LogosStoryblok {
   cta_style?: "" | "button" | "text";
   _uid: string;
   component: "logos";
+}
+
+export interface MatchesStoryblok {
+  title?: string;
+  snippet?: string;
+  url?: string;
+  _uid: string;
+  component: "matches";
 }
 
 export interface MosaicStoryblok {
@@ -451,11 +544,55 @@ export interface QuestionsStoryblok {
   component: "questions";
 }
 
+export interface SearchStoryblok {
+  headline?: HeadlineStoryblok[];
+  searchBar?: SearchBarStoryblok[];
+  searchFilter?: SearchFilterStoryblok[];
+  searchResults?: SearchResultsStoryblok[];
+  _uid: string;
+  component: "search";
+}
+
+export interface SearchBarStoryblok {
+  placeholder?: string;
+  buttonText?: string;
+  hint?: string;
+  alternativeText?: string;
+  alternativeResult?: string;
+  _uid: string;
+  component: "search-bar";
+}
+
+export interface SearchFilterStoryblok {
+  title?: string;
+  categories?: CategoriesStoryblok[];
+  _uid: string;
+  component: "search-filter";
+}
+
+export interface SearchResultsStoryblok {
+  url?: string;
+  title?: string;
+  imageColSize?: "" | "none" | "small" | "large";
+  previewImage?: string;
+  initialMatch?: string;
+  matches?: MatchesStoryblok[];
+  showLink?: boolean;
+  _uid: string;
+  component: "searchResults";
+}
+
 export interface SectionStoryblok {
   width?: "" | "full" | "max" | "wide" | "default" | "narrow";
   style?: "" | "default" | "framed" | "deko";
   backgroundColor?: "" | "default" | "accent" | "bold";
-  transition?: "" | "none" | "to_default" | "to_accent" | "to_bold" | "to_inverted";
+  transition?:
+    | ""
+    | "none"
+    | "to_default"
+    | "to_accent"
+    | "to_bold"
+    | "to_inverted";
   backgroundImage?: AssetStoryblok;
   spotlight?: boolean;
   spaceBefore?: "" | "default" | "small" | "none";
@@ -473,8 +610,43 @@ export interface SectionStoryblok {
   content_align?: "" | "left" | "center" | "right";
   content_gutter?: "" | "large" | "default" | "small" | "none";
   content_mode?: "" | "default" | "tile" | "list" | "slider";
-  content_tileWidth?: "" | "smallest" | "default" | "medium" | "large" | "largest" | "full";
-  components?: (InfoTableStoryblok | SplitEvenStoryblok | SplitWeightedStoryblok | GlobalReferenceStoryblok)[];
+  content_tileWidth?:
+    | ""
+    | "smallest"
+    | "default"
+    | "medium"
+    | "large"
+    | "largest"
+    | "full";
+  components?: (
+    | GlobalReferenceStoryblok
+    | BlogTeaserStoryblok
+    | BusinessCardStoryblok
+    | ContentNavStoryblok
+    | CtaStoryblok
+    | DividerStoryblok
+    | DownloadsStoryblok
+    | EventLatestTeaserStoryblok
+    | EventListTeaserStoryblok
+    | FaqStoryblok
+    | FeaturesStoryblok
+    | GalleryStoryblok
+    | HeroStoryblok
+    | HtmlStoryblok
+    | ImageStoryStoryblok
+    | ImageTextStoryblok
+    | InfoTableStoryblok
+    | LogosStoryblok
+    | MosaicStoryblok
+    | SliderStoryblok
+    | SplitEvenStoryblok
+    | SplitWeightedStoryblok
+    | StatsStoryblok
+    | TeaserCardStoryblok
+    | TestimonialsStoryblok
+    | TextStoryblok
+    | VideoCurtainStoryblok
+  )[];
   buttons?: ButtonsStoryblok[];
   _uid: string;
   component: "section";
@@ -539,16 +711,46 @@ export interface SplitEvenStoryblok {
     | HtmlStoryblok
     | ImageStoryStoryblok
     | ImageTextStoryblok
+    | InfoTableStoryblok
     | LogosStoryblok
     | MosaicStoryblok
     | SliderStoryblok
+    | SplitEvenStoryblok
+    | SplitWeightedStoryblok
     | StatsStoryblok
     | TeaserCardStoryblok
     | TestimonialsStoryblok
     | TextStoryblok
     | VideoCurtainStoryblok
   )[];
-  secondComponents?: never[];
+  secondComponents?: (
+    | BlogTeaserStoryblok
+    | BusinessCardStoryblok
+    | ContentNavStoryblok
+    | CtaStoryblok
+    | DividerStoryblok
+    | DownloadsStoryblok
+    | EventLatestTeaserStoryblok
+    | EventListTeaserStoryblok
+    | FaqStoryblok
+    | FeaturesStoryblok
+    | GalleryStoryblok
+    | HeroStoryblok
+    | HtmlStoryblok
+    | ImageStoryStoryblok
+    | ImageTextStoryblok
+    | InfoTableStoryblok
+    | LogosStoryblok
+    | MosaicStoryblok
+    | SliderStoryblok
+    | SplitEvenStoryblok
+    | SplitWeightedStoryblok
+    | StatsStoryblok
+    | TeaserCardStoryblok
+    | TestimonialsStoryblok
+    | TextStoryblok
+    | VideoCurtainStoryblok
+  )[];
   _uid: string;
   component: "split-even";
 }
@@ -563,8 +765,62 @@ export interface SplitWeightedStoryblok {
   asideLayout_minWidth?: "" | "narrow" | "default" | "wide";
   order_mobile?: "" | "mainFirst" | "asideFirst";
   order_desktop?: "" | "mainFirst" | "asideFirst";
-  mainComponents?: never[];
-  asideComponents?: never[];
+  mainComponents?: (
+    | BlogTeaserStoryblok
+    | BusinessCardStoryblok
+    | ContentNavStoryblok
+    | CtaStoryblok
+    | DividerStoryblok
+    | DownloadsStoryblok
+    | EventLatestTeaserStoryblok
+    | EventListTeaserStoryblok
+    | FaqStoryblok
+    | FeaturesStoryblok
+    | GalleryStoryblok
+    | HeroStoryblok
+    | HtmlStoryblok
+    | ImageStoryStoryblok
+    | ImageTextStoryblok
+    | InfoTableStoryblok
+    | LogosStoryblok
+    | MosaicStoryblok
+    | SliderStoryblok
+    | SplitEvenStoryblok
+    | SplitWeightedStoryblok
+    | StatsStoryblok
+    | TeaserCardStoryblok
+    | TestimonialsStoryblok
+    | TextStoryblok
+    | VideoCurtainStoryblok
+  )[];
+  asideComponents?: (
+    | BlogTeaserStoryblok
+    | BusinessCardStoryblok
+    | ContentNavStoryblok
+    | CtaStoryblok
+    | DividerStoryblok
+    | DownloadsStoryblok
+    | EventLatestTeaserStoryblok
+    | EventListTeaserStoryblok
+    | FaqStoryblok
+    | FeaturesStoryblok
+    | GalleryStoryblok
+    | HeroStoryblok
+    | HtmlStoryblok
+    | ImageStoryStoryblok
+    | ImageTextStoryblok
+    | InfoTableStoryblok
+    | LogosStoryblok
+    | MosaicStoryblok
+    | SliderStoryblok
+    | SplitEvenStoryblok
+    | SplitWeightedStoryblok
+    | StatsStoryblok
+    | TeaserCardStoryblok
+    | TestimonialsStoryblok
+    | TextStoryblok
+    | VideoCurtainStoryblok
+  )[];
   _uid: string;
   component: "split-weighted";
 }

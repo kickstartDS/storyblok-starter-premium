@@ -744,7 +744,7 @@
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
       "metadata": {},
-      "component_group_name": "FirstComponents"
+      "component_group_name": "Components"
     },
     {
       "name": "business-card",
@@ -968,7 +968,7 @@
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
       "metadata": {},
-      "component_group_name": "FirstComponents"
+      "component_group_name": "Components"
     },
     {
       "name": "buttons",
@@ -1009,6 +1009,74 @@
       "all_presets": [],
       "preset_id": null,
       "real_name": "Buttons",
+      "component_group_uuid": null,
+      "color": "#05566a",
+      "icon": "block-wallet",
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {}
+    },
+    {
+      "name": "categories",
+      "display_name": "Categories",
+      "description": null,
+      "created_at": "2026-01-06T15:16:13.986Z",
+      "updated_at": "2026-01-06T15:16:13.986Z",
+      "id": 131166101458784,
+      "schema": {
+        "label": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Label",
+          "key": "label",
+          "type": "text",
+          "description": "Label of the category",
+          "required": false
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Categories",
+      "component_group_uuid": null,
+      "color": "#05566a",
+      "icon": "block-wallet",
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {}
+    },
+    {
+      "name": "categoryCheckboxes",
+      "display_name": "CategoryCheckboxes",
+      "description": null,
+      "created_at": "2026-01-07T09:08:28.028Z",
+      "updated_at": "2026-01-07T09:08:28.028Z",
+      "id": 131429613689454,
+      "schema": {
+        "entry": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "CategoryCheckboxes",
+          "key": "categoryCheckboxes",
+          "type": "text",
+          "description": "Category name",
+          "required": false
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "CategoryCheckboxes",
       "component_group_uuid": null,
       "color": "#05566a",
       "icon": "block-wallet",
@@ -1209,7 +1277,7 @@
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
       "metadata": {},
-      "component_group_name": "FirstComponents"
+      "component_group_name": "Components"
     },
     {
       "name": "cta",
@@ -1498,7 +1566,94 @@
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
       "metadata": {},
-      "component_group_name": "FirstComponents"
+      "component_group_name": "Components"
+    },
+    {
+      "name": "dates",
+      "display_name": "Dates",
+      "description": null,
+      "created_at": "2026-01-06T15:16:14.759Z",
+      "updated_at": "2026-01-06T15:16:14.759Z",
+      "id": 131166104624993,
+      "schema": {
+        "date": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Date",
+          "key": "date",
+          "type": "datetime",
+          "disable_time": true,
+          "description": "Date of the appointment",
+          "required": false
+        },
+        "time": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Time",
+          "key": "time",
+          "type": "text",
+          "description": "Time of the appointment",
+          "required": false
+        },
+        "label": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Label",
+          "key": "label",
+          "type": "text",
+          "description": "Label for the call to action button",
+          "required": false
+        },
+        "url": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Url",
+          "key": "url",
+          "type": "multilink",
+          "allow_target_blank": true,
+          "email_link_type": true,
+          "asset_link_type": true,
+          "show_anchor": true,
+          "default_value": "#",
+          "description": "URL for the call to action button",
+          "required": false
+        },
+        "newTab": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "NewTab",
+          "key": "newTab",
+          "type": "boolean",
+          "default_value": true,
+          "description": "Whether the link should open in a new tab",
+          "required": false
+        },
+        "ariaLabel": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "AriaLabel",
+          "key": "ariaLabel",
+          "type": "text",
+          "default_value": "Event Appointment",
+          "description": "Aria label for the link",
+          "required": false
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Dates",
+      "component_group_uuid": null,
+      "color": "#05566a",
+      "icon": "block-wallet",
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {}
     },
     {
       "name": "divider",
@@ -1565,14 +1720,14 @@
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
       "metadata": {},
-      "component_group_name": "FirstComponents"
+      "component_group_name": "Components"
     },
     {
       "name": "download",
       "display_name": "Download",
       "description": null,
       "created_at": "2025-12-18T14:47:08.693Z",
-      "updated_at": "2025-12-18T14:47:08.693Z",
+      "updated_at": "2026-01-06T15:56:59.771Z",
       "id": 124434959133649,
       "schema": {
         "name": {
@@ -1598,13 +1753,16 @@
           "pos": 0,
           "display_name": "PreviewImage",
           "key": "previewImage",
-          "type": "multilink",
+          "type": "asset",
           "allow_target_blank": true,
           "email_link_type": true,
           "asset_link_type": true,
           "show_anchor": true,
           "description": "A URL to an image that previews the file.",
-          "required": false
+          "required": false,
+          "filetypes": [
+            "images"
+          ]
         },
         "url": {
           "id": 0,
@@ -1727,7 +1885,377 @@
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
       "metadata": {},
-      "component_group_name": "FirstComponents"
+      "component_group_name": "Components"
+    },
+    {
+      "name": "event-detail",
+      "display_name": "Event Detail",
+      "description": null,
+      "created_at": "2026-01-06T15:16:14.983Z",
+      "updated_at": "2026-01-06T15:16:14.983Z",
+      "id": 131166105542499,
+      "schema": {
+        "title": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Title",
+          "key": "title",
+          "type": "text",
+          "description": "Title of the event",
+          "required": false
+        },
+        "categories": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Categories",
+          "key": "categories",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "categories"
+          ]
+        },
+        "intro": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Intro",
+          "key": "intro",
+          "type": "text",
+          "description": "Short intro text for the event",
+          "required": false
+        },
+        "locations": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Locations",
+          "key": "locations",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "locations"
+          ],
+          "description": "Event Location"
+        },
+        "download": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Download",
+          "key": "download",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "download"
+          ]
+        },
+        "description": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Description",
+          "key": "description",
+          "type": "markdown",
+          "description": "Description of the event",
+          "required": false
+        },
+        "images": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Images",
+          "key": "images",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "images"
+          ]
+        },
+        "tab-dcc851b0-9490-489c-9348-b0f40f90c439": {
+          "id": "3MhRsJSQSJyTSLD0D5DEOQ",
+          "pos": 0,
+          "display_name": "Button",
+          "key": "tab-dcc851b0-9490-489c-9348-b0f40f90c439",
+          "keys": [
+            "button_label",
+            "button_url"
+          ],
+          "type": "tab",
+          "description": "Button at the bottom of the event detail",
+          "required": false
+        },
+        "button_label": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Label",
+          "key": "button_label",
+          "type": "text",
+          "description": "Label of the button",
+          "required": false
+        },
+        "button_url": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Url",
+          "key": "button_url",
+          "type": "multilink",
+          "allow_target_blank": true,
+          "email_link_type": true,
+          "asset_link_type": true,
+          "show_anchor": true,
+          "description": "URL the button links to",
+          "required": false
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": true,
+      "preview_tmpl": null,
+      "is_nestable": false,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Event Detail",
+      "component_group_uuid": null,
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {}
+    },
+    {
+      "name": "event-filter",
+      "display_name": "Event Filter",
+      "description": null,
+      "created_at": "2026-01-07T09:08:27.907Z",
+      "updated_at": "2026-01-07T09:08:27.907Z",
+      "id": 131429613197933,
+      "schema": {
+        "tab-bc2c5bd6-d013-4637-b1af-789b8e085a12": {
+          "id": "vCxb1tATRjexr3ibjghaEg",
+          "pos": 0,
+          "display_name": "DatePicker",
+          "key": "tab-bc2c5bd6-d013-4637-b1af-789b8e085a12",
+          "keys": [
+            "datePicker_title",
+            "datePicker_tab-031b763d-b9bb-4efd-b1ba-35d3f1eea44b",
+            "datePicker_tab-0b6ac043-bae7-4201-83f9-1a3165c7e2f3",
+            "datePicker_toggle"
+          ],
+          "type": "tab",
+          "required": false
+        },
+        "datePicker_title": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Title",
+          "key": "datePicker_title",
+          "type": "text",
+          "default_value": "Find Appointment",
+          "description": "Title for the date picker",
+          "required": false
+        },
+        "datePicker_tab-031b763d-b9bb-4efd-b1ba-35d3f1eea44b": {
+          "id": "Axt2Pbm7Tv2xujXT8e6kSw",
+          "pos": 0,
+          "display_name": "DateFromInput",
+          "key": "datePicker_tab-031b763d-b9bb-4efd-b1ba-35d3f1eea44b",
+          "keys": [
+            "dateFromInput_label",
+            "dateFromInput_placeholder"
+          ],
+          "type": "tab",
+          "objectFields": [
+            {
+              "id": 0,
+              "pos": 0,
+              "display_name": "Label",
+              "key": "dateFromInput_label",
+              "type": "text",
+              "default_value": "From",
+              "description": "Label for the date-from input",
+              "required": false
+            },
+            {
+              "id": 0,
+              "pos": 0,
+              "display_name": "Placeholder",
+              "key": "dateFromInput_placeholder",
+              "type": "text",
+              "default_value": "Select a date",
+              "description": "Placeholder text for the date-from input",
+              "required": false
+            }
+          ],
+          "required": false
+        },
+        "datePicker_tab-0b6ac043-bae7-4201-83f9-1a3165c7e2f3": {
+          "id": "C2rAQ7rnQgGD-RoxZcfi8w",
+          "pos": 0,
+          "display_name": "DateToInput",
+          "key": "datePicker_tab-0b6ac043-bae7-4201-83f9-1a3165c7e2f3",
+          "keys": [
+            "dateToInput_label",
+            "dateToInput_placeholder"
+          ],
+          "type": "tab",
+          "objectFields": [
+            {
+              "id": 0,
+              "pos": 0,
+              "display_name": "Label",
+              "key": "dateToInput_label",
+              "type": "text",
+              "default_value": "To",
+              "description": "Label for the date-to input",
+              "required": false
+            },
+            {
+              "id": 0,
+              "pos": 0,
+              "display_name": "Placeholder",
+              "key": "dateToInput_placeholder",
+              "type": "text",
+              "default_value": "Select a date",
+              "description": "Placeholder text for the date-to input",
+              "required": false
+            }
+          ],
+          "required": false
+        },
+        "datePicker_toggle": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Toggle",
+          "key": "datePicker_toggle",
+          "type": "boolean",
+          "default_value": true,
+          "description": "Toggle to enable or disable the date picker",
+          "required": false
+        },
+        "tab-8c3fc4a8-11b6-4ad3-a224-d5f504c00cc5": {
+          "id": "jD_EqBG2StOiJNX1BMAMxQ",
+          "pos": 0,
+          "display_name": "Categories",
+          "key": "tab-8c3fc4a8-11b6-4ad3-a224-d5f504c00cc5",
+          "keys": [
+            "categories_title",
+            "categories_categoryCheckboxes",
+            "categories_toggle"
+          ],
+          "type": "tab",
+          "required": false
+        },
+        "categories_title": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Title",
+          "key": "categories_title",
+          "type": "text",
+          "default_value": "Categories",
+          "description": "Title for the categories filter",
+          "required": false
+        },
+        "categories_categoryCheckboxes": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "CategoryCheckboxes",
+          "key": "categories_categoryCheckboxes",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "categoryCheckboxes"
+          ]
+        },
+        "categories_toggle": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Toggle",
+          "key": "categories_toggle",
+          "type": "boolean",
+          "default_value": true,
+          "description": "Toggle to enable or disable the category filter",
+          "required": false
+        },
+        "tab-2c74d1f0-8918-4cf4-8be3-ac9100d64416": {
+          "id": "LHTR8IkYTPSL46yRANZEFg",
+          "pos": 0,
+          "display_name": "ApplyButton",
+          "key": "tab-2c74d1f0-8918-4cf4-8be3-ac9100d64416",
+          "keys": [
+            "applyButton_label",
+            "applyButton_onClick"
+          ],
+          "type": "tab",
+          "required": false
+        },
+        "applyButton_label": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Label",
+          "key": "applyButton_label",
+          "type": "text",
+          "default_value": "Filter Appointments",
+          "description": "Label for the button",
+          "required": false
+        },
+        "applyButton_onClick": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "OnClick",
+          "key": "applyButton_onClick",
+          "type": "text",
+          "description": "Function to call on button click",
+          "required": false
+        },
+        "tab-64ed6974-2083-425a-9fbf-28ea88149ac2": {
+          "id": "ZO1pdCCDQlqfvyjqiBSawg",
+          "pos": 0,
+          "display_name": "ResetButton",
+          "key": "tab-64ed6974-2083-425a-9fbf-28ea88149ac2",
+          "keys": [
+            "resetButton_label",
+            "resetButton_onClick"
+          ],
+          "type": "tab",
+          "required": false
+        },
+        "resetButton_label": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Label",
+          "key": "resetButton_label",
+          "type": "text",
+          "default_value": "Reset Filters",
+          "description": "Label for the button",
+          "required": false
+        },
+        "resetButton_onClick": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "OnClick",
+          "key": "resetButton_onClick",
+          "type": "text",
+          "description": "Function to call on button click",
+          "required": false
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Event Filter",
+      "component_group_uuid": null,
+      "color": "#05566a",
+      "icon": "block-wallet",
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {}
     },
     {
       "name": "event-latest-teaser",
@@ -1861,7 +2389,60 @@
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
       "metadata": {},
-      "component_group_name": "FirstComponents"
+      "component_group_name": "Components"
+    },
+    {
+      "name": "event-list",
+      "display_name": "Event List",
+      "description": null,
+      "created_at": "2026-01-07T09:08:27.164Z",
+      "updated_at": "2026-01-07T09:08:27.164Z",
+      "id": 131429610150508,
+      "schema": {
+        "filter": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Filter",
+          "key": "filter",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "event-filter"
+          ],
+          "maximum": 1,
+          "minimum": 0,
+          "description": "Event Filter"
+        },
+        "events": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Events",
+          "key": "events",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "event-list-teaser"
+          ],
+          "description": "Display an event teaser with date, title and location"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": true,
+      "preview_tmpl": null,
+      "is_nestable": false,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Event List",
+      "component_group_uuid": null,
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {}
     },
     {
       "name": "event-list-teaser",
@@ -2059,7 +2640,7 @@
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
       "metadata": {},
-      "component_group_name": "FirstComponents"
+      "component_group_name": "Components"
     },
     {
       "name": "faq",
@@ -2117,7 +2698,7 @@
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
       "metadata": {},
-      "component_group_name": "FirstComponents"
+      "component_group_name": "Components"
     },
     {
       "name": "feature",
@@ -2428,7 +3009,7 @@
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
       "metadata": {},
-      "component_group_name": "FirstComponents"
+      "component_group_name": "Components"
     },
     {
       "name": "footer",
@@ -2709,14 +3290,14 @@
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
       "metadata": {},
-      "component_group_name": "FirstComponents"
+      "component_group_name": "Components"
     },
     {
       "name": "global",
       "display_name": "Global",
       "description": null,
       "created_at": "2025-12-18T14:47:52.844Z",
-      "updated_at": "2025-12-18T14:47:52.844Z",
+      "updated_at": "2025-12-18T15:20:35.717Z",
       "id": 124435139976188,
       "schema": {
         "global": {
@@ -2725,9 +3306,7 @@
           "type": "bloks",
           "restrict_type": "groups",
           "restrict_components": true,
-          "component_group_whitelist": [
-            "64ed358f-6111-4585-ba64-29ffa5de45a2"
-          ]
+          "component_group_whitelist": []
         }
       },
       "image": null,
@@ -2905,6 +3484,139 @@
       "component_group_uuid": null,
       "color": "#05566a",
       "icon": "block-wallet",
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {}
+    },
+    {
+      "name": "headline",
+      "display_name": "Headline",
+      "description": null,
+      "created_at": "2026-01-07T10:11:04.715Z",
+      "updated_at": "2026-01-07T10:11:04.715Z",
+      "id": 131445001083842,
+      "schema": {
+        "text": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Text",
+          "key": "text",
+          "type": "markdown",
+          "description": "Der Haupttext der Überschrift",
+          "required": false
+        },
+        "sub": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Sub",
+          "key": "sub",
+          "type": "markdown",
+          "description": "Ein optionaler Untertitel, der unter dem Haupttext angezeigt wird",
+          "required": false
+        },
+        "align": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Align",
+          "key": "align",
+          "type": "option",
+          "description": "Die Ausrichtung des Textes, z.B. links, zentriert oder rechts",
+          "options": [
+            {
+              "name": "left",
+              "value": "left",
+              "_uid": "2f469a89-cc0d-45b6-b195-48be809991d5"
+            },
+            {
+              "name": "center",
+              "value": "center",
+              "_uid": "7f757160-eb1f-43ce-8bc8-0119a11572a6"
+            },
+            {
+              "name": "right",
+              "value": "right",
+              "_uid": "eb4dd813-b8a1-4b8b-a423-d93a792360e0"
+            }
+          ],
+          "required": false
+        },
+        "style": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Style",
+          "key": "style",
+          "type": "option",
+          "default_value": "h2",
+          "description": "Anzeige der Überschrift wie z.B. eine H1, H2, H3 usw",
+          "options": [
+            {
+              "name": "h1",
+              "value": "h1",
+              "_uid": "f2c2dab4-bf6c-412d-8321-09337a3cfd4d"
+            },
+            {
+              "name": "h2",
+              "value": "h2",
+              "_uid": "a4e7cd6f-c771-4b29-8413-3673c1261acd"
+            },
+            {
+              "name": "h3",
+              "value": "h3",
+              "_uid": "831ee2f3-72cc-4c72-9f4f-1cdc1794140a"
+            },
+            {
+              "name": "h4",
+              "value": "h4",
+              "_uid": "b2537585-0f3c-4c96-92ea-e62f446c2872"
+            },
+            {
+              "name": "p",
+              "value": "p",
+              "_uid": "c90431bd-bffa-45eb-a3d5-7d6c3c4b3950"
+            }
+          ],
+          "required": false
+        },
+        "spaceAfter": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "SpaceAfter",
+          "key": "spaceAfter",
+          "type": "option",
+          "default_value": "small",
+          "description": "Ob nach der Überschrift ein zusätzlicher Abstand eingefügt werden soll",
+          "options": [
+            {
+              "name": "minimum",
+              "value": "minimum",
+              "_uid": "bf7541eb-4ce8-44fa-ae50-49a4b4786c15"
+            },
+            {
+              "name": "small",
+              "value": "small",
+              "_uid": "ad237f78-47ee-45fe-bbc0-97625b148f7c"
+            },
+            {
+              "name": "large",
+              "value": "large",
+              "_uid": "407f10fa-b7de-4b1d-abdd-110dc4eb6750"
+            }
+          ],
+          "required": false
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Headline",
+      "component_group_uuid": null,
+      "color": "#05566a",
+      "icon": "heading-1",
       "internal_tags_list": [],
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
@@ -3121,7 +3833,7 @@
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
       "metadata": {},
-      "component_group_name": "FirstComponents"
+      "component_group_name": "Components"
     },
     {
       "name": "html",
@@ -3227,7 +3939,7 @@
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
       "metadata": {},
-      "component_group_name": "FirstComponents"
+      "component_group_name": "Components"
     },
     {
       "name": "images",
@@ -3474,7 +4186,7 @@
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
       "metadata": {},
-      "component_group_name": "FirstComponents"
+      "component_group_name": "Components"
     },
     {
       "name": "image-text",
@@ -3602,14 +4314,14 @@
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
       "metadata": {},
-      "component_group_name": "FirstComponents"
+      "component_group_name": "Components"
     },
     {
       "name": "info-table",
       "display_name": "Info Table",
       "description": null,
       "created_at": "2025-12-18T14:47:44.088Z",
-      "updated_at": "2025-12-18T14:47:44.088Z",
+      "updated_at": "2025-12-18T15:20:06.142Z",
       "id": 124435104115698,
       "schema": {
         "data": {
@@ -3630,7 +4342,7 @@
       "all_presets": [],
       "preset_id": null,
       "real_name": "Info Table",
-      "component_group_uuid": "64ed358f-6111-4585-ba64-29ffa5de45a2",
+      "component_group_uuid": "b5709bbb-0d99-419b-9157-2ffbd9ab9001",
       "color": "#05566a",
       "icon": "block-wallet",
       "internal_tags_list": [],
@@ -3762,6 +4474,96 @@
       "all_presets": [],
       "preset_id": null,
       "real_name": "Links",
+      "component_group_uuid": null,
+      "color": "#05566a",
+      "icon": "block-wallet",
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {}
+    },
+    {
+      "name": "locations",
+      "display_name": "Locations",
+      "description": null,
+      "created_at": "2026-01-06T15:16:14.881Z",
+      "updated_at": "2026-01-06T15:16:14.881Z",
+      "id": 131166105120610,
+      "schema": {
+        "dates": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Dates",
+          "key": "dates",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "dates"
+          ],
+          "description": "Event Appointment"
+        },
+        "locationName": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "LocationName",
+          "key": "locationName",
+          "type": "text",
+          "description": "Name of the event location",
+          "required": false
+        },
+        "displayMode": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "DisplayMode",
+          "key": "displayMode",
+          "type": "option",
+          "default_value": "spacious",
+          "description": "Spacious is recommended for 1-2 appointments, Compact for more than 2.",
+          "options": [
+            {
+              "name": "spacious",
+              "value": "spacious",
+              "_uid": "03ae29b8-bbb8-463c-b23e-833ace0b09e6"
+            },
+            {
+              "name": "compact",
+              "value": "compact",
+              "_uid": "f14d8104-ae93-4a35-9caf-dec8e093887c"
+            }
+          ],
+          "required": false
+        },
+        "address": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Address",
+          "key": "address",
+          "type": "text",
+          "description": "Address of the appointment",
+          "required": false
+        },
+        "links": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Links",
+          "key": "links",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "links"
+          ]
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Locations",
       "component_group_uuid": null,
       "color": "#05566a",
       "icon": "block-wallet",
@@ -3986,7 +4788,59 @@
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
       "metadata": {},
-      "component_group_name": "FirstComponents"
+      "component_group_name": "Components"
+    },
+    {
+      "name": "matches",
+      "display_name": "Matches",
+      "description": null,
+      "created_at": "2026-01-07T10:11:05.676Z",
+      "updated_at": "2026-01-07T10:11:05.676Z",
+      "id": 131445005024197,
+      "schema": {
+        "title": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Title",
+          "key": "title",
+          "type": "text",
+          "description": "The title of the match.",
+          "required": false
+        },
+        "snippet": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Snippet",
+          "key": "snippet",
+          "type": "text",
+          "description": "The main content or description of the search result.",
+          "required": false
+        },
+        "url": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Url",
+          "key": "url",
+          "type": "text",
+          "description": "A URL linking to the specific match or more information.",
+          "required": false
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Matches",
+      "component_group_uuid": null,
+      "color": "#05566a",
+      "icon": "block-wallet",
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {}
     },
     {
       "name": "mosaic",
@@ -4079,7 +4933,7 @@
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
       "metadata": {},
-      "component_group_name": "FirstComponents"
+      "component_group_name": "Components"
     },
     {
       "name": "navItems",
@@ -4293,11 +5147,320 @@
       "metadata": {}
     },
     {
+      "name": "search",
+      "display_name": "Search",
+      "description": null,
+      "created_at": "2026-01-07T10:11:05.891Z",
+      "updated_at": "2026-01-07T10:11:05.891Z",
+      "id": 131445005900743,
+      "schema": {
+        "headline": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Headline",
+          "key": "headline",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "headline"
+          ],
+          "maximum": 1,
+          "minimum": 0
+        },
+        "searchBar": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "SearchBar",
+          "key": "searchBar",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "search-bar"
+          ],
+          "maximum": 1,
+          "minimum": 0,
+          "description": "Search Bar"
+        },
+        "searchFilter": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "SearchFilter",
+          "key": "searchFilter",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "search-filter"
+          ],
+          "maximum": 1,
+          "minimum": 0,
+          "description": "Search Filter"
+        },
+        "searchResults": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "SearchResults",
+          "key": "searchResults",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "searchResults"
+          ],
+          "description": "Search Result"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": true,
+      "preview_tmpl": null,
+      "is_nestable": false,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Search",
+      "component_group_uuid": null,
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {}
+    },
+    {
+      "name": "search-bar",
+      "display_name": "Search Bar",
+      "description": null,
+      "created_at": "2026-01-07T10:11:04.784Z",
+      "updated_at": "2026-01-07T10:11:04.784Z",
+      "id": 131445001362371,
+      "schema": {
+        "placeholder": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Placeholder",
+          "key": "placeholder",
+          "type": "text",
+          "description": "Placeholder text for the search input field.",
+          "required": false
+        },
+        "buttonText": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "ButtonText",
+          "key": "buttonText",
+          "type": "text",
+          "description": "Text displayed on the search button.",
+          "required": false
+        },
+        "hint": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Hint",
+          "key": "hint",
+          "type": "text",
+          "description": "Additional information or instructions related to the search functionality.",
+          "required": false
+        },
+        "alternativeText": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "AlternativeText",
+          "key": "alternativeText",
+          "type": "text",
+          "description": "Text to display when offering alternative results.",
+          "required": false
+        },
+        "alternativeResult": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "AlternativeResult",
+          "key": "alternativeResult",
+          "type": "text",
+          "description": "The alternative result to display when offering suggestions.",
+          "required": false
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Search Bar",
+      "component_group_uuid": null,
+      "color": "#05566a",
+      "icon": "block-wallet",
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {}
+    },
+    {
+      "name": "search-filter",
+      "display_name": "Search Filter",
+      "description": null,
+      "created_at": "2026-01-07T10:11:04.844Z",
+      "updated_at": "2026-01-07T10:11:04.844Z",
+      "id": 131445001616324,
+      "schema": {
+        "title": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Title",
+          "key": "title",
+          "type": "text",
+          "description": "The title of the search filter.",
+          "required": false
+        },
+        "categories": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Categories",
+          "key": "categories",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "categories"
+          ]
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Search Filter",
+      "component_group_uuid": null,
+      "color": "#05566a",
+      "icon": "block-wallet",
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {}
+    },
+    {
+      "name": "searchResults",
+      "display_name": "SearchResults",
+      "description": null,
+      "created_at": "2026-01-07T10:11:05.816Z",
+      "updated_at": "2026-01-07T10:11:05.816Z",
+      "id": 131445005605830,
+      "schema": {
+        "url": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Url",
+          "key": "url",
+          "type": "text",
+          "description": "A URL linking to the search result or more information.",
+          "required": false
+        },
+        "title": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Title",
+          "key": "title",
+          "type": "text",
+          "description": "The title of the search result.",
+          "required": false
+        },
+        "imageColSize": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "ImageColSize",
+          "key": "imageColSize",
+          "type": "option",
+          "default_value": "small",
+          "description": "The reserved space of the image row.",
+          "options": [
+            {
+              "name": "none",
+              "value": "none",
+              "_uid": "3ea4e557-5f2e-43c8-bf03-c8cbff930198"
+            },
+            {
+              "name": "small",
+              "value": "small",
+              "_uid": "12583c86-d85e-44d1-8337-c6e9e8d6beea"
+            },
+            {
+              "name": "large",
+              "value": "large",
+              "_uid": "450e13a2-782c-4636-8e51-fe2b55a4017a"
+            }
+          ],
+          "required": false
+        },
+        "previewImage": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "PreviewImage",
+          "key": "previewImage",
+          "type": "text",
+          "description": "A URL to an image preview for the search result.",
+          "required": false
+        },
+        "initialMatch": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "InitialMatch",
+          "key": "initialMatch",
+          "type": "text",
+          "description": "The initial search match or summary of the search result.",
+          "required": false
+        },
+        "matches": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "Matches",
+          "key": "matches",
+          "type": "bloks",
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "matches"
+          ],
+          "description": "Search Result Match"
+        },
+        "showLink": {
+          "id": 0,
+          "pos": 0,
+          "display_name": "ShowLink",
+          "key": "showLink",
+          "type": "boolean",
+          "default_value": true,
+          "description": "Whether to display the link to the search result.",
+          "required": false
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "SearchResults",
+      "component_group_uuid": null,
+      "color": "#05566a",
+      "icon": "block-wallet",
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {}
+    },
+    {
       "name": "section",
       "display_name": "Section",
       "description": null,
       "created_at": "2025-12-18T14:47:44.162Z",
-      "updated_at": "2025-12-18T14:47:44.162Z",
+      "updated_at": "2025-12-18T15:20:35.442Z",
       "id": 124435104426995,
       "schema": {
         "width": {
@@ -4849,11 +6012,12 @@
           "restrict_type": "groups",
           "restrict_components": true,
           "component_group_whitelist": [
-            "64ed358f-6111-4585-ba64-29ffa5de45a2",
-            "ad36c011-897b-4799-b282-7f2244596a63"
+            "ad36c011-897b-4799-b282-7f2244596a63",
+            "b5709bbb-0d99-419b-9157-2ffbd9ab9001"
           ],
           "description": "Abstracts a blog post concept into JSON schema",
-          "required": false
+          "required": false,
+          "component_group_denylist": []
         },
         "buttons": {
           "id": 0,
@@ -5244,7 +6408,7 @@
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
       "metadata": {},
-      "component_group_name": "FirstComponents"
+      "component_group_name": "Components"
     },
     {
       "name": "socialSharing",
@@ -5314,7 +6478,7 @@
       "display_name": "Split Even",
       "description": null,
       "created_at": "2025-12-18T14:47:42.068Z",
-      "updated_at": "2025-12-18T14:47:42.068Z",
+      "updated_at": "2025-12-18T17:13:12.161Z",
       "id": 124435095841776,
       "schema": {
         "contentMinWidth": {
@@ -5504,10 +6668,12 @@
           "restrict_type": "groups",
           "restrict_components": true,
           "component_group_whitelist": [
-            "ea7a3d1b-a6d2-4edb-adbe-bf765f7341f8"
+            "ea7a3d1b-a6d2-4edb-adbe-bf765f7341f8",
+            "b5709bbb-0d99-419b-9157-2ffbd9ab9001"
           ],
           "description": "Abstracts a blog post concept into JSON schema",
-          "required": false
+          "required": false,
+          "component_group_denylist": []
         }
       },
       "image": null,
@@ -5537,7 +6703,7 @@
       ],
       "preset_id": null,
       "real_name": "Split Even",
-      "component_group_uuid": "64ed358f-6111-4585-ba64-29ffa5de45a2",
+      "component_group_uuid": "b5709bbb-0d99-419b-9157-2ffbd9ab9001",
       "color": "#05566a",
       "icon": "block-wallet",
       "internal_tags_list": [],
@@ -5551,7 +6717,7 @@
       "display_name": "Split Weighted",
       "description": null,
       "created_at": "2025-12-18T14:47:43.089Z",
-      "updated_at": "2025-12-18T14:47:43.089Z",
+      "updated_at": "2025-12-18T19:39:08.521Z",
       "id": 124435100023793,
       "schema": {
         "verticalGutter": {
@@ -5860,10 +7026,12 @@
           "restrict_type": "groups",
           "restrict_components": true,
           "component_group_whitelist": [
-            "f66f74a4-6d5a-4099-aafc-9609ad06ce83"
+            "f66f74a4-6d5a-4099-aafc-9609ad06ce83",
+            "b5709bbb-0d99-419b-9157-2ffbd9ab9001"
           ],
           "description": "Abstracts a blog post concept into JSON schema",
-          "required": false
+          "required": false,
+          "component_group_denylist": []
         },
         "asideComponents": {
           "id": 0,
@@ -5874,10 +7042,12 @@
           "restrict_type": "groups",
           "restrict_components": true,
           "component_group_whitelist": [
-            "5feea184-d32d-4b85-9d8f-a0e00b3e91b8"
+            "5feea184-d32d-4b85-9d8f-a0e00b3e91b8",
+            "b5709bbb-0d99-419b-9157-2ffbd9ab9001"
           ],
           "description": "Abstracts a blog post concept into JSON schema",
-          "required": false
+          "required": false,
+          "component_group_denylist": []
         }
       },
       "image": null,
@@ -5907,7 +7077,7 @@
       ],
       "preset_id": null,
       "real_name": "Split Weighted",
-      "component_group_uuid": "64ed358f-6111-4585-ba64-29ffa5de45a2",
+      "component_group_uuid": "b5709bbb-0d99-419b-9157-2ffbd9ab9001",
       "color": "#05566a",
       "icon": "block-wallet",
       "internal_tags_list": [],
@@ -6039,7 +7209,7 @@
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
       "metadata": {},
-      "component_group_name": "FirstComponents"
+      "component_group_name": "Components"
     },
     {
       "name": "tags",
@@ -6283,7 +7453,7 @@
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
       "metadata": {},
-      "component_group_name": "FirstComponents"
+      "component_group_name": "Components"
     },
     {
       "name": "testimonial",
@@ -6525,7 +7695,7 @@
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
       "metadata": {},
-      "component_group_name": "FirstComponents"
+      "component_group_name": "Components"
     },
     {
       "name": "text",
@@ -6628,7 +7798,7 @@
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
       "metadata": {},
-      "component_group_name": "FirstComponents"
+      "component_group_name": "Components"
     },
     {
       "name": "tile",
@@ -7006,7 +8176,7 @@
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
       "metadata": {},
-      "component_group_name": "FirstComponents"
+      "component_group_name": "Components"
     }
   ]
 }
