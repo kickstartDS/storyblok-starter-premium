@@ -21,6 +21,9 @@
         "colorNeutral": {
           "x-cms-hidden": true
         },
+        "fullWidth": {
+          "x-cms-hidden": true
+        },
         "buttons": {
           "x-cms-hidden": false
         },

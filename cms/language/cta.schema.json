@@ -28,6 +28,10 @@
           "title": "Farbneutral?",
           "description": "Sollen Infotext und Buttons in neutralen Farben dargestellt werden?"
         },
+        "fullWidth": {
+          "title": "Vollbreit?",
+          "description": "Soll der Call-to-Action die volle Breite des Containers einnehmen?"
+        },
         "buttons": {
           "title": "Buttons",
           "description": "Buttons für den Call-to-Action"
@@ -52,7 +56,7 @@
           "title": "Textausrichtung",
           "description": "Ausrichtung des Textes im Call-to-Action"
         },
-        "align": {
+        "contentAlign": {
           "title": "Vertikale Ausrichtung",
           "description": "Vertikale Ausrichtung des Inhalts im Call-to-Action"
         }

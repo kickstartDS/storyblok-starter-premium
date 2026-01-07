@@ -48,13 +48,13 @@ const BlogTeaserPostProvider: FC<PropsWithChildren> = (props) => {
         function isBlogPost(
           object: any
         ): object is ComponentProps<typeof BlogPost> & { slug: string } {
-          return object.type === "blog-post";
+          return object.component === "blog-post";
         }
 
         function isBlogTeaser(
           object: any
         ): object is ComponentProps<typeof BlogTeaser> {
-          return object.type === "blog-teaser";
+          return object.component === "blog-teaser";
         }
 
         if (isBlogPost(props) && props.head && props.aside) {
@@ -125,8 +125,8 @@ const BlogOverview: React.FC<PageProps> = ({ blok }) => {
               content={{ mode: "list" }}
               spaceBefore="small"
             >
-              {list.map((article) => (
-                <BlogTeaser {...article} key={article.headline} />
+              {list.map((article, index) => (
+                <BlogTeaser {...article} key={`${article.headline}-${index}`} />
               ))}
             </Section>
           )}
@@ -135,8 +135,8 @@ const BlogOverview: React.FC<PageProps> = ({ blok }) => {
           </Section>
           {more && more.length > 0 && (
             <Section headline={{ text: moreTitle }}>
-              {more.map((article) => (
-                <BlogTeaser {...article} key={article.headline} />
+              {more.map((article, index) => (
+                <BlogTeaser {...article} key={`${article.headline}-${index}`} />
               ))}
             </Section>
           )}

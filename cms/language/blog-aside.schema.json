@@ -16,6 +16,7 @@
           "title": "Social Sharing",
           "description": "Social Sharing Links für den Blogbeitrag",
           "items": {
+            "type": "object",
             "title": "Social Sharing Link",
             "description": "Link zum Teilen des Blogbeitrags",
             "properties": {

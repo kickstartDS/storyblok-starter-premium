@@ -27,8 +27,6 @@ import {
 } from "@kickstartds/content/lib/storytelling";
 import { StorytellingProps } from "@kickstartds/content/lib/storytelling/typing";
 
-import { IconProvider } from "./icon/IconProvider";
-
 import { BlogTeaserContext } from "@kickstartds/ds-agency-premium/blog-teaser";
 import { BlogAsideContext } from "@kickstartds/ds-agency-premium/blog-aside";
 import { BlogAuthorContext } from "@kickstartds/ds-agency-premium/blog-author";
@@ -36,6 +34,14 @@ import { BlogHeadContext } from "@kickstartds/ds-agency-premium/blog-head";
 import { CtaContext } from "@kickstartds/ds-agency-premium/cta";
 import { FeatureContext } from "@kickstartds/ds-agency-premium/feature";
 import { StatContext } from "@kickstartds/ds-agency-premium/stat";
+import {
+  SplitEvenContext,
+  SplitEvenContextDefault,
+} from "@kickstartds/ds-agency-premium/split-even";
+import {
+  SplitWeightedContext,
+  SplitWeightedContextDefault,
+} from "@kickstartds/ds-agency-premium/split-weighted";
 import { TestimonialContext } from "@kickstartds/ds-agency-premium/testimonial";
 import {
   HeroContextDefault,
@@ -44,10 +50,14 @@ import {
 
 import { StoryblokSubComponent } from "./StoryblokSubComponent";
 import { TeaserProvider } from "./TeaserProvider";
+import { IconProvider } from "./icon/IconProvider";
+
 import { useBlurHashes } from "./BlurHashContext";
 import { useImagePriority } from "./ImagePriorityContext";
 import { useImageSize } from "./ImageSizeContext";
 import { useImageRatio } from "./ImageRatioContext";
+import { StoryblokComponent } from "@storyblok/react";
+import { unflatten } from "@/helpers/unflatten";
 
 const Link = forwardRef<
   HTMLAnchorElement,
@@ -196,6 +206,96 @@ const HeroProvider: FC<PropsWithChildren> = (props) => (
   <HeroContext.Provider {...props} value={Hero} />
 );
 
+const SplitEven = forwardRef<
+  HTMLDivElement,
+  ComponentProps<typeof SplitEvenContextDefault> &
+    HTMLAttributes<HTMLDivElement>
+>((props, ref) => {
+  const { firstComponents, secondComponents, ...rest } = props;
+
+  return (
+    <SplitEvenContextDefault
+      {...rest}
+      firstComponents={
+        firstComponents &&
+        firstComponents.length > 0 && (
+          <>
+            {firstComponents.map((component) => (
+              <StoryblokComponent
+                key={component._uid}
+                blok={unflatten(component)}
+              ></StoryblokComponent>
+            ))}
+          </>
+        )
+      }
+      secondComponents={
+        secondComponents &&
+        secondComponents.length > 0 && (
+          <>
+            {secondComponents.map((component) => (
+              <StoryblokComponent
+                key={component._uid}
+                blok={unflatten(component)}
+              ></StoryblokComponent>
+            ))}
+          </>
+        )
+      }
+      ref={ref}
+    />
+  );
+});
+
+const SplitEvenProvider: FC<PropsWithChildren> = (props) => (
+  <SplitEvenContext.Provider {...props} value={SplitEven} />
+);
+
+const SplitWeighted = forwardRef<
+  HTMLDivElement,
+  ComponentProps<typeof SplitWeightedContextDefault> &
+    HTMLAttributes<HTMLDivElement>
+>((props, ref) => {
+  const { mainComponents, asideComponents, ...rest } = props;
+
+  return (
+    <SplitWeightedContextDefault
+      {...rest}
+      main={
+        mainComponents &&
+        mainComponents.length > 0 && (
+          <>
+            {mainComponents.map((component) => (
+              <StoryblokComponent
+                key={component._uid}
+                blok={unflatten(component)}
+              ></StoryblokComponent>
+            ))}
+          </>
+        )
+      }
+      aside={
+        asideComponents &&
+        asideComponents.length > 0 && (
+          <>
+            {asideComponents.map((component) => (
+              <StoryblokComponent
+                key={component._uid}
+                blok={unflatten(component)}
+              ></StoryblokComponent>
+            ))}
+          </>
+        )
+      }
+      ref={ref}
+    />
+  );
+});
+
+const SplitWeightedProvider: FC<PropsWithChildren> = (props) => (
+  <SplitWeightedContext.Provider {...props} value={SplitWeighted} />
+);
+
 const Storytelling = forwardRef<
   HTMLDivElement,
   StorytellingProps & HTMLAttributes<HTMLDivElement>
@@ -217,47 +317,51 @@ const ComponentProviders = (props: PropsWithChildren) => (
   <IconProvider>
     <StorytellingProvider>
       <PictureProvider>
-        <HeroProvider>
-          <LinkProvider>
-            <TeaserProvider>
-              {/* @ts-expect-error */}
-              <CtaContext.Provider value={StoryblokSubComponent}>
-                {/* @ts-expect-error */}
-                <FeatureContext.Provider value={StoryblokSubComponent}>
+        <SplitEvenProvider>
+          <SplitWeightedProvider>
+            <HeroProvider>
+              <LinkProvider>
+                <TeaserProvider>
                   {/* @ts-expect-error */}
-                  <StatContext.Provider value={StoryblokSubComponent}>
-                    <TestimonialContext.Provider
-                      // @ts-expect-error
-                      value={StoryblokSubComponent}
-                    >
-                      <BlogHeadContext.Provider
-                        // @ts-expect-error
-                        value={StoryblokSubComponent}
-                      >
-                        <BlogAsideContext.Provider
+                  <CtaContext.Provider value={StoryblokSubComponent}>
+                    {/* @ts-expect-error */}
+                    <FeatureContext.Provider value={StoryblokSubComponent}>
+                      {/* @ts-expect-error */}
+                      <StatContext.Provider value={StoryblokSubComponent}>
+                        <TestimonialContext.Provider
                           // @ts-expect-error
                           value={StoryblokSubComponent}
                         >
-                          <BlogTeaserContext.Provider
+                          <BlogHeadContext.Provider
                             // @ts-expect-error
                             value={StoryblokSubComponent}
                           >
-                            <BlogAuthorContext.Provider
+                            <BlogAsideContext.Provider
                               // @ts-expect-error
                               value={StoryblokSubComponent}
                             >
-                              {props.children}
-                            </BlogAuthorContext.Provider>
-                          </BlogTeaserContext.Provider>
-                        </BlogAsideContext.Provider>
-                      </BlogHeadContext.Provider>
-                    </TestimonialContext.Provider>
-                  </StatContext.Provider>
-                </FeatureContext.Provider>
-              </CtaContext.Provider>
-            </TeaserProvider>
-          </LinkProvider>
-        </HeroProvider>
+                              <BlogTeaserContext.Provider
+                                // @ts-expect-error
+                                value={StoryblokSubComponent}
+                              >
+                                <BlogAuthorContext.Provider
+                                  // @ts-expect-error
+                                  value={StoryblokSubComponent}
+                                >
+                                  {props.children}
+                                </BlogAuthorContext.Provider>
+                              </BlogTeaserContext.Provider>
+                            </BlogAsideContext.Provider>
+                          </BlogHeadContext.Provider>
+                        </TestimonialContext.Provider>
+                      </StatContext.Provider>
+                    </FeatureContext.Provider>
+                  </CtaContext.Provider>
+                </TeaserProvider>
+              </LinkProvider>
+            </HeroProvider>
+          </SplitWeightedProvider>
+        </SplitEvenProvider>
       </PictureProvider>
     </StorytellingProvider>
   </IconProvider>

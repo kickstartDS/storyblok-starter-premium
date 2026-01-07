@@ -98,6 +98,9 @@ export const components = {
   global_reference: GlobalReference,
   "blog-overview": dynamic(() => import("./BlogOverview")),
   "blog-post": dynamic(() => import("./BlogPost")),
+  "event-detail": dynamic(() => import("./EventDetail")),
+  "event-list": dynamic(() => import("./EventList")),
+  search: dynamic(() => import("./Search")),
   "blog-teaser": editable(
     dynamic(() =>
       import("@kickstartds/ds-agency-premium/blog-teaser").then(
@@ -127,10 +130,24 @@ export const components = {
     )
   ),
   section: editable(SectionContextDefault, "components"),
+  "business-card": editable(
+    dynamic(() =>
+      import("@kickstartds/ds-agency-premium/business-card").then(
+        (mod) => mod.BusinessCardContextDefault
+      )
+    )
+  ),
   contact: editable(
     dynamic(() =>
       import("@kickstartds/ds-agency-premium/contact").then(
         (mod) => mod.ContactContextDefault
+      )
+    )
+  ),
+  "content-nav": editable(
+    dynamic(() =>
+      import("@kickstartds/ds-agency-premium/content-nav").then(
+        (mod) => mod.ContentNavContextDefault
       )
     )
   ),
@@ -145,6 +162,27 @@ export const components = {
     dynamic(() =>
       import("@kickstartds/ds-agency-premium/divider").then(
         (mod) => mod.DividerContextDefault
+      )
+    )
+  ),
+  downloads: editable(
+    dynamic(() =>
+      import("@kickstartds/ds-agency-premium/downloads").then(
+        (mod) => mod.DownloadsContextDefault
+      )
+    )
+  ),
+  "event-latest-teaser": editable(
+    dynamic(() =>
+      import("@kickstartds/ds-agency-premium/event-latest-teaser").then(
+        (mod) => mod.EventLatestTeaserContextDefault
+      )
+    )
+  ),
+  "event-list-teaser": editable(
+    dynamic(() =>
+      import("@kickstartds/ds-agency-premium/event-list-teaser").then(
+        (mod) => mod.EventListTeaserContextDefault
       )
     )
   ),
@@ -195,14 +233,16 @@ export const components = {
       import("@kickstartds/ds-agency-premium/split-even").then(
         (mod) => mod.SplitEven
       )
-    )
+    ),
+    "firstComponents"
   ),
   "split-weighted": editable(
     dynamic(() =>
       import("@kickstartds/ds-agency-premium/split-weighted").then(
         (mod) => mod.SplitWeighted
       )
-    )
+    ),
+    "mainComponents"
   ),
   stats: editable(
     dynamic(() =>
