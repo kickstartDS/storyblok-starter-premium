@@ -1,7 +1,7 @@
 FROM node:18-alpine AS base
 
 # Disabling Telemetry
-ENV NEXT_TELEMETRY_DISABLED 1
+ENV NEXT_TELEMETRY_DISABLED=1
 RUN apk add --no-cache libc6-compat curl
 
 FROM base AS deps
@@ -26,7 +26,7 @@ RUN npm run build
 FROM base AS runner
 WORKDIR /app
 
-ENV NODE_ENV production
+ENV NODE_ENV=production
 
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
@@ -42,7 +42,7 @@ USER nextjs
 
 EXPOSE 3030
 
-ENV PORT 3030
-ENV HOSTNAME "0.0.0.0"
+ENV PORT=3030
+ENV HOSTNAME="0.0.0.0"
 
 CMD ["node", "server.js"]
