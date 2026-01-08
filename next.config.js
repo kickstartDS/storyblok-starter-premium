@@ -52,7 +52,7 @@ module.exports = {
             value: process.env.NEXT_PUBLIC_SECONDARY_PUBLIC_SITE_DOMAIN,
           },
         ],
-        destination: `https://${NEXT_PUBLIC_PRIMARY_PUBLIC_SITE_DOMAIN}/:path*`,
+        destination: `https://${process.env.NEXT_PUBLIC_PRIMARY_PUBLIC_SITE_DOMAIN}/:path*`,
         permanent: true,
       },
     ];
