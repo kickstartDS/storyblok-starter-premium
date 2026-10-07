@@ -1,0 +1,95 @@
+import classnames from "classnames";
+import { forwardRef, createContext, useContext, HTMLAttributes } from "react";
+import { PostTeaserContextDefault } from "@kickstartds/blog/lib/post-teaser";
+import { BlogTeaserProps } from "./BlogTeaserProps";
+import "./blog-teaser.scss";
+import { Container } from "@kickstartds/core/lib/container";
+import { deepMergeDefaults } from "../helpers";
+import defaults from "./BlogTeaserDefaults";
+
+export type { BlogTeaserProps };
+
+export const BlogTeaserContextDefault = forwardRef<
+  HTMLDivElement,
+  BlogTeaserProps & HTMLAttributes<HTMLDivElement>
+>(
+  (
+    {
+      date,
+      tags = [],
+      headline,
+      teaserText,
+      image,
+      alt,
+      link,
+      readingTime,
+      author,
+      className,
+      ...rest
+    },
+    ref
+  ) => {
+    // `newTab` is resolved at story-processing time from Storyblok's multilink
+    // target-blank toggle and isn't part of the generated schema type.
+    const linkWithNewTab = link as BlogTeaserProps["link"] & {
+      newTab?: boolean;
+    };
+
+    const teaserMetaItems = [];
+
+    if (date)
+      teaserMetaItems.push({
+        icon: "date",
+        text:
+          typeof date === "number" ? new Date(date).toLocaleDateString() : date,
+      });
+
+    if (readingTime)
+      teaserMetaItems.push({
+        icon: "time",
+        text: readingTime,
+      });
+
+    return (
+      <Container name="blog-teaser">
+        <PostTeaserContextDefault
+          {...rest}
+          className={classnames(className, "dsa-blog-teaser")}
+          // @ts-expect-error
+          image={{ src: image, alt: alt || headline }}
+          meta={{
+            author: author
+              ? {
+                  image: author.image && { src: author.image },
+                  name: author.name,
+                }
+              : undefined,
+            items: teaserMetaItems,
+          }}
+          link={{
+            //@ts-expect-error
+            url: linkWithNewTab.url,
+            label: linkWithNewTab?.text || "Read article",
+            newTab: linkWithNewTab.newTab,
+          }}
+          title={headline}
+          body={teaserText}
+          categories={tags.map((tag) => {
+            return { label: tag.entry };
+          })}
+          ref={ref}
+        />
+      </Container>
+    );
+  }
+);
+
+export const BlogTeaserContext = createContext(BlogTeaserContextDefault);
+export const BlogTeaser = forwardRef<
+  HTMLDivElement,
+  BlogTeaserProps & HTMLAttributes<HTMLDivElement>
+>((props, ref) => {
+  const Component = useContext(BlogTeaserContext);
+  return <Component {...deepMergeDefaults(defaults, props)} ref={ref} />;
+});
+BlogTeaser.displayName = "BlogTeaser";

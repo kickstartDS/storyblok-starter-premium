@@ -1,0 +1,167 @@
+.dsa-nav-main {
+  display: flex;
+  align-items: center;
+  gap: var(--ks-spacing-m);
+
+  a.dsa-nav-main__header-cta {
+    display: none;
+    align-items: center;
+    white-space: nowrap;
+    text-decoration: none;
+    font-size: var(--ks-font-size-interface-s);
+    font-family: var(--ks-font-family-interface);
+    font-weight: var(--dsa-button--font-weight);
+    color: var(--dsa-button_primary--color);
+    background-color: var(--dsa-button_primary--background-color);
+    border-radius: var(--dsa-button--border-radius);
+    border: var(--dsa-button--border-width) solid transparent;
+    padding: var(--dsa-button--padding);
+    transition: background-color 0.2s ease;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--dsa-button_primary--color_hover);
+      background-color: var(--dsa-button_primary--background-color_hover);
+      text-decoration: none;
+    }
+
+    @media (min-width: 62rem) {
+      display: flex;
+    }
+  }
+
+  .dsa-nav-main__search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // On mobile the trigger sits before the hamburger, which keeps the right
+    // edge of the menu bar to the toggle; the desktop order (nav links,
+    // search, language, CTA) is restored below.
+    order: -1;
+    position: relative;
+    // Above the toggle, whose tap target the negative margin below overlaps:
+    // the trigger has to own its whole box for the magnifier to stay clickable.
+    z-index: 2;
+    padding: 0;
+    border: 0;
+    background: none;
+    // The toggle reserves one `--dsa-header--spacing-horizontal` gutter to its
+    // left and then translates itself right by that same amount, so an empty
+    // gutter plus the flex gap used to separate the two icons. Reclaiming it
+    // moves the magnifier next to the burger instead of next to the logo.
+    margin-right: calc(-2 * var(--dsa-header--spacing-horizontal));
+    // The toggle's icon carries `scale(0.7) translate(7.5%, 7.5%)`, which drops
+    // its bars 0.7 * 7.5% of `--dsa-logo--height` below the row centre; the
+    // trigger follows, so the two icons share one optical centre.
+    top: calc(var(--dsa-logo--height) * 0.0525);
+    // An inverted header only flips the design-system variables, so consuming
+    // the same token as the nav labels is what turns this white - the
+    // inherited page colour it used before never inverts.
+    color: var(--ks-text-color-interface-interactive);
+    cursor: pointer;
+    line-height: 0;
+    transition: opacity 0.2s ease;
+
+    // The burger's bars are the toggle's box (`--dsa-logo--height`, 3px bars
+    // inset 2px top and bottom) scaled by 0.7. The magnifier's glyph fills
+    // 20/24 of its own box (24px viewBox, 2px inset), so `0.7 * 24/20 = 0.84`
+    // of the logo height gives it the same width as those bars. The toggle
+    // scales by 0.8 from 40em up, hence the second factor; both follow
+    // `--dsa-logo--height`, which the design system steps at 48em.
+    .icon {
+      width: calc(var(--dsa-logo--height) * 0.84);
+      height: calc(var(--dsa-logo--height) * 0.84);
+    }
+
+    &:hover,
+    &:focus-visible {
+      opacity: 0.75;
+    }
+
+    @media (min-width: 40em) {
+      top: calc(var(--dsa-logo--height) * 0.02);
+
+      .icon {
+        width: calc(var(--dsa-logo--height) * 0.96);
+        height: calc(var(--dsa-logo--height) * 0.96);
+      }
+    }
+
+    @media (min-width: 62rem) {
+      // The toggle is hidden from here, so the magnifier returns to its desktop
+      // size and placement between the nav links and the language switcher.
+      order: 0;
+      top: auto;
+      margin-right: 0;
+
+      .icon {
+        width: 1.25em;
+        height: 1.25em;
+      }
+    }
+  }
+
+  .dsa-language-switcher {
+    display: none;
+    align-items: center;
+    gap: 0.3em;
+    font-size: var(--ks-font-size-interface-s);
+    font-family: var(--ks-font-family-interface);
+    font-weight: var(--ks-font-weight-semi-bold);
+    letter-spacing: 0.04em;
+    // Colours the separator, which only inherits; the items set the token
+    // themselves below.
+    color: var(--ks-text-color-interface-interactive);
+
+    @media (min-width: 62rem) {
+      display: flex;
+    }
+
+    &__item {
+      // Same inverted-aware token as the nav labels: without it the linked
+      // (inactive) language falls back to the global `a:not(.c-button)` link
+      // colour, which is not what turns white on an inverted menu.
+      color: var(--ks-text-color-interface-interactive);
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+
+      &--active {
+        color: var(--ks-color-primary);
+        pointer-events: none;
+      }
+
+      &--link {
+        &:hover,
+        &:focus-visible {
+          opacity: 0.75;
+          text-decoration: none;
+        }
+      }
+    }
+
+    &__separator {
+      opacity: 0.25;
+      user-select: none;
+      font-weight: var(--ks-font-weight-regular);
+    }
+  }
+
+  // Below 62rem the header bar is replaced by the flyout, which carries the
+  // same DE/EN pair through its content slot. The current language is marked
+  // the way the flyout marks the active nav item: primary tint plus bold. The
+  // bar's own rules above stay untouched, so nothing from 62rem up changes.
+  .dsa-nav-flyout .dsa-language-switcher {
+    display: flex;
+    // Above the nav list, where the flyout's logo used to sit. The panel's own
+    // padding is horizontal only, so the vertical spacing has to come from
+    // here.
+    order: -1;
+    padding-top: var(--ks-spacing-inset-m);
+    padding-bottom: var(--ks-spacing-stack-s);
+
+    .dsa-language-switcher__item--active {
+      color: var(--dsa-nav-flyout__label--color_active);
+      font-weight: var(--dsa-nav-flyout__label--font-weight_active);
+    }
+  }
+}

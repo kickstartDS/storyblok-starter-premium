@@ -1,0 +1,83 @@
+.dsa-search-modal {
+  &[open] {
+    border-radius: var(--ks-border-radius-card);
+    border: var(--ks-border-color-interface) solid
+      var(--ks-border-width-default);
+    box-shadow: var(
+      --dsa-cookie-consent-dialog--box-shadow,
+      var(--ks-box-shadow-card)
+    );
+    background-color: var(--ks-background-color-default);
+    padding: 0;
+    width: calc(100% - calc(var(--ks-spacing-inset-xs) * 2));
+    max-width: 60rem;
+    max-height: calc(100% - calc(var(--ks-spacing-inset-xs) * 2));
+    margin-top: var(--ks-spacing-inset-xs);
+  }
+
+  &::backdrop {
+    background-color: var(--dsa-overlay--background-color);
+  }
+
+  &__close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    // Equal padding on all four sides so the (label-less) icon sits centred.
+    // The button padding token cannot be used for this: the theme overrides it
+    // on every button carrying an `.icon` with the four-value shorthand
+    // `0.75em 0.75em 0.75em 1.15em` (that rule assumes a label follows the
+    // icon) at a higher specificity than anything settable here, and the base
+    // library's `.c-button--clear` variant sets `padding-left: 0` outright.
+    // !important is needed against both of those and against
+    // `.c-button--clear:hover/:focus`, which would otherwise re-apply the
+    // asymmetric shorthand and shift the icon on interaction.
+    padding: 0.75em !important;
+
+    // !important needed: base .dsa-button.c-button .icon has higher
+    // specificity (3 classes) than this descendant selector, so a plain
+    // override here would otherwise lose the cascade.
+    .icon {
+      margin-left: 0 !important;
+    }
+  }
+
+  .dsa-search-result {
+    justify-content: center;
+
+    // Fill available width like the default styling (flex-grow: 1) up to a
+    // comfortable reading width, instead of the base flex-basis (a much
+    // narrower fixed tile width) or fully unconstrained growth (which fills
+    // the row edge-to-edge and makes the parent's justify-content: center
+    // above have no visible effect). Once the cap is hit, the remaining
+    // space is distributed evenly on both sides by justify-content: center.
+    &__content {
+      flex-grow: 1;
+      flex-basis: 0;
+      max-width: 44rem;
+    }
+
+    // A result without a preview image still reserves the image column's
+    // flex-basis, and that invisible column eats the free space the parent's
+    // justify-content: center would otherwise distribute on both sides -
+    // leaving the card flush left. Drop the column when it holds no image;
+    // results that do carry one keep it.
+    &__preview-image-row:not(:has(.dsa-search-result__preview-image[src])) {
+      display: none;
+    }
+  }
+
+  .l-section__container--headline .dsa-headline {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .dsa-search-bar {
+    position: sticky;
+    top: 0;
+    background: var(--ks-background-color-default);
+    padding: 1em 0;
+  }
+}

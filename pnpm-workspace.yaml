@@ -1,0 +1,22 @@
+packages:
+  - "packages/*"
+
+# Migrated from .npmrc for pnpm 10
+shamefullyHoist: true
+strictPeerDependencies: false
+linkWorkspacePackages: true
+saveWorkspaceProtocol: rolling
+
+# Required for pnpm deploy (pnpm 10 breaking change)
+injectWorkspacePackages: true
+
+# Injected workspace packages are hardlinked snapshots taken at install time, so
+# files created by a later build (the design system's gitignored dist/) never
+# reach the dependents' node_modules on their own. Re-sync them after a build
+# script, so a consumer building after the design system sees its dist/.
+syncInjectedDepsAfterScripts:
+  - build
+
+overrides:
+  "@kickstartds/jsonschema-utils": "^3.9.0"
+  "@kickstartds/jsonschema2storyblok": "^1.7.0"

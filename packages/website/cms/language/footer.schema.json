@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://language.mydesignsystem.com/footer.schema.json",
+  "type": "object",
+  "allOf": [
+    {
+      "title": "Footer",
+      "description": "Footer Element das als Abschluss der Seite eingesetzt wird.",
+      "type": "object",
+      "properties": {
+        "logo": {
+          "title": "Logo",
+          "description": "Das Logo im Footer, das in der Regel die Marke repräsentiert."
+        },
+        "byline": {
+          "title": "Zusatztext",
+          "description": "Ein kurzer Zusatztext oder Slogan, der im Footer angezeigt wird."
+        },
+        "inverted": {
+          "title": "Invertiert?",
+          "description": "Ob der Footer invertiert dargestellt werden soll."
+        },
+        "navItems": {
+          "title": "Navigationselemente",
+          "description": "Eine Liste von Navigationselementen, die im Footer angezeigt werden."
+        },
+        "backToTop": {
+          "title": "Zurück nach oben",
+          "description": "Runder Button am Ende der Footer-Navigation, der die Seite nach oben scrollt. Ohne Label wird der Button nicht angezeigt."
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "$ref": "http://schema.mydesignsystem.com/footer.schema.json"
+    }
+  ]
+}
